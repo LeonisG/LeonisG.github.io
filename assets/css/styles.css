@@ -776,4 +776,8 @@ h1 {
   .about-method strong {
     font-size: 1.25rem;
   }
+  
+  .about-intro .section-title {
+    line-height: 1.12;
+  }
 }
