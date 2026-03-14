@@ -432,22 +432,85 @@ h1 {
   color: var(--muted);
 }
 
-.about-single {
-  max-width: 720px;
-  margin: 0 auto;
+.about-wrap {
+  display: grid;
+  gap: 1.4rem;
 }
 
-.about-single h3 {
-  margin-top: 2rem;
+.about-intro,
+.about-card,
+.about-closing {
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.04));
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
 }
 
-.about-single ul {
+.about-intro {
+  padding: 1.5rem;
+  max-width: 860px;
+}
+
+.about-lead {
+  margin: 0.2rem 0 0;
+  max-width: 54ch;
+  font-size: 1.12rem;
+  line-height: 1.5;
+  color: #dce7dd;
+}
+
+.about-copy {
+  margin: 1rem 0 0;
+  max-width: 64ch;
+  color: var(--muted);
+}
+
+.about-blocks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.about-card {
+  padding: 1.35rem;
+}
+
+.about-card h3 {
+  margin: 0 0 0.85rem;
+  font-size: 1.08rem;
+  line-height: 1.2;
+}
+
+.about-card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.about-card li {
+  color: var(--muted);
+}
+
+.about-card li + li {
   margin-top: 0.6rem;
-  padding-left: 1.2rem;
 }
 
-.about-single li {
-  margin-bottom: 0.4rem;
+.about-closing {
+  padding: 1.4rem 1.5rem;
+  max-width: 860px;
+}
+
+.about-closing p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.about-closing p + p {
+  margin-top: 1rem;
+}
+
+.about-method {
+  color: #dce7dd;
+  font-size: 1.02rem;
 }
 
 .manifesto-lead {
@@ -663,7 +726,7 @@ h1 {
     flex-direction: column;
     align-items: flex-start;
   }
-  
+
   .hero-subtitle {
     font-size: 1rem;
     max-width: 100%;
