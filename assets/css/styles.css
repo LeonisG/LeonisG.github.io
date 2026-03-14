@@ -198,13 +198,26 @@ input {
   filter: blur(8px);
 }
 
+.hero-copy-block {
+  max-width: 640px;
+}
+
 .hero-grid {
   display: grid;
   grid-template-columns: 1.18fr 0.82fr;
-  gap: 1.5rem;
+  gap: 2rem;
   align-items: center;
 }
 
+.hero-subtitle {
+  margin: 1rem 0 0;
+  max-width: 34ch;
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: #dce7dd;
+  font-weight: 500;
+}
 .eyebrow {
   display: inline-flex;
   align-items: center;
@@ -231,10 +244,10 @@ h1 {
 }
 
 .hero-copy {
-  margin-top: 1.3rem;
-  max-width: 62ch;
+  margin-top: 1rem;
+  max-width: 60ch;
   color: var(--muted);
-  font-size: 1.08rem;
+  font-size: 1.04rem;
 }
 
 .hero-copy strong {
@@ -260,8 +273,9 @@ h1 {
 .hero-proof span {
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(255, 255, 255, 0.03);
-  padding: 0.5rem 0.75rem;
+  padding: 0.58rem 0.82rem;
   border-radius: 999px;
+  line-height: 1.2;
 }
 
 .hero-panel,
@@ -315,7 +329,7 @@ h1 {
 
 .signal {
   position: relative;
-  padding: 1rem;
+  padding: 1rem 1rem 1.05rem;
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -323,13 +337,18 @@ h1 {
 
 .signal small {
   display: block;
-  color: var(--muted);
-  margin-bottom: 0.2rem;
+  color: var(--accent);
+  margin-bottom: 0.28rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .signal strong {
   display: block;
   font-size: 1rem;
+  line-height: 1.35;
 }
 
 .section {
@@ -620,8 +639,11 @@ h1 {
   }
 
   h1 {
-    font-size: clamp(2.5rem, 13vw, 4rem);
-    max-width: 11ch;
+    margin: 0;
+    font-size: clamp(3rem, 6vw, 5.8rem);
+    line-height: 0.9;
+    letter-spacing: -0.055em;
+    max-width: 10.5ch;
   }
 
   .hero {
@@ -629,12 +651,21 @@ h1 {
   }
 
   .hero-proof {
-    flex-direction: column;
-    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1.4rem;
+    color: #d8e8db;
+    font-size: 0.92rem;
   }
 
   .footer-box {
     flex-direction: column;
     align-items: flex-start;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+    max-width: 100%;
   }
 }
