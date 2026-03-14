@@ -451,6 +451,7 @@ h1 {
 .about-intro .section-title {
   margin-top: 0.25rem;
   margin-bottom: 1.1rem;
+  line-height: 1.08;
 }
 
 .about-lead {
