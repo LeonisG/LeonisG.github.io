@@ -413,6 +413,24 @@ h1 {
   color: var(--muted);
 }
 
+.about-single {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.about-single h3 {
+  margin-top: 2rem;
+}
+
+.about-single ul {
+  margin-top: 0.6rem;
+  padding-left: 1.2rem;
+}
+
+.about-single li {
+  margin-bottom: 0.4rem;
+}
+
 .manifesto-lead {
   background:
     linear-gradient(180deg, rgba(185, 239, 69, 0.12), rgba(255, 255, 255, 0.03)),
