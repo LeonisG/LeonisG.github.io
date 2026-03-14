@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Leonis Project</title>
+  <meta name="description" content="Pensar mejor. Construir con criterio. Progresar con calma." />
+  <style>
+    :root {
+      --bg: #f6fbf7;
+      --bg-soft: #eef7f0;
+      --surface: #ffffff;
+      --text: #10261a;
+      --muted: #4a6757;
+      --line: #dbeadd;
+      --green-900: #0f2f20;
+      --green-800: #184a31;
+      --green-700: #216042;
+      --green-500: #4e9a72;
+      --green-300: #b8dec4;
+      --green-200: #d9efe0;
+      --shadow: 0 10px 30px rgba(16, 38, 26, 0.08);
+      --radius: 18px;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top left, #ffffff 0%, var(--bg) 50%, var(--bg-soft) 100%);
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: min(var(--max), calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(14px);
+      background: rgba(246, 251, 247, 0.78);
+      border-bottom: 1px solid rgba(219, 234, 221, 0.8);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 72px;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: var(--green-900);
+      display: grid;
+      place-items: center;
+      box-shadow: var(--shadow);
+    }
+
+    .brand-mark svg { width: 22px; height: 22px; }
+
+    .nav-links {
+      display: flex;
+      gap: 1.2rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      padding: 0.9rem 1.15rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 600;
+      transition: 0.2s ease;
+    }
+
+    .cta-primary {
+      background: var(--green-900);
+      color: white;
+      box-shadow: var(--shadow);
+    }
+
+    .cta-primary:hover { background: var(--green-800); }
+    .cta-secondary {
+      background: rgba(255,255,255,0.7);
+      color: var(--green-900);
+      border-color: var(--line);
+    }
+
+    .hero {
+      padding: 5rem 0 3.5rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.9fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.45rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.72);
+      border: 1px solid var(--line);
+      color: var(--green-800);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.6rem, 5vw, 5rem);
+      line-height: 0.96;
+      letter-spacing: -0.04em;
+    }
+
+    .hero p {
+      margin: 1.2rem 0 0;
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 62ch;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 0.85rem;
+      margin-top: 1.7rem;
+      flex-wrap: wrap;
+    }
+
+    .panel {
+      background: linear-gradient(180deg, rgba(255,255,255,0.92) 0%, rgba(238,247,240,0.88) 100%);
+      border: 1px solid var(--line);
+      border-radius: calc(var(--radius) + 6px);
+      padding: 1.4rem;
+      box-shadow: var(--shadow);
+    }
+
+    .signal-grid {
+      display: grid;
+      gap: 0.8rem;
+    }
+
+    .signal {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 1rem;
+    }
+
+    .signal small {
+      display: block;
+      color: var(--muted);
+      margin-bottom: 0.25rem;
+    }
+
+    .signal strong {
+      display: block;
+      font-size: 1rem;
+    }
+
+    .section {
+      padding: 2.5rem 0;
+    }
+
+    .section-title {
+      margin: 0 0 1rem;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      letter-spacing: -0.03em;
+    }
+
+    .section-copy {
+      color: var(--muted);
+      max-width: 72ch;
+      margin-bottom: 1.5rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.86);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.2rem;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 { margin: 0 0 0.5rem; }
+    .card p { margin: 0; color: var(--muted); }
+
+    .manifesto {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 1rem;
+      align-items: stretch;
+    }
+
+    .manifesto-quote {
+      background: var(--green-900);
+      color: white;
+      border-radius: 24px;
+      padding: 1.6rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 280px;
+    }
+
+    .manifesto-quote .big {
+      font-size: clamp(1.6rem, 3vw, 2.5rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+
+    .manifesto-list {
+      background: rgba(255,255,255,0.86);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 1.4rem;
+      box-shadow: var(--shadow);
+    }
+
+    .manifesto-item {
+      padding: 0.95rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .manifesto-item:last-child { border-bottom: none; }
+    .manifesto-item strong { display: block; margin-bottom: 0.3rem; }
+    .manifesto-item span { color: var(--muted); }
+
+    .subscribe {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 1rem;
+      align-items: center;
+      background: linear-gradient(135deg, var(--green-900), var(--green-800));
+      color: white;
+      border-radius: 28px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+    }
+
+    .subscribe p { color: rgba(255,255,255,0.82); }
+
+    .form {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 22px;
+      padding: 1rem;
+    }
+
+    .input {
+      flex: 1 1 240px;
+      padding: 0.95rem 1rem;
+      border-radius: 14px;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+    }
+
+    .footer {
+      padding: 2rem 0 3rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      border-top: 1px solid var(--line);
+      padding-top: 1.2rem;
+    }
+
+    @media (max-width: 920px) {
+      .hero-grid,
+      .grid-3,
+      .manifesto,
+      .subscribe {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links { display: none; }
+    }
+
+    @media (max-width: 640px) {
+      .hero { padding-top: 3.5rem; }
+      .nav-inner { min-height: 64px; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#inicio">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L14.7 9.3L22 12L14.7 14.7L12 22L9.3 14.7L2 12L9.3 9.3L12 2Z" fill="#E4F1E7"/>
+            <path d="M12 5.2L13.4 10.6L18.8 12L13.4 13.4L12 18.8L10.6 13.4L5.2 12L10.6 10.6L12 5.2Z" fill="#4E9A72"/>
+          </svg>
+        </span>
+        <span>The Leonis Project</span>
+      </a>
+      <div class="nav-links">
+        <a href="#manifiesto">Manifiesto</a>
+        <a href="#contenido">Contenido</a>
+        <a href="#suscribete">Suscripción</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Minimal tech • GitHub Pages ready</div>
+          <h1>Pensar mejor.<br>Construir con criterio.<br>Progresar con calma.</h1>
+          <p>
+            The Leonis Project es un laboratorio editorial sobre micro-negocios,
+            sistemas de ingresos e independencia financiera progresiva.
+            Sin pelotazos. Sin humo. Con contexto real.
+          </p>
+          <div class="hero-actions">
+            <a class="cta cta-primary" href="#suscribete">Unirme a la lista</a>
+            <a class="cta cta-secondary" href="#manifiesto">Ver manifiesto</a>
+          </div>
+        </div>
+
+        <aside class="panel">
+          <div class="signal-grid">
+            <div class="signal">
+              <small>Enfoque</small>
+              <strong>Micro-negocios reales</strong>
+            </div>
+            <div class="signal">
+              <small>Método</small>
+              <strong>Análisis + Laboratorio IA</strong>
+            </div>
+            <div class="signal">
+              <small>Horizonte</small>
+              <strong>Independencia progresiva</strong>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="contenido">
+      <div class="container">
+        <h2 class="section-title">Qué encontrarás</h2>
+        <p class="section-copy">
+          Una base de conocimiento viva sobre modelos de negocio pequeños, sostenibles y compatibles con una vida real.
+        </p>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Análisis Leonis</h3>
+            <p>Desgloses sobrios de modelos de negocio, con economía realista, riesgos, fricción y encaje vital.</p>
+          </article>
+          <article class="card">
+            <h3>Laboratorio IA</h3>
+            <p>Simulaciones hiperrealistas, día a día, con perfiles humanos, límites de tiempo, energía e imprevistos.</p>
+          </article>
+          <article class="card">
+            <h3>Atlas de oportunidades</h3>
+            <p>Un mapa comparativo para entender qué modelos tienen sentido y cuáles no, según contexto y objetivos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="manifiesto">
+      <div class="container manifesto">
+        <div class="manifesto-quote">
+          <div>
+            <div class="big">No quiero hacer más por hacer más. Quiero hacer lo que tenga sentido.</div>
+          </div>
+          <div>Leonis existe para elegir mejor antes de comprometer tiempo, dinero y energía.</div>
+        </div>
+        <div class="manifesto-list">
+          <div class="manifesto-item">
+            <strong>El tiempo es el activo principal</strong>
+            <span>El dinero importa, pero el margen de tiempo importa más.</span>
+          </div>
+          <div class="manifesto-item">
+            <strong>No todo ingreso mejora tu vida</strong>
+            <span>Analizamos modelos desde su impacto real en tu energía, foco y estabilidad.</span>
+          </div>
+          <div class="manifesto-item">
+            <strong>Independencia progresiva</strong>
+            <span>La libertad financiera se construye con criterio, repetición y paciencia.</span>
+          </div>
+          <div class="manifesto-item">
+            <strong>Cada persona tiene un contexto distinto</strong>
+            <span>Un buen negocio es el que encaja contigo ahora, no el que funciona en Twitter.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="suscribete">
+      <div class="container subscribe">
+        <div>
+          <h2 class="section-title" style="margin-top:0;color:white;">Únete a The Leonis Project</h2>
+          <p>Un análisis por semana. Sin ruido. Sin promesas vacías. Solo modelos, sistemas y criterio.</p>
+        </div>
+        <form class="form">
+          <input class="input" type="email" placeholder="Tu email" aria-label="Tu email" />
+          <button class="cta cta-primary" type="button">Suscribirme</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© The Leonis Project</div>
+      <div>thinking about work, money and independence</div>
+    </div>
+  </footer>
+</body>
+</html>
