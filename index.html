@@ -3,35 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Leonis Project</title>
-  <meta name="description" content="Pensar mejor. Construir con criterio. Progresar con calma." />
+  <title>The Leonis Project | Micro negocios, criterio e independencia progresiva</title>
+  <meta
+    name="description"
+    content="The Leonis Project es una plataforma editorial sobre micro negocios sostenibles, sistemas de ingresos e independencia financiera progresiva. Un análisis semanal, un laboratorio con IA y una biblioteca construida con criterio."
+  />
+  <meta property="og:title" content="The Leonis Project" />
+  <meta
+    property="og:description"
+    content="Think better. Build wisely. Micro negocios sostenibles, análisis sobrios y laboratorio con agentes de IA."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/img/og-cover.jpg" />
+  <meta name="theme-color" content="#031d10" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #f6fbf7;
-      --bg-soft: #eef7f0;
-      --surface: #ffffff;
-      --text: #10261a;
-      --muted: #4a6757;
-      --line: #dbeadd;
-      --green-900: #0f2f20;
-      --green-800: #184a31;
-      --green-700: #216042;
-      --green-500: #4e9a72;
-      --green-300: #b8dec4;
-      --green-200: #d9efe0;
-      --shadow: 0 10px 30px rgba(16, 38, 26, 0.08);
-      --radius: 18px;
-      --max: 1120px;
+      --bg: #04160d;
+      --bg-2: #082214;
+      --surface: rgba(255, 255, 255, 0.06);
+      --surface-2: rgba(255, 255, 255, 0.08);
+      --surface-3: rgba(255, 255, 255, 0.03);
+      --text: #f5f7f4;
+      --muted: #b6c5ba;
+      --line: rgba(187, 255, 121, 0.16);
+      --line-strong: rgba(187, 255, 121, 0.28);
+      --accent: #b9ef45;
+      --accent-2: #88d839;
+      --accent-dark: #0d351e;
+      --shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+      --radius: 24px;
+      --max: 1180px;
     }
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top left, #ffffff 0%, var(--bg) 50%, var(--bg-soft) 100%);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 15% 15%, rgba(111, 255, 76, 0.18), transparent 28%),
+        radial-gradient(circle at 85% 75%, rgba(185, 239, 69, 0.12), transparent 26%),
+        linear-gradient(180deg, #04160d 0%, #071b11 36%, #05130c 100%);
       color: var(--text);
-      line-height: 1.55;
+      line-height: 1.6;
+      letter-spacing: -0.01em;
     }
 
     a { color: inherit; text-decoration: none; }
@@ -45,17 +64,17 @@
     .nav {
       position: sticky;
       top: 0;
-      z-index: 10;
-      backdrop-filter: blur(14px);
-      background: rgba(246, 251, 247, 0.78);
-      border-bottom: 1px solid rgba(219, 234, 221, 0.8);
+      z-index: 30;
+      backdrop-filter: blur(18px);
+      background: rgba(4, 22, 13, 0.72);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
     }
 
     .nav-inner {
+      min-height: 78px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      min-height: 72px;
       gap: 1rem;
     }
 
@@ -65,60 +84,73 @@
       gap: 0.85rem;
       font-weight: 700;
       letter-spacing: 0.02em;
+      white-space: nowrap;
     }
 
-    .brand-mark {
+    .brand img {
       width: 42px;
       height: 42px;
-      border-radius: 14px;
-      background: var(--green-900);
-      display: grid;
-      place-items: center;
-      box-shadow: var(--shadow);
+      object-fit: contain;
     }
-
-    .brand-mark svg { width: 22px; height: 22px; }
 
     .nav-links {
       display: flex;
-      gap: 1.2rem;
+      align-items: center;
+      gap: 1.25rem;
       color: var(--muted);
-      font-size: 0.95rem;
+      font-size: 0.96rem;
     }
+
+    .nav-links a:hover { color: var(--text); }
 
     .cta {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 0.55rem;
-      padding: 0.9rem 1.15rem;
+      padding: 0.95rem 1.2rem;
       border-radius: 999px;
+      font-weight: 700;
       border: 1px solid transparent;
-      font-weight: 600;
-      transition: 0.2s ease;
+      transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+      cursor: pointer;
     }
+
+    .cta:hover { transform: translateY(-1px); }
 
     .cta-primary {
-      background: var(--green-900);
-      color: white;
-      box-shadow: var(--shadow);
+      background: linear-gradient(135deg, var(--accent), #cbff67);
+      color: #06110b;
+      box-shadow: 0 12px 30px rgba(185, 239, 69, 0.2);
     }
 
-    .cta-primary:hover { background: var(--green-800); }
     .cta-secondary {
-      background: rgba(255,255,255,0.7);
-      color: var(--green-900);
-      border-color: var(--line);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text);
+      border-color: rgba(255, 255, 255, 0.08);
     }
 
     .hero {
-      padding: 5rem 0 3.5rem;
+      position: relative;
+      overflow: hidden;
+      padding: 4.25rem 0 2.5rem;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -10% -8% auto;
+      width: 58%;
+      height: 58%;
+      background: radial-gradient(circle, rgba(185, 239, 69, 0.16) 0%, rgba(185, 239, 69, 0.02) 48%, transparent 70%);
+      pointer-events: none;
+      filter: blur(8px);
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.25fr 0.9fr;
-      gap: 2rem;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 1.5rem;
       align-items: center;
     }
 
@@ -126,60 +158,117 @@
       display: inline-flex;
       align-items: center;
       gap: 0.55rem;
-      padding: 0.45rem 0.75rem;
+      padding: 0.45rem 0.8rem;
       border-radius: 999px;
-      background: rgba(255,255,255,0.72);
       border: 1px solid var(--line);
-      color: var(--green-800);
+      background: rgba(255, 255, 255, 0.04);
+      color: #d8e8db;
       font-size: 0.9rem;
       margin-bottom: 1rem;
     }
 
     h1 {
       margin: 0;
-      font-size: clamp(2.6rem, 5vw, 5rem);
-      line-height: 0.96;
-      letter-spacing: -0.04em;
+      font-size: clamp(3rem, 6vw, 5.8rem);
+      line-height: 0.92;
+      letter-spacing: -0.055em;
+      max-width: 10.5ch;
     }
 
-    .hero p {
-      margin: 1.2rem 0 0;
-      font-size: 1.1rem;
-      color: var(--muted);
+    .accent { color: var(--accent); }
+
+    .hero-copy {
+      margin-top: 1.3rem;
       max-width: 62ch;
+      color: var(--muted);
+      font-size: 1.08rem;
     }
+
+    .hero-copy strong { color: var(--text); }
 
     .hero-actions {
       display: flex;
+      flex-wrap: wrap;
       gap: 0.85rem;
       margin-top: 1.7rem;
-      flex-wrap: wrap;
     }
 
-    .panel {
-      background: linear-gradient(180deg, rgba(255,255,255,0.92) 0%, rgba(238,247,240,0.88) 100%);
-      border: 1px solid var(--line);
-      border-radius: calc(var(--radius) + 6px);
-      padding: 1.4rem;
+    .hero-proof {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-top: 1.2rem;
+      color: #d8e8db;
+      font-size: 0.92rem;
+    }
+
+    .hero-proof span {
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.03);
+      padding: 0.5rem 0.75rem;
+      border-radius: 999px;
+    }
+
+    .hero-panel,
+    .card,
+    .manifesto-card,
+    .subscribe,
+    .about,
+    .footer-box {
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.04));
       box-shadow: var(--shadow);
+      border-radius: var(--radius);
+    }
+
+    .hero-panel {
+      padding: 1.2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(185,239,69,0.08), transparent 45%),
+        linear-gradient(135deg, transparent 20%, rgba(255,255,255,0.03));
+      pointer-events: none;
+    }
+
+    .hero-logo {
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08);
+      margin-bottom: 1rem;
+      background: #031108;
+    }
+
+    .hero-logo img {
+      width: 100%;
+      min-height: 220px;
+      object-fit: cover;
+      object-position: center;
     }
 
     .signal-grid {
       display: grid;
-      gap: 0.8rem;
+      gap: 0.75rem;
     }
 
     .signal {
-      background: white;
-      border: 1px solid var(--line);
-      border-radius: 16px;
+      position: relative;
       padding: 1rem;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.05);
     }
 
     .signal small {
       display: block;
       color: var(--muted);
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.2rem;
     }
 
     .signal strong {
@@ -191,158 +280,231 @@
       padding: 2.5rem 0;
     }
 
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: end;
+      margin-bottom: 1.3rem;
+    }
+
     .section-title {
-      margin: 0 0 1rem;
-      font-size: clamp(1.6rem, 3vw, 2.4rem);
-      letter-spacing: -0.03em;
+      margin: 0;
+      font-size: clamp(1.75rem, 4vw, 2.8rem);
+      line-height: 1;
+      letter-spacing: -0.045em;
     }
 
     .section-copy {
+      margin: 0;
       color: var(--muted);
-      max-width: 72ch;
-      margin-bottom: 1.5rem;
+      max-width: 66ch;
     }
 
-    .grid-3 {
+    .grid-3,
+    .grid-2 {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
       gap: 1rem;
     }
 
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+
     .card {
-      background: rgba(255,255,255,0.86);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 1.2rem;
-      box-shadow: var(--shadow);
+      padding: 1.35rem;
     }
 
-    .card h3 { margin: 0 0 0.5rem; }
-    .card p { margin: 0; color: var(--muted); }
+    .card-kicker {
+      display: inline-block;
+      margin-bottom: 0.8rem;
+      padding: 0.32rem 0.6rem;
+      border-radius: 999px;
+      color: #d6ebcf;
+      background: rgba(185,239,69,0.08);
+      border: 1px solid rgba(185,239,69,0.14);
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
 
-    .manifesto {
+    .card h3 {
+      margin: 0 0 0.55rem;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .manifesto-wrap {
       display: grid;
       grid-template-columns: 0.9fr 1.1fr;
       gap: 1rem;
-      align-items: stretch;
     }
 
-    .manifesto-quote {
-      background: var(--green-900);
-      color: white;
-      border-radius: 24px;
-      padding: 1.6rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      min-height: 280px;
+    .manifesto-card {
+      padding: 1.5rem;
     }
 
-    .manifesto-quote .big {
-      font-size: clamp(1.6rem, 3vw, 2.5rem);
-      line-height: 1.05;
-      letter-spacing: -0.03em;
+    .manifesto-lead {
+      min-height: 100%;
+      background:
+        linear-gradient(180deg, rgba(185,239,69,0.12), rgba(255,255,255,0.03)),
+        rgba(255,255,255,0.04);
     }
 
-    .manifesto-list {
-      background: rgba(255,255,255,0.86);
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      padding: 1.4rem;
-      box-shadow: var(--shadow);
+    .manifesto-lead .quote {
+      font-size: clamp(1.7rem, 3vw, 2.7rem);
+      line-height: 1.03;
+      letter-spacing: -0.04em;
+      margin: 0 0 1rem;
+      max-width: 12ch;
+    }
+
+    .manifesto-points {
+      display: grid;
+      gap: 0.85rem;
     }
 
     .manifesto-item {
       padding: 0.95rem 0;
-      border-bottom: 1px solid var(--line);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
-    .manifesto-item:last-child { border-bottom: none; }
-    .manifesto-item strong { display: block; margin-bottom: 0.3rem; }
+    .manifesto-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+    .manifesto-item strong {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-size: 1rem;
+    }
+
     .manifesto-item span { color: var(--muted); }
 
     .subscribe {
+      padding: 1.5rem;
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-columns: 1.05fr 0.95fr;
       gap: 1rem;
       align-items: center;
-      background: linear-gradient(135deg, var(--green-900), var(--green-800));
-      color: white;
-      border-radius: 28px;
-      padding: 1.5rem;
-      box-shadow: var(--shadow);
+      background:
+        radial-gradient(circle at top right, rgba(185,239,69,0.14), transparent 30%),
+        linear-gradient(135deg, #082214 0%, #0c2e1a 100%);
     }
 
-    .subscribe p { color: rgba(255,255,255,0.82); }
+    .subscribe p {
+      color: #d9e7db;
+      margin-bottom: 0;
+    }
 
     .form {
       display: flex;
-      gap: 0.75rem;
       flex-wrap: wrap;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.16);
-      border-radius: 22px;
+      gap: 0.75rem;
       padding: 1rem;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
     }
 
     .input {
       flex: 1 1 240px;
-      padding: 0.95rem 1rem;
+      min-height: 54px;
       border-radius: 14px;
-      border: none;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.94);
+      padding: 0.95rem 1rem;
+      font: inherit;
+      color: #09120c;
       outline: none;
-      font-size: 1rem;
     }
+
+    .form-note {
+      width: 100%;
+      color: #dce7dd;
+      font-size: 0.88rem;
+      opacity: 0.88;
+    }
+
+    .about {
+      padding: 1.5rem;
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 1rem;
+      align-items: start;
+    }
+
+    .about-panel {
+      padding: 1rem;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .about-panel p,
+    .about-panel li {
+      color: var(--muted);
+    }
+
+    .about-panel ul {
+      padding-left: 1rem;
+      margin: 0.8rem 0 0;
+    }
+
+    .about-panel li + li { margin-top: 0.45rem; }
 
     .footer {
       padding: 2rem 0 3rem;
-      color: var(--muted);
-      font-size: 0.95rem;
     }
 
-    .footer-inner {
+    .footer-box {
+      padding: 1rem 1.1rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 1rem;
-      border-top: 1px solid var(--line);
-      padding-top: 1.2rem;
+      color: var(--muted);
+      font-size: 0.94rem;
     }
 
-    @media (max-width: 920px) {
+    @media (max-width: 980px) {
       .hero-grid,
       .grid-3,
-      .manifesto,
-      .subscribe {
+      .grid-2,
+      .manifesto-wrap,
+      .subscribe,
+      .about {
         grid-template-columns: 1fr;
       }
 
       .nav-links { display: none; }
+      h1 { max-width: 12ch; }
+      .section-head { align-items: start; flex-direction: column; }
     }
 
     @media (max-width: 640px) {
-      .hero { padding-top: 3.5rem; }
-      .nav-inner { min-height: 64px; }
-      .footer-inner { flex-direction: column; align-items: flex-start; }
+      .hero { padding-top: 3.25rem; }
+      .nav-inner { min-height: 68px; }
+      .brand span:last-child { font-size: 0.95rem; }
+      .footer-box { flex-direction: column; align-items: flex-start; }
+      h1 { font-size: clamp(2.5rem, 13vw, 4rem); }
     }
   </style>
 </head>
 <body>
   <nav class="nav">
     <div class="container nav-inner">
-      <a class="brand" href="#inicio">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2L14.7 9.3L22 12L14.7 14.7L12 22L9.3 14.7L2 12L9.3 9.3L12 2Z" fill="#E4F1E7"/>
-            <path d="M12 5.2L13.4 10.6L18.8 12L13.4 13.4L12 18.8L10.6 13.4L5.2 12L10.6 10.6L12 5.2Z" fill="#4E9A72"/>
-          </svg>
-        </span>
+      <a class="brand" href="#inicio" aria-label="The Leonis Project, ir al inicio">
+        <img src="assets/img/logo-mark.png" alt="Logo de The Leonis Project" />
         <span>The Leonis Project</span>
       </a>
+
       <div class="nav-links">
-        <a href="#manifiesto">Manifiesto</a>
         <a href="#contenido">Contenido</a>
-        <a href="#suscribete">Suscripción</a>
+        <a href="#manifiesto">Manifiesto</a>
+        <a href="#laboratorio">Laboratorio</a>
+        <a href="#about">About</a>
+        <a class="cta cta-primary" href="#suscribete">Newsletter</a>
       </div>
     </div>
   </nav>
@@ -351,32 +513,41 @@
     <section class="hero" id="inicio">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow">Minimal tech • GitHub Pages ready</div>
-          <h1>Pensar mejor.<br>Construir con criterio.<br>Progresar con calma.</h1>
-          <p>
-            The Leonis Project es un laboratorio editorial sobre micro-negocios,
-            sistemas de ingresos e independencia financiera progresiva.
-            Sin pelotazos. Sin humo. Con contexto real.
+          <div class="eyebrow">Un micro negocio analizado cada semana · Sin humo · Con criterio</div>
+          <h1>Think better.<br><span class="accent">Build wisely.</span></h1>
+          <p class="hero-copy">
+            <strong>The Leonis Project</strong> es una plataforma editorial sobre micro negocios pequeños,
+            sostenibles y compatibles con una vida real. Aquí no se persiguen pelotazos:
+            se estudian modelos, se prueban ideas y se construyen sistemas para lograr
+            independencia financiera progresiva.
           </p>
           <div class="hero-actions">
-            <a class="cta cta-primary" href="#suscribete">Unirme a la lista</a>
-            <a class="cta cta-secondary" href="#manifiesto">Ver manifiesto</a>
+            <a class="cta cta-primary" href="#suscribete">Quiero recibir la newsletter</a>
+            <a class="cta cta-secondary" href="#manifiesto">Leer el manifiesto</a>
+          </div>
+          <div class="hero-proof" aria-label="Señales del proyecto">
+            <span>1 análisis semanal</span>
+            <span>Laboratorio con agentes de IA</span>
+            <span>Base de conocimiento en construcción</span>
           </div>
         </div>
 
-        <aside class="panel">
+        <aside class="hero-panel">
+          <div class="hero-logo">
+            <img src="assets/img/logo-hero.png" alt="Identidad visual de The Leonis Project" />
+          </div>
           <div class="signal-grid">
             <div class="signal">
-              <small>Enfoque</small>
-              <strong>Micro-negocios reales</strong>
+              <small>Newsletter</small>
+              <strong>Un micro negocio por semana, analizado con honestidad.</strong>
             </div>
             <div class="signal">
-              <small>Método</small>
-              <strong>Análisis + Laboratorio IA</strong>
+              <small>Laboratorio Leonis</small>
+              <strong>Experimentos y simulaciones con agentes de IA bajo fricción real.</strong>
             </div>
             <div class="signal">
-              <small>Horizonte</small>
-              <strong>Independencia progresiva</strong>
+              <small>Objetivo</small>
+              <strong>Diseñar sistemas de ingresos con más coherencia, margen y tiempo.</strong>
             </div>
           </div>
         </aside>
@@ -385,74 +556,155 @@
 
     <section class="section" id="contenido">
       <div class="container">
-        <h2 class="section-title">Qué encontrarás</h2>
-        <p class="section-copy">
-          Una base de conocimiento viva sobre modelos de negocio pequeños, sostenibles y compatibles con una vida real.
-        </p>
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">Qué vas a encontrar aquí</h2>
+            <p class="section-copy">
+              Una arquitectura editorial pensada para alguien que quiere entender mejor qué construir,
+              por qué construirlo y qué coste real tiene en tiempo, energía y vida.
+            </p>
+          </div>
+        </div>
+
         <div class="grid-3">
           <article class="card">
+            <span class="card-kicker">Newsletter</span>
             <h3>Análisis Leonis</h3>
-            <p>Desgloses sobrios de modelos de negocio, con economía realista, riesgos, fricción y encaje vital.</p>
+            <p>
+              Cada semana, un micro negocio desglosado con enfoque realista: barreras de entrada,
+              economía, riesgos, escalabilidad, encaje vital y veredicto Leonis.
+            </p>
           </article>
-          <article class="card">
-            <h3>Laboratorio IA</h3>
-            <p>Simulaciones hiperrealistas, día a día, con perfiles humanos, límites de tiempo, energía e imprevistos.</p>
+
+          <article class="card" id="laboratorio">
+            <span class="card-kicker">Laboratorio</span>
+            <h3>Agentes de IA y simulación</h3>
+            <p>
+              Un entorno para probar ideas en condiciones más cercanas a la realidad: perfiles concretos,
+              tiempo limitado, energía finita, incertidumbre e imprevistos.
+            </p>
           </article>
+
           <article class="card">
+            <span class="card-kicker">Biblioteca</span>
             <h3>Atlas de oportunidades</h3>
-            <p>Un mapa comparativo para entender qué modelos tienen sentido y cuáles no, según contexto y objetivos.</p>
+            <p>
+              Una base de conocimiento viva para comparar modelos, detectar patrones y acumular criterio,
+              no solo información suelta.
+            </p>
           </article>
         </div>
       </div>
     </section>
 
     <section class="section" id="manifiesto">
-      <div class="container manifesto">
-        <div class="manifesto-quote">
-          <div>
-            <div class="big">No quiero hacer más por hacer más. Quiero hacer lo que tenga sentido.</div>
-          </div>
-          <div>Leonis existe para elegir mejor antes de comprometer tiempo, dinero y energía.</div>
+      <div class="container manifesto-wrap">
+        <div class="manifesto-card manifesto-lead">
+          <p class="quote">No todo ingreso mejora tu vida. No todo negocio merece tu tiempo.</p>
+          <p>
+            Leonis nace para pensar mejor antes de comprometer tiempo, dinero y energía.
+            La pregunta no es solo cuánto puede ganar un modelo. La pregunta es qué tipo de vida exige.
+          </p>
         </div>
-        <div class="manifesto-list">
+
+        <div class="manifesto-card manifesto-points">
           <div class="manifesto-item">
-            <strong>El tiempo es el activo principal</strong>
-            <span>El dinero importa, pero el margen de tiempo importa más.</span>
+            <strong>La independencia no se improvisa</strong>
+            <span>Se construye gradualmente, con paciencia, repetición y decisiones mejor pensadas.</span>
           </div>
           <div class="manifesto-item">
-            <strong>No todo ingreso mejora tu vida</strong>
-            <span>Analizamos modelos desde su impacto real en tu energía, foco y estabilidad.</span>
+            <strong>El tiempo es el activo central</strong>
+            <span>No buscamos solo rentabilidad. Buscamos sistemas que no destruyan margen vital.</span>
           </div>
           <div class="manifesto-item">
-            <strong>Independencia progresiva</strong>
-            <span>La libertad financiera se construye con criterio, repetición y paciencia.</span>
+            <strong>La realidad importa más que el discurso</strong>
+            <span>Se valora la fricción real: clientes, energía, consistencia, contexto y dificultad operativa.</span>
           </div>
           <div class="manifesto-item">
-            <strong>Cada persona tiene un contexto distinto</strong>
-            <span>Un buen negocio es el que encaja contigo ahora, no el que funciona en Twitter.</span>
+            <strong>Los buenos modelos son coherentes</strong>
+            <span>Un negocio interesante es aquel que puede sostenerse con vida real, no solo en teoría.</span>
+          </div>
+          <div class="manifesto-item">
+            <strong>El criterio es una ventaja acumulativa</strong>
+            <span>Entender qué no construir también es progreso. Elegir mejor ahorra años.</span>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid-2">
+        <article class="card">
+          <span class="card-kicker">Cómo funciona la newsletter</span>
+          <h3>Una entrega semanal, bien enfocada</h3>
+          <p>
+            Recibirás un análisis por semana de un micro negocio concreto. No una recopilación superficial,
+            sino una pieza diseñada para ayudarte a evaluar si ese modelo tiene sentido o no.
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="card-kicker">Qué viene después</span>
+          <h3>Landing hoy. Ecosistema mañana.</h3>
+          <p>
+            Esta página es el punto de entrada: newsletter, manifiesto, laboratorio y archivo. Con el tiempo,
+            se convertirá en una biblioteca navegable de modelos, simulaciones y decisiones de diseño.
+          </p>
+        </article>
       </div>
     </section>
 
     <section class="section" id="suscribete">
       <div class="container subscribe">
         <div>
-          <h2 class="section-title" style="margin-top:0;color:white;">Únete a The Leonis Project</h2>
-          <p>Un análisis por semana. Sin ruido. Sin promesas vacías. Solo modelos, sistemas y criterio.</p>
+          <h2 class="section-title" style="margin-top:0;">Únete a la newsletter de Leonis</h2>
+          <p>
+            Un micro negocio a la semana. Sin ruido. Sin promesas vacías. Solo análisis sobrios,
+            sistemas de ingresos y una forma más inteligente de pensar el trabajo, el dinero y la independencia.
+          </p>
         </div>
-        <form class="form">
-          <input class="input" type="email" placeholder="Tu email" aria-label="Tu email" />
-          <button class="cta cta-primary" type="button">Suscribirme</button>
+
+        <form class="form" action="#" method="post">
+          <input class="input" type="email" name="email" placeholder="Tu email" aria-label="Tu email" required />
+          <button class="cta cta-primary" type="submit">Suscribirme</button>
+          <div class="form-note">Más adelante puedes conectar este formulario con Buttondown, Beehiiv, ConvertKit o MailerLite.</div>
         </form>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container about">
+        <div class="about-panel">
+          <span class="card-kicker">About</span>
+          <h3>Sobre el proyecto</h3>
+          <p>
+            The Leonis Project explora modelos de negocio pequeños, sostenibles y coherentes para construir
+            independencia financiera progresiva. El foco no está en perseguir más, sino en construir mejor.
+          </p>
+        </div>
+
+        <div class="about-panel">
+          <span class="card-kicker">Founder note</span>
+          <h3>Sobre mí</h3>
+          <p>
+            Esta sección puede evolucionar hacia una presentación más personal: quién eres, por qué nace Leonis,
+            qué has observado sobre trabajo, dinero y libertad de tiempo, y por qué decidiste documentar el proceso.
+          </p>
+          <ul>
+            <li>Qué te llevó a crear el proyecto.</li>
+            <li>Qué tipo de preguntas te obsesionan.</li>
+            <li>Qué promete Leonis y qué no promete.</li>
+            <li>Por qué la paciencia y el criterio son parte del método.</li>
+          </ul>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container footer-inner">
+    <div class="container footer-box">
       <div>© The Leonis Project</div>
-      <div>thinking about work, money and independence</div>
+      <div>Think better. Build wisely.</div>
     </div>
   </footer>
 </body>
