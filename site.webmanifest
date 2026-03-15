@@ -1,0 +1,25 @@
+{
+  "name": "The Leonis Project",
+  "short_name": "Leonis",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#04160d",
+  "theme_color": "#031d10",
+  "icons": [
+    {
+      "src": "/assets/img/favicon/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/favicon/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/favicon/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    }
+  ]
+}
