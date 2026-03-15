@@ -202,6 +202,18 @@ input {
   border-color: rgba(255, 255, 255, 0.08);
 }
 
+.nav-menu .cta-primary,
+.hero-actions .cta-primary,
+.form .cta-primary {
+  color: #06110b;
+}
+
+.nav-menu .cta-primary:hover,
+.hero-actions .cta-primary:hover,
+.form .cta-primary:hover {
+  color: #06110b;
+}
+
 .hero {
   position: relative;
   overflow: hidden;
