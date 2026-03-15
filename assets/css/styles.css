@@ -127,8 +127,20 @@ input {
   font-size: 0.96rem;
 }
 
-.nav-menu a:hover {
+.nav-menu a:not(.cta-primary):hover {
   color: var(--text);
+}
+
+.cta-primary,
+.cta-primary:hover,
+.cta-primary:focus-visible,
+.cta-primary:active,
+.cta-primary:visited,
+.nav-menu a.cta-primary,
+.nav-menu a.cta-primary:hover,
+.nav-menu a.cta-primary:focus-visible,
+.nav-menu a.cta-primary:active {
+  color: #06110b;
 }
 
 .nav-toggle {
