@@ -331,7 +331,7 @@
           </p>
         </div>
 
-        <form class="form" action="https://api.beehiiv.com/v2/publications/pub_dcf08977-4a21-4e8f-bd3d-7e6e15c5b85b/subscriptions" method="post">
+        <form class="form" id="subscribe-form" novalidate>
           <label class="sr-only" for="email">Tu email</label>
           <input
             class="input"
@@ -341,13 +341,10 @@
             placeholder="Tu email"
             required
           />
-          <input type="hidden" name="reactivate_existing" value="true" />
-          <input type="hidden" name="send_welcome_email" value="true" />
-
           <button class="cta cta-primary" type="submit">Suscribirme</button>
-          
+                
           <p class="form-note">
-            Más adelante puedes conectar este formulario con Buttondown, Beehiiv, ConvertKit o MailerLite.
+            Un análisis semanal. Sin ruido. Sin promesas vacías.
           </p>
           <p class="form-message" id="form-message" aria-live="polite"></p>
         </form>

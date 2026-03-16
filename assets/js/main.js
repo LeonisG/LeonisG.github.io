@@ -21,25 +21,51 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if (form && emailInput && formMessage) {
-    form.addEventListener("submit", (event) => {
+    form.addEventListener("submit", async (event) => {
       event.preventDefault();
-
+    
       const email = emailInput.value.trim();
       const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-
+    
       if (!email) {
         formMessage.textContent = "Introduce tu email para continuar.";
         return;
       }
-
+    
       if (!isValid) {
         formMessage.textContent = "Parece que el email no es válido.";
         return;
       }
-
-      formMessage.textContent =
-        "Todo listo. Cuando conectes tu herramienta de email marketing, este formulario ya tendrá la base preparada.";
-      form.reset();
+    
+      formMessage.textContent = "Enviando...";
+    
+      try {
+        const response = await fetch(
+          "https://leonis-worker.adrianleonisgarcia.workers.dev/subscribe",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ email })
+          }
+        );
+      
+        const data = await response.json();
+      
+        if (!response.ok) {
+          formMessage.textContent =
+            data.error || "No se pudo completar la suscripción.";
+          return;
+        }
+      
+        formMessage.textContent =
+          "Suscripción completada. Revisa tu correo si hay confirmación pendiente.";
+        form.reset();
+      } catch (error) {
+        formMessage.textContent =
+          "Ha ocurrido un error al conectar con la newsletter.";
+      }
     });
   }
 
