@@ -52,6 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
         );
       
         const data = await response.json();
+        console.log("Worker response:", data);
       
         if (!response.ok) {
           formMessage.textContent =
@@ -63,6 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
           "Suscripción completada. Revisa tu correo si hay confirmación pendiente.";
         form.reset();
       } catch (error) {
+        console.error("Newsletter error:", error);
         formMessage.textContent =
           "Ha ocurrido un error al conectar con la newsletter.";
       }
