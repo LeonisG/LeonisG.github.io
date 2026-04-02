@@ -216,26 +216,31 @@
       padding: 4.25rem 0 2.5rem;
     }
 
-    .hero::before {
+    .laboratory-hero {
+      padding-top: 4.5rem;
+    }
+
+    .laboratory-hero::before {
       content: "";
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(180deg, rgba(185,239,69,0.06), transparent 22%),
-        radial-gradient(circle at 80% 20%, rgba(185, 239, 69, 0.16), transparent 24%);
+        radial-gradient(circle at 18% 22%, rgba(185,239,69,0.16), transparent 22%),
+        radial-gradient(circle at 84% 18%, rgba(185,239,69,0.12), transparent 24%),
+        linear-gradient(180deg, rgba(185,239,69,0.05), transparent 26%);
       pointer-events: none;
     }
 
-    .hero-grid {
+    .laboratory-hero-shell {
       position: relative;
       display: grid;
-      grid-template-columns: 1.08fr 0.92fr;
-      gap: 1rem;
+      grid-template-columns: 1.02fr 0.98fr;
+      gap: 1.2rem;
       align-items: stretch;
     }
 
-    .hero-copy-block,
-    .hero-panel,
+    .laboratory-hero-copy,
+    .laboratory-hero-stage,
     .panel,
     .project-card,
     .method-card,
@@ -246,38 +251,15 @@
       border-radius: var(--radius);
     }
 
-    .hero-copy-block {
-      padding: 1.6rem;
+    .laboratory-hero-copy {
+      padding: 1.7rem;
       min-height: 100%;
     }
 
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.55rem;
-      padding: 0.45rem 0.8rem;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.04);
-      color: #d8e8db;
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(3rem, 6vw, 5.4rem);
-      line-height: 0.92;
-      letter-spacing: -0.055em;
-      max-width: 11ch;
-    }
-
-    .accent { color: var(--accent); }
-
     .hero-subtitle {
       margin: 1rem 0 0;
-      max-width: 36ch;
-      font-size: clamp(1.05rem, 2vw, 1.3rem);
+      max-width: 38ch;
+      font-size: clamp(1.08rem, 2vw, 1.34rem);
       line-height: 1.28;
       letter-spacing: -0.02em;
       color: #dce7dd;
@@ -317,119 +299,164 @@
       line-height: 1.2;
     }
 
-    .hero-panel {
-      padding: 1.2rem;
+    .laboratory-hero-stage {
+      padding: 1.15rem;
       position: relative;
       overflow: hidden;
-      display: grid;
-      gap: 1rem;
-    }
-
-    .hero-panel::before {
-      content: "";
-      position: absolute;
-      inset: 0;
       background:
-        linear-gradient(180deg, rgba(185,239,69,0.08), transparent 45%),
-        linear-gradient(135deg, transparent 20%, rgba(255,255,255,0.03));
-      pointer-events: none;
+        radial-gradient(circle at top right, rgba(185,239,69,0.12), transparent 24%),
+        linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.035));
     }
 
-    .hero-visual {
+    .stage-frame {
       position: relative;
-      min-height: 280px;
-      border-radius: 22px;
-      overflow: hidden;
+      min-height: 100%;
+      border-radius: 24px;
       border: 1px solid rgba(255,255,255,0.08);
       background:
-        radial-gradient(circle at 25% 20%, rgba(185,239,69,0.22), transparent 20%),
-        radial-gradient(circle at 72% 65%, rgba(185,239,69,0.14), transparent 22%),
-        linear-gradient(180deg, #092217 0%, #0d2f1e 100%);
+        radial-gradient(circle at 18% 24%, rgba(185,239,69,0.14), transparent 20%),
+        radial-gradient(circle at 82% 72%, rgba(185,239,69,0.1), transparent 24%),
+        linear-gradient(180deg, #0a2216 0%, #0e2b1d 100%);
+      overflow: hidden;
+      padding: 1.2rem;
     }
 
-    .hero-visual::before {
+    .stage-frame::before {
       content: "";
       position: absolute;
       inset: 0;
       background-image:
-        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
-      background-size: 38px 38px;
-      opacity: 0.32;
+        linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+      background-size: 34px 34px;
+      opacity: 0.3;
+      pointer-events: none;
     }
 
-    .hero-visual-card {
-      position: absolute;
-      border: 1px solid rgba(255,255,255,0.08);
-      background: rgba(4, 22, 13, 0.45);
-      box-shadow: 0 18px 40px rgba(0,0,0,0.18);
-      backdrop-filter: blur(8px);
-      border-radius: 20px;
-      padding: 1rem;
-    }
-
-    .hero-visual-card strong {
-      display: block;
-      margin-bottom: 0.3rem;
-      font-size: 1rem;
-    }
-
-    .hero-visual-card small {
-      display: block;
-      color: #d6e0d7;
-      line-height: 1.35;
-    }
-
-    .card-a {
-      width: 52%;
-      top: 10%;
-      left: 8%;
-    }
-
-    .card-b {
-      width: 48%;
-      top: 48%;
-      right: 8%;
-    }
-
-    .hero-visual-line {
-      position: absolute;
-      left: 42%;
-      top: 32%;
-      width: 21%;
-      height: 2px;
-      background: linear-gradient(90deg, rgba(185,239,69,0.15), rgba(185,239,69,0.7));
-      transform: rotate(18deg);
-      box-shadow: 0 0 18px rgba(185,239,69,0.28);
-    }
-
-    .signal-grid {
-      display: grid;
-      gap: 0.75rem;
-    }
-
-    .signal {
+    .stage-label {
       position: relative;
-      padding: 1rem 1rem 1.05rem;
-      border-radius: 18px;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.05);
+      z-index: 1;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.42rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: #dce7dd;
+      font-size: 0.86rem;
+      margin-bottom: 1rem;
     }
 
-    .signal small {
+    .agent-card {
+      position: relative;
+      z-index: 1;
+      width: min(100%, 390px);
+      padding: 1.15rem;
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(6, 25, 16, 0.56);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.18);
+    }
+
+    .agent-card-left {
+      margin-right: auto;
+      margin-top: 0.4rem;
+    }
+
+    .agent-card-right {
+      margin-left: auto;
+      margin-top: 2.6rem;
+    }
+
+    .agent-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.8rem;
+      align-items: flex-start;
+      margin-bottom: 0.85rem;
+    }
+
+    .agent-top small {
       display: block;
       color: var(--accent);
-      margin-bottom: 0.28rem;
+      margin-bottom: 0.2rem;
       font-size: 0.78rem;
       font-weight: 700;
       letter-spacing: 0.04em;
       text-transform: uppercase;
     }
 
-    .signal strong {
+    .agent-top strong {
       display: block;
-      font-size: 1rem;
-      line-height: 1.35;
+      font-size: 1.15rem;
+      line-height: 1.15;
+    }
+
+    .agent-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.38rem 0.62rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: #dce7dd;
+      font-size: 0.8rem;
+      white-space: nowrap;
+    }
+
+    .agent-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .agent-traits {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin-top: 1rem;
+    }
+
+    .agent-traits span {
+      padding: 0.42rem 0.65rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      color: #e2ece3;
+      font-size: 0.82rem;
+    }
+
+    .vs-core {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      width: 74px;
+      height: 74px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: radial-gradient(circle, rgba(185,239,69,0.9), rgba(185,239,69,0.58));
+      color: #06110b;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      box-shadow: 0 0 22px rgba(185,239,69,0.3);
+      border: 4px solid rgba(9,34,23,0.9);
+    }
+
+    .stage-footnote {
+      position: relative;
+      z-index: 1;
+      margin-top: 1.1rem;
+      color: #d6e0d7;
+      max-width: 46ch;
+      font-size: 0.95rem;
+    }
+
+    .signal-grid {
+      display: none;
     }
 
     .section { padding: 2.7rem 0; }
@@ -650,7 +677,7 @@
     }
 
     @media (max-width: 1080px) {
-      .hero-grid,
+      .laboratory-hero-shell,
       .grid-3,
       .grid-2 {
         grid-template-columns: 1fr;
@@ -658,6 +685,10 @@
 
       .comparison-bar {
         grid-template-columns: repeat(2, 1fr);
+      }
+
+      .laboratory-hero-stage {
+        min-height: 620px;
       }
     }
 
@@ -713,8 +744,8 @@
       }
 
       .hero-proof { flex-direction: column; align-items: flex-start; }
-      .hero-copy-block,
-      .hero-panel,
+      .laboratory-hero-copy,
+      .laboratory-hero-stage,
       .panel,
       .quote-panel,
       .project-card,
@@ -724,16 +755,27 @@
       .project-footer,
       .footer-box { flex-direction: column; align-items: flex-start; }
 
-      .card-a,
-      .card-b {
-        width: calc(100% - 2rem);
-        left: 1rem;
-        right: 1rem;
+      .stage-frame {
+        padding: 1rem;
       }
 
-      .card-a { top: 8%; }
-      .card-b { top: auto; bottom: 8%; }
-      .hero-visual-line { display: none; }
+      .laboratory-hero-stage {
+        min-height: auto;
+      }
+
+      .agent-card {
+        width: 100%;
+      }
+
+      .agent-card-right {
+        margin-top: 3.2rem;
+      }
+
+      .vs-core {
+        width: 62px;
+        height: 62px;
+        font-size: 0.92rem;
+      }
     }
   </style>
 </head>
@@ -772,65 +814,84 @@
   </header>
 
   <main>
-    <section class="hero" id="inicio">
-      <div class="container hero-grid">
-        <div class="hero-copy-block reveal">
-          <div class="eyebrow">Laboratorio Leonis · perfiles simulados · fricción real</div>
+    <section class="hero laboratory-hero" id="inicio">
+      <div class="container laboratory-hero-shell reveal is-visible">
+        <div class="laboratory-hero-copy">
+          <div class="eyebrow">Laboratorio Leonis · simulación editorial · fricción real</div>
 
           <h1>
-            Donde <span class="accent">las ideas</span><br />
-            se enfrentan a<br />
-            una vida real.
+            El lugar donde <span class="accent">dos vidas</span><br />
+            ponen a prueba<br />
+            la misma idea.
           </h1>
 
           <p class="hero-subtitle">
-            Experimentos donde perfiles humanos simulados intentan construir modelos de negocio con tiempo limitado, energía finita y condiciones cercanas a la realidad.
+            El Laboratorio Leonis compara cómo un mismo modelo de negocio cambia por completo cuando se enfrenta a perfiles humanos distintos, con tiempo, energía, dinero y psicologías reales.
           </p>
 
           <p class="hero-copy">
-            <strong>El Laboratorio Leonis</strong> no prueba si una idea suena bien. Prueba qué ocurre cuando esa idea entra en contacto con una persona concreta: su trabajo, su dinero, sus dudas, su cansancio y sus decisiones imperfectas.
+            Aquí no se presentan ideas bonitas. Aquí se documenta lo que ocurre cuando un negocio entra en contacto con una vida concreta: cansancio, dudas, pequeñas decisiones, bloqueos, avances y aprendizaje acumulado.
           </p>
 
           <div class="hero-actions">
             <a class="cta cta-primary" href="#proyectos">Ver experimentos</a>
-            <a class="cta cta-secondary" href="#metodo">Cómo funciona</a>
+            <a class="cta cta-secondary" href="#metodo">Entender el sistema</a>
           </div>
 
           <div class="hero-proof" aria-label="Puntos clave del laboratorio">
+            <span>Experimentos construidos por proyectos</span>
             <span>Dos perfiles enfrentados al mismo modelo</span>
-            <span>Diarios narrativos día a día</span>
-            <span>Aprendizajes sobre encaje real</span>
+            <span>Diarios narrativos y comparación continua</span>
           </div>
         </div>
 
-        <aside class="hero-panel reveal">
-          <div class="hero-visual" aria-hidden="true">
-            <div class="hero-visual-card card-a">
-              <strong>Daniel · 34</strong>
-              <small>Empleado, pareja, tiempo escaso, capital limitado y una necesidad creciente de construir algo propio.</small>
+        <aside class="laboratory-hero-stage" aria-label="Comparación de perfiles del laboratorio">
+          <div class="stage-frame">
+            <div class="stage-label">Comparativa de perfiles</div>
+
+            <div class="agent-card agent-card-left">
+              <div class="agent-top">
+                <div>
+                  <small>Perfil A</small>
+                  <strong>Daniel · 34</strong>
+                </div>
+                <span class="agent-badge">Tiempo escaso</span>
+              </div>
+              <p>
+                Administrativo, pareja, 4.000€ de ahorro y una relación prudente con el riesgo. Quiere construir algo propio, pero llega con poca energía al final del día.
+              </p>
+              <div class="agent-traits">
+                <span>Trabajo 9–18</span>
+                <span>Capital limitado</span>
+                <span>Perfil prudente</span>
+              </div>
             </div>
-            <div class="hero-visual-line"></div>
-            <div class="hero-visual-card card-b">
-              <strong>Marta · 29</strong>
-              <small>Freelance, más flexibilidad y más energía, pero también una relación distinta con el riesgo y la incertidumbre.</small>
+
+            <div class="vs-core">
+              <span>VS</span>
             </div>
-          </div>
 
-          <div class="signal-grid">
-            <article class="signal">
-              <small>Modelo</small>
-              <strong>Un mismo negocio se pone a prueba bajo dos vidas distintas.</strong>
-            </article>
+            <div class="agent-card agent-card-right">
+              <div class="agent-top">
+                <div>
+                  <small>Perfil B</small>
+                  <strong>Marta · 29</strong>
+                </div>
+                <span class="agent-badge">Más flexibilidad</span>
+              </div>
+              <p>
+                Freelance en marketing, más margen horario y energía alta, pero ingresos variables y una mayor tolerancia a la incertidumbre. Avanza más rápido, aunque también se expone más.
+              </p>
+              <div class="agent-traits">
+                <span>Horario flexible</span>
+                <span>Ingresos variables</span>
+                <span>Perfil explorador</span>
+              </div>
+            </div>
 
-            <article class="signal">
-              <small>Dinámica</small>
-              <strong>Cada perfil escribe su propio diario y deja ver cómo piensa, duda y avanza.</strong>
-            </article>
-
-            <article class="signal">
-              <small>Objetivo</small>
-              <strong>Entender qué modelos encajan de verdad con una vida real y cuáles no.</strong>
-            </article>
+            <div class="stage-footnote">
+              El laboratorio observa qué ocurre cuando el mismo negocio se enfrenta a dos vidas distintas.
+            </div>
           </div>
         </aside>
       </div>
