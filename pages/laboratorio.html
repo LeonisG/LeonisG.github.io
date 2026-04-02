@@ -251,6 +251,20 @@
       border-radius: var(--radius);
     }
 
+    .laboratory-breadcrumb {
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.9;
+    }
+
+    .laboratory-title {
+      font-size: clamp(3.4rem, 6.5vw, 6.2rem);
+      line-height: 0.9;
+      letter-spacing: -0.055em;
+      max-width: 11ch;
+    }
+
     .laboratory-hero-copy {
       padding: 1.7rem;
       min-height: 100%;
@@ -817,12 +831,12 @@
     <section class="hero laboratory-hero" id="inicio">
       <div class="container laboratory-hero-shell reveal is-visible">
         <div class="laboratory-hero-copy">
-          <div class="eyebrow">Laboratorio Leonis · simulación editorial · fricción real</div>
+          <div class="eyebrow laboratory-breadcrumb">Laboratorio</div>
 
-          <h1>
-            El lugar donde <span class="accent">dos vidas</span><br />
+          <h1 class="laboratory-title">
+            Donde <span class="accent">dos vidas</span><br />
             ponen a prueba<br />
-            la misma idea.
+            la <span class="accent">misma idea</span>.
           </h1>
 
           <p class="hero-subtitle">
