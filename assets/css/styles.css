@@ -910,34 +910,49 @@ h1 {
 .laboratory-hero-banner-inner {
   position: relative;
   z-index: 1;
-  padding: 1.05rem 1.6rem 1.15rem;
+  padding: 1.1rem 1.6rem 1.2rem;
   text-align: center;
+  display: grid;
+  justify-items: center;
+  align-content: center;
 }
 
 .laboratory-banner-title {
   margin: 0;
-  line-height: 0.95;
-  letter-spacing: -0.06em;
+  line-height: 0.92;
+  letter-spacing: -0.065em;
 }
 
 .laboratory-banner-title-main {
   display: inline-block;
-  font-size: clamp(2.7rem, 6vw, 5rem);
-  font-weight: 750;
-  color: #f4f8f1;
+  font-size: clamp(3.4rem, 7.2vw, 5.8rem);
+  font-weight: 800;
   text-transform: uppercase;
+  color: #f4f8f1;
   text-shadow:
-    0 0 12px rgba(185, 239, 69, 0.1),
-    0 0 28px rgba(185, 239, 69, 0.08);
+    0 0 10px rgba(185, 239, 69, 0.08),
+    0 0 24px rgba(185, 239, 69, 0.06);
+  background: linear-gradient(
+    90deg,
+    #f4f8f1 0%,
+    #f4f8f1 62%,
+    #d7f48e 78%,
+    #b9ef45 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .laboratory-banner-subtitle {
-  margin: 0.45rem 0 0;
-  font-size: clamp(1.05rem, 2vw, 1.55rem);
-  line-height: 1.2;
-  letter-spacing: -0.025em;
+  margin: 0.55rem auto 0;
+  max-width: 30ch;
+  font-size: clamp(0.95rem, 1.6vw, 1.2rem);
+  line-height: 1.22;
+  letter-spacing: -0.02em;
   font-weight: 500;
-  color: #e5efe4;
+  color: #e3ece3;
+  text-align: center;
 }
 
 .laboratory-hero-shell {
@@ -1324,7 +1339,16 @@ h1 {
   }
 
   .laboratory-hero-banner-inner {
-    padding: 0.95rem 1.1rem 1rem;
+  padding: 1rem 1.1rem 1.05rem;
+  }
+
+  .laboratory-banner-title-main {
+    font-size: clamp(2.8rem, 9vw, 4.2rem);
+  }
+
+  .laboratory-banner-subtitle {
+    max-width: 28ch;
+    font-size: clamp(0.95rem, 2.4vw, 1.08rem);
   }
 
   .laboratory-copy-lead {
@@ -1350,19 +1374,20 @@ h1 {
   }
 
   .laboratory-hero-banner-inner {
-  padding: 0.9rem 0.9rem 0.95rem;
-}
-
-.laboratory-banner-title-main {
-  font-size: clamp(2rem, 11vw, 3rem);
-}
-
-.laboratory-banner-subtitle {
-  margin-top: 0.38rem;
-  font-size: clamp(0.95rem, 4.6vw, 1.15rem);
-  line-height: 1.22;
-}
-
+    padding: 0.95rem 0.9rem 1rem;
+  }
+  
+  .laboratory-banner-title-main {
+    font-size: clamp(2.1rem, 11vw, 3rem);
+    line-height: 0.95;
+  }
+  
+  .laboratory-banner-subtitle {
+    margin-top: 0.4rem;
+    max-width: 22ch;
+    font-size: clamp(0.9rem, 4.2vw, 1.02rem);
+    line-height: 1.24;
+  }
   .laboratory-hero-copy,
   .laboratory-hero-stage,
   .method-card,
