@@ -990,7 +990,7 @@ h1 {
 .laboratory-copy-lead {
   margin: 0;
   max-width: 18ch;
-  font-size: clamp(1.7rem, 2.45vw, 2.35rem);
+  font-size: clamp(1.5rem, 2.45vw, 2.35rem);
   line-height: 1.1;
   letter-spacing: -0.04em;
   color: var(--text);
@@ -1376,12 +1376,12 @@ h1 {
   .laboratory-hero-banner-inner {
     padding: 0.95rem 0.9rem 1rem;
   }
-  
+
   .laboratory-banner-title-main {
     font-size: clamp(2.1rem, 11vw, 3rem);
     line-height: 0.95;
   }
-  
+
   .laboratory-banner-subtitle {
     margin-top: 0.4rem;
     max-width: 22ch;
@@ -1399,7 +1399,7 @@ h1 {
 
   .laboratory-copy-lead {
     max-width: 100%;
-    font-size: clamp(1.4rem, 7vw, 1.9rem);
+    font-size: clamp(1.2rem, 7vw, 1.9rem);
     line-height: 1.12;
   }
 
