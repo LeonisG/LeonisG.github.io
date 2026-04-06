@@ -827,3 +827,430 @@ h1 {
     line-height: 1.12;
   }
 }
+
+/* =========================================================
+   LABORATORIO PAGE
+========================================================= */
+
+.laboratory-page .hero {
+  padding: 4.6rem 0 3rem;
+}
+
+.laboratory-page .hero::after {
+  width: 64%;
+  height: 64%;
+  right: -6%;
+  bottom: -10%;
+  background: radial-gradient(
+    circle,
+    rgba(185, 239, 69, 0.18) 0%,
+    rgba(185, 239, 69, 0.03) 48%,
+    transparent 72%
+  );
+}
+
+.laboratory-hero-shell {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.02fr 0.98fr;
+  gap: 1.2rem;
+  align-items: stretch;
+}
+
+.laboratory-hero-copy,
+.laboratory-hero-stage,
+.method-card,
+.project-card,
+.quote-panel {
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.04));
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+}
+
+.laboratory-hero-copy {
+  padding: 1.6rem;
+}
+
+.laboratory-breadcrumb {
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.92;
+}
+
+.laboratory-title {
+  margin: 0;
+  font-size: clamp(2.65rem, 5vw, 4.75rem);
+  line-height: 1.02;
+  letter-spacing: -0.055em;
+  max-width: 9.2ch;
+}
+
+.laboratory-title .accent {
+  color: var(--accent);
+}
+
+.laboratory-page .hero-subtitle {
+  max-width: 38ch;
+}
+
+.laboratory-hero-stage {
+  padding: 1.1rem;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top right, rgba(185,239,69,0.12), transparent 24%),
+    linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.035));
+}
+
+.stage-frame {
+  position: relative;
+  min-height: 100%;
+  border-radius: 24px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background:
+    radial-gradient(circle at 18% 24%, rgba(185,239,69,0.14), transparent 20%),
+    radial-gradient(circle at 82% 72%, rgba(185,239,69,0.10), transparent 24%),
+    linear-gradient(180deg, #0a2216 0%, #0e2b1d 100%);
+  overflow: hidden;
+  padding: 1.2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto;
+  gap: 0;
+}
+
+.stage-frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+  background-size: 34px 34px;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.stage-label {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.42rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #dce7dd;
+  font-size: 0.86rem;
+  margin-bottom: 1rem;
+  justify-self: start;
+}
+
+.agent-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 1.2rem;
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(6, 25, 16, 0.56);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.18);
+}
+
+.agent-card-left {
+  grid-row: 2 / 3;
+  margin-bottom: 2.2rem;
+}
+
+.agent-card-right {
+  grid-row: 3 / 4;
+  margin-top: 2.2rem;
+}
+
+.agent-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8rem;
+  align-items: flex-start;
+  margin-bottom: 0.85rem;
+}
+
+.agent-top small {
+  display: block;
+  color: var(--accent);
+  margin-bottom: 0.2rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.agent-top strong {
+  display: block;
+  font-size: 1.15rem;
+  line-height: 1.15;
+}
+
+.agent-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.38rem 0.62rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #dce7dd;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.agent-card p {
+  margin: 0;
+  color: var(--muted);
+  max-width: 62ch;
+}
+
+.agent-traits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 1rem;
+}
+
+.agent-traits span {
+  padding: 0.42rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+  color: #e2ece3;
+  font-size: 0.82rem;
+}
+
+.vs-core {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  min-width: 96px;
+  height: 52px;
+  padding: 0 1.1rem;
+  border-radius: 999px;
+  display: inline-grid;
+  place-items: center;
+  background: linear-gradient(135deg, rgba(185,239,69,0.96), rgba(185,239,69,0.72));
+  color: #06110b;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  box-shadow: 0 0 22px rgba(185,239,69,0.3);
+  border: 4px solid rgba(9,34,23,0.9);
+  animation: laboratoryGlowPulse 2.8s ease-in-out infinite;
+}
+
+@keyframes laboratoryGlowPulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: 0 0 18px rgba(185,239,69,0.24), 0 0 36px rgba(185,239,69,0.08);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.04);
+    box-shadow: 0 0 26px rgba(185,239,69,0.36), 0 0 48px rgba(185,239,69,0.16);
+  }
+}
+
+.stage-footnote {
+  position: relative;
+  z-index: 1;
+  margin-top: 1rem;
+  color: #d6e0d7;
+  max-width: 56ch;
+  font-size: 0.95rem;
+}
+
+.method-card,
+.project-card,
+.quote-panel {
+  padding: 1.35rem;
+}
+
+.project-card {
+  display: grid;
+  gap: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: auto -20% -35% auto;
+  width: 55%;
+  height: 55%;
+  background: radial-gradient(circle, rgba(185,239,69,0.12), transparent 70%);
+  pointer-events: none;
+}
+
+.project-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.42rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #dce7dd;
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 12px rgba(185,239,69,0.4);
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  color: #d8e8db;
+  font-size: 0.9rem;
+}
+
+.project-meta span {
+  padding: 0.42rem 0.68rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.project-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #e8f3e1;
+  font-weight: 600;
+}
+
+.project-link span:last-child {
+  color: var(--accent);
+}
+
+.comparison-bar {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.75rem;
+  padding-top: 0.2rem;
+}
+
+.comparison-item {
+  padding: 0.8rem;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.comparison-item small {
+  display: block;
+  color: var(--muted);
+  margin-bottom: 0.2rem;
+  font-size: 0.8rem;
+}
+
+.comparison-item strong {
+  display: block;
+  font-size: 0.96rem;
+  line-height: 1.25;
+}
+
+.quote-panel {
+  background:
+    linear-gradient(180deg, rgba(185,239,69,0.12), rgba(255,255,255,0.03)),
+    rgba(255,255,255,0.04);
+}
+
+.quote-panel p {
+  margin: 0;
+  font-size: clamp(1.4rem, 2.8vw, 2.3rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  max-width: 22ch;
+}
+
+@media (max-width: 1080px) {
+  .laboratory-hero-shell,
+  .comparison-bar {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 980px) {
+  .laboratory-hero-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .laboratory-hero-stage {
+    min-height: auto;
+  }
+
+  .comparison-bar {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .laboratory-page .hero {
+    padding-top: 3.25rem;
+  }
+
+  .laboratory-title {
+    font-size: clamp(2.2rem, 11vw, 3.4rem);
+    line-height: 1.08;
+    max-width: 10ch;
+  }
+
+  .laboratory-hero-copy,
+  .laboratory-hero-stage,
+  .method-card,
+  .project-card,
+  .quote-panel {
+    padding: 1rem;
+  }
+
+  .stage-frame {
+    padding: 1rem;
+  }
+
+  .agent-card {
+    padding: 1rem;
+  }
+
+  .vs-core {
+    min-width: 84px;
+    height: 46px;
+    font-size: 0.9rem;
+  }
+}
