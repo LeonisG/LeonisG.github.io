@@ -1131,7 +1131,7 @@ h1 {
 .vs-core {
   position: absolute;
   left: 50%;
-  top: calc(50% - 1.2rem);
+  top: calc(50% - 1.4rem);
   transform: translate(-50%, -50%);
   z-index: 3;
   min-width: 92px;
