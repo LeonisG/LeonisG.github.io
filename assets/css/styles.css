@@ -1061,8 +1061,8 @@ h1 {
   padding: 1.15rem;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto auto;
-  row-gap: 0.8rem;
+  grid-template-rows: auto auto 6.2rem auto auto;
+  row-gap: 0.85rem;
 }
 
 .stage-frame::before {
@@ -1116,23 +1116,24 @@ h1 {
   grid-row: 2 / 3;
   width: calc(100% - 1.6rem);
   margin-right: auto;
-  margin-bottom: 3.4rem;
+  margin-bottom: 0;
   align-self: start;
 }
 
 .agent-card-right {
-  grid-row: 3 / 4;
+  grid-row: 4 / 5;
   width: calc(100% - 1.6rem);
   margin-left: auto;
-  margin-top: 3.4rem;
+  margin-top: 0;
   align-self: start;
 }
 
 .vs-core {
-  position: absolute;
-  left: 50%;
-  top: calc(50% - 1.4rem);
-  transform: translate(-50%, -50%);
+  grid-row: 3 / 4;
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
   z-index: 3;
   min-width: 92px;
   height: 50px;
@@ -1140,6 +1141,8 @@ h1 {
   border-radius: 999px;
   display: inline-grid;
   place-items: center;
+  justify-self: center;
+  align-self: center;
   background: linear-gradient(135deg, rgba(185,239,69,0.94), rgba(185,239,69,0.72));
   color: #06110b;
   font-weight: 800;
@@ -1213,11 +1216,11 @@ h1 {
 
 @keyframes laboratoryGlowPulse {
   0%, 100% {
-    transform: translate(-50%, -50%) scale(1);
+    transform: scale(1);
     box-shadow: 0 0 18px rgba(185,239,69,0.22), 0 0 36px rgba(185,239,69,0.07);
   }
   50% {
-    transform: translate(-50%, -50%) scale(1.04);
+    transform: scale(1.04);
     box-shadow: 0 0 24px rgba(185,239,69,0.32), 0 0 44px rgba(185,239,69,0.14);
   }
 }
