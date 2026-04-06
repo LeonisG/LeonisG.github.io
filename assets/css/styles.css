@@ -1260,33 +1260,28 @@ h1 {
   white-space: nowrap;
 }
 
-.status-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.42rem 0.7rem;
-  border-radius: 999px;
-  font-size: 0.82rem;
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
 }
 
 /* ACTIVO */
-.status-active {
+.status-badge.active .status-dot {
   background: var(--accent);
-  color: #06110b;
+  box-shadow: 0 0 12px rgba(185,239,69,0.4);
 }
 
 /* PRÓXIMAMENTE */
-.status-upcoming {
-  background: rgba(185, 239, 69, 0.25);
-  color: #dff5b8;
-  border: 1px solid rgba(185, 239, 69, 0.35);
+.status-badge.upcoming .status-dot {
+  background: #87b84a;
+  box-shadow: 0 0 10px rgba(135,184,74,0.28);
 }
 
 /* FINALIZADO */
-.status-completed {
-  background: rgba(255, 255, 255, 0.06);
-  color: #c7d3c8;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+.status-badge.completed .status-dot {
+  background: #91a39a;
+  box-shadow: 0 0 8px rgba(145,163,154,0.18);
 }
 
 .project-meta {
