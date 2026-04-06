@@ -990,7 +990,7 @@ h1 {
 .laboratory-copy-lead {
   margin: 0;
   max-width: 18ch;
-  font-size: clamp(1.5rem, 2.45vw, 2.35rem);
+  font-size: clamp(1.2rem, 2.45vw, 2.35rem);
   line-height: 1.1;
   letter-spacing: -0.04em;
   color: var(--text);
@@ -1399,7 +1399,7 @@ h1 {
 
   .laboratory-copy-lead {
     max-width: 100%;
-    font-size: clamp(1.2rem, 7vw, 1.9rem);
+    font-size: clamp(1.0rem, 7vw, 1.9rem);
     line-height: 1.12;
   }
 
