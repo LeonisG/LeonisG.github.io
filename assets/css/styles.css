@@ -912,7 +912,7 @@ h1 {
   content: "";
   width: min(520px, 58%);
   height: 1px;
-  margin-top: 0.88rem;
+  margin-top: 1.05rem;
   background: linear-gradient(
     90deg,
     transparent 0%,
@@ -923,6 +923,16 @@ h1 {
   );
   box-shadow: 0 0 12px rgba(185, 239, 69, 0.18);
   border-radius: 999px;
+}
+
+.laboratory-hero-banner-inner {
+  position: relative;
+  z-index: 1;
+  padding: 1.6rem 1.8rem 1.35rem;
+  text-align: center;
+  display: grid;
+  justify-items: center;
+  align-content: center;
 }
 
 .laboratory-banner-title {
@@ -961,8 +971,8 @@ h1 {
 }
 
 .laboratory-banner-subtitle {
-  margin: 0.58rem auto 0;
-  padding-bottom: 0.38rem;
+  margin: 0.65rem auto 0;
+  padding-bottom: 0.55rem;
   max-width: none;
   white-space: nowrap;
   font-size: clamp(1rem, 1.7vw, 1.28rem);
