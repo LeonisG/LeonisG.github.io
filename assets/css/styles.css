@@ -892,9 +892,9 @@ h1 {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 14% 42%, rgba(185,239,69,0.18), transparent 20%),
-    radial-gradient(circle at 84% 48%, rgba(185,239,69,0.14), transparent 22%),
-    linear-gradient(90deg, transparent 0%, rgba(185,239,69,0.04) 50%, transparent 100%);
+    radial-gradient(circle at 14% 42%, rgba(185,239,69,0.16), transparent 20%),
+    radial-gradient(circle at 84% 48%, rgba(185,239,69,0.12), transparent 22%),
+    linear-gradient(90deg, transparent 0%, rgba(185,239,69,0.035) 50%, transparent 100%);
   pointer-events: none;
 }
 
@@ -907,51 +907,62 @@ h1 {
   pointer-events: none;
 }
 
-.laboratory-hero-banner-inner {
-  position: relative;
-  z-index: 1;
-  padding: 1.1rem 1.6rem 1.2rem;
-  text-align: center;
-  display: grid;
-  justify-items: center;
-  align-content: center;
+.laboratory-banner-inner::after,
+.laboratory-hero-banner-inner::after {
+  content: "";
+  width: min(520px, 58%);
+  height: 1px;
+  margin-top: 0.72rem;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(185, 239, 69, 0.08) 18%,
+    rgba(185, 239, 69, 0.5) 50%,
+    rgba(185, 239, 69, 0.08) 82%,
+    transparent 100%
+  );
+  box-shadow: 0 0 12px rgba(185, 239, 69, 0.18);
+  border-radius: 999px;
 }
 
 .laboratory-banner-title {
   margin: 0;
-  line-height: 0.96;
-  letter-spacing: -0.055em;
+  line-height: 0.98;
+  letter-spacing: -0.048em;
   width: 100%;
   text-align: center;
+  overflow: visible;
 }
 
 .laboratory-banner-title-main {
   display: inline-block;
-  font-size: clamp(3rem, 6.2vw, 5rem);
+  padding-inline: 0.08em;
+  font-size: clamp(2.7rem, 5.5vw, 4.45rem);
   font-weight: 800;
   text-transform: uppercase;
   white-space: nowrap;
   background: linear-gradient(
     90deg,
     #f4f8f1 0%,
-    #f4f8f1 68%,
-    #d9f49b 84%,
+    #f4f8f1 70%,
+    #ddf7a8 86%,
     #b9ef45 100%
   );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   text-shadow:
-    0 0 10px rgba(185, 239, 69, 0.05),
-    0 0 18px rgba(185, 239, 69, 0.04);
+    0 0 8px rgba(185, 239, 69, 0.04),
+    0 0 16px rgba(185, 239, 69, 0.035);
 }
 
 .laboratory-banner-subtitle {
-  margin: 0.5rem auto 0;
-  max-width: 34ch;
-  font-size: clamp(0.92rem, 1.35vw, 1.08rem);
-  line-height: 1.22;
-  letter-spacing: -0.02em;
+  margin: 0.55rem auto 0;
+  max-width: none;
+  white-space: nowrap;
+  font-size: clamp(1rem, 1.7vw, 1.28rem);
+  line-height: 1.18;
+  letter-spacing: -0.022em;
   font-weight: 500;
   color: #e3ece3;
   text-align: center;
@@ -1346,16 +1357,22 @@ h1 {
   }
 
   .laboratory-hero-banner-inner {
-  padding: 1rem 1.1rem 1.05rem;
+    padding: 1rem 1.2rem 1.05rem;
+  }
+
+  .laboratory-hero-banner-inner::after {
+    width: min(420px, 72%);
+    margin-top: 0.64rem;
   }
 
   .laboratory-banner-title-main {
-    font-size: clamp(2.5rem, 8vw, 4rem);
+    font-size: clamp(2.35rem, 7vw, 3.7rem);
   }
-  
+
   .laboratory-banner-subtitle {
+    white-space: normal;
     max-width: 30ch;
-    font-size: clamp(0.92rem, 2.2vw, 1rem);
+    font-size: clamp(0.96rem, 2.1vw, 1.05rem);
   }
 
   .laboratory-copy-lead {
@@ -1381,17 +1398,23 @@ h1 {
   }
 
   .laboratory-hero-banner-inner {
-    padding: 0.95rem 0.9rem 1rem;
+    padding: 0.92rem 0.88rem 0.96rem;
   }
-
+  
+  .laboratory-hero-banner-inner::after {
+    width: min(240px, 68%);
+    margin-top: 0.56rem;
+  }
+  
   .laboratory-banner-title-main {
-    font-size: clamp(1.95rem, 9.8vw, 2.75rem);
-    line-height: 0.98;
+    font-size: clamp(1.9rem, 9.2vw, 2.55rem);
+    line-height: 1;
   }
   
   .laboratory-banner-subtitle {
     margin-top: 0.38rem;
     max-width: 24ch;
+    white-space: normal;
     font-size: clamp(0.88rem, 3.9vw, 0.98rem);
     line-height: 1.24;
   }
