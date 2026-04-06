@@ -912,7 +912,7 @@ h1 {
   content: "";
   width: min(520px, 58%);
   height: 1px;
-  margin-top: 0.72rem;
+  margin-top: 0.88rem;
   background: linear-gradient(
     90deg,
     transparent 0%,
@@ -926,21 +926,25 @@ h1 {
 }
 
 .laboratory-banner-title {
-  margin: 0;
+  margin: 0 auto;
+  width: 100%;
+  max-width: none;
+  text-align: center;
   line-height: 0.98;
   letter-spacing: -0.048em;
-  width: 100%;
-  text-align: center;
   overflow: visible;
+  display: flex;
+  justify-content: center;
 }
 
 .laboratory-banner-title-main {
   display: inline-block;
-  padding-inline: 0.08em;
+  padding-inline: 0.12em;
   font-size: clamp(2.7rem, 5.5vw, 4.45rem);
   font-weight: 800;
   text-transform: uppercase;
   white-space: nowrap;
+  text-align: center;
   background: linear-gradient(
     90deg,
     #f4f8f1 0%,
@@ -957,7 +961,8 @@ h1 {
 }
 
 .laboratory-banner-subtitle {
-  margin: 0.55rem auto 0;
+  margin: 0.58rem auto 0;
+  padding-bottom: 0.38rem;
   max-width: none;
   white-space: nowrap;
   font-size: clamp(1rem, 1.7vw, 1.28rem);
@@ -1400,17 +1405,17 @@ h1 {
   .laboratory-hero-banner-inner {
     padding: 0.92rem 0.88rem 0.96rem;
   }
-  
+
   .laboratory-hero-banner-inner::after {
     width: min(240px, 68%);
     margin-top: 0.56rem;
   }
-  
+
   .laboratory-banner-title-main {
     font-size: clamp(1.9rem, 9.2vw, 2.55rem);
     line-height: 1;
   }
-  
+
   .laboratory-banner-subtitle {
     margin-top: 0.38rem;
     max-width: 24ch;
