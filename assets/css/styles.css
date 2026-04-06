@@ -1260,12 +1260,33 @@ h1 {
   white-space: nowrap;
 }
 
-.status-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.42rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+}
+
+/* ACTIVO */
+.status-active {
   background: var(--accent);
-  box-shadow: 0 0 12px rgba(185,239,69,0.4);
+  color: #06110b;
+}
+
+/* PRÓXIMAMENTE */
+.status-upcoming {
+  background: rgba(185, 239, 69, 0.25);
+  color: #dff5b8;
+  border: 1px solid rgba(185, 239, 69, 0.35);
+}
+
+/* FINALIZADO */
+.status-completed {
+  background: rgba(255, 255, 255, 0.06);
+  color: #c7d3c8;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .project-meta {
