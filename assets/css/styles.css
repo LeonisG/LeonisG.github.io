@@ -264,6 +264,7 @@ input {
   color: #dce7dd;
   font-weight: 500;
 }
+
 .eyebrow {
   display: inline-flex;
   align-items: center;
@@ -763,7 +764,6 @@ h1 {
   .about-shell {
     padding: 1.2rem;
   }
-
 }
 
 @media (max-width: 640px) {
@@ -810,12 +810,13 @@ h1 {
     font-size: 1rem;
     max-width: 100%;
   }
+
   .about-shell {
     padding: 1rem;
     gap: 1.2rem;
   }
 
- .about-card {
+  .about-card {
     padding: 1rem;
   }
 
@@ -826,26 +827,8 @@ h1 {
   .about-intro .section-title {
     line-height: 1.12;
   }
-  .agent-card-left {
-    width: 100%;
-    margin-bottom: 2.8rem;
-  }
-
-  .agent-card-right {
-    width: 100%;
-    margin-top: 2.8rem;
-  }
-
-  .vs-core {
-    min-width: 84px;
-    height: 46px;
-    font-size: 0.9rem;
-  }
 }
 
-/* =========================================================
-   LABORATORIO PAGE
-========================================================= */
 /* =========================================================
    LABORATORIO PAGE
 ========================================================= */
@@ -907,7 +890,16 @@ h1 {
   pointer-events: none;
 }
 
-.laboratory-banner-inner::after,
+.laboratory-hero-banner-inner {
+  position: relative;
+  z-index: 1;
+  padding: 1.6rem 1.8rem 1.35rem;
+  text-align: center;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+}
+
 .laboratory-hero-banner-inner::after {
   content: "";
   width: min(520px, 58%);
@@ -923,16 +915,6 @@ h1 {
   );
   box-shadow: 0 0 12px rgba(185, 239, 69, 0.18);
   border-radius: 999px;
-}
-
-.laboratory-hero-banner-inner {
-  position: relative;
-  z-index: 1;
-  padding: 1.6rem 1.8rem 1.35rem;
-  text-align: center;
-  display: grid;
-  justify-items: center;
-  align-content: center;
 }
 
 .laboratory-banner-title {
@@ -1061,7 +1043,7 @@ h1 {
   padding: 1.15rem;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto 6.2rem auto auto;
+  grid-template-rows: auto auto 6.4rem auto auto;
   row-gap: 0.85rem;
 }
 
@@ -1143,6 +1125,7 @@ h1 {
   place-items: center;
   justify-self: center;
   align-self: center;
+  margin: 0;
   background: linear-gradient(135deg, rgba(185,239,69,0.94), rgba(185,239,69,0.72));
   color: #06110b;
   font-weight: 800;
@@ -1212,8 +1195,6 @@ h1 {
   font-size: 0.82rem;
 }
 
-
-
 @keyframes laboratoryGlowPulse {
   0%, 100% {
     transform: scale(1);
@@ -1226,6 +1207,7 @@ h1 {
 }
 
 .stage-footnote {
+  grid-row: 5 / 6;
   position: relative;
   z-index: 1;
   margin-top: 0.15rem;
@@ -1450,12 +1432,13 @@ h1 {
 
   .laboratory-copy-lead {
     max-width: 100%;
-    font-size: clamp(1.0rem, 7vw, 1.9rem);
+    font-size: clamp(1rem, 7vw, 1.9rem);
     line-height: 1.12;
   }
 
   .stage-frame {
     padding: 1rem;
+    grid-template-rows: auto auto auto auto auto;
     row-gap: 0.9rem;
   }
 
@@ -1488,8 +1471,11 @@ h1 {
     font-size: 0.9rem;
     margin: 0.15rem auto;
     display: grid;
+    justify-self: center;
+    align-self: center;
     animation: none;
   }
+
   .agent-card-right {
     grid-row: 4 / 5;
     width: 100%;
@@ -1497,6 +1483,7 @@ h1 {
   }
 
   .stage-footnote {
+    grid-row: 5 / 6;
     margin-top: 0.1rem;
     font-size: 0.92rem;
   }
