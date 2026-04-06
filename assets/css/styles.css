@@ -955,15 +955,17 @@ h1 {
   align-items: center;
   justify-content: center;
   width: fit-content;
-  padding: 0.42rem 0.78rem;
+  padding: 0.32rem 0.78rem;
   border-radius: 999px;
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(255,255,255,0.08);
   color: #dce7dd;
   font-size: 0.86rem;
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.75rem;
   justify-self: start;
+  align-self: start;
   white-space: nowrap;
+  line-height: 1.1;
 }
 .agent-card {
   position: relative;
@@ -975,20 +977,23 @@ h1 {
   background: rgba(6, 25, 16, 0.56);
   backdrop-filter: blur(10px);
   box-shadow: 0 16px 40px rgba(0,0,0,0.18);
+  align-self: start;
 }
 
 .agent-card-left {
   grid-row: 2 / 3;
   width: calc(100% - 1.6rem);
   margin-right: auto;
-  margin-bottom: 3rem;
+  margin-bottom: 3.4rem;
+  align-self: start;
 }
 
 .agent-card-right {
   grid-row: 3 / 4;
   width: calc(100% - 1.6rem);
   margin-left: auto;
-  margin-top: 3rem;
+  margin-top: 3.4rem;
+  align-self: start;
 }
 
 .agent-top {
@@ -996,7 +1001,7 @@ h1 {
   justify-content: space-between;
   gap: 0.8rem;
   align-items: flex-start;
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.6rem;
 }
 
 .agent-top small {
@@ -1037,8 +1042,9 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 0.55rem;
-  margin-top: 0.9rem;
+  margin-top: 0.8rem;
   margin-bottom: 0;
+  line-height: 1;
 }
 
 .agent-traits span {
@@ -1222,8 +1228,7 @@ h1 {
 }
 
 @media (max-width: 1080px) {
-  .laboratory-hero-shell,
-  .comparison-bar {
+  .laboratory-hero-shell {
     grid-template-columns: 1fr;
   }
 
@@ -1245,7 +1250,6 @@ h1 {
     grid-template-columns: 1fr;
   }
 }
-
 @media (max-width: 640px) {
   .laboratory-page .hero {
     padding-top: 3.25rem;
@@ -1253,7 +1257,7 @@ h1 {
 
   .laboratory-title {
     font-size: clamp(2.2rem, 11vw, 3.4rem);
-    line-height: 1.08;
+    line-height: 1.14;
     max-width: 10ch;
   }
 
@@ -1269,13 +1273,36 @@ h1 {
     padding: 1rem;
   }
 
+  .stage-label {
+    padding: 0.28rem 0.7rem;
+    margin-bottom: 0.65rem;
+    font-size: 0.82rem;
+  }
+
   .agent-card {
     padding: 1rem;
+    width: 100%;
+  }
+
+  .agent-card-left {
+    width: 100%;
+    margin-bottom: 1.6rem;
+  }
+
+  .agent-card-right {
+    width: 100%;
+    margin-top: 1.6rem;
   }
 
   .vs-core {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
     min-width: 84px;
     height: 46px;
     font-size: 0.9rem;
+    margin: -0.2rem auto -0.2rem;
+    display: grid;
   }
 }
