@@ -1274,8 +1274,8 @@ h1 {
 
 /* PRÓXIMAMENTE */
 .status-badge.upcoming .status-dot {
-  background: #87b84a;
-  box-shadow: 0 0 10px rgba(135,184,74,0.28);
+  background: #7c8da3;
+  box-shadow: 0 0 10px rgba(124,141,163,0.25);
 }
 
 /* FINALIZADO */
