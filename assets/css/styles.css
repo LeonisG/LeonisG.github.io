@@ -2866,8 +2866,8 @@ h1 {
   border: 1px solid rgba(255,255,255,0.06);
   background:
     linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.025));
-  min-height: 500px;
-  height: 500px;
+  min-height: 600px;
+  height: 600px;
 }
 
 .metrics-chart-card-lg {
