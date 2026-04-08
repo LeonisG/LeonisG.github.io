@@ -403,7 +403,7 @@
                         Psicología<br>
                         <span class="th-profile th-m">Marta</span>
                     </th>
-                    <th>Encaje</th>
+                    <th class="fit-col">Encaje</th>
                     <th>Ingresos</th>
                 </tr>
               </thead>
@@ -978,25 +978,38 @@
         const tableButtons = document.querySelectorAll("[data-table-view]");
         const tableBody = document.querySelector(".metrics-history-table tbody");
         const tableHeadFirst = document.querySelector(".metrics-history-table thead th");
+        const fitHeader = document.querySelector(".metrics-history-table thead .fit-col");
 
         function renderTable(view = "daily") {
           if (!tableBody) return;
           const rows = view === "daily" ? dailyData.slice(0, 12) : weeklyData;
-
+        
           if (tableHeadFirst) {
             tableHeadFirst.textContent = view === "daily" ? "Día" : "Semana";
           }
-
+      
+          if (fitHeader) {
+            fitHeader.style.display = view === "daily" ? "none" : "";
+          }
+      
           tableBody.innerHTML = rows.map(item => {
             const label = view === "daily" ? item.day : item.label;
             const daniel = item.daniel;
             const marta = item.marta;
-            const fitText = view === "daily"
-              ? "—"
-              : `${daniel.fit?.toFixed(1) ?? "—"} / ${marta.fit?.toFixed(1) ?? "—"}`;
-
+        
+            const fitCell = view === "daily"
+              ? ""
+              : `
+                <td class="fit-col">
+                  <div class="cell-stack">
+                    <span class="cell-profile cell-profile-a">D ${daniel.fit?.toFixed(1) ?? "—"}</span>
+                    <span class="cell-profile cell-profile-b">M ${marta.fit?.toFixed(1) ?? "—"}</span>
+                  </div>
+                </td>
+              `;
+            
             const incomeTotal = `${(daniel.income || 0) + (marta.income || 0)} €`;
-
+            
             return `
               <tr>
                 <td>${label}</td>
@@ -1008,7 +1021,7 @@
                 <td>${marta.energy.toFixed(1)}</td>
                 <td>${daniel.psychology.toFixed(1)}</td>
                 <td>${marta.psychology.toFixed(1)}</td>
-                <td>${fitText}</td>
+                ${fitCell}
                 <td>${incomeTotal}</td>
               </tr>
             `;

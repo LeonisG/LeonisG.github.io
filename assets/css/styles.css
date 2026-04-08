@@ -3322,3 +3322,23 @@ h1 {
 .th-m {
   color: var(--accent); /* verde Marta */
 }
+
+.cell-stack {
+  display: grid;
+  gap: 0.22rem;
+}
+
+.cell-profile {
+  display: block;
+  font-size: 0.82rem;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.cell-profile-a {
+  color: #9ec3e6;
+}
+
+.cell-profile-b {
+  color: var(--accent);
+}
