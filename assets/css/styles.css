@@ -2867,10 +2867,12 @@ h1 {
   background:
     linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.025));
   min-height: 280px;
+  height: 280px;
 }
 
 .metrics-chart-card-lg {
   min-height: 370px;
+  height: 370px;
 }
 
 .metrics-chart-card canvas {
