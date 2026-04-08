@@ -2347,20 +2347,21 @@ h1 {
   transform: translateY(-2px);
 }
 
-/* DANIEL */
+/* DANIEL — NUEVO ESTILO (AZUL PETRÓLEO) */
+
 .day-entry.profile-a {
-  border-color: rgba(150, 170, 160, 0.18);
+  border-color: rgba(120, 170, 210, 0.22);
   background:
     linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.028)),
-    linear-gradient(135deg, rgba(120, 136, 128, 0.08), transparent 48%);
+    linear-gradient(135deg, rgba(70, 110, 140, 0.12), transparent 50%);
   box-shadow:
-    inset 3px 0 0 rgba(168, 182, 176, 0.38);
+    inset 3px 0 0 rgba(120, 170, 210, 0.55);
 }
 
 .day-entry.profile-a:hover {
-  border-color: rgba(180, 195, 188, 0.26);
+  border-color: rgba(140, 190, 230, 0.32);
   box-shadow:
-    inset 3px 0 0 rgba(186, 200, 193, 0.5),
+    inset 3px 0 0 rgba(140, 190, 230, 0.7),
     0 12px 28px rgba(0,0,0,0.16);
 }
 
@@ -2408,15 +2409,15 @@ h1 {
 }
 
 /* Avatar Marta */
-.profile-b .entry-avatar {
+.profile-a .entry-avatar {
   background:
-    radial-gradient(circle at 35% 30%, rgba(245,255,214,0.45), transparent 26%),
-    linear-gradient(135deg, #b9ef45 0%, #5e8f28 100%);
-  border-color: rgba(185, 239, 69, 0.28);
+    radial-gradient(circle at 35% 30%, rgba(210,230,255,0.5), transparent 26%),
+    linear-gradient(135deg, #6f8fa8 0%, #2e4a5f 100%);
+  border-color: rgba(140, 180, 210, 0.35);
 }
 
 .profile-a .day-entry-head small {
-  color: #cfd8d3;
+  color: #9ec3e6;
 }
 
 .profile-b .day-entry-head small {
@@ -2424,7 +2425,7 @@ h1 {
 }
 
 .profile-a .day-entry-head strong {
-  color: #eef2ef;
+  color: #e6f2ff;
 }
 
 .profile-b .day-entry-head strong {
@@ -2432,7 +2433,7 @@ h1 {
 }
 
 .profile-a .entry-meta {
-  color: #c8d2cd;
+  color: #b8d4ea;
 }
 
 .profile-b .entry-meta {
@@ -2440,7 +2441,7 @@ h1 {
 }
 
 .profile-a .day-entry-body p {
-  color: #b9c6be;
+  color: #b7cfe3;
 }
 
 .profile-b .day-entry-body p {
