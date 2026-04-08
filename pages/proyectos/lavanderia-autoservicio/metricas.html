@@ -979,7 +979,7 @@
         const tableBody = document.querySelector(".metrics-history-table tbody");
         const tableHeadFirst = document.querySelector(".metrics-history-table thead th");
         const fitHeader = document.querySelector(".metrics-history-table thead .fit-col");
-
+            
         function renderTable(view = "daily") {
           if (!tableBody) return;
           const rows = view === "daily" ? dailyData.slice(0, 12) : weeklyData;
@@ -1008,8 +1008,15 @@
                 </td>
               `;
             
-            const incomeTotal = `${(daniel.income || 0) + (marta.income || 0)} €`;
-            
+            const incomeCell = `
+              <td>
+                <div class="cell-stack">
+                  <span class="cell-profile cell-profile-a">D ${(daniel.income || 0).toLocaleString("es-ES")} €</span>
+                  <span class="cell-profile cell-profile-b">M ${(marta.income || 0).toLocaleString("es-ES")} €</span>
+                </div>
+              </td>
+            `;
+          
             return `
               <tr>
                 <td>${label}</td>
@@ -1022,11 +1029,12 @@
                 <td>${daniel.psychology.toFixed(1)}</td>
                 <td>${marta.psychology.toFixed(1)}</td>
                 ${fitCell}
-                <td>${incomeTotal}</td>
+                ${incomeCell}
               </tr>
             `;
           }).join("");
         }
+
 
         renderTable("daily");
 
