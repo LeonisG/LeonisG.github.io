@@ -2459,3 +2459,99 @@ h1 {
     height: 34px;
   }
 }
+
+/* =========================
+   PROJECT PROFILE IDENTITIES
+========================= */
+
+.profile-card {
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.22s ease,
+    border-color 0.22s ease,
+    box-shadow 0.22s ease,
+    background 0.22s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-2px);
+}
+
+/* DANIEL */
+.profile-card-a {
+  border-color: rgba(120, 170, 210, 0.22);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.03)),
+    linear-gradient(135deg, rgba(70, 110, 140, 0.12), transparent 52%);
+  box-shadow:
+    inset 3px 0 0 rgba(120, 170, 210, 0.55);
+}
+
+.profile-card-a:hover {
+  border-color: rgba(140, 190, 230, 0.3);
+  box-shadow:
+    inset 3px 0 0 rgba(140, 190, 230, 0.72),
+    0 12px 28px rgba(0,0,0,0.18);
+}
+
+.profile-card-a h3 {
+  color: #e6f2ff;
+}
+
+.profile-card-a .profile-meta {
+  color: #9ec3e6 !important;
+}
+
+.profile-card-a p,
+.profile-card-a .profile-data {
+  color: #b7cfe3;
+}
+
+.profile-card-a .profile-data strong {
+  color: #eef6ff;
+}
+
+/* MARTA */
+.profile-card-b {
+  border-color: rgba(185, 239, 69, 0.18);
+  background:
+    radial-gradient(circle at top right, rgba(185,239,69,0.10), transparent 28%),
+    linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.03));
+  box-shadow:
+    inset 3px 0 0 rgba(185, 239, 69, 0.58);
+}
+
+.profile-card-b:hover {
+  border-color: rgba(185, 239, 69, 0.28);
+  box-shadow:
+    inset 3px 0 0 rgba(185, 239, 69, 0.76),
+    0 12px 28px rgba(0,0,0,0.18),
+    0 0 18px rgba(185,239,69,0.08);
+}
+
+.profile-card-b h3 {
+  color: #f3f9ec;
+}
+
+.profile-card-b .profile-meta {
+  color: var(--accent) !important;
+}
+
+.profile-card-b p,
+.profile-card-b .profile-data {
+  color: #c6d6c3;
+}
+
+.profile-card-b .profile-data strong {
+  color: #f2f8ea;
+}
+
+/* MÉTRICAS — eco visual */
+.metrics-col-a {
+  color: #9ec3e6 !important;
+}
+
+.metrics-col-b {
+  color: var(--accent) !important;
+}
