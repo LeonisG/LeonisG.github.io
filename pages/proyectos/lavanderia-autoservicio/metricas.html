@@ -192,33 +192,75 @@
       </div>
     </section>
 
-    <!-- RADAR + CONTROLES -->
+        <!-- NÚCLEO ANALÍTICO -->
     <section class="section">
       <div class="container">
-        <div class="metrics-radar-shell metrics-panel reveal">
-          <div class="metrics-block-head">
-            <div>
-              <p class="project-eyebrow">RADAR DE ESTADO</p>
-              <h2 class="project-block-title">Perfil sintético del momento</h2>
+        <div class="metrics-core-grid reveal">
+
+          <!-- RADAR -->
+          <div class="metrics-radar-shell metrics-panel">
+            <div class="metrics-block-head">
+              <div>
+                <p class="project-eyebrow">RADAR DE ESTADO</p>
+                <h2 class="project-block-title">Perfil sintético del momento</h2>
+              </div>
+
+              <div class="metrics-controls">
+                <div class="control-group">
+                  <button class="control-chip active" type="button" data-radar-profile="both">Ambos</button>
+                  <button class="control-chip" type="button" data-radar-profile="daniel">Daniel</button>
+                  <button class="control-chip" type="button" data-radar-profile="marta">Marta</button>
+                </div>
+
+                <div class="control-group">
+                  <button class="control-chip active" type="button" data-radar-range="current">Actual</button>
+                  <button class="control-chip" type="button" data-radar-range="weekly">Semanal</button>
+                </div>
+              </div>
             </div>
 
-            <div class="metrics-controls">
-              <div class="control-group">
-                <button class="control-chip active" type="button" data-radar-profile="both">Ambos</button>
-                <button class="control-chip" type="button" data-radar-profile="daniel">Daniel</button>
-                <button class="control-chip" type="button" data-radar-profile="marta">Marta</button>
-              </div>
-
-              <div class="control-group">
-                <button class="control-chip active" type="button" data-radar-range="current">Actual</button>
-                <button class="control-chip" type="button" data-radar-range="weekly">Semanal</button>
-              </div>
+            <div class="metrics-chart-card metrics-chart-card-radar">
+              <canvas id="radarChart"></canvas>
             </div>
           </div>
 
-          <div class="metrics-chart-card">
-            <canvas id="radarChart"></canvas>
-          </div>
+          <!-- PANEL CONTEXTUAL -->
+          <aside class="metrics-context-panel metrics-panel">
+            <div class="metrics-context-head">
+              <p class="project-eyebrow">LECTURA RÁPIDA</p>
+              <h2 class="project-block-title">Contexto del estado</h2>
+            </div>
+
+            <div class="metrics-context-stack">
+              <div class="context-card context-card-a">
+                <small>Daniel</small>
+                <strong>Más estable, menos velocidad</strong>
+                <p>
+                  Mantiene mejor la estructura general, pero su avance está limitado por tiempo real y presión psicológica.
+                </p>
+              </div>
+
+              <div class="context-card context-card-b">
+                <small>Marta</small>
+                <strong>Más impulso, más exposición</strong>
+                <p>
+                  Avanza con mayor velocidad, pero su margen financiero empieza a tensionarse antes.
+                </p>
+              </div>
+
+              <div class="context-alerts">
+                <div class="alert-chip alert-chip-critical">Psicología Daniel en zona crítica</div>
+                <div class="alert-chip alert-chip-fragile">Capital Marta en zona frágil</div>
+                <div class="alert-chip alert-chip-stable">Encaje Marta estable</div>
+              </div>
+
+              <div class="context-legend">
+                <div><span class="legend-dot legend-dot-a"></span> Daniel = control, prudencia, estructura</div>
+                <div><span class="legend-dot legend-dot-b"></span> Marta = impulso, velocidad, exposición</div>
+              </div>
+            </div>
+          </aside>
+
         </div>
       </div>
     </section>
@@ -257,52 +299,64 @@
       </div>
     </section>
 
-    <!-- MOMENTOS CRÍTICOS -->
+    <!-- BLOQUE INFERIOR -->
     <section class="section">
       <div class="container">
-        <div class="critical-moments-shell metrics-panel reveal">
-          <div class="metrics-block-head">
-            <div>
-              <p class="project-eyebrow">MOMENTOS CRÍTICOS</p>
-              <h2 class="project-block-title">Puntos de inflexión del experimento</h2>
+        <div class="metrics-bottom-grid reveal">
+
+          <div class="critical-moments-shell metrics-panel">
+            <div class="metrics-block-head">
+              <div>
+                <p class="project-eyebrow">MOMENTOS CRÍTICOS</p>
+                <h2 class="project-block-title">Puntos de inflexión</h2>
+              </div>
+            </div>
+
+            <div class="critical-moments-grid">
+              <article class="critical-event event-a">
+                <small>Día 6 · Daniel</small>
+                <h3>Caída en psicología</h3>
+                <p>
+                  La presión que genera la inversión inicial empieza a pesar más de lo esperado y reduce su claridad para avanzar.
+                </p>
+              </article>
+
+              <article class="critical-event event-b">
+                <small>Día 8 · Marta</small>
+                <h3>Primer punto de tensión de capital</h3>
+                <p>
+                  La lectura de costes reales hace más evidente que el margen financiero disponible puede ser un cuello de botella temprano.
+                </p>
+              </article>
+
+              <article class="critical-event event-a">
+                <small>Semana 2 · Daniel</small>
+                <h3>Encaje en zona frágil</h3>
+                <p>
+                  El modelo empieza a mostrar fricciones serias con su disponibilidad real y su necesidad de minimizar errores.
+                </p>
+              </article>
+
+              <article class="critical-event event-b">
+                <small>Semana 2 · Marta</small>
+                <h3>Mayor velocidad, mayor exposición</h3>
+                <p>
+                  Su capacidad de acción la pone por delante en avance, pero también la acerca antes a las limitaciones estructurales del proyecto.
+                </p>
+              </article>
             </div>
           </div>
 
-          <div class="critical-moments-grid">
-
-            <article class="critical-event event-a">
-              <small>Día 6 · Daniel</small>
-              <h3>Caída en psicología</h3>
-              <p>
-                La presión que genera la inversión inicial empieza a pesar más de lo esperado y reduce su claridad para avanzar.
-              </p>
-            </article>
-
-            <article class="critical-event event-b">
-              <small>Día 8 · Marta</small>
-              <h3>Primer punto de tensión de capital</h3>
-              <p>
-                La lectura de costes reales hace más evidente que el margen financiero disponible puede ser un cuello de botella temprano.
-              </p>
-            </article>
-
-            <article class="critical-event event-a">
-              <small>Semana 2 · Daniel</small>
-              <h3>Encaje en zona frágil</h3>
-              <p>
-                El modelo empieza a mostrar fricciones serias con su disponibilidad real y su necesidad de minimizar errores.
-              </p>
-            </article>
-
-            <article class="critical-event event-b">
-              <small>Semana 2 · Marta</small>
-              <h3>Mayor velocidad, mayor exposición</h3>
-              <p>
-                Su capacidad de acción la pone por delante en avance, pero también la acerca antes a las limitaciones estructurales del proyecto.
-              </p>
-            </article>
-
+          <div class="metrics-method-note metrics-panel">
+            <h2 class="project-block-title">Nota metodológica</h2>
+            <p class="project-text">
+              Las métricas de esta página son simuladas y se actualizan manualmente a partir del histórico del experimento. Su función no es ofrecer exactitud contable absoluta, sino observar tendencias, desgaste, capacidad de avance y encaje real del modelo con cada perfil.
+            </p>
+            <p class="project-text">
+              Los gráficos sintetizan relaciones entre variables y ayudan a leer patrones. No sustituyen el diario ni la interpretación editorial: la complementan.
+            </p>
           </div>
+
         </div>
       </div>
     </section>
@@ -432,13 +486,13 @@
         const navToggle = document.querySelector(".nav-toggle");
         const navMenu = document.querySelector(".nav-menu");
         const revealItems = document.querySelectorAll(".reveal");
-    
+
         if (navToggle && navMenu) {
           navToggle.addEventListener("click", () => {
             const isOpen = navMenu.classList.toggle("is-open");
             navToggle.setAttribute("aria-expanded", String(isOpen));
           });
-      
+
           navMenu.querySelectorAll("a").forEach((link) => {
             link.addEventListener("click", () => {
               navMenu.classList.remove("is-open");
@@ -446,7 +500,7 @@
             });
           });
         }
-    
+
         if ("IntersectionObserver" in window && revealItems.length > 0) {
           const observer = new IntersectionObserver(
             (entries, currentObserver) => {
@@ -459,16 +513,16 @@
             },
             { threshold: 0.12 }
           );
-        
+
           revealItems.forEach((item) => observer.observe(item));
         } else {
           revealItems.forEach((item) => item.classList.add("is-visible"));
         }
-    
+
         /* =========================================================
            DATOS SIMULADOS — 30 DÍAS
         ========================================================= */
-    
+
         const dailyData = [
           { day: 1,  daniel: { timeAvailable: 7, timeInvested: 0.5, capital: 25000, spending: 0,   income: 0, energy: 6.0, psychology: 5.0, fit: null }, marta: { timeAvailable: 22, timeInvested: 1.5, capital: 8000, spending: 0,   income: 0, energy: 8.0, psychology: 6.0, fit: null } },
           { day: 2,  daniel: { timeAvailable: 7, timeInvested: 1.0, capital: 24900, spending: 100, income: 0, energy: 5.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 22, timeInvested: 2.0, capital: 7950, spending: 50,  income: 0, energy: 7.0, psychology: 5.0, fit: null } },
@@ -477,7 +531,7 @@
           { day: 5,  daniel: { timeAvailable: 7, timeInvested: 1.0, capital: 24500, spending: 500, income: 0, energy: 5.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 22, timeInvested: 2.0, capital: 7750, spending: 250, income: 0, energy: 7.0, psychology: 5.0, fit: null } },
           { day: 6,  daniel: { timeAvailable: 6, timeInvested: 0.5, capital: 24400, spending: 600, income: 0, energy: 4.0, psychology: 3.0, fit: null }, marta: { timeAvailable: 21, timeInvested: 2.0, capital: 7650, spending: 350, income: 0, energy: 7.0, psychology: 5.0, fit: null } },
           { day: 7,  daniel: { timeAvailable: 7, timeInvested: 1.0, capital: 24350, spending: 650, income: 0, energy: 4.0, psychology: 4.0, fit: 5.0 }, marta: { timeAvailable: 22, timeInvested: 2.5, capital: 7600, spending: 400, income: 0, energy: 7.0, psychology: 5.0, fit: 6.0 } },
-    
+
           { day: 8,  daniel: { timeAvailable: 6, timeInvested: 0.5, capital: 24250, spending: 750, income: 0, energy: 5.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 23, timeInvested: 2.5, capital: 7500, spending: 500, income: 0, energy: 7.0, psychology: 5.0, fit: null } },
           { day: 9,  daniel: { timeAvailable: 6, timeInvested: 0.5, capital: 24200, spending: 800, income: 0, energy: 5.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 23, timeInvested: 2.0, capital: 7400, spending: 600, income: 0, energy: 6.0, psychology: 5.0, fit: null } },
           { day: 10, daniel: { timeAvailable: 7, timeInvested: 1.0, capital: 24150, spending: 850, income: 0, energy: 5.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 22, timeInvested: 3.0, capital: 7350, spending: 650, income: 50, energy: 7.0, psychology: 6.0, fit: null } },
@@ -485,7 +539,7 @@
           { day: 12, daniel: { timeAvailable: 7, timeInvested: 4.0, capital: 24100, spending: 900, income: 0, energy: 5.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 22, timeInvested: 11.0, capital: 7150, spending: 850, income: 0, energy: 7.0, psychology: 5.0, fit: null } },
           { day: 13, daniel: { timeAvailable: 6, timeInvested: 1.0, capital: 24050, spending: 950, income: 0, energy: 5.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 22, timeInvested: 2.5, capital: 7100, spending: 900, income: 0, energy: 6.0, psychology: 5.0, fit: null } },
           { day: 14, daniel: { timeAvailable: 6, timeInvested: 1.5, capital: 24000, spending: 1000, income: 0, energy: 5.0, psychology: 4.0, fit: 5.0 }, marta: { timeAvailable: 21, timeInvested: 2.5, capital: 7050, spending: 950, income: 0, energy: 6.0, psychology: 5.0, fit: 6.0 } },
-    
+
           { day: 15, daniel: { timeAvailable: 7, timeInvested: 1.0, capital: 23950, spending: 1050, income: 0, energy: 5.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 21, timeInvested: 3.0, capital: 6950, spending: 1050, income: 100, energy: 6.0, psychology: 5.0, fit: null } },
           { day: 16, daniel: { timeAvailable: 6, timeInvested: 0.5, capital: 23900, spending: 1100, income: 0, energy: 4.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 20, timeInvested: 2.5, capital: 6900, spending: 1100, income: 120, energy: 6.0, psychology: 5.0, fit: null } },
           { day: 17, daniel: { timeAvailable: 6, timeInvested: 0.5, capital: 23880, spending: 1120, income: 0, energy: 4.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 20, timeInvested: 2.0, capital: 6850, spending: 1150, income: 140, energy: 6.0, psychology: 5.0, fit: null } },
@@ -493,7 +547,7 @@
           { day: 19, daniel: { timeAvailable: 6, timeInvested: 0.5, capital: 23800, spending: 1200, income: 0, energy: 4.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 20, timeInvested: 3.0, capital: 6750, spending: 1250, income: 180, energy: 5.0, psychology: 5.0, fit: null } },
           { day: 20, daniel: { timeAvailable: 6, timeInvested: 1.0, capital: 23780, spending: 1220, income: 0, energy: 4.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 19, timeInvested: 2.0, capital: 6700, spending: 1300, income: 220, energy: 5.0, psychology: 5.0, fit: null } },
           { day: 21, daniel: { timeAvailable: 7, timeInvested: 1.5, capital: 23750, spending: 1250, income: 0, energy: 4.0, psychology: 4.0, fit: 4.0 }, marta: { timeAvailable: 20, timeInvested: 2.0, capital: 6650, spending: 1350, income: 250, energy: 5.0, psychology: 5.0, fit: 6.0 } },
-    
+
           { day: 22, daniel: { timeAvailable: 6, timeInvested: 0.5, capital: 23720, spending: 1280, income: 0, energy: 4.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 19, timeInvested: 2.5, capital: 6600, spending: 1400, income: 300, energy: 5.0, psychology: 5.0, fit: null } },
           { day: 23, daniel: { timeAvailable: 6, timeInvested: 1.0, capital: 23690, spending: 1310, income: 0, energy: 4.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 19, timeInvested: 2.0, capital: 6550, spending: 1450, income: 340, energy: 5.0, psychology: 5.0, fit: null } },
           { day: 24, daniel: { timeAvailable: 7, timeInvested: 1.0, capital: 23650, spending: 1350, income: 0, energy: 4.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 18, timeInvested: 2.5, capital: 6500, spending: 1500, income: 380, energy: 5.0, psychology: 5.0, fit: null } },
@@ -501,33 +555,33 @@
           { day: 26, daniel: { timeAvailable: 6, timeInvested: 1.0, capital: 23600, spending: 1400, income: 0, energy: 4.0, psychology: 3.0, fit: null }, marta: { timeAvailable: 18, timeInvested: 2.0, capital: 6400, spending: 1600, income: 460, energy: 5.0, psychology: 5.0, fit: null } },
           { day: 27, daniel: { timeAvailable: 7, timeInvested: 1.0, capital: 23580, spending: 1420, income: 0, energy: 4.0, psychology: 3.0, fit: null }, marta: { timeAvailable: 17, timeInvested: 2.5, capital: 6350, spending: 1650, income: 520, energy: 5.0, psychology: 5.0, fit: null } },
           { day: 28, daniel: { timeAvailable: 6, timeInvested: 1.0, capital: 23550, spending: 1450, income: 0, energy: 4.0, psychology: 3.0, fit: 4.0 }, marta: { timeAvailable: 17, timeInvested: 2.0, capital: 6300, spending: 1700, income: 600, energy: 5.0, psychology: 5.0, fit: 6.0 } },
-    
+
           { day: 29, daniel: { timeAvailable: 6, timeInvested: 0.5, capital: 23520, spending: 1480, income: 0, energy: 4.0, psychology: 3.0, fit: null }, marta: { timeAvailable: 17, timeInvested: 2.5, capital: 6250, spending: 1750, income: 680, energy: 5.0, psychology: 5.0, fit: null } },
           { day: 30, daniel: { timeAvailable: 7, timeInvested: 1.0, capital: 23500, spending: 1500, income: 0, energy: 4.0, psychology: 3.0, fit: null }, marta: { timeAvailable: 16, timeInvested: 2.0, capital: 6200, spending: 1800, income: 750, energy: 5.0, psychology: 5.0, fit: null } }
         ];
-    
+
         const initialCapital = {
           daniel: 25000,
           marta: 8000
         };
-    
+
         function average(values) {
           const clean = values.filter(v => v !== null && v !== undefined);
           if (!clean.length) return null;
           return clean.reduce((a, b) => a + b, 0) / clean.length;
         }
-    
+
         function sum(values) {
           return values.reduce((a, b) => a + (b || 0), 0);
         }
-    
+
         function buildWeeklyData(data) {
           const weeks = [];
           for (let i = 0; i < data.length; i += 7) {
             const slice = data.slice(i, i + 7);
             const label = `S${Math.floor(i / 7) + 1}`;
             const last = slice[slice.length - 1];
-        
+
             weeks.push({
               label,
               dayStart: slice[0].day,
@@ -556,28 +610,28 @@
           }
           return weeks;
         }
-    
+
         const weeklyData = buildWeeklyData(dailyData);
-    
+
         function normalizeTimeAvailable(hours, profile) {
           const max = profile === "daniel" ? 8 : 25;
           return Math.max(0, Math.min(10, (hours / max) * 10));
         }
-    
+
         function normalizeTimeInvested(hours, profile) {
           const max = profile === "daniel" ? 8 : 14;
           return Math.max(0, Math.min(10, (hours / max) * 10));
         }
-    
+
         function normalizeCapital(capital, profile) {
           return Math.max(0, Math.min(10, (capital / initialCapital[profile]) * 10));
         }
-    
+
         function normalizeIncome(income, profile) {
           const max = profile === "daniel" ? 800 : 800;
           return Math.max(0, Math.min(10, (income / max) * 10));
         }
-    
+
         function compositeScore(entry, profile) {
           const fitValue = entry.fit ?? 5;
           const score =
@@ -586,25 +640,25 @@
             (fitValue * 0.20) +
             (normalizeCapital(entry.capital, profile) * 0.20) +
             (normalizeTimeInvested(entry.timeInvested, profile) * 0.10);
-        
+
           return Number(score.toFixed(1));
         }
-    
+
         function currentDaily() {
           return dailyData[dailyData.length - 1];
         }
-    
+
         function currentWeekly() {
           return weeklyData[weeklyData.length - 1];
         }
-    
+
         /* =========================================================
            CHARTS
         ========================================================= */
-    
+
         const radarCtx = document.getElementById("radarChart");
         const timelineCtx = document.getElementById("timelineChart");
-    
+
         const profileColors = {
           daniel: {
             border: "rgba(120, 170, 210, 1)",
@@ -615,7 +669,7 @@
             fill: "rgba(185, 239, 69, 0.16)"
           }
         };
-    
+
         function buildRadarDataset(source, profileKey) {
           const entry = source[profileKey];
           return [
@@ -628,7 +682,7 @@
             normalizeIncome(entry.income, profileKey)
           ];
         }
-    
+
         const radarLabels = [
           "Tiempo disp.",
           "Tiempo inv.",
@@ -638,10 +692,10 @@
           "Encaje",
           "Ingresos"
         ];
-    
+
         let radarMode = "both";
         let radarRange = "current";
-    
+
         const radarChart = new Chart(radarCtx, {
           type: "radar",
           data: {
@@ -683,12 +737,12 @@
             }
           }
         });
-    
+
         function updateRadarChart() {
           const source = radarRange === "current" ? currentWeekly() : currentWeekly();
-        
+
           const datasets = [];
-        
+
           if (radarMode === "both" || radarMode === "daniel") {
             datasets.push({
               label: "Daniel",
@@ -700,7 +754,7 @@
               pointRadius: 3
             });
           }
-      
+
           if (radarMode === "both" || radarMode === "marta") {
             datasets.push({
               label: "Marta",
@@ -712,14 +766,14 @@
               pointRadius: 3
             });
           }
-      
+
           radarChart.data.datasets = datasets;
           radarChart.update();
         }
-    
+
         let timelineView = "daily";
         let timelineMetric = "energy";
-    
+
         const metricConfig = {
           energy: {
             label: "Energía",
@@ -746,7 +800,7 @@
             extract: (entry) => entry.fit ?? null
           }
         };
-    
+
         const timelineChart = new Chart(timelineCtx, {
           type: "line",
           data: {
@@ -794,12 +848,12 @@
             }
           }
         });
-    
+
         function updateTimelineChart() {
           const source = timelineView === "daily" ? dailyData : weeklyData;
           const labels = source.map(item => timelineView === "daily" ? `D${item.day}` : item.label);
           const config = metricConfig[timelineMetric];
-        
+
           timelineChart.data.labels = labels;
           timelineChart.data.datasets = [
             {
@@ -825,22 +879,22 @@
               fill: false
             }
           ];
-        
+
           const isTenScale = ["energy", "psychology", "fit"].includes(timelineMetric);
-        
+
           timelineChart.options.scales.y.suggestedMin = isTenScale ? 0 : undefined;
           timelineChart.options.scales.y.suggestedMax = isTenScale ? 10 : undefined;
-        
+
           timelineChart.update();
         }
-    
+
         updateRadarChart();
         updateTimelineChart();
-    
+
         /* =========================================================
            SUMMARY / COMPARISON AUTO-FILL
         ========================================================= */
-    
+
         function updateSummaryCards() {
           const current = currentDaily();
           const summaryItems = document.querySelectorAll(".metrics-summary-grid .summary-item strong");
@@ -850,19 +904,19 @@
             summaryItems[2].textContent = `${compositeScore(current.daniel, "daniel")} / 10`;
             summaryItems[3].textContent = `${compositeScore(current.marta, "marta")} / 10`;
           }
-      
+
           const badgeText = document.querySelector(".metrics-summary-head .status-badge");
           if (badgeText) {
             badgeText.lastChild.textContent = ` Día ${current.day}`;
           }
         }
-    
+
         updateSummaryCards();
-    
+
         /* =========================================================
            CONTROLS
         ========================================================= */
-    
+
         document.querySelectorAll("[data-radar-profile]").forEach(btn => {
           btn.addEventListener("click", () => {
             radarMode = btn.dataset.radarProfile;
@@ -871,7 +925,7 @@
             updateRadarChart();
           });
         });
-    
+
         document.querySelectorAll("[data-radar-range]").forEach(btn => {
           btn.addEventListener("click", () => {
             radarRange = btn.dataset.radarRange;
@@ -880,7 +934,7 @@
             updateRadarChart();
           });
         });
-    
+
         document.querySelectorAll("[data-view]").forEach(btn => {
           btn.addEventListener("click", () => {
             timelineView = btn.dataset.view;
@@ -889,7 +943,7 @@
             updateTimelineChart();
           });
         });
-    
+
         document.querySelectorAll("[data-metric]").forEach(btn => {
           btn.addEventListener("click", () => {
             timelineMetric = btn.dataset.metric;
@@ -898,23 +952,23 @@
             updateTimelineChart();
           });
         });
-    
+
         /* =========================================================
            TABLE TOGGLE
         ========================================================= */
-    
+
         const tableButtons = document.querySelectorAll("[data-table-view]");
         const tableBody = document.querySelector(".metrics-history-table tbody");
         const tableHeadFirst = document.querySelector(".metrics-history-table thead th");
-    
+
         function renderTable(view = "daily") {
           if (!tableBody) return;
           const rows = view === "daily" ? dailyData.slice(0, 12) : weeklyData;
-        
+
           if (tableHeadFirst) {
             tableHeadFirst.textContent = view === "daily" ? "Día" : "Semana";
           }
-      
+
           tableBody.innerHTML = rows.map(item => {
             const label = view === "daily" ? item.day : item.label;
             const daniel = item.daniel;
@@ -922,9 +976,9 @@
             const fitText = view === "daily"
               ? "—"
               : `${daniel.fit?.toFixed(1) ?? "—"} / ${marta.fit?.toFixed(1) ?? "—"}`;
-        
+
             const incomeTotal = `${(daniel.income || 0) + (marta.income || 0)} €`;
-        
+
             return `
               <tr>
                 <td>${label}</td>
@@ -942,9 +996,9 @@
             `;
           }).join("");
         }
-    
+
         renderTable("daily");
-    
+
         tableButtons.forEach(btn => {
           btn.addEventListener("click", () => {
             tableButtons.forEach(b => b.classList.remove("active"));
