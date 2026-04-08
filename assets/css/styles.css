@@ -3295,3 +3295,30 @@ h1 {
     grid-template-columns: 1fr;
   }
 }
+
+/* Header tabla métricas */
+
+.metrics-table th {
+  text-align: center;
+  line-height: 1.2;
+}
+
+.th-profile {
+  display: inline-block;
+  margin-top: 0.15rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+/* Identidad perfiles */
+
+.th-d {
+  color: #9ec3e6; /* azul Daniel */
+}
+
+.th-m {
+  color: var(--accent); /* verde Marta */
+}
