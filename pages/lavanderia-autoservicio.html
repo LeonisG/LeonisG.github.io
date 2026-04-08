@@ -12,9 +12,40 @@
 </head>
 
 <body class="project-page">
+  <header class="site-header">
+    <nav class="nav">
+      <div class="container nav-inner">
+        <a class="brand" href="/index.html#inicio" aria-label="Ir al inicio de The Leonis Project">
+          <img class="brand-mark" src="/assets/img/logo-mark.png" alt="Símbolo de The Leonis Project" />
+          <span class="brand-text">
+            <span class="brand-white">THE LEONIS</span>
+            <span class="brand-green">PROJECT</span>
+          </span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          aria-label="Abrir menú"
+        >
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-menu" id="nav-menu">
+          <a href="/index.html#contenido">Contenido</a>
+          <a href="/pages/laboratorio.html">Laboratorio</a>
+          <a href="/index.html#manifiesto">Manifiesto</a>
+          <a href="/index.html#about">Proyecto</a>
+          <a class="cta cta-primary" href="/index.html#suscribete">Newsletter</a>
+        </div>
+      </div>
+    </nav>
+  </header>
 
   <main class="project-page">
-
     <section class="section project-hero">
       <div class="container">
         <div class="project-hero-inner reveal">
@@ -222,8 +253,24 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
+      const navToggle = document.querySelector(".nav-toggle");
+      const navMenu = document.querySelector(".nav-menu");
       const revealItems = document.querySelectorAll(".reveal");
-
+    
+      if (navToggle && navMenu) {
+        navToggle.addEventListener("click", () => {
+          const isOpen = navMenu.classList.toggle("is-open");
+          navToggle.setAttribute("aria-expanded", String(isOpen));
+        });
+      
+        navMenu.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            navMenu.classList.remove("is-open");
+            navToggle.setAttribute("aria-expanded", "false");
+          });
+        });
+      }
+    
       if ("IntersectionObserver" in window && revealItems.length > 0) {
         const observer = new IntersectionObserver(
           (entries, currentObserver) => {
@@ -236,7 +283,7 @@
           },
           { threshold: 0.12 }
         );
-
+        
         revealItems.forEach((item) => observer.observe(item));
       } else {
         revealItems.forEach((item) => item.classList.add("is-visible"));
