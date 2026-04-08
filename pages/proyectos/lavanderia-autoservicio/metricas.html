@@ -428,43 +428,531 @@
   </main>
 
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const navToggle = document.querySelector(".nav-toggle");
-      const navMenu = document.querySelector(".nav-menu");
-      const revealItems = document.querySelectorAll(".reveal");
-
-      if (navToggle && navMenu) {
-        navToggle.addEventListener("click", () => {
-          const isOpen = navMenu.classList.toggle("is-open");
-          navToggle.setAttribute("aria-expanded", String(isOpen));
-        });
-
-        navMenu.querySelectorAll("a").forEach((link) => {
-          link.addEventListener("click", () => {
-            navMenu.classList.remove("is-open");
-            navToggle.setAttribute("aria-expanded", "false");
+      document.addEventListener("DOMContentLoaded", () => {
+        const navToggle = document.querySelector(".nav-toggle");
+        const navMenu = document.querySelector(".nav-menu");
+        const revealItems = document.querySelectorAll(".reveal");
+    
+        if (navToggle && navMenu) {
+          navToggle.addEventListener("click", () => {
+            const isOpen = navMenu.classList.toggle("is-open");
+            navToggle.setAttribute("aria-expanded", String(isOpen));
           });
-        });
-      }
-
-      if ("IntersectionObserver" in window && revealItems.length > 0) {
-        const observer = new IntersectionObserver(
-          (entries, currentObserver) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("is-visible");
-                currentObserver.unobserve(entry.target);
+      
+          navMenu.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+              navMenu.classList.remove("is-open");
+              navToggle.setAttribute("aria-expanded", "false");
+            });
+          });
+        }
+    
+        if ("IntersectionObserver" in window && revealItems.length > 0) {
+          const observer = new IntersectionObserver(
+            (entries, currentObserver) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("is-visible");
+                  currentObserver.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.12 }
+          );
+        
+          revealItems.forEach((item) => observer.observe(item));
+        } else {
+          revealItems.forEach((item) => item.classList.add("is-visible"));
+        }
+    
+        /* =========================================================
+           DATOS SIMULADOS — 30 DÍAS
+        ========================================================= */
+    
+        const dailyData = [
+          { day: 1,  daniel: { timeAvailable: 7, timeInvested: 0.5, capital: 25000, spending: 0,   income: 0, energy: 6.0, psychology: 5.0, fit: null }, marta: { timeAvailable: 22, timeInvested: 1.5, capital: 8000, spending: 0,   income: 0, energy: 8.0, psychology: 6.0, fit: null } },
+          { day: 2,  daniel: { timeAvailable: 7, timeInvested: 1.0, capital: 24900, spending: 100, income: 0, energy: 5.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 22, timeInvested: 2.0, capital: 7950, spending: 50,  income: 0, energy: 7.0, psychology: 5.0, fit: null } },
+          { day: 3,  daniel: { timeAvailable: 6, timeInvested: 0.5, capital: 24850, spending: 150, income: 0, energy: 5.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 21, timeInvested: 1.0, capital: 7900, spending: 100, income: 0, energy: 7.0, psychology: 5.0, fit: null } },
+          { day: 4,  daniel: { timeAvailable: 6, timeInvested: 1.0, capital: 24700, spending: 300, income: 0, energy: 5.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 21, timeInvested: 1.5, capital: 7850, spending: 150, income: 0, energy: 7.0, psychology: 5.0, fit: null } },
+          { day: 5,  daniel: { timeAvailable: 7, timeInvested: 1.0, capital: 24500, spending: 500, income: 0, energy: 5.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 22, timeInvested: 2.0, capital: 7750, spending: 250, income: 0, energy: 7.0, psychology: 5.0, fit: null } },
+          { day: 6,  daniel: { timeAvailable: 6, timeInvested: 0.5, capital: 24400, spending: 600, income: 0, energy: 4.0, psychology: 3.0, fit: null }, marta: { timeAvailable: 21, timeInvested: 2.0, capital: 7650, spending: 350, income: 0, energy: 7.0, psychology: 5.0, fit: null } },
+          { day: 7,  daniel: { timeAvailable: 7, timeInvested: 1.0, capital: 24350, spending: 650, income: 0, energy: 4.0, psychology: 4.0, fit: 5.0 }, marta: { timeAvailable: 22, timeInvested: 2.5, capital: 7600, spending: 400, income: 0, energy: 7.0, psychology: 5.0, fit: 6.0 } },
+    
+          { day: 8,  daniel: { timeAvailable: 6, timeInvested: 0.5, capital: 24250, spending: 750, income: 0, energy: 5.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 23, timeInvested: 2.5, capital: 7500, spending: 500, income: 0, energy: 7.0, psychology: 5.0, fit: null } },
+          { day: 9,  daniel: { timeAvailable: 6, timeInvested: 0.5, capital: 24200, spending: 800, income: 0, energy: 5.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 23, timeInvested: 2.0, capital: 7400, spending: 600, income: 0, energy: 6.0, psychology: 5.0, fit: null } },
+          { day: 10, daniel: { timeAvailable: 7, timeInvested: 1.0, capital: 24150, spending: 850, income: 0, energy: 5.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 22, timeInvested: 3.0, capital: 7350, spending: 650, income: 50, energy: 7.0, psychology: 6.0, fit: null } },
+          { day: 11, daniel: { timeAvailable: 6, timeInvested: 0.5, capital: 24120, spending: 880, income: 0, energy: 5.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 21, timeInvested: 1.5, capital: 7250, spending: 750, income: 50, energy: 6.0, psychology: 5.0, fit: null } },
+          { day: 12, daniel: { timeAvailable: 7, timeInvested: 4.0, capital: 24100, spending: 900, income: 0, energy: 5.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 22, timeInvested: 11.0, capital: 7150, spending: 850, income: 0, energy: 7.0, psychology: 5.0, fit: null } },
+          { day: 13, daniel: { timeAvailable: 6, timeInvested: 1.0, capital: 24050, spending: 950, income: 0, energy: 5.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 22, timeInvested: 2.5, capital: 7100, spending: 900, income: 0, energy: 6.0, psychology: 5.0, fit: null } },
+          { day: 14, daniel: { timeAvailable: 6, timeInvested: 1.5, capital: 24000, spending: 1000, income: 0, energy: 5.0, psychology: 4.0, fit: 5.0 }, marta: { timeAvailable: 21, timeInvested: 2.5, capital: 7050, spending: 950, income: 0, energy: 6.0, psychology: 5.0, fit: 6.0 } },
+    
+          { day: 15, daniel: { timeAvailable: 7, timeInvested: 1.0, capital: 23950, spending: 1050, income: 0, energy: 5.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 21, timeInvested: 3.0, capital: 6950, spending: 1050, income: 100, energy: 6.0, psychology: 5.0, fit: null } },
+          { day: 16, daniel: { timeAvailable: 6, timeInvested: 0.5, capital: 23900, spending: 1100, income: 0, energy: 4.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 20, timeInvested: 2.5, capital: 6900, spending: 1100, income: 120, energy: 6.0, psychology: 5.0, fit: null } },
+          { day: 17, daniel: { timeAvailable: 6, timeInvested: 0.5, capital: 23880, spending: 1120, income: 0, energy: 4.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 20, timeInvested: 2.0, capital: 6850, spending: 1150, income: 140, energy: 6.0, psychology: 5.0, fit: null } },
+          { day: 18, daniel: { timeAvailable: 7, timeInvested: 1.0, capital: 23850, spending: 1150, income: 0, energy: 4.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 21, timeInvested: 2.5, capital: 6800, spending: 1200, income: 160, energy: 6.0, psychology: 5.0, fit: null } },
+          { day: 19, daniel: { timeAvailable: 6, timeInvested: 0.5, capital: 23800, spending: 1200, income: 0, energy: 4.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 20, timeInvested: 3.0, capital: 6750, spending: 1250, income: 180, energy: 5.0, psychology: 5.0, fit: null } },
+          { day: 20, daniel: { timeAvailable: 6, timeInvested: 1.0, capital: 23780, spending: 1220, income: 0, energy: 4.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 19, timeInvested: 2.0, capital: 6700, spending: 1300, income: 220, energy: 5.0, psychology: 5.0, fit: null } },
+          { day: 21, daniel: { timeAvailable: 7, timeInvested: 1.5, capital: 23750, spending: 1250, income: 0, energy: 4.0, psychology: 4.0, fit: 4.0 }, marta: { timeAvailable: 20, timeInvested: 2.0, capital: 6650, spending: 1350, income: 250, energy: 5.0, psychology: 5.0, fit: 6.0 } },
+    
+          { day: 22, daniel: { timeAvailable: 6, timeInvested: 0.5, capital: 23720, spending: 1280, income: 0, energy: 4.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 19, timeInvested: 2.5, capital: 6600, spending: 1400, income: 300, energy: 5.0, psychology: 5.0, fit: null } },
+          { day: 23, daniel: { timeAvailable: 6, timeInvested: 1.0, capital: 23690, spending: 1310, income: 0, energy: 4.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 19, timeInvested: 2.0, capital: 6550, spending: 1450, income: 340, energy: 5.0, psychology: 5.0, fit: null } },
+          { day: 24, daniel: { timeAvailable: 7, timeInvested: 1.0, capital: 23650, spending: 1350, income: 0, energy: 4.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 18, timeInvested: 2.5, capital: 6500, spending: 1500, income: 380, energy: 5.0, psychology: 5.0, fit: null } },
+          { day: 25, daniel: { timeAvailable: 6, timeInvested: 0.5, capital: 23620, spending: 1380, income: 0, energy: 4.0, psychology: 3.0, fit: null }, marta: { timeAvailable: 18, timeInvested: 2.0, capital: 6450, spending: 1550, income: 420, energy: 5.0, psychology: 5.0, fit: null } },
+          { day: 26, daniel: { timeAvailable: 6, timeInvested: 1.0, capital: 23600, spending: 1400, income: 0, energy: 4.0, psychology: 3.0, fit: null }, marta: { timeAvailable: 18, timeInvested: 2.0, capital: 6400, spending: 1600, income: 460, energy: 5.0, psychology: 5.0, fit: null } },
+          { day: 27, daniel: { timeAvailable: 7, timeInvested: 1.0, capital: 23580, spending: 1420, income: 0, energy: 4.0, psychology: 3.0, fit: null }, marta: { timeAvailable: 17, timeInvested: 2.5, capital: 6350, spending: 1650, income: 520, energy: 5.0, psychology: 5.0, fit: null } },
+          { day: 28, daniel: { timeAvailable: 6, timeInvested: 1.0, capital: 23550, spending: 1450, income: 0, energy: 4.0, psychology: 3.0, fit: 4.0 }, marta: { timeAvailable: 17, timeInvested: 2.0, capital: 6300, spending: 1700, income: 600, energy: 5.0, psychology: 5.0, fit: 6.0 } },
+    
+          { day: 29, daniel: { timeAvailable: 6, timeInvested: 0.5, capital: 23520, spending: 1480, income: 0, energy: 4.0, psychology: 3.0, fit: null }, marta: { timeAvailable: 17, timeInvested: 2.5, capital: 6250, spending: 1750, income: 680, energy: 5.0, psychology: 5.0, fit: null } },
+          { day: 30, daniel: { timeAvailable: 7, timeInvested: 1.0, capital: 23500, spending: 1500, income: 0, energy: 4.0, psychology: 3.0, fit: null }, marta: { timeAvailable: 16, timeInvested: 2.0, capital: 6200, spending: 1800, income: 750, energy: 5.0, psychology: 5.0, fit: null } }
+        ];
+    
+        const initialCapital = {
+          daniel: 25000,
+          marta: 8000
+        };
+    
+        function average(values) {
+          const clean = values.filter(v => v !== null && v !== undefined);
+          if (!clean.length) return null;
+          return clean.reduce((a, b) => a + b, 0) / clean.length;
+        }
+    
+        function sum(values) {
+          return values.reduce((a, b) => a + (b || 0), 0);
+        }
+    
+        function buildWeeklyData(data) {
+          const weeks = [];
+          for (let i = 0; i < data.length; i += 7) {
+            const slice = data.slice(i, i + 7);
+            const label = `S${Math.floor(i / 7) + 1}`;
+            const last = slice[slice.length - 1];
+        
+            weeks.push({
+              label,
+              dayStart: slice[0].day,
+              dayEnd: last.day,
+              daniel: {
+                timeAvailable: average(slice.map(d => d.daniel.timeAvailable)),
+                timeInvested: sum(slice.map(d => d.daniel.timeInvested)),
+                capital: last.daniel.capital,
+                spending: last.daniel.spending,
+                income: last.daniel.income,
+                energy: average(slice.map(d => d.daniel.energy)),
+                psychology: average(slice.map(d => d.daniel.psychology)),
+                fit: average(slice.map(d => d.daniel.fit))
+              },
+              marta: {
+                timeAvailable: average(slice.map(d => d.marta.timeAvailable)),
+                timeInvested: sum(slice.map(d => d.marta.timeInvested)),
+                capital: last.marta.capital,
+                spending: last.marta.spending,
+                income: last.marta.income,
+                energy: average(slice.map(d => d.marta.energy)),
+                psychology: average(slice.map(d => d.marta.psychology)),
+                fit: average(slice.map(d => d.marta.fit))
               }
             });
+          }
+          return weeks;
+        }
+    
+        const weeklyData = buildWeeklyData(dailyData);
+    
+        function normalizeTimeAvailable(hours, profile) {
+          const max = profile === "daniel" ? 8 : 25;
+          return Math.max(0, Math.min(10, (hours / max) * 10));
+        }
+    
+        function normalizeTimeInvested(hours, profile) {
+          const max = profile === "daniel" ? 8 : 14;
+          return Math.max(0, Math.min(10, (hours / max) * 10));
+        }
+    
+        function normalizeCapital(capital, profile) {
+          return Math.max(0, Math.min(10, (capital / initialCapital[profile]) * 10));
+        }
+    
+        function normalizeIncome(income, profile) {
+          const max = profile === "daniel" ? 800 : 800;
+          return Math.max(0, Math.min(10, (income / max) * 10));
+        }
+    
+        function compositeScore(entry, profile) {
+          const fitValue = entry.fit ?? 5;
+          const score =
+            (entry.energy * 0.25) +
+            (entry.psychology * 0.25) +
+            (fitValue * 0.20) +
+            (normalizeCapital(entry.capital, profile) * 0.20) +
+            (normalizeTimeInvested(entry.timeInvested, profile) * 0.10);
+        
+          return Number(score.toFixed(1));
+        }
+    
+        function currentDaily() {
+          return dailyData[dailyData.length - 1];
+        }
+    
+        function currentWeekly() {
+          return weeklyData[weeklyData.length - 1];
+        }
+    
+        /* =========================================================
+           CHARTS
+        ========================================================= */
+    
+        const radarCtx = document.getElementById("radarChart");
+        const timelineCtx = document.getElementById("timelineChart");
+    
+        const profileColors = {
+          daniel: {
+            border: "rgba(120, 170, 210, 1)",
+            fill: "rgba(120, 170, 210, 0.16)"
           },
-          { threshold: 0.12 }
-        );
-
-        revealItems.forEach((item) => observer.observe(item));
-      } else {
-        revealItems.forEach((item) => item.classList.add("is-visible"));
-      }
-    });
-  </script>
+          marta: {
+            border: "rgba(185, 239, 69, 1)",
+            fill: "rgba(185, 239, 69, 0.16)"
+          }
+        };
+    
+        function buildRadarDataset(source, profileKey) {
+          const entry = source[profileKey];
+          return [
+            normalizeTimeAvailable(entry.timeAvailable, profileKey),
+            normalizeTimeInvested(entry.timeInvested, profileKey),
+            normalizeCapital(entry.capital, profileKey),
+            entry.energy,
+            entry.psychology,
+            entry.fit ?? 5,
+            normalizeIncome(entry.income, profileKey)
+          ];
+        }
+    
+        const radarLabels = [
+          "Tiempo disp.",
+          "Tiempo inv.",
+          "Capital",
+          "Energía",
+          "Psicología",
+          "Encaje",
+          "Ingresos"
+        ];
+    
+        let radarMode = "both";
+        let radarRange = "current";
+    
+        const radarChart = new Chart(radarCtx, {
+          type: "radar",
+          data: {
+            labels: radarLabels,
+            datasets: []
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: {
+                labels: {
+                  color: "#dce7dd"
+                }
+              }
+            },
+            scales: {
+              r: {
+                min: 0,
+                max: 10,
+                ticks: {
+                  stepSize: 2,
+                  color: "rgba(220,231,221,0.7)",
+                  backdropColor: "transparent"
+                },
+                grid: {
+                  color: "rgba(255,255,255,0.08)"
+                },
+                angleLines: {
+                  color: "rgba(255,255,255,0.08)"
+                },
+                pointLabels: {
+                  color: "#dce7dd",
+                  font: {
+                    size: 12
+                  }
+                }
+              }
+            }
+          }
+        });
+    
+        function updateRadarChart() {
+          const source = radarRange === "current" ? currentWeekly() : currentWeekly();
+        
+          const datasets = [];
+        
+          if (radarMode === "both" || radarMode === "daniel") {
+            datasets.push({
+              label: "Daniel",
+              data: buildRadarDataset(source, "daniel"),
+              borderColor: profileColors.daniel.border,
+              backgroundColor: profileColors.daniel.fill,
+              pointBackgroundColor: profileColors.daniel.border,
+              pointBorderColor: profileColors.daniel.border,
+              pointRadius: 3
+            });
+          }
+      
+          if (radarMode === "both" || radarMode === "marta") {
+            datasets.push({
+              label: "Marta",
+              data: buildRadarDataset(source, "marta"),
+              borderColor: profileColors.marta.border,
+              backgroundColor: profileColors.marta.fill,
+              pointBackgroundColor: profileColors.marta.border,
+              pointBorderColor: profileColors.marta.border,
+              pointRadius: 3
+            });
+          }
+      
+          radarChart.data.datasets = datasets;
+          radarChart.update();
+        }
+    
+        let timelineView = "daily";
+        let timelineMetric = "energy";
+    
+        const metricConfig = {
+          energy: {
+            label: "Energía",
+            extract: (entry) => entry.energy
+          },
+          psychology: {
+            label: "Psicología",
+            extract: (entry) => entry.psychology
+          },
+          capital: {
+            label: "Capital restante",
+            extract: (entry) => entry.capital
+          },
+          time: {
+            label: "Tiempo invertido",
+            extract: (entry) => entry.timeInvested
+          },
+          income: {
+            label: "Ingresos generados",
+            extract: (entry) => entry.income
+          },
+          fit: {
+            label: "Encaje",
+            extract: (entry) => entry.fit ?? null
+          }
+        };
+    
+        const timelineChart = new Chart(timelineCtx, {
+          type: "line",
+          data: {
+            labels: [],
+            datasets: []
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            interaction: {
+              mode: "index",
+              intersect: false
+            },
+            plugins: {
+              legend: {
+                labels: {
+                  color: "#dce7dd"
+                }
+              },
+              tooltip: {
+                backgroundColor: "rgba(8, 24, 15, 0.95)",
+                titleColor: "#f5f7f4",
+                bodyColor: "#dce7dd",
+                borderColor: "rgba(255,255,255,0.08)",
+                borderWidth: 1
+              }
+            },
+            scales: {
+              x: {
+                ticks: {
+                  color: "#cfdad0"
+                },
+                grid: {
+                  color: "rgba(255,255,255,0.04)"
+                }
+              },
+              y: {
+                ticks: {
+                  color: "#cfdad0"
+                },
+                grid: {
+                  color: "rgba(255,255,255,0.06)"
+                }
+              }
+            }
+          }
+        });
+    
+        function updateTimelineChart() {
+          const source = timelineView === "daily" ? dailyData : weeklyData;
+          const labels = source.map(item => timelineView === "daily" ? `D${item.day}` : item.label);
+          const config = metricConfig[timelineMetric];
+        
+          timelineChart.data.labels = labels;
+          timelineChart.data.datasets = [
+            {
+              label: "Daniel",
+              data: source.map(item => config.extract(item.daniel)),
+              borderColor: profileColors.daniel.border,
+              backgroundColor: profileColors.daniel.fill,
+              tension: 0.32,
+              spanGaps: true,
+              pointRadius: 3,
+              pointHoverRadius: 5,
+              fill: false
+            },
+            {
+              label: "Marta",
+              data: source.map(item => config.extract(item.marta)),
+              borderColor: profileColors.marta.border,
+              backgroundColor: profileColors.marta.fill,
+              tension: 0.32,
+              spanGaps: true,
+              pointRadius: 3,
+              pointHoverRadius: 5,
+              fill: false
+            }
+          ];
+        
+          const isTenScale = ["energy", "psychology", "fit"].includes(timelineMetric);
+        
+          timelineChart.options.scales.y.suggestedMin = isTenScale ? 0 : undefined;
+          timelineChart.options.scales.y.suggestedMax = isTenScale ? 10 : undefined;
+        
+          timelineChart.update();
+        }
+    
+        updateRadarChart();
+        updateTimelineChart();
+    
+        /* =========================================================
+           SUMMARY / COMPARISON AUTO-FILL
+        ========================================================= */
+    
+        function updateSummaryCards() {
+          const current = currentDaily();
+          const summaryItems = document.querySelectorAll(".metrics-summary-grid .summary-item strong");
+          if (summaryItems.length >= 4) {
+            summaryItems[0].textContent = `Semana ${Math.ceil(current.day / 7)}`;
+            summaryItems[1].textContent = "Capital inicial";
+            summaryItems[2].textContent = `${compositeScore(current.daniel, "daniel")} / 10`;
+            summaryItems[3].textContent = `${compositeScore(current.marta, "marta")} / 10`;
+          }
+      
+          const badgeText = document.querySelector(".metrics-summary-head .status-badge");
+          if (badgeText) {
+            badgeText.lastChild.textContent = ` Día ${current.day}`;
+          }
+        }
+    
+        updateSummaryCards();
+    
+        /* =========================================================
+           CONTROLS
+        ========================================================= */
+    
+        document.querySelectorAll("[data-radar-profile]").forEach(btn => {
+          btn.addEventListener("click", () => {
+            radarMode = btn.dataset.radarProfile;
+            document.querySelectorAll("[data-radar-profile]").forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+            updateRadarChart();
+          });
+        });
+    
+        document.querySelectorAll("[data-radar-range]").forEach(btn => {
+          btn.addEventListener("click", () => {
+            radarRange = btn.dataset.radarRange;
+            document.querySelectorAll("[data-radar-range]").forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+            updateRadarChart();
+          });
+        });
+    
+        document.querySelectorAll("[data-view]").forEach(btn => {
+          btn.addEventListener("click", () => {
+            timelineView = btn.dataset.view;
+            document.querySelectorAll("[data-view]").forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+            updateTimelineChart();
+          });
+        });
+    
+        document.querySelectorAll("[data-metric]").forEach(btn => {
+          btn.addEventListener("click", () => {
+            timelineMetric = btn.dataset.metric;
+            document.querySelectorAll("[data-metric]").forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+            updateTimelineChart();
+          });
+        });
+    
+        /* =========================================================
+           TABLE TOGGLE
+        ========================================================= */
+    
+        const tableButtons = document.querySelectorAll("[data-table-view]");
+        const tableBody = document.querySelector(".metrics-history-table tbody");
+        const tableHeadFirst = document.querySelector(".metrics-history-table thead th");
+    
+        function renderTable(view = "daily") {
+          if (!tableBody) return;
+          const rows = view === "daily" ? dailyData.slice(0, 12) : weeklyData;
+        
+          if (tableHeadFirst) {
+            tableHeadFirst.textContent = view === "daily" ? "Día" : "Semana";
+          }
+      
+          tableBody.innerHTML = rows.map(item => {
+            const label = view === "daily" ? item.day : item.label;
+            const daniel = item.daniel;
+            const marta = item.marta;
+            const fitText = view === "daily"
+              ? "—"
+              : `${daniel.fit?.toFixed(1) ?? "—"} / ${marta.fit?.toFixed(1) ?? "—"}`;
+        
+            const incomeTotal = `${(daniel.income || 0) + (marta.income || 0)} €`;
+        
+            return `
+              <tr>
+                <td>${label}</td>
+                <td>${daniel.timeInvested}h</td>
+                <td>${marta.timeInvested}h</td>
+                <td>${Math.round(daniel.capital).toLocaleString("es-ES")} €</td>
+                <td>${Math.round(marta.capital).toLocaleString("es-ES")} €</td>
+                <td>${daniel.energy.toFixed(1)}</td>
+                <td>${marta.energy.toFixed(1)}</td>
+                <td>${daniel.psychology.toFixed(1)}</td>
+                <td>${marta.psychology.toFixed(1)}</td>
+                <td>${fitText}</td>
+                <td>${incomeTotal}</td>
+              </tr>
+            `;
+          }).join("");
+        }
+    
+        renderTable("daily");
+    
+        tableButtons.forEach(btn => {
+          btn.addEventListener("click", () => {
+            tableButtons.forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+            renderTable(btn.dataset.tableView);
+          });
+        });
+      });
+    </script>
 </body>
 </html>
