@@ -2403,17 +2403,17 @@ h1 {
 /* Avatar Daniel */
 .profile-a .entry-avatar {
   background:
-    radial-gradient(circle at 35% 30%, rgba(232,236,233,0.45), transparent 26%),
-    linear-gradient(135deg, #7c8983 0%, #4f5d57 100%);
-  border-color: rgba(190, 202, 196, 0.22);
-}
-
-/* Avatar Marta */
-.profile-a .entry-avatar {
-  background:
     radial-gradient(circle at 35% 30%, rgba(210,230,255,0.5), transparent 26%),
     linear-gradient(135deg, #6f8fa8 0%, #2e4a5f 100%);
   border-color: rgba(140, 180, 210, 0.35);
+}
+
+/* Avatar Marta */
+.profile-b .entry-avatar {
+  background:
+    radial-gradient(circle at 35% 30%, rgba(245,255,214,0.45), transparent 26%),
+    linear-gradient(135deg, #b9ef45 0%, #5e8f28 100%);
+  border-color: rgba(185, 239, 69, 0.28);
 }
 
 .profile-a .day-entry-head small {
