@@ -1774,7 +1774,7 @@ h1 {
 
 .project-links {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
 
@@ -1803,6 +1803,15 @@ h1 {
     radial-gradient(circle at top right, rgba(185,239,69,0.08), transparent 30%),
     rgba(255,255,255,0.04);
   box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+}
+
+.project-nav-section {
+  padding-top: 0;
+}
+
+.project-nav-section .project-block {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 /* =========================
