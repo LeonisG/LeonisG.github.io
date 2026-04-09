@@ -1779,13 +1779,14 @@ h1 {
 }
 
 .project-link-card {
-  padding: 1rem 1.05rem;
+  padding: 0.85rem 1rem;
   border-radius: 20px;
   background: rgba(255,255,255,0.03);
   border: 1px solid rgba(255,255,255,0.06);
-  min-height: 110px;
+  min-height: auto;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  text-align: center;
   font-size: 1.02rem;
   line-height: 1.25;
   color: #eef4ee;
