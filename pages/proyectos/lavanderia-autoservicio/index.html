@@ -472,7 +472,10 @@
               }
             });
           },
-          { threshold: 0.12 }
+          {
+          threshold: 0.02,
+          rootMargin: "0px 0px -6% 0px"
+          }
         );
         
         revealItems.forEach((item) => observer.observe(item));
