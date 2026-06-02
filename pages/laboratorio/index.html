@@ -12,20 +12,14 @@
   <meta name="theme-color" content="#031d10" />
 
   <meta property="og:title" content="Laboratorio Leonis | The Leonis Project" />
-  <meta
-    property="og:description"
-    content="Perfiles humanos simulados, fricción real y modelos de negocio documentados en condiciones cercanas a la realidad."
-  />
+  <meta property="og:description" content="Perfiles humanos simulados, fricción real y modelos de negocio documentados en condiciones cercanas a la realidad." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://theleonisproject.com/pages/laboratorio/index.html" />
   <meta property="og:image" content="https://theleonisproject.com/assets/img/og-cover.jpg" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Laboratorio Leonis | The Leonis Project" />
-  <meta
-    name="twitter:description"
-    content="Perfiles humanos simulados, fricción real y modelos de negocio documentados en condiciones cercanas a la realidad."
-  />
+  <meta name="twitter:description" content="Perfiles humanos simulados, fricción real y modelos de negocio documentados en condiciones cercanas a la realidad." />
   <meta name="twitter:image" content="https://theleonisproject.com/assets/img/og-cover.jpg" />
 
   <link rel="icon" href="/favicon.ico" />
@@ -37,10 +31,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/css/styles.css" />
   <script src="/assets/js/main.js" defer></script>
 </head>
@@ -56,18 +47,10 @@
             <span class="brand-green">PROJECT</span>
           </span>
         </a>
-
-        <button
-          class="nav-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="nav-menu"
-          aria-label="Abrir menú"
-        >
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú">
           <span></span>
           <span></span>
         </button>
-
         <div class="nav-menu" id="nav-menu">
           <a href="/pages/laboratorio/index.html">Laboratorio</a>
           <a href="/pages/manifiesto.html">Manifiesto</a>
@@ -90,74 +73,125 @@
             <span class="hero-tag-dot" aria-hidden="true"></span>
             Leonis — Sistema de Observación
           </p>
-
           <h1 class="lab-h1">
             El laboratorio observa<br>
             qué exige cada modelo<br>
             en una vida real.
           </h1>
-
           <p class="lab-hero-body">
-            Cada experimento sigue dos perfiles humanos concretos intentando construir
-            el mismo negocio. No se busca demostrar que funciona. Se documenta qué
-            fricción genera, qué tipo de vida exige y para quién tiene encaje real.
+            Cada experimento sigue dos perfiles humanos concretos intentando construir el mismo
+            negocio. No se busca demostrar que funciona. Se documenta qué fricción genera, qué
+            tipo de vida exige y para quién tiene encaje real.
           </p>
-
           <div class="hero-actions">
             <a class="cta cta-primary" href="#experimentos">Ver experimentos</a>
             <a class="cta cta-secondary" href="#metodo">Entender el sistema</a>
           </div>
         </div>
 
-        <aside class="laboratory-hero-stage reveal">
-          <div class="stage-frame">
-            <div class="stage-label">Comparativa activa — Exp. 01</div>
+        <!-- ── Duel comparativo ─────────────────────────────── -->
+        <aside class="laboratory-hero-stage reveal" aria-label="Comparativa de perfiles activa">
+          <div class="lab-duel">
 
-            <div class="agent-card agent-card-left">
-              <div class="agent-top">
-                <div>
-                  <small>Perfil A</small>
-                  <strong>Daniel · 34</strong>
+            <div class="lab-duel-header">
+              <span class="lab-duel-exp">EXP-01 · Comparativa activa</span>
+              <span class="lab-duel-vs-label" aria-hidden="true">VS</span>
+            </div>
+
+            <div class="lab-duel-arena">
+
+              <!-- Perfil A — Daniel -->
+              <div class="lab-duel-profile lab-duel-a">
+                <div class="lab-duel-ident">
+                  <div class="lab-duel-avatar lab-duel-avatar-a" aria-hidden="true">D</div>
+                  <div class="lab-duel-ident-text">
+                    <span class="lab-duel-pid">Perfil A</span>
+                    <strong class="lab-duel-name">Daniel</strong>
+                    <span class="lab-duel-tag lab-duel-tag-a">Prudente</span>
+                  </div>
                 </div>
-                <span class="agent-badge">Tiempo escaso</span>
-              </div>
-              <p>
-                Administrativo, pareja, 4.000 € de ahorro y una relación prudente con el riesgo.
-                Quiere construir algo propio, pero llega con poca energía al final del día.
-              </p>
-              <div class="agent-traits">
-                <span>Trabajo 9–18</span>
-                <span>Capital limitado</span>
-                <span>Perfil prudente</span>
-              </div>
-            </div>
-
-            <div class="vs-core">VS</div>
-
-            <div class="agent-card agent-card-right">
-              <div class="agent-top">
-                <div>
-                  <small>Perfil B</small>
-                  <strong>Marta · 29</strong>
+                <div class="lab-duel-bars">
+                  <div class="lab-duel-bar-row">
+                    <span class="lab-duel-bar-label">Tiempo</span>
+                    <div class="lab-duel-bar-track">
+                      <div class="lab-duel-bar-fill lab-duel-fill-a" style="--val: 28%"></div>
+                    </div>
+                    <span class="lab-duel-bar-val lab-val-a">~8 h/sem</span>
+                  </div>
+                  <div class="lab-duel-bar-row">
+                    <span class="lab-duel-bar-label">Capital</span>
+                    <div class="lab-duel-bar-track">
+                      <div class="lab-duel-bar-fill lab-duel-fill-a" style="--val: 38%"></div>
+                    </div>
+                    <span class="lab-duel-bar-val lab-val-a">4.000 €</span>
+                  </div>
+                  <div class="lab-duel-bar-row">
+                    <span class="lab-duel-bar-label">Riesgo</span>
+                    <div class="lab-duel-bar-track">
+                      <div class="lab-duel-bar-fill lab-duel-fill-a" style="--val: 22%"></div>
+                    </div>
+                    <span class="lab-duel-bar-val lab-val-a">Bajo</span>
+                  </div>
+                  <div class="lab-duel-bar-row">
+                    <span class="lab-duel-bar-label">Energía</span>
+                    <div class="lab-duel-bar-track">
+                      <div class="lab-duel-bar-fill lab-duel-fill-a" style="--val: 18%"></div>
+                    </div>
+                    <span class="lab-duel-bar-val lab-val-a">Escasa</span>
+                  </div>
                 </div>
-                <span class="agent-badge">Más flexibilidad</span>
               </div>
-              <p>
-                Freelance en marketing, más margen horario y energía alta, pero ingresos
-                variables y mayor tolerancia a la incertidumbre. Avanza más rápido,
-                aunque también se expone más.
-              </p>
-              <div class="agent-traits">
-                <span>Horario flexible</span>
-                <span>Ingresos variables</span>
-                <span>Perfil explorador</span>
-              </div>
-            </div>
 
-            <div class="stage-footnote">
-              El laboratorio observa qué ocurre cuando el mismo negocio se enfrenta
-              a dos vidas distintas.
-            </div>
+              <!-- Separador -->
+              <div class="lab-duel-sep" aria-hidden="true"></div>
+
+              <!-- Perfil B — Marta -->
+              <div class="lab-duel-profile lab-duel-b">
+                <div class="lab-duel-ident lab-duel-ident-b">
+                  <div class="lab-duel-ident-text lab-duel-ident-text-b">
+                    <span class="lab-duel-pid">Perfil B</span>
+                    <strong class="lab-duel-name">Marta</strong>
+                    <span class="lab-duel-tag lab-duel-tag-b">Exploradora</span>
+                  </div>
+                  <div class="lab-duel-avatar lab-duel-avatar-b" aria-hidden="true">M</div>
+                </div>
+                <div class="lab-duel-bars">
+                  <div class="lab-duel-bar-row lab-duel-bar-row-b">
+                    <span class="lab-duel-bar-val lab-val-b">~20 h/sem</span>
+                    <div class="lab-duel-bar-track">
+                      <div class="lab-duel-bar-fill lab-duel-fill-b" style="--val: 70%"></div>
+                    </div>
+                    <span class="lab-duel-bar-label">Tiempo</span>
+                  </div>
+                  <div class="lab-duel-bar-row lab-duel-bar-row-b">
+                    <span class="lab-duel-bar-val lab-val-b">8.000 €</span>
+                    <div class="lab-duel-bar-track">
+                      <div class="lab-duel-bar-fill lab-duel-fill-b" style="--val: 76%"></div>
+                    </div>
+                    <span class="lab-duel-bar-label">Capital</span>
+                  </div>
+                  <div class="lab-duel-bar-row lab-duel-bar-row-b">
+                    <span class="lab-duel-bar-val lab-val-b">Alta</span>
+                    <div class="lab-duel-bar-track">
+                      <div class="lab-duel-bar-fill lab-duel-fill-b" style="--val: 78%"></div>
+                    </div>
+                    <span class="lab-duel-bar-label">Riesgo</span>
+                  </div>
+                  <div class="lab-duel-bar-row lab-duel-bar-row-b">
+                    <span class="lab-duel-bar-val lab-val-b">Alta</span>
+                    <div class="lab-duel-bar-track">
+                      <div class="lab-duel-bar-fill lab-duel-fill-b" style="--val: 68%"></div>
+                    </div>
+                    <span class="lab-duel-bar-label">Energía</span>
+                  </div>
+                </div>
+              </div>
+
+            </div><!-- /lab-duel-arena -->
+
+            <p class="lab-duel-footnote">
+              El mismo modelo. Dos vidas distintas. Observamos qué cambia.
+            </p>
           </div>
         </aside>
 
@@ -271,39 +305,127 @@
           <span class="home-section-num" aria-hidden="true">03</span>
           <h2 class="home-section-title">Comparativa de perfiles</h2>
         </header>
-        <div class="panel reveal">
-          <span class="card-kicker">La premisa del laboratorio</span>
-          <h3 class="section-title">
-            No simula solo negocios.<br>Simula personas intentando construirlos.
-          </h3>
-          <p class="section-copy">
-            El mismo modelo puede parecer una oportunidad razonable para un perfil y una mala
-            decisión para otro. El laboratorio existe para observar precisamente esa diferencia:
-            no solo si una idea funciona, sino para quién, bajo qué condiciones y a qué coste vital.
-          </p>
-          <div class="comparison-bar">
-            <div class="comparison-item">
-              <small>Tiempo</small>
-              <strong>¿Cuánto margen real tiene esta persona para avanzar?</strong>
+        <p class="home-section-sub reveal">
+          El mismo modelo puede encajar bien en una vida y ser insostenible en otra.
+          Esta tabla compara cómo cada perfil del experimento activo se posiciona en las
+          variables clave de encaje vital.
+        </p>
+
+        <div class="lab-matrix reveal">
+
+          <div class="lab-matrix-head" aria-hidden="true">
+            <div class="lab-matrix-head-var">Variable de observación</div>
+            <div class="lab-matrix-head-profile lab-matrix-head-a">
+              <div class="lab-matrix-avatar lab-matrix-avatar-a">D</div>
+              <span>Daniel</span>
             </div>
-            <div class="comparison-item">
-              <small>Capital</small>
-              <strong>¿Puede asumir los costes sin poner en riesgo su estabilidad?</strong>
-            </div>
-            <div class="comparison-item">
-              <small>Energía</small>
-              <strong>¿Tiene cabeza y cuerpo para sostener el esfuerzo?</strong>
-            </div>
-            <div class="comparison-item">
-              <small>Psicología</small>
-              <strong>¿Cómo se relaciona con el riesgo, la paciencia y la incertidumbre?</strong>
-            </div>
-            <div class="comparison-item">
-              <small>Encaje</small>
-              <strong>¿Este negocio mejora su vida o la tensiona todavía más?</strong>
+            <div class="lab-matrix-head-profile lab-matrix-head-b">
+              <div class="lab-matrix-avatar lab-matrix-avatar-b">M</div>
+              <span>Marta</span>
             </div>
           </div>
-        </div>
+
+          <div class="lab-matrix-row">
+            <div class="lab-matrix-var">
+              <strong>Tiempo disponible</strong>
+              <span>Horas reales por semana</span>
+            </div>
+            <div class="lab-matrix-cell">
+              <div class="lab-matrix-bar-track">
+                <div class="lab-matrix-fill lab-matrix-fill-a" style="--val: 28%"></div>
+              </div>
+              <span class="lab-matrix-val lab-val-a">~8 h/sem</span>
+            </div>
+            <div class="lab-matrix-cell">
+              <div class="lab-matrix-bar-track">
+                <div class="lab-matrix-fill lab-matrix-fill-b" style="--val: 70%"></div>
+              </div>
+              <span class="lab-matrix-val lab-val-b">~20 h/sem</span>
+            </div>
+          </div>
+
+          <div class="lab-matrix-row">
+            <div class="lab-matrix-var">
+              <strong>Capital inicial</strong>
+              <span>Recursos disponibles</span>
+            </div>
+            <div class="lab-matrix-cell">
+              <div class="lab-matrix-bar-track">
+                <div class="lab-matrix-fill lab-matrix-fill-a" style="--val: 38%"></div>
+              </div>
+              <span class="lab-matrix-val lab-val-a">4.000 €</span>
+            </div>
+            <div class="lab-matrix-cell">
+              <div class="lab-matrix-bar-track">
+                <div class="lab-matrix-fill lab-matrix-fill-b" style="--val: 76%"></div>
+              </div>
+              <span class="lab-matrix-val lab-val-b">8.000 €</span>
+            </div>
+          </div>
+
+          <div class="lab-matrix-row">
+            <div class="lab-matrix-var">
+              <strong>Energía residual</strong>
+              <span>Capacidad de sostener el esfuerzo</span>
+            </div>
+            <div class="lab-matrix-cell">
+              <div class="lab-matrix-bar-track">
+                <div class="lab-matrix-fill lab-matrix-fill-a" style="--val: 18%"></div>
+              </div>
+              <span class="lab-matrix-val lab-val-a">Escasa</span>
+            </div>
+            <div class="lab-matrix-cell">
+              <div class="lab-matrix-bar-track">
+                <div class="lab-matrix-fill lab-matrix-fill-b" style="--val: 68%"></div>
+              </div>
+              <span class="lab-matrix-val lab-val-b">Alta</span>
+            </div>
+          </div>
+
+          <div class="lab-matrix-row">
+            <div class="lab-matrix-var">
+              <strong>Tolerancia al riesgo</strong>
+              <span>Relación con la incertidumbre</span>
+            </div>
+            <div class="lab-matrix-cell">
+              <div class="lab-matrix-bar-track">
+                <div class="lab-matrix-fill lab-matrix-fill-a" style="--val: 22%"></div>
+              </div>
+              <span class="lab-matrix-val lab-val-a">Baja</span>
+            </div>
+            <div class="lab-matrix-cell">
+              <div class="lab-matrix-bar-track">
+                <div class="lab-matrix-fill lab-matrix-fill-b" style="--val: 80%"></div>
+              </div>
+              <span class="lab-matrix-val lab-val-b">Alta</span>
+            </div>
+          </div>
+
+          <div class="lab-matrix-row">
+            <div class="lab-matrix-var">
+              <strong>Fricción acumulativa</strong>
+              <span>Desgaste operativo esperado</span>
+            </div>
+            <div class="lab-matrix-cell">
+              <div class="lab-matrix-bar-track">
+                <div class="lab-matrix-fill lab-matrix-fill-a" style="--val: 72%"></div>
+              </div>
+              <span class="lab-matrix-val lab-val-a">Alta</span>
+            </div>
+            <div class="lab-matrix-cell">
+              <div class="lab-matrix-bar-track">
+                <div class="lab-matrix-fill lab-matrix-fill-b" style="--val: 52%"></div>
+              </div>
+              <span class="lab-matrix-val lab-val-b">Media</span>
+            </div>
+          </div>
+
+        </div><!-- /lab-matrix -->
+
+        <p class="lab-matrix-note reveal">
+          Los valores son estimaciones comparativas relativas entre perfiles dentro del experimento,
+          no métricas absolutas. Lo relevante es la diferencia, no el número exacto.
+        </p>
       </div>
     </section>
 
@@ -312,162 +434,194 @@
       <div class="container">
         <header class="home-section-head reveal">
           <span class="home-section-num" aria-hidden="true">04</span>
-          <h2 class="home-section-title">Experimentos del laboratorio</h2>
+          <h2 class="home-section-title">Expedientes del laboratorio</h2>
         </header>
         <p class="home-section-sub reveal">
-          Modelos de negocio enfrentados a dos perfiles distintos. Algunos están activos,
-          otros irán quedando archivados con sus conclusiones.
+          Modelos de negocio documentados bajo condiciones reales de dos perfiles distintos.
+          Cada expediente recoge decisiones, métricas, fricciones y evolución semanal.
         </p>
 
-        <div class="grid-2">
-          <article class="project-card active reveal">
-            <div class="project-top">
-              <div>
-                <span class="card-kicker">Proyecto #01</span>
-                <h3>Lavandería autoservicio</h3>
-              </div>
+        <div class="lab-files-grid">
+
+          <!-- EXP-01 · Activo -->
+          <article class="lab-file lab-file-active reveal">
+            <div class="lab-file-ribbon">
+              <span class="lab-file-ref">EXP-01</span>
               <span class="status-badge active">
                 <span class="status-dot"></span>
                 Activo
               </span>
             </div>
-
-            <p>
-              Dos perfiles intentan validar si este modelo puede construirse como una vía
-              razonable de ingresos o patrimonio cuando el tiempo y el capital son limitados.
+            <h3 class="lab-file-name">Lavandería autoservicio</h3>
+            <p class="lab-file-hypothesis">
+              ¿Puede este modelo construirse como vía razonable de ingresos cuando el tiempo
+              y el capital son limitados?
             </p>
-
-            <div class="project-meta">
-              <span>Daniel vs Marta</span>
-              <span>Fricción alta</span>
-              <span>Semana 4</span>
+            <div class="lab-file-data">
+              <div class="lab-file-datum">
+                <span class="lab-file-key">Perfiles</span>
+                <span class="lab-file-val">
+                  <span class="lab-file-profile-a">Daniel</span>
+                  <span class="lab-file-vs"> vs </span>
+                  <span class="lab-file-profile-b">Marta</span>
+                </span>
+              </div>
+              <div class="lab-file-datum">
+                <span class="lab-file-key">Fricción</span>
+                <span class="lab-file-val">Alta</span>
+              </div>
+              <div class="lab-file-datum">
+                <span class="lab-file-key">Semana</span>
+                <span class="lab-file-val">4 / en curso</span>
+              </div>
+              <div class="lab-file-datum">
+                <span class="lab-file-key">Tipo</span>
+                <span class="lab-file-val">Negocio físico local</span>
+              </div>
             </div>
-
-            <div class="project-footer">
-              <p class="section-copy" style="margin:0; max-width:42ch;">
-                El foco del experimento está en licencias, capital inicial y tensión entre
-                validación rápida y riesgo real.
-              </p>
-              <a class="project-link" href="/pages/proyectos/lavanderia-autoservicio/index.html">
-                <span>Ver experimento</span>
-                <span>→</span>
-              </a>
+            <div class="lab-file-progress">
+              <div class="lab-file-prog-track">
+                <div class="lab-file-prog-fill" style="--prog: 40%"></div>
+              </div>
+              <div class="lab-file-prog-labels">
+                <span>Inicio</span>
+                <span>Semana 4 de ~10</span>
+                <span>Cierre</span>
+              </div>
             </div>
+            <a class="lab-file-link" href="/pages/proyectos/lavanderia-autoservicio/index.html">
+              Acceder al expediente completo <span aria-hidden="true">→</span>
+            </a>
           </article>
 
-          <article class="project-card upcoming reveal">
-            <div class="project-top">
-              <div>
-                <span class="card-kicker">Proyecto #02</span>
-                <h3>Agencia SEO local</h3>
-              </div>
+          <!-- EXP-02 · Próximo -->
+          <article class="lab-file lab-file-upcoming reveal">
+            <div class="lab-file-ribbon">
+              <span class="lab-file-ref">EXP-02</span>
               <span class="status-badge upcoming">
                 <span class="status-dot"></span>
                 Próximo
               </span>
             </div>
-
-            <p>
-              Un modelo con barreras de entrada bajas pero fricción comercial alta. El experimento
-              pone el foco en captación de clientes, consistencia y desgaste psicológico.
+            <h3 class="lab-file-name">Agencia SEO local</h3>
+            <p class="lab-file-hypothesis">
+              ¿Qué tipo de perfil soporta mejor la fricción comercial continua de un servicio
+              con baja barrera de entrada?
             </p>
-
-            <div class="project-meta">
-              <span>Luis vs Carla</span>
-              <span>Fricción media</span>
+            <div class="lab-file-data">
+              <div class="lab-file-datum">
+                <span class="lab-file-key">Perfiles</span>
+                <span class="lab-file-val">Luis vs Carla</span>
+              </div>
+              <div class="lab-file-datum">
+                <span class="lab-file-key">Fricción</span>
+                <span class="lab-file-val">Media-alta</span>
+              </div>
+              <div class="lab-file-datum">
+                <span class="lab-file-key">Tipo</span>
+                <span class="lab-file-val">Servicio B2B local</span>
+              </div>
+              <div class="lab-file-datum">
+                <span class="lab-file-key">Estado</span>
+                <span class="lab-file-val">En preparación</span>
+              </div>
             </div>
-
-            <div class="project-footer">
-              <p class="section-copy" style="margin:0; max-width:42ch;">
-                El interés no está solo en si se consiguen clientes, sino en qué tipo de
-                persona soporta mejor el rechazo y la constancia comercial.
-              </p>
-              <a class="project-link" href="#">
-                <span>Próximamente</span>
-                <span>→</span>
-              </a>
+            <div class="lab-file-upcoming-note">
+              El interés no está solo en si se consiguen clientes, sino en qué tipo de persona
+              soporta mejor el rechazo y la constancia comercial continua.
             </div>
           </article>
 
-          <article class="project-card upcoming reveal">
-            <div class="project-top">
-              <div>
-                <span class="card-kicker">Proyecto #03</span>
-                <h3>Micro SaaS B2B</h3>
-              </div>
+          <!-- EXP-03 · Próximo -->
+          <article class="lab-file lab-file-upcoming reveal">
+            <div class="lab-file-ribbon">
+              <span class="lab-file-ref">EXP-03</span>
               <span class="status-badge upcoming">
                 <span class="status-dot"></span>
                 Próximo
               </span>
             </div>
-
-            <p>
-              Un modelo atractivo por escalabilidad potencial, pero exigente en capacidad técnica,
-              paciencia y claridad sobre el problema que resuelve.
+            <h3 class="lab-file-name">Micro SaaS B2B</h3>
+            <p class="lab-file-hypothesis">
+              ¿Cuánto pesa la ventaja técnica frente a la disciplina y la observación
+              de mercado para sostener un producto largo?
             </p>
-
-            <div class="project-meta">
-              <span>Perfil técnico vs no técnico</span>
-              <span>Alta exigencia</span>
+            <div class="lab-file-data">
+              <div class="lab-file-datum">
+                <span class="lab-file-key">Perfiles</span>
+                <span class="lab-file-val">Técnico vs No técnico</span>
+              </div>
+              <div class="lab-file-datum">
+                <span class="lab-file-key">Fricción</span>
+                <span class="lab-file-val">Alta</span>
+              </div>
+              <div class="lab-file-datum">
+                <span class="lab-file-key">Tipo</span>
+                <span class="lab-file-val">Producto digital</span>
+              </div>
+              <div class="lab-file-datum">
+                <span class="lab-file-key">Estado</span>
+                <span class="lab-file-val">En preparación</span>
+              </div>
             </div>
-
-            <div class="project-footer">
-              <p class="section-copy" style="margin:0; max-width:42ch;">
-                Este experimento explorará cuánto pesa la ventaja técnica frente a la
-                disciplina, la observación de mercado y la capacidad de sostener proyectos largos.
-              </p>
-              <a class="project-link" href="#">
-                <span>Próximamente</span>
-                <span>→</span>
-              </a>
+            <div class="lab-file-upcoming-note">
+              Exploración de si la ventaja técnica inicial compensa la desventaja en
+              disciplina, paciencia y tolerancia a la ambigüedad de producto.
             </div>
           </article>
 
-          <article class="project-card upcoming reveal">
-            <div class="project-top">
-              <div>
-                <span class="card-kicker">Proyecto #04</span>
-                <h3>Vending saludable</h3>
-              </div>
+          <!-- EXP-04 · Próximo -->
+          <article class="lab-file lab-file-upcoming reveal">
+            <div class="lab-file-ribbon">
+              <span class="lab-file-ref">EXP-04</span>
               <span class="status-badge upcoming">
                 <span class="status-dot"></span>
                 Próximo
               </span>
             </div>
-
-            <p>
-              Un modelo físico con logística, permisos, ubicaciones y una relación muy directa
-              entre capital inicial y margen operativo.
+            <h3 class="lab-file-name">Vending saludable</h3>
+            <p class="lab-file-hypothesis">
+              ¿Cómo afectan las restricciones de capital inicial y la logística física
+              al encaje vital de un modelo de este tipo?
             </p>
-
-            <div class="project-meta">
-              <span>Sergio vs Alba</span>
-              <span>Veredicto moderado</span>
+            <div class="lab-file-data">
+              <div class="lab-file-datum">
+                <span class="lab-file-key">Perfiles</span>
+                <span class="lab-file-val">Sergio vs Alba</span>
+              </div>
+              <div class="lab-file-datum">
+                <span class="lab-file-key">Fricción</span>
+                <span class="lab-file-val">Media</span>
+              </div>
+              <div class="lab-file-datum">
+                <span class="lab-file-key">Tipo</span>
+                <span class="lab-file-val">Negocio físico local</span>
+              </div>
+              <div class="lab-file-datum">
+                <span class="lab-file-key">Estado</span>
+                <span class="lab-file-val">En preparación</span>
+              </div>
             </div>
-
-            <div class="project-footer">
-              <p class="section-copy" style="margin:0; max-width:42ch;">
-                El archivo del laboratorio irá recogiendo todos los experimentos completados
-                junto con sus aprendizajes y conclusiones editoriales.
-              </p>
-              <a class="project-link" href="#">
-                <span>Próximamente</span>
-                <span>→</span>
-              </a>
+            <div class="lab-file-upcoming-note">
+              Un modelo con logística, permisos y ubicaciones donde el capital inicial
+              determina fuertemente el margen operativo real desde el primer mes.
             </div>
           </article>
-        </div>
+
+        </div><!-- /lab-files-grid -->
       </div>
     </section>
 
     <!-- ── LECTURA LEONIS ────────────────────────────────────── -->
     <section class="section">
       <div class="container">
-        <div class="quote-panel reveal">
-          <p>
-            El laboratorio no busca demostrar que un negocio funciona.
-            Observa qué tipo de vida exige construirlo.
-          </p>
+        <div class="lab-statement reveal">
+          <span class="lab-statement-label" aria-hidden="true">Leonis — Lectura del laboratorio</span>
+          <blockquote class="lab-statement-text">
+            <span class="lab-statement-line-1">No mide si una idea funciona.</span>
+            <span class="lab-statement-line-2">Mide qué exige sostenerla.</span>
+            <span class="lab-statement-line-3">Eso varía según la persona que lo intenta.</span>
+          </blockquote>
         </div>
       </div>
     </section>
