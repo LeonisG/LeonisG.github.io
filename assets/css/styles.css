@@ -1712,16 +1712,7 @@ a.home-follow-card:hover .home-follow-arrow {
 }
 
 .laboratory-page .hero::after {
-  width: 64%;
-  height: 64%;
-  right: -6%;
-  bottom: -10%;
-  background: radial-gradient(
-    circle,
-    rgba(185, 239, 69, 0.16) 0%,
-    rgba(185, 239, 69, 0.03) 48%,
-    transparent 72%
-  );
+  background: transparent;
 }
 
 .laboratory-hero-wrap {
