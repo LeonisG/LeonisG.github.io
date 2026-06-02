@@ -1649,6 +1649,54 @@ a.home-follow-card:hover .home-follow-arrow {
    LABORATORIO PAGE
 ========================================================= */
 
+/* ── Lab index hero ──────────────────────────────────────── */
+
+.lab-hero-wrap {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.lab-h1 {
+  margin: 0;
+  font-size: clamp(1.75rem, 4.5vw, 3.8rem);
+  line-height: 1.06;
+  letter-spacing: -0.042em;
+  max-width: none;
+  overflow-wrap: break-word;
+  color: var(--text);
+}
+
+.lab-hero-body {
+  margin: 1.4rem 0 0;
+  max-width: 52ch;
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 860px) {
+  .lab-hero-wrap {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .lab-h1 {
+    font-size: clamp(1.6rem, 8vw, 2.6rem);
+    line-height: 1.08;
+  }
+}
+
+/* ── Lab section head (overrides for lab context) ─────────── */
+
+.laboratory-page .home-section-head {
+  margin-bottom: 1.75rem;
+}
+
+/* ─────────────────────────────────────────────────────────── */
+
 .laboratory-page .hero {
   padding: 4rem 0 3rem;
 }
