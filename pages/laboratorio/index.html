@@ -53,9 +53,6 @@
         </button>
         <div class="nav-menu" id="nav-menu">
           <a href="/pages/laboratorio/index.html">Laboratorio</a>
-          <a href="/pages/manifiesto.html">Manifiesto</a>
-          <a href="/pages/newsletter.html">Análisis</a>
-          <a href="/pages/about.html">Proyecto</a>
           <a class="cta cta-primary" href="/#suscribete">Newsletter</a>
         </div>
       </div>
@@ -85,115 +82,222 @@
           </p>
           <div class="hero-actions">
             <a class="cta cta-primary" href="#experimentos">Ver experimentos</a>
-            <a class="cta cta-secondary" href="#metodo">Entender el sistema</a>
+            <a class="cta cta-secondary" href="#simulacion">Ver simulación</a>
           </div>
         </div>
 
-        <!-- ── Duel comparativo ─────────────────────────────── -->
-        <aside class="laboratory-hero-stage reveal" aria-label="Comparativa de perfiles activa">
-          <div class="lab-duel">
+      </div>
+    </section>
 
-            <div class="lab-duel-header">
-              <span class="lab-duel-exp">EXP-01 · Comparativa activa</span>
-              <span class="lab-duel-vs-label" aria-hidden="true">VS</span>
+    <!-- ── SIMULACIÓN DE TRAYECTORIA ─────────────────────────── -->
+    <section class="section lab-sim-section" id="simulacion">
+      <div class="container">
+
+        <header class="lab-sim-head reveal">
+          <span class="lab-sim-eyebrow">
+            <span class="lab-sim-eyebrow-dot" aria-hidden="true"></span>
+            Simulación de ejemplo
+          </span>
+          <h2 class="lab-sim-title">Dos perfiles. Un mismo modelo.<br><span class="lab-sim-title-accent">Trayectorias distintas.</span></h2>
+          <p class="lab-sim-sub">Cada perfil parte con capital, tiempo y energía diferentes. El laboratorio observa cómo esas diferencias cambian la forma de avanzar, decidir y sostener el negocio.</p>
+        </header>
+
+        <div class="lab-sim-arena reveal">
+
+          <!-- 5 fases en columnas -->
+          <div class="lab-sim-phases" role="list" aria-label="Fases de la simulación">
+
+            <!-- Fase 01 -->
+            <div class="lab-sim-phase" role="listitem">
+              <div class="lab-sim-phase-head">
+                <div class="lab-sim-node"></div>
+                <span class="lab-sim-phase-n">01</span>
+                <span class="lab-sim-phase-name">Inicio</span>
+              </div>
+              <div class="lab-sim-phase-body">
+                <div class="lab-sim-row lab-sim-row-a">
+                  <span class="lab-sim-row-id" aria-label="Perfil A">A</span>
+                  <div class="lab-sim-row-content">
+                    <p>Reserva capital. Local mínimo. Sin prisa.</p>
+                    <span class="lab-sim-chip lab-sim-chip-a">Cap. 100%</span>
+                  </div>
+                </div>
+                <div class="lab-sim-row lab-sim-row-b">
+                  <span class="lab-sim-row-id lab-sim-row-id-b" aria-label="Perfil B">B</span>
+                  <div class="lab-sim-row-content">
+                    <p>Invierte fuerte. Local completo. Arranca.</p>
+                    <span class="lab-sim-chip lab-sim-chip-b">Cap. 78%</span>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div class="lab-duel-arena">
-
-              <!-- Perfil A — Daniel -->
-              <div class="lab-duel-profile lab-duel-a">
-                <div class="lab-duel-ident">
-                  <div class="lab-duel-avatar lab-duel-avatar-a" aria-hidden="true">D</div>
-                  <div class="lab-duel-ident-text">
-                    <span class="lab-duel-pid">Perfil A</span>
-                    <strong class="lab-duel-name">Daniel</strong>
-                    <span class="lab-duel-tag lab-duel-tag-a">Prudente</span>
+            <!-- Fase 02 -->
+            <div class="lab-sim-phase" role="listitem">
+              <div class="lab-sim-phase-head">
+                <div class="lab-sim-node"></div>
+                <span class="lab-sim-phase-n">02</span>
+                <span class="lab-sim-phase-name">Primera fricción</span>
+              </div>
+              <div class="lab-sim-phase-body">
+                <div class="lab-sim-row lab-sim-row-a">
+                  <span class="lab-sim-row-id" aria-label="Perfil A">A</span>
+                  <div class="lab-sim-row-content">
+                    <p>Escasos clientes. Decide esperar. Conserva.</p>
+                    <span class="lab-sim-chip lab-sim-chip-a">Cap. 92%</span>
                   </div>
                 </div>
-                <div class="lab-duel-bars">
-                  <div class="lab-duel-bar-row">
-                    <span class="lab-duel-bar-label">Tiempo</span>
-                    <div class="lab-duel-bar-track">
-                      <div class="lab-duel-bar-fill lab-duel-fill-a" style="--val: 28%"></div>
-                    </div>
-                    <span class="lab-duel-bar-val lab-val-a">~8 h/sem</span>
-                  </div>
-                  <div class="lab-duel-bar-row">
-                    <span class="lab-duel-bar-label">Capital</span>
-                    <div class="lab-duel-bar-track">
-                      <div class="lab-duel-bar-fill lab-duel-fill-a" style="--val: 38%"></div>
-                    </div>
-                    <span class="lab-duel-bar-val lab-val-a">4.000 €</span>
-                  </div>
-                  <div class="lab-duel-bar-row">
-                    <span class="lab-duel-bar-label">Riesgo</span>
-                    <div class="lab-duel-bar-track">
-                      <div class="lab-duel-bar-fill lab-duel-fill-a" style="--val: 22%"></div>
-                    </div>
-                    <span class="lab-duel-bar-val lab-val-a">Bajo</span>
-                  </div>
-                  <div class="lab-duel-bar-row">
-                    <span class="lab-duel-bar-label">Energía</span>
-                    <div class="lab-duel-bar-track">
-                      <div class="lab-duel-bar-fill lab-duel-fill-a" style="--val: 18%"></div>
-                    </div>
-                    <span class="lab-duel-bar-val lab-val-a">Escasa</span>
+                <div class="lab-sim-row lab-sim-row-b">
+                  <span class="lab-sim-row-id lab-sim-row-id-b" aria-label="Perfil B">B</span>
+                  <div class="lab-sim-row-content">
+                    <p>Pierde clientes. Ajusta precios. Sigue.</p>
+                    <span class="lab-sim-chip lab-sim-chip-b">Cap. 58%</span>
                   </div>
                 </div>
               </div>
+            </div>
 
-              <!-- Separador -->
-              <div class="lab-duel-sep" aria-hidden="true"></div>
-
-              <!-- Perfil B — Marta -->
-              <div class="lab-duel-profile lab-duel-b">
-                <div class="lab-duel-ident lab-duel-ident-b">
-                  <div class="lab-duel-ident-text lab-duel-ident-text-b">
-                    <span class="lab-duel-pid">Perfil B</span>
-                    <strong class="lab-duel-name">Marta</strong>
-                    <span class="lab-duel-tag lab-duel-tag-b">Exploradora</span>
+            <!-- Fase 03 -->
+            <div class="lab-sim-phase" role="listitem">
+              <div class="lab-sim-phase-head">
+                <div class="lab-sim-node"></div>
+                <span class="lab-sim-phase-n">03</span>
+                <span class="lab-sim-phase-name">Decisión clave</span>
+              </div>
+              <div class="lab-sim-phase-body">
+                <div class="lab-sim-row lab-sim-row-a">
+                  <span class="lab-sim-row-id" aria-label="Perfil A">A</span>
+                  <div class="lab-sim-row-content">
+                    <p>Ruta segura. Margen intacto. Avance lento.</p>
+                    <span class="lab-sim-chip lab-sim-chip-a">Cap. 88%</span>
                   </div>
-                  <div class="lab-duel-avatar lab-duel-avatar-b" aria-hidden="true">M</div>
                 </div>
-                <div class="lab-duel-bars">
-                  <div class="lab-duel-bar-row lab-duel-bar-row-b">
-                    <span class="lab-duel-bar-val lab-val-b">~20 h/sem</span>
-                    <div class="lab-duel-bar-track">
-                      <div class="lab-duel-bar-fill lab-duel-fill-b" style="--val: 70%"></div>
-                    </div>
-                    <span class="lab-duel-bar-label">Tiempo</span>
-                  </div>
-                  <div class="lab-duel-bar-row lab-duel-bar-row-b">
-                    <span class="lab-duel-bar-val lab-val-b">8.000 €</span>
-                    <div class="lab-duel-bar-track">
-                      <div class="lab-duel-bar-fill lab-duel-fill-b" style="--val: 76%"></div>
-                    </div>
-                    <span class="lab-duel-bar-label">Capital</span>
-                  </div>
-                  <div class="lab-duel-bar-row lab-duel-bar-row-b">
-                    <span class="lab-duel-bar-val lab-val-b">Alta</span>
-                    <div class="lab-duel-bar-track">
-                      <div class="lab-duel-bar-fill lab-duel-fill-b" style="--val: 78%"></div>
-                    </div>
-                    <span class="lab-duel-bar-label">Riesgo</span>
-                  </div>
-                  <div class="lab-duel-bar-row lab-duel-bar-row-b">
-                    <span class="lab-duel-bar-val lab-val-b">Alta</span>
-                    <div class="lab-duel-bar-track">
-                      <div class="lab-duel-bar-fill lab-duel-fill-b" style="--val: 68%"></div>
-                    </div>
-                    <span class="lab-duel-bar-label">Energía</span>
+                <div class="lab-sim-row lab-sim-row-b">
+                  <span class="lab-sim-row-id lab-sim-row-id-b" aria-label="Perfil B">B</span>
+                  <div class="lab-sim-row-content">
+                    <p>Amplía capacidad. Asume más riesgo.</p>
+                    <span class="lab-sim-chip lab-sim-chip-b">Cap. 41%</span>
                   </div>
                 </div>
               </div>
+            </div>
 
-            </div><!-- /lab-duel-arena -->
+            <!-- Fase 04 -->
+            <div class="lab-sim-phase" role="listitem">
+              <div class="lab-sim-phase-head">
+                <div class="lab-sim-node"></div>
+                <span class="lab-sim-phase-n">04</span>
+                <span class="lab-sim-phase-name">Desgaste</span>
+              </div>
+              <div class="lab-sim-phase-body">
+                <div class="lab-sim-row lab-sim-row-a">
+                  <span class="lab-sim-row-id" aria-label="Perfil A">A</span>
+                  <div class="lab-sim-row-content">
+                    <p>Ritmo lento. Sin desgaste. Energía estable.</p>
+                    <span class="lab-sim-chip lab-sim-chip-a">Cap. 84%</span>
+                  </div>
+                </div>
+                <div class="lab-sim-row lab-sim-row-b">
+                  <span class="lab-sim-row-id lab-sim-row-id-b" aria-label="Perfil B">B</span>
+                  <div class="lab-sim-row-content">
+                    <p>Ingresos crecen. Carga operativa sube.</p>
+                    <span class="lab-sim-chip lab-sim-chip-b">Cap. 38%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-            <p class="lab-duel-footnote">
-              El mismo modelo. Dos vidas distintas. Observamos qué cambia.
-            </p>
-          </div>
-        </aside>
+            <!-- Fase 05 — Estado actual -->
+            <div class="lab-sim-phase lab-sim-phase-current" role="listitem">
+              <div class="lab-sim-phase-head">
+                <div class="lab-sim-node lab-sim-node-current"></div>
+                <span class="lab-sim-phase-n">05</span>
+                <span class="lab-sim-phase-name">Estado actual</span>
+              </div>
+              <div class="lab-sim-phase-body">
+                <div class="lab-sim-row lab-sim-row-a">
+                  <span class="lab-sim-row-id" aria-label="Perfil A">A</span>
+                  <div class="lab-sim-row-content">
+                    <p>Margen preservado. Ritmo sostenible.</p>
+                    <span class="lab-sim-chip lab-sim-chip-a">Cap. 82%</span>
+                  </div>
+                </div>
+                <div class="lab-sim-row lab-sim-row-b">
+                  <span class="lab-sim-row-id lab-sim-row-id-b" aria-label="Perfil B">B</span>
+                  <div class="lab-sim-row-content">
+                    <p>Mayor volumen. Menor holgura. Carga alta.</p>
+                    <span class="lab-sim-chip lab-sim-chip-b">Cap. 35%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /lab-sim-phases -->
+
+          <!-- Métricas de estado final -->
+          <div class="lab-sim-metrics" aria-label="Métricas de estado actual">
+
+            <div class="lab-sim-metric">
+              <span class="lab-sim-metric-label">Capital restante</span>
+              <div class="lab-sim-bar-row">
+                <div class="lab-sim-bar-id lab-sim-bar-id-a" aria-hidden="true">A</div>
+                <div class="lab-sim-bar-track">
+                  <div class="lab-sim-bar-fill lab-sim-fill-a" style="--val: 82%"></div>
+                </div>
+                <span class="lab-sim-bar-val lab-sim-val-a">82%</span>
+              </div>
+              <div class="lab-sim-bar-row">
+                <div class="lab-sim-bar-id lab-sim-bar-id-b" aria-hidden="true">B</div>
+                <div class="lab-sim-bar-track">
+                  <div class="lab-sim-bar-fill lab-sim-fill-b" style="--val: 35%"></div>
+                </div>
+                <span class="lab-sim-bar-val lab-sim-val-b">35%</span>
+              </div>
+            </div>
+
+            <div class="lab-sim-metric">
+              <span class="lab-sim-metric-label">Tiempo semanal</span>
+              <div class="lab-sim-bar-row">
+                <div class="lab-sim-bar-id lab-sim-bar-id-a" aria-hidden="true">A</div>
+                <div class="lab-sim-bar-track">
+                  <div class="lab-sim-bar-fill lab-sim-fill-a" style="--val: 25%"></div>
+                </div>
+                <span class="lab-sim-bar-val lab-sim-val-a">~8 h/sem</span>
+              </div>
+              <div class="lab-sim-bar-row">
+                <div class="lab-sim-bar-id lab-sim-bar-id-b" aria-hidden="true">B</div>
+                <div class="lab-sim-bar-track">
+                  <div class="lab-sim-bar-fill lab-sim-fill-b" style="--val: 72%"></div>
+                </div>
+                <span class="lab-sim-bar-val lab-sim-val-b">~22 h/sem</span>
+              </div>
+            </div>
+
+            <div class="lab-sim-metric">
+              <span class="lab-sim-metric-label">Energía disponible</span>
+              <div class="lab-sim-bar-row">
+                <div class="lab-sim-bar-id lab-sim-bar-id-a" aria-hidden="true">A</div>
+                <div class="lab-sim-bar-track">
+                  <div class="lab-sim-bar-fill lab-sim-fill-a" style="--val: 65%"></div>
+                </div>
+                <span class="lab-sim-bar-val lab-sim-val-a">Media-alta</span>
+              </div>
+              <div class="lab-sim-bar-row">
+                <div class="lab-sim-bar-id lab-sim-bar-id-b" aria-hidden="true">B</div>
+                <div class="lab-sim-bar-track">
+                  <div class="lab-sim-bar-fill lab-sim-fill-b" style="--val: 28%"></div>
+                </div>
+                <span class="lab-sim-bar-val lab-sim-val-b">Baja</span>
+              </div>
+            </div>
+
+          </div><!-- /lab-sim-metrics -->
+
+          <p class="lab-sim-reading">
+            El perfil que avanza más rápido no siempre conserva mejor margen. El laboratorio observa esa tensión.
+          </p>
+
+        </div><!-- /lab-sim-arena -->
 
       </div>
     </section>
@@ -636,10 +740,10 @@
             <p class="home-follow-desc">El punto de entrada al proyecto: qué es, qué observa y cómo seguirlo.</p>
             <span class="home-follow-arrow" aria-hidden="true">→</span>
           </a>
-          <a class="home-follow-card" href="/pages/manifiesto.html">
-            <span class="home-follow-kicker">Manifiesto</span>
-            <strong class="home-follow-title">Leer el manifiesto</strong>
-            <p class="home-follow-desc">Los principios que guían cómo se analiza, qué se valora y qué no.</p>
+          <a class="home-follow-card" href="#simulacion">
+            <span class="home-follow-kicker">Simulación</span>
+            <strong class="home-follow-title">Ver cómo evoluciona un experimento</strong>
+            <p class="home-follow-desc">Trayectoria de dos perfiles a lo largo de cinco fases de un modelo real.</p>
             <span class="home-follow-arrow" aria-hidden="true">→</span>
           </a>
           <a class="home-follow-card" href="/#suscribete">
