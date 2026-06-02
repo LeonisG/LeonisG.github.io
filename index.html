@@ -4,17 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>The Leonis Project | Micro negocios, criterio e independencia progresiva</title>
+  <title>The Leonis Project | Un laboratorio editorial sobre negocios pequeños</title>
   <meta
     name="description"
-    content="The Leonis Project es una plataforma editorial sobre micro negocios sostenibles, sistemas de ingresos e independencia financiera progresiva. Un análisis semanal, un laboratorio con IA y una biblioteca construida con criterio."
+    content="The Leonis Project es un laboratorio editorial sobre modelos de negocio pequeños, sistemas realistas e independencia progresiva. Observación, análisis y simulación con criterio."
   />
   <meta name="theme-color" content="#031d10" />
 
   <meta property="og:title" content="The Leonis Project" />
   <meta
     property="og:description"
-    content="Think better. Build wisely. Micro negocios sostenibles, análisis sobrios y laboratorio con agentes de IA."
+    content="Un laboratorio editorial sobre negocios pequeños, sistemas realistas e independencia progresiva."
   />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://theleonisproject.com/" />
@@ -24,14 +24,14 @@
   <meta name="twitter:title" content="The Leonis Project" />
   <meta
     name="twitter:description"
-    content="Micro negocios sostenibles, criterio editorial y laboratorio con IA."
+    content="Un laboratorio editorial sobre negocios pequeños, sistemas realistas e independencia progresiva."
   />
   <meta name="twitter:image" content="https://theleonisproject.com/assets/img/og-cover.jpg" />
 
   <link rel="icon" href="favicon.ico" />
   <link rel="shortcut icon" href="favicon.ico" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png" />
   <link rel="apple-touch-icon" href="assets/img/favicon/apple-touch-icon.png" />
   <link rel="manifest" href="site.webmanifest" />
 
@@ -46,10 +46,11 @@
   <script src="assets/js/main.js" defer></script>
 </head>
 <body>
+
   <header class="site-header">
     <nav class="nav">
       <div class="container nav-inner">
-        <a class="brand" href="#inicio" aria-label="Ir al inicio de The Leonis Project">
+        <a class="brand" href="/" aria-label="Ir al inicio de The Leonis Project">
           <img
             class="brand-mark"
             src="assets/img/logo-mark.png"
@@ -73,10 +74,10 @@
         </button>
 
         <div class="nav-menu" id="nav-menu">
-          <a href="#contenido">Contenido</a>
-          <a href="/pages/laboratorio/index.html">Laboratorio</a>
-          <a href="#manifiesto">Manifiesto</a>
-          <a href="#about">Proyecto</a>
+          <a href="pages/laboratorio/index.html">Laboratorio</a>
+          <a href="pages/manifiesto.html">Manifiesto</a>
+          <a href="pages/newsletter.html">Análisis</a>
+          <a href="pages/about.html">Proyecto</a>
           <a class="cta cta-primary" href="#suscribete">Newsletter</a>
         </div>
       </div>
@@ -84,276 +85,302 @@
   </header>
 
   <main>
+
+    <!-- ── HERO ─────────────────────────────────────────────── -->
     <section class="hero" id="inicio">
-      <div class="container hero-grid">
-        <div class="hero-copy-block reveal">
+      <div class="container hero-editorial-wrap">
 
-          <h1>
-            Think better.<br />
-            <span class="accent">Build wisely.</span>
-          </h1>
-
-          <p class="hero-subtitle">
-            Micro negocios, sistemas de ingresos e independencia progresiva para una vida real.
+        <div class="hero-editorial-copy reveal">
+          <p class="hero-tag">
+            <span class="hero-tag-dot" aria-hidden="true"></span>
+            Leonis — Laboratorio Editorial
           </p>
 
-          <p class="hero-copy">
-            <strong>The Leonis Project</strong> es una plataforma editorial que analiza cada semana
-            un modelo de negocio concreto y estudia si realmente encaja en una vida real.
-            Aquí no se persiguen pelotazos: se observan modelos, se prueban ideas mediante simulación
-            y pensamiento crítico, y se evalúa cuáles merecen tiempo, cuáles no, y qué tipo de vida exige construirlos.
+          <h1 class="hero-h1">
+            Un laboratorio<br>
+            editorial sobre<br>
+            negocios pequeños.
+          </h1>
+
+          <p class="hero-editorial-body">
+            Observamos modelos de negocio, su fricción real y qué tipo de vida exige
+            construirlos. Cada experimento sigue a personas simuladas intentando construir
+            un negocio bajo restricciones concretas: tiempo limitado, energía finita,
+            incertidumbre real.
           </p>
 
           <div class="hero-actions">
-            <a class="cta cta-primary" href="#suscribete">Quiero recibir la newsletter</a>
-            <a class="cta cta-secondary" href="#manifiesto">Leer el manifiesto</a>
-          </div>
-
-          <div class="hero-proof" aria-label="Puntos clave del proyecto">
-            <span>Un micro negocio analizado cada semana</span>
-            <span>Laboratorio de simulación con agentes de IA</span>
-            <span>Atlas en construcción de modelos de negocio</span>
+            <a class="cta cta-primary" href="pages/laboratorio/index.html">Ir al Laboratorio</a>
+            <a class="cta cta-secondary" href="pages/manifiesto.html">Leer el Manifiesto</a>
           </div>
         </div>
 
-        <aside class="hero-panel reveal">
-          <div class="hero-logo-frame">
-            <img
-              src="assets/img/logo-hero.png"
-              alt="Identidad visual de The Leonis Project"
-            />
-          </div>
-
-          <div class="signal-grid">
-            <article class="signal">
-              <small>Newsletter</small>
-              <strong>Un micro negocio analizado cada semana.</strong>
-            </article>
-
-            <article class="signal">
-              <small>Laboratorio Leonis</small>
-              <strong>Simulación con agentes de IA bajo condiciones reales.</strong>
-            </article>
-
-            <article class="signal">
-              <small>Propósito</small>
-              <strong>Construir criterio antes de construir más.</strong>
-            </article>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <section class="section" id="contenido">
-      <div class="container">
-        <div class="section-head reveal">
-          <div>
-            <h2 class="section-title">Qué vas a encontrar aquí</h2>
-            <p class="section-copy">
-              Una arquitectura editorial pensada para quien quiere entender mejor qué construir,
-              por qué construirlo y qué coste real tiene en tiempo, energía y vida.
-            </p>
-          </div>
-        </div>
-
-        <div class="grid-3">
-          <article class="card reveal">
-            <span class="card-kicker">Newsletter</span>
-            <h3>Análisis Leonis</h3>
-            <p>
-              Cada semana, un micro negocio desglosado con enfoque realista: barreras de entrada,
-              economía, riesgos, escalabilidad, encaje vital y veredicto Leonis.
-            </p>
-          </article>
-
-          <article class="card reveal" id="laboratorio">
-            <span class="card-kicker">Laboratorio</span>
-            <h3>Agentes de IA y simulación</h3>
-            <p>
-              Un entorno para probar ideas en condiciones más cercanas a la realidad: perfiles
-              concretos, tiempo limitado, energía finita, incertidumbre e imprevistos.
-            </p>
-            <a class="project-link" href="/pages/laboratorio.html">
-              <span>Explorar laboratorio</span>
-              <span>→</span>
+        <aside class="hero-editorial-aside reveal">
+          <div class="hero-logbook">
+            <div class="hero-logbook-head">
+              <span class="hero-logbook-label">SISTEMA EN CURSO</span>
+              <span class="hero-logbook-status">
+                <span class="hero-logbook-dot" aria-hidden="true"></span>
+                Activo
+              </span>
+            </div>
+            <dl class="hero-logbook-data">
+              <div class="hero-logbook-row">
+                <dt>Experimento</dt>
+                <dd>Lavandería autoservicio</dd>
+              </div>
+              <div class="hero-logbook-row">
+                <dt>Perfiles</dt>
+                <dd>Daniel · Marta</dd>
+              </div>
+              <div class="hero-logbook-row">
+                <dt>Semana en curso</dt>
+                <dd>4 / en progreso</dd>
+              </div>
+              <div class="hero-logbook-row">
+                <dt>Modelo</dt>
+                <dd>Negocio físico local</dd>
+              </div>
+            </dl>
+            <a class="hero-logbook-link" href="pages/laboratorio/index.html">
+              Ver el experimento <span aria-hidden="true">→</span>
             </a>
-          </article>
+          </div>
 
-          <article class="card reveal">
-            <span class="card-kicker">Biblioteca</span>
-            <h3>Atlas de oportunidades</h3>
+          <p class="hero-signature">Think better. Build wisely.</p>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- ── 01 · QUÉ ES ───────────────────────────────────────── -->
+    <section class="section home-section" id="que-es">
+      <div class="container">
+        <header class="home-section-head reveal">
+          <span class="home-section-num" aria-hidden="true">01</span>
+          <h2 class="home-section-title">Qué es The Leonis Project</h2>
+        </header>
+        <div class="home-what-grid reveal">
+          <div class="home-what-lead">
             <p>
-              Una base de conocimiento viva para comparar modelos, detectar patrones y acumular
-              criterio, no solo información suelta.
+              Una plataforma editorial que analiza modelos de negocio pequeños bajo el criterio
+              de <strong>encaje vital</strong>: no solo si son rentables, sino qué tipo de vida
+              exigen realmente construirlos.
             </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="manifiesto">
-      <div class="container manifesto-grid">
-        <article class="manifesto-lead reveal">
-          <p class="manifesto-quote">
-            No todo ingreso mejora tu vida. No todo negocio merece tu tiempo.
-          </p>
-          <p class="manifesto-text">
-            Leonis nace para pensar mejor antes de comprometer tiempo, dinero y energía.
-            La pregunta no es solo cuánto puede ganar un modelo. La pregunta es qué tipo de vida exige.
-          </p>
-        </article>
-
-        <article class="manifesto-list reveal">
-          <div class="manifesto-item">
-            <strong>La independencia no se improvisa</strong>
-            <span>Se construye gradualmente, con paciencia, repetición y decisiones mejor pensadas.</span>
-          </div>
-
-          <div class="manifesto-item">
-            <strong>El tiempo es el activo central</strong>
-            <span>No buscamos solo rentabilidad. Buscamos sistemas que no destruyan margen vital.</span>
-          </div>
-
-          <div class="manifesto-item">
-            <strong>La realidad importa más que el discurso</strong>
-            <span>Se valora la fricción real: clientes, energía, consistencia, contexto y dificultad operativa.</span>
-          </div>
-
-          <div class="manifesto-item">
-            <strong>Los buenos modelos son coherentes</strong>
-            <span>Un negocio interesante es aquel que puede sostenerse con vida real, no solo en teoría.</span>
-          </div>
-
-          <div class="manifesto-item">
-            <strong>El criterio es una ventaja acumulativa</strong>
-            <span>Entender qué no construir también es progreso. Elegir mejor ahorra años.</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container grid-2">
-        <article class="card reveal">
-          <span class="card-kicker">Cómo funciona la newsletter</span>
-          <h3>Una entrega semanal, bien enfocada</h3>
-          <p>
-            Recibirás un análisis por semana de un micro negocio concreto. No una recopilación superficial,
-            sino una pieza diseñada para ayudarte a evaluar si ese modelo tiene sentido o no.
-          </p>
-        </article>
-
-        <article class="card reveal">
-          <span class="card-kicker">Qué viene después</span>
-          <h3>Landing hoy. Ecosistema mañana.</h3>
-          <p>
-            Esta página es el punto de entrada: newsletter, manifiesto, laboratorio y archivo.
-            Con el tiempo, se convertirá en una biblioteca navegable de modelos, simulaciones y
-            decisiones de diseño.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="about">
-      <div class="container reveal">
-        <div class="about-shell">
-          <div class="about-intro">
-            <span class="card-kicker">El proyecto</span>
-          
-            <h2 class="section-title">¿Por qué existe The Leonis Project?</h2>
-          
-            <p class="about-lead">
-              The Leonis Project nace de una inquietud sencilla: entender qué tipo de trabajo
-              y qué tipo de sistemas de ingresos merece realmente la pena construir cuando uno
-              quiere diseñar su vida con más libertad, más margen y más criterio.
-            </p>
-          
-            <p class="about-copy">
-              Internet está lleno de promesas rápidas, estrategias virales y modelos de negocio
-              que funcionan en teoría pero no encajan en la vida real de la mayoría de las personas.
-            </p>
-          
-            <p class="about-copy">
-              The Leonis Project intenta hacer lo contrario: estudiar los modelos con calma,
-              analizar su fricción real y entender qué tipo de vida exige realmente construirlos.
+            <p>
+              Internet está lleno de estrategias que funcionan en teoría.
+              The Leonis Project estudia la fricción real: clientes, energía, consistencia,
+              contexto y dificultad operativa. Sin filtros optimistas.
             </p>
           </div>
-        
-          <div class="about-blocks">
-            <article class="about-card">
-              <h3>Las preguntas que nos obsesionan</h3>
-              <ul>
-                <li>¿Qué modelos de negocio pueden construirse mientras mantienes una vida real?</li>
-                <li>¿Qué sistemas generan ingresos sin destruir tu tiempo y tu energía?</li>
-                <li>¿Qué proyectos tienen sentido construir durante años, y no solo durante unos meses?</li>
-              </ul>
-            </article>
-          
-            <article class="about-card">
-              <h3>Qué promete The Leonis Project</h3>
-              <ul>
-                <li>Análisis honestos de micro negocios y modelos de ingresos.</li>
-                <li>Un laboratorio que experimenta con ideas en condiciones cercanas a la realidad.</li>
-                <li>Una biblioteca en construcción para acumular criterio, no solo información aislada.</li>
-              </ul>
-            </article>
-          
-            <article class="about-card">
-              <h3>Qué no promete The Leonis Project</h3>
-              <ul>
-                <li>No promete dinero rápido.</li>
-                <li>No promete independencia financiera en tres pasos.</li>
-                <li>No promete que exista un modelo universal que funcione para todo el mundo.</li>
-              </ul>
-            </article>
-          </div>
-        
-          <div class="about-closing">
-            <p class="about-closing-copy">
-              The Leonis Project parte de una idea simple: la independencia financiera rara vez llega
-              por un golpe de suerte. Suele construirse lentamente, mediante sistemas bien elegidos,
-              decisiones coherentes y una relación más consciente con el trabajo, el tiempo y el dinero.
-            </p>
-          
-            <p class="about-method">
-              <strong>No se trata de correr más.</strong>
-              <span>Se trata de elegir mejor, construir con paciencia y recuperar margen de vida.</span>
-            </p>
+          <div class="home-what-aside">
+            <div class="home-what-aside-item">
+              <strong>No es</strong>
+              <span>Una promesa de libertad financiera rápida ni una guía de ingresos pasivos en tres pasos.</span>
+            </div>
+            <div class="home-what-aside-item home-what-aside-item--accent">
+              <strong>Es</strong>
+              <span>Un sistema de observación y análisis para construir con más criterio, más paciencia y menos ilusión.</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="suscribete">
-      <div class="container subscribe reveal">
-        <div class="subscribe-copy">
-          <h2 class="section-title">Únete a la newsletter de The Leonis Project</h2>
-          <p>
-            Un micro negocio a la semana. Sin ruido. Sin promesas vacías. Solo análisis sobrios,
-            sistemas de ingresos y una forma más inteligente de pensar el trabajo, el dinero y la independencia.
-          </p>
-        </div>
-
-        <form class="form" id="subscribe-form" novalidate>
-          <label class="sr-only" for="email">Tu email</label>
-          <input
-            class="input"
-            id="email"
-            name="email"
-            type="email"
-            placeholder="Tu email"
-            required
-          />
-          <button class="cta cta-primary" type="submit">Suscribirme</button>
-                
-          <p class="form-note">
-            Un análisis semanal. Sin ruido. Sin promesas vacías.
-          </p>
-          <p class="form-message" id="form-message" aria-live="polite"></p>
-        </form>
+    <!-- ── 02 · QUÉ OBSERVAMOS ──────────────────────────────── -->
+    <section class="section home-section" id="observamos">
+      <div class="container">
+        <header class="home-section-head reveal">
+          <span class="home-section-num" aria-hidden="true">02</span>
+          <h2 class="home-section-title">Qué observamos</h2>
+        </header>
+        <p class="home-section-sub reveal">
+          Seis variables de análisis que determinan si un modelo de negocio
+          merece tiempo, dinero y energía reales.
+        </p>
+        <ol class="home-observe-list reveal">
+          <li class="home-observe-item">
+            <span class="home-observe-n" aria-hidden="true">I</span>
+            <div class="home-observe-body">
+              <strong>Modelos de negocio pequeños</strong>
+              <p>Lavandería, servicio local, producto digital, consultoría acotada. Escala humana, no unicornios.</p>
+            </div>
+          </li>
+          <li class="home-observe-item">
+            <span class="home-observe-n" aria-hidden="true">II</span>
+            <div class="home-observe-body">
+              <strong>Coste vital real</strong>
+              <p>Cuánto tiempo, energía y atención consume un modelo bajo condiciones normales, no ideales.</p>
+            </div>
+          </li>
+          <li class="home-observe-item">
+            <span class="home-observe-n" aria-hidden="true">III</span>
+            <div class="home-observe-body">
+              <strong>Fricción acumulativa</strong>
+              <p>Los problemas que no aparecen en los análisis optimistas: clientes reales, operativa diaria, imprevistos.</p>
+            </div>
+          </li>
+          <li class="home-observe-item">
+            <span class="home-observe-n" aria-hidden="true">IV</span>
+            <div class="home-observe-body">
+              <strong>Encaje vida-negocio</strong>
+              <p>Si el modelo puede sostenerse con la vida real de una persona concreta, no con la versión ideal de ella.</p>
+            </div>
+          </li>
+          <li class="home-observe-item">
+            <span class="home-observe-n" aria-hidden="true">V</span>
+            <div class="home-observe-body">
+              <strong>Tiempo disponible real</strong>
+              <p>No el tiempo ideal. El que queda después del trabajo, la familia y la energía residual.</p>
+            </div>
+          </li>
+          <li class="home-observe-item">
+            <span class="home-observe-n" aria-hidden="true">VI</span>
+            <div class="home-observe-body">
+              <strong>Métricas y decisiones</strong>
+              <p>Qué medir, cuándo pivotar y cómo leer los datos sin autoengaño.</p>
+            </div>
+          </li>
+        </ol>
       </div>
     </section>
+
+    <!-- ── 03 · LABORATORIO LEONIS ───────────────────────────── -->
+    <section class="section home-section" id="laboratorio">
+      <div class="container">
+        <header class="home-section-head reveal">
+          <span class="home-section-num" aria-hidden="true">03</span>
+          <h2 class="home-section-title">Laboratorio Leonis</h2>
+        </header>
+        <p class="home-section-sub reveal">
+          Un entorno de simulación donde personas ficticias con restricciones reales intentan
+          construir modelos de negocio concretos. No es una ficción superficial: cada decisión
+          tiene consecuencias medibles y cada semana se registran avances y retrocesos.
+        </p>
+        <div class="home-lab-chain reveal">
+          <div class="home-lab-step">
+            <span class="home-lab-n">01</span>
+            <strong>Modelo</strong>
+            <p>Se define el negocio, sus condiciones de mercado y su barrera de entrada.</p>
+          </div>
+          <div class="home-lab-step">
+            <span class="home-lab-n">02</span>
+            <strong>Perfiles</strong>
+            <p>Dos personas simuladas con contextos distintos: tiempo, capital y vida real.</p>
+          </div>
+          <div class="home-lab-step">
+            <span class="home-lab-n">03</span>
+            <strong>Diario</strong>
+            <p>Registro semanal de decisiones, fricciones, avances y retrocesos.</p>
+          </div>
+          <div class="home-lab-step">
+            <span class="home-lab-n">04</span>
+            <strong>Métricas</strong>
+            <p>Datos comparados: ingresos, horas invertidas, fricción acumulada.</p>
+          </div>
+          <div class="home-lab-step">
+            <span class="home-lab-n">05</span>
+            <strong>Decisiones</strong>
+            <p>Resumen ejecutivo: qué funcionó, qué no, y para qué perfil tiene sentido.</p>
+          </div>
+        </div>
+        <div class="reveal">
+          <a class="cta cta-secondary home-lab-cta" href="pages/laboratorio/index.html">
+            Ver el experimento activo <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 04 · PRINCIPIOS ───────────────────────────────────── -->
+    <section class="section home-section" id="principios">
+      <div class="container">
+        <header class="home-section-head reveal">
+          <span class="home-section-num" aria-hidden="true">04</span>
+          <h2 class="home-section-title">Principios</h2>
+        </header>
+        <div class="home-principles reveal">
+          <div class="home-principle">
+            <span class="home-principle-dash" aria-hidden="true">—</span>
+            <div>
+              <strong>Sin hype, sin promesas</strong>
+              <p>No todo ingreso mejora tu vida. No todo negocio merece tu tiempo.</p>
+            </div>
+          </div>
+          <div class="home-principle">
+            <span class="home-principle-dash" aria-hidden="true">—</span>
+            <div>
+              <strong>Realismo operativo</strong>
+              <p>La independencia no se improvisa. Se construye con paciencia y decisiones mejor pensadas.</p>
+            </div>
+          </div>
+          <div class="home-principle">
+            <span class="home-principle-dash" aria-hidden="true">—</span>
+            <div>
+              <strong>El tiempo como activo central</strong>
+              <p>No buscamos solo rentabilidad. Buscamos sistemas que no destruyan margen vital.</p>
+            </div>
+          </div>
+          <div class="home-principle">
+            <span class="home-principle-dash" aria-hidden="true">—</span>
+            <div>
+              <strong>Sistemas antes que impulsos</strong>
+              <p>La realidad importa más que el discurso. Se valora la fricción real, no la versión optimista.</p>
+            </div>
+          </div>
+          <div class="home-principle">
+            <span class="home-principle-dash" aria-hidden="true">—</span>
+            <div>
+              <strong>Independencia progresiva</strong>
+              <p>El criterio es una ventaja acumulativa. Entender qué no construir también es progreso.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 05 · CÓMO SEGUIR ──────────────────────────────────── -->
+    <section class="section home-section" id="suscribete">
+      <div class="container">
+        <header class="home-section-head reveal">
+          <span class="home-section-num" aria-hidden="true">05</span>
+          <h2 class="home-section-title">Cómo seguir el proyecto</h2>
+        </header>
+        <div class="home-follow-grid reveal">
+          <a class="home-follow-card" href="pages/laboratorio/index.html">
+            <span class="home-follow-kicker">Laboratorio</span>
+            <strong class="home-follow-title">Seguir el experimento activo</strong>
+            <p class="home-follow-desc">Diario, métricas y decisiones del modelo en simulación actual.</p>
+            <span class="home-follow-arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="home-follow-card" href="pages/newsletter.html">
+            <span class="home-follow-kicker">Archivo</span>
+            <strong class="home-follow-title">Leer el archivo de análisis</strong>
+            <p class="home-follow-desc">Cada entrega desglosa un modelo con enfoque realista y veredicto Leonis.</p>
+            <span class="home-follow-arrow" aria-hidden="true">→</span>
+          </a>
+          <div class="home-follow-card home-follow-card--form">
+            <span class="home-follow-kicker">Newsletter</span>
+            <strong class="home-follow-title">Recibir un análisis semanal</strong>
+            <p class="home-follow-desc">Un micro negocio a la semana. Sin ruido. Sin promesas vacías.</p>
+            <form class="form home-mini-form" id="subscribe-form" novalidate>
+              <label class="sr-only" for="email">Tu email</label>
+              <input
+                class="input"
+                id="email"
+                name="email"
+                type="email"
+                placeholder="Tu email"
+                required
+              />
+              <button class="cta cta-primary" type="submit">Suscribirme</button>
+              <p class="form-message" id="form-message" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="footer">
@@ -362,5 +389,6 @@
       <div>Think better. Build wisely.</div>
     </div>
   </footer>
+
 </body>
 </html>
