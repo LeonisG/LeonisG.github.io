@@ -8060,3 +8060,164 @@ a.home-follow-card:hover .home-follow-arrow {
     transition: none;
   }
 }
+
+/* =========================================================
+   MEJORAS V3.1 — Sparklines · Indicador crítico · Acordeón
+========================================================= */
+
+/* ── Sparklines SVG por dimensión ────────────────────── */
+
+.metrics-dim-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.metrics-dim-spark {
+  width: 72px;
+  height: 18px;
+  flex-shrink: 0;
+  overflow: visible;
+}
+
+.dim-spark-a {
+  stroke: rgba(120, 170, 210, 0.65);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.dim-spark-b {
+  stroke: rgba(185, 239, 69, 0.65);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .metrics-dim-spark {
+    opacity: 0;
+    transition: opacity 0.5s ease 0.8s;
+  }
+  .metrics-dimensions.is-visible .metrics-dim-spark {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .metrics-dim-spark { opacity: 1; }
+}
+
+/* ── Indicador de semana crítica ─────────────────────── */
+
+.metrics-hito-critical-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 0.18rem 0.52rem;
+  border-radius: 999px;
+  background: rgba(210, 80, 50, 0.1);
+  border: 1px solid rgba(210, 80, 50, 0.22);
+  color: rgba(230, 120, 95, 0.95);
+  flex-shrink: 0;
+}
+
+/* ── Acordeón semanas pendientes ─────────────────────── */
+
+details.metrics-hito {
+  cursor: default;
+}
+
+details.metrics-hito summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  user-select: none;
+}
+
+details.metrics-hito summary::-webkit-details-marker {
+  display: none;
+}
+
+details.metrics-hito summary::marker {
+  display: none;
+}
+
+.metrics-hito-chevron {
+  margin-left: auto;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: var(--muted);
+  opacity: 0.5;
+  transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+details.metrics-hito[open] .metrics-hito-chevron {
+  transform: rotate(180deg);
+}
+
+.metrics-hito-accordion-body {
+  display: grid;
+  gap: 0.65rem;
+  padding-top: 0.9rem;
+  margin-top: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  animation: accordionOpen 0.28s ease;
+}
+
+@keyframes accordionOpen {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.metrics-hito-phase {
+  display: flex;
+  align-items: baseline;
+  gap: 0.85rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.metrics-hito-phase-week {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: 0.5;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.metrics-hito-phase-desc {
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.5;
+  opacity: 0.7;
+}
+
+.metrics-hito-pending-note {
+  font-size: 0.74rem;
+  color: var(--muted);
+  opacity: 0.55;
+  line-height: 1.55;
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .metrics-hito-accordion-body { animation: none; }
+  .metrics-hito-chevron { transition: none; }
+}

@@ -373,7 +373,13 @@
 
             <!-- D1: Capital -->
             <div class="metrics-dim-row">
-              <span class="metrics-dim-label">Capital restante</span>
+              <div class="metrics-dim-label-row">
+                <span class="metrics-dim-label">Capital restante</span>
+                <svg class="metrics-dim-spark" viewBox="0 0 72 18" aria-hidden="true">
+                  <polyline class="dim-spark-a" points="2,1 26,1.1 50,1.9 70,2.8"/>
+                  <polyline class="dim-spark-b" points="2,1 26,2.4 50,7.7 70,17"/>
+                </svg>
+              </div>
               <div class="metrics-dim-bars">
                 <div class="metrics-dim-bar-row">
                   <span class="metrics-dim-bar-id metrics-dim-bar-id-a" aria-label="Perfil A">A</span>
@@ -398,7 +404,13 @@
 
             <!-- D2: Tiempo invertido -->
             <div class="metrics-dim-row">
-              <span class="metrics-dim-label">Tiempo invertido acumulado</span>
+              <div class="metrics-dim-label-row">
+                <span class="metrics-dim-label">Tiempo invertido acumulado</span>
+                <svg class="metrics-dim-spark" viewBox="0 0 72 18" aria-hidden="true">
+                  <polyline class="dim-spark-a" points="2,17 26,15.3 50,13.5 70,11.8"/>
+                  <polyline class="dim-spark-b" points="2,14.3 26,9.4 50,4.4 70,1"/>
+                </svg>
+              </div>
               <div class="metrics-dim-bars">
                 <div class="metrics-dim-bar-row">
                   <span class="metrics-dim-bar-id metrics-dim-bar-id-a">A</span>
@@ -423,7 +435,13 @@
 
             <!-- D3: Energía -->
             <div class="metrics-dim-row">
-              <span class="metrics-dim-label">Energía disponible</span>
+              <div class="metrics-dim-label-row">
+                <span class="metrics-dim-label">Energía disponible</span>
+                <svg class="metrics-dim-spark" viewBox="0 0 72 18" aria-hidden="true">
+                  <polyline class="dim-spark-a" points="2,14.3 26,14.3 50,17 70,9"/>
+                  <polyline class="dim-spark-b" points="2,1 26,6.3 50,10.1 70,4.3"/>
+                </svg>
+              </div>
               <div class="metrics-dim-bars">
                 <div class="metrics-dim-bar-row">
                   <span class="metrics-dim-bar-id metrics-dim-bar-id-a">A</span>
@@ -448,7 +466,13 @@
 
             <!-- D4: Fricción -->
             <div class="metrics-dim-row">
-              <span class="metrics-dim-label">Fricción acumulada</span>
+              <div class="metrics-dim-label-row">
+                <span class="metrics-dim-label">Fricción acumulada</span>
+                <svg class="metrics-dim-spark" viewBox="0 0 72 18" aria-hidden="true">
+                  <polyline class="dim-spark-a" points="2,17 26,12.9 50,10.1 70,7.3"/>
+                  <polyline class="dim-spark-b" points="2,17 26,8.7 50,4.6 70,1"/>
+                </svg>
+              </div>
               <div class="metrics-dim-bars">
                 <div class="metrics-dim-bar-row">
                   <span class="metrics-dim-bar-id metrics-dim-bar-id-a">A</span>
@@ -473,7 +497,13 @@
 
             <!-- D5: Psicología -->
             <div class="metrics-dim-row">
-              <span class="metrics-dim-label">Estado psicológico</span>
+              <div class="metrics-dim-label-row">
+                <span class="metrics-dim-label">Estado psicológico</span>
+                <svg class="metrics-dim-spark" viewBox="0 0 72 18" aria-hidden="true">
+                  <polyline class="dim-spark-a" points="2,9 26,13 50,13 70,17"/>
+                  <polyline class="dim-spark-b" points="2,1 26,5 50,5 70,5"/>
+                </svg>
+              </div>
               <div class="metrics-dim-bars">
                 <div class="metrics-dim-bar-row">
                   <span class="metrics-dim-bar-id metrics-dim-bar-id-a">A</span>
@@ -498,7 +528,13 @@
 
             <!-- D6: Encaje modelo-vida -->
             <div class="metrics-dim-row">
-              <span class="metrics-dim-label">Encaje modelo-vida</span>
+              <div class="metrics-dim-label-row">
+                <span class="metrics-dim-label">Encaje modelo-vida</span>
+                <svg class="metrics-dim-spark" viewBox="0 0 72 18" aria-hidden="true">
+                  <polyline class="dim-spark-a" points="2,11.7 26,11.7 50,17 70,17"/>
+                  <polyline class="dim-spark-b" points="2,1 26,1 50,1 70,1"/>
+                </svg>
+              </div>
               <div class="metrics-dim-bars">
                 <div class="metrics-dim-bar-row">
                   <span class="metrics-dim-bar-id metrics-dim-bar-id-a">A</span>
@@ -703,6 +739,7 @@
             <div class="metrics-hito-head">
               <span class="metrics-hito-week">Semana 4 · En curso</span>
               <span class="metrics-hito-name">Apertura inminente — El primer imprevisto real</span>
+              <span class="metrics-hito-critical-tag" aria-label="Semana de máxima tensión financiera">⚠ Máxima tensión</span>
               <span class="exp-tl-badge exp-badge-active" style="margin-left:auto">Activa</span>
             </div>
             <div class="metrics-hito-data">
@@ -725,6 +762,32 @@
             </div>
             <p class="metrics-hito-event">A evalúa si abrir con equipamiento mínimo o esperar — su capital permite esa pausa. B asume 800 € de ventilación insuficiente para no retrasar la apertura. Capital en 5.760 €. El margen de error es ya mínimo y el experimento aún no ha generado ingresos.</p>
           </div>
+
+          <details class="metrics-hito">
+            <summary>
+              <span class="metrics-hito-week">Semanas 5–10</span>
+              <span class="metrics-hito-name">Fases pendientes — Operativa y cierre</span>
+              <span class="exp-tl-badge exp-badge-pending">Pendiente</span>
+              <svg class="metrics-hito-chevron" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                <path d="M4.5 6.75 9 11.25l4.5-4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </summary>
+            <div class="metrics-hito-accordion-body">
+              <p class="metrics-hito-pending-note">Las métricas de estas fases se actualizarán conforme avance el experimento. Las fases previstas son las siguientes:</p>
+              <div class="metrics-hito-phase">
+                <span class="metrics-hito-phase-week">Sem. 5–6</span>
+                <span class="metrics-hito-phase-desc">Apertura al público. Primeros clientes reales. Ajuste de precios y horarios. Primera lectura de tráfico por zona.</span>
+              </div>
+              <div class="metrics-hito-phase">
+                <span class="metrics-hito-phase-week">Sem. 7–8</span>
+                <span class="metrics-hito-phase-desc">Medición de flujo diario y rentabilidad por máquina. Señal crítica: ¿cubre costes fijos la ubicación secundaria de A?</span>
+              </div>
+              <div class="metrics-hito-phase">
+                <span class="metrics-hito-phase-week">Sem. 9–10</span>
+                <span class="metrics-hito-phase-desc">Cierre del experimento. Resumen de métricas, análisis de encaje vital por perfil y veredicto Leonis del modelo completo.</span>
+              </div>
+            </div>
+          </details>
 
         </div>
       </div>
