@@ -7,7 +7,7 @@
   <title>Métricas · EXP-01 Lavandería Autoservicio — Laboratorio Leonis</title>
   <meta
     name="description"
-    content="Evolución semanal de Perfil A y Perfil B en el experimento de lavandería autoservicio. Capital, tiempo, energía y radar de estado."
+    content="Panel analítico del experimento de lavandería autoservicio. Capital, tiempo, energía, fricción y encaje vital de Perfil A y Perfil B semana a semana."
   />
   <meta name="theme-color" content="#031d10" />
 
@@ -27,10 +27,11 @@
   <link rel="stylesheet" href="/assets/css/styles.css" />
   <script src="/assets/js/main.js" defer></script>
 
-  <!-- Chart.js — necesario para radar y gráficos de evolución temporal -->
+  <!-- Chart.js — gráfico de evolución temporal -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body class="project-metrics-page">
+
   <header class="site-header">
     <nav class="nav">
       <div class="container nav-inner">
@@ -64,72 +65,155 @@
 
   <main class="project-metrics-main">
 
-    <!-- HERO -->
-    <section class="section metrics-hero">
+    <!-- ── HERO V2 ─────────────────────────────────────────── -->
+    <section class="section metrics-hero-v2">
       <div class="container">
-        <div class="metrics-hero-inner reveal">
-          <nav class="exp-breadcrumb" aria-label="Ubicación en el sitio" style="position:relative;z-index:1;margin-bottom:1rem">
-            <a href="/pages/laboratorio/index.html">Laboratorio</a>
-            <span aria-hidden="true">›</span>
-            <a href="./index.html">EXP-01 · Lavandería</a>
-            <span aria-hidden="true">›</span>
-            <span aria-current="page">Métricas</span>
-          </nav>
 
-          <p class="project-eyebrow">EXP-01 · MÉTRICAS HISTÓRICAS</p>
+        <nav class="exp-breadcrumb reveal" aria-label="Ubicación en el sitio">
+          <a href="/pages/laboratorio/index.html">Laboratorio</a>
+          <span aria-hidden="true">›</span>
+          <a href="./index.html">EXP-01 · Lavandería</a>
+          <span aria-hidden="true">›</span>
+          <span aria-current="page">Métricas</span>
+        </nav>
 
-          <h1 class="metrics-title">Lavandería autoservicio</h1>
+        <div class="metrics-hero-v2-grid reveal">
 
-          <p class="metrics-subtitle">
-            Evolución semanal de Perfil A y Perfil B a lo largo del experimento. Capital, tiempo, energía y encaje vital comparado.
-          </p>
+          <!-- Copia -->
+          <div class="metrics-hero-v2-copy">
+            <div class="exp-hero-tags">
+              <span class="exp-tag exp-tag-ref">EXP-01</span>
+              <span class="exp-tag exp-tag-type">Panel analítico</span>
+              <span class="status-badge active">
+                <span class="status-dot"></span>
+                Semana 4 · En curso
+              </span>
+            </div>
 
-          <div class="metrics-hero-links">
-            <a class="cta cta-secondary" href="./index.html">Volver al proyecto</a>
-            <a class="cta cta-secondary" href="./diario.html">Ver diario</a>
+            <h1 class="metrics-h1-v2">
+              Señales del<br>
+              <span class="accent">experimento</span>
+            </h1>
+
+            <p class="metrics-subtitle-v2">
+              Las métricas no son un dashboard. Son señales de realidad operativa. Capital, tiempo, energía y fricción — la historia real de dos perfiles construyendo el mismo modelo bajo condiciones radicalmente distintas.
+            </p>
+
+            <div class="metrics-hero-links">
+              <a class="cta cta-secondary" href="./index.html">Expediente completo</a>
+              <a class="cta cta-secondary" href="./diario.html">Diario semanal</a>
+            </div>
           </div>
+
+          <!-- Panel KPIs -->
+          <div class="metrics-hero-v2-signals" aria-label="Métricas clave del experimento">
+            <span class="metrics-hero-signal-label">Semana 4 · Estado del experimento</span>
+
+            <div class="metrics-hero-kpis">
+              <div class="metrics-hero-kpi metrics-hero-kpi-a">
+                <span class="metrics-hero-kpi-key">Capital · Perfil A</span>
+                <span class="metrics-hero-kpi-val">24.200 €</span>
+                <span class="metrics-hero-kpi-sub">97% conservado · margen amplio</span>
+              </div>
+              <div class="metrics-hero-kpi metrics-hero-kpi-b">
+                <span class="metrics-hero-kpi-key">Capital · Perfil B</span>
+                <span class="metrics-hero-kpi-val">5.760 €</span>
+                <span class="metrics-hero-kpi-sub">72% · zona de riesgo activa</span>
+              </div>
+              <div class="metrics-hero-kpi">
+                <span class="metrics-hero-kpi-key">Fricción dominante</span>
+                <span class="metrics-hero-kpi-val">Capital inicial</span>
+                <span class="metrics-hero-kpi-sub">Afecta a ambos perfiles desde S1</span>
+              </div>
+            </div>
+
+            <div class="metrics-hero-alerta" role="alert">
+              <span class="exp-signal-dot exp-signal-warn" aria-hidden="true" style="flex-shrink:0;margin-top:3px"></span>
+              Un imprevisto adicional de 1.000–2.000 € comprometería la apertura de Perfil B. El margen de error es ya mínimo.
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <!-- ESTADO ACTUAL -->
+    <!-- ── ESTADO ACTUAL V2 ────────────────────────────────── -->
     <section class="section">
       <div class="container">
-        <div class="metrics-summary metrics-panel reveal">
-          <div class="metrics-summary-head">
-            <h2 class="project-block-title">Estado actual del experimento</h2>
-            <span class="status-badge active">
-              <span class="status-dot"></span>
-              Semana 4 · En curso
-            </span>
+
+        <div class="metrics-estado-dominante reveal" role="note">
+          <div class="metrics-estado-dominante-head">
+            <span class="exp-signal-dot exp-signal-warn" aria-hidden="true"></span>
+            <span class="metrics-estado-dominante-key">Señal dominante — Semana 4</span>
+          </div>
+          <p>Perfil B ha consumido 2.240 € de su fondo inicial en fricciones pre-apertura y ya cede 12–15% de margen por la franquicia. Un imprevisto más podría forzar una decisión crítica antes de abrir.</p>
+        </div>
+
+        <div class="metrics-estado-perfiles reveal">
+
+          <div class="metrics-perfil-panel metrics-perfil-panel-a">
+            <div class="metrics-perfil-head">
+              <div class="exp-avatar exp-avatar-a exp-avatar-lg" aria-label="Perfil A">A</div>
+              <div class="metrics-perfil-head-info">
+                <span class="metrics-perfil-title">Perfil A · Prudente</span>
+                <span class="metrics-perfil-meta">Empleado · tiempo limitado · 25.000 € iniciales</span>
+              </div>
+            </div>
+            <div class="metrics-perfil-datos">
+              <div class="metrics-perfil-dato">
+                <span class="metrics-perfil-dato-key">Capital restante</span>
+                <span class="metrics-perfil-dato-val">24.200 € (97%)</span>
+              </div>
+              <div class="metrics-perfil-dato">
+                <span class="metrics-perfil-dato-key">Tiempo invertido</span>
+                <span class="metrics-perfil-dato-val">28 h acumuladas</span>
+              </div>
+              <div class="metrics-perfil-dato">
+                <span class="metrics-perfil-dato-key">Energía disponible</span>
+                <span class="metrics-perfil-dato-val">6 / 10</span>
+              </div>
+              <div class="metrics-perfil-dato">
+                <span class="metrics-perfil-dato-key">Fricción acumulada</span>
+                <span class="metrics-perfil-dato-val">Media · 2 eventos</span>
+              </div>
+            </div>
+            <p class="metrics-perfil-lectura">Capital conservado a coste de velocidad. Su margen de error es alto, pero el ritmo lento podría convertirse en fricción real si el tráfico de la zona secundaria no es suficiente tras la apertura.</p>
           </div>
 
-          <div class="metrics-summary-grid">
-            <div class="summary-item">
-              <small>Semana actual</small>
-              <strong>Semana 4 / ~10</strong>
+          <div class="metrics-perfil-panel metrics-perfil-panel-b">
+            <div class="metrics-perfil-head">
+              <div class="exp-avatar exp-avatar-b exp-avatar-lg" aria-label="Perfil B">B</div>
+              <div class="metrics-perfil-head-info">
+                <span class="metrics-perfil-title">Perfil B · Exploradora</span>
+                <span class="metrics-perfil-meta">Autónoma · tiempo amplio · 8.000 € iniciales</span>
+              </div>
             </div>
-
-            <div class="summary-item">
-              <small>Fricción dominante</small>
-              <strong>Capital inicial</strong>
+            <div class="metrics-perfil-datos">
+              <div class="metrics-perfil-dato">
+                <span class="metrics-perfil-dato-key">Capital restante</span>
+                <span class="metrics-perfil-dato-val">5.760 € (72%)</span>
+              </div>
+              <div class="metrics-perfil-dato">
+                <span class="metrics-perfil-dato-key">Tiempo invertido</span>
+                <span class="metrics-perfil-dato-val">72 h acumuladas</span>
+              </div>
+              <div class="metrics-perfil-dato">
+                <span class="metrics-perfil-dato-key">Energía disponible</span>
+                <span class="metrics-perfil-dato-val">7 / 10</span>
+              </div>
+              <div class="metrics-perfil-dato">
+                <span class="metrics-perfil-dato-key">Fricción acumulada</span>
+                <span class="metrics-perfil-dato-val">Alta · 3 eventos</span>
+              </div>
             </div>
-
-            <div class="summary-item summary-item-a">
-              <small>Estado Perfil A</small>
-              <strong>24.200 € · 97%</strong>
-            </div>
-
-            <div class="summary-item summary-item-b">
-              <small>Estado Perfil B</small>
-              <strong>5.760 € · 72%</strong>
-            </div>
+            <p class="metrics-perfil-lectura">Velocidad a coste de margen. Cada fricción pre-apertura erosiona el colchón más pequeño. El ritmo es sostenible en energía, pero no en capital. La pregunta es cuánto puede aguantar sin ingresos reales.</p>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- COMPARATIVA VISUAL — barras animadas -->
+    <!-- ── 01 · COMPARATIVA DE MÉTRICAS ───────────────────── -->
     <section class="section metrics-bars-section">
       <div class="container">
         <header class="home-section-head reveal">
@@ -165,7 +249,7 @@
           <div class="exp-metric-card">
             <div class="exp-metric-top">
               <span class="exp-metric-name">Tiempo invertido</span>
-              <span class="exp-metric-why">Horas reales dedicadas al experimento (acumuladas)</span>
+              <span class="exp-metric-why">Horas reales dedicadas (acumuladas, semana 4)</span>
             </div>
             <div class="exp-metric-body">
               <div class="exp-metric-row">
@@ -181,14 +265,14 @@
             </div>
             <p class="exp-metric-signal">
               <span class="exp-signal-dot exp-signal-neutral" aria-hidden="true"></span>
-              A avanza despacio por restricción de tiempo real. B compensa capital con dedicación.
+              A avanza despacio por restricción real de tiempo disponible. B compensa capital con dedicación.
             </p>
           </div>
 
           <div class="exp-metric-card">
             <div class="exp-metric-top">
               <span class="exp-metric-name">Energía disponible</span>
-              <span class="exp-metric-why">Capacidad subjetiva de sostener el ritmo actual</span>
+              <span class="exp-metric-why">Capacidad subjetiva de sostener el ritmo actual (0–10)</span>
             </div>
             <div class="exp-metric-body">
               <div class="exp-metric-row">
@@ -204,7 +288,7 @@
             </div>
             <p class="exp-metric-signal">
               <span class="exp-signal-dot exp-signal-ok" aria-hidden="true"></span>
-              Ambos mantienen energía. Señal positiva — todavía no hay desgaste crítico.
+              Ambos mantienen energía. Señal positiva — todavía no hay desgaste crítico en semana 4.
             </p>
           </div>
 
@@ -231,7 +315,7 @@
             </p>
           </div>
 
-        </div><!-- /metrics-bars-grid -->
+        </div>
 
         <!-- Señales visuales -->
         <div class="metrics-signals reveal">
@@ -261,118 +345,217 @@
       </div>
     </section>
 
-    <!-- CHARTS: RADAR + CONTEXTO -->
+    <!-- ── 02 · PANEL DE DIMENSIONES ─────────────────────── -->
     <section class="section">
       <div class="container">
         <header class="home-section-head reveal">
           <span class="home-section-num" aria-hidden="true">02</span>
-          <h2 class="home-section-title">Radar de estado y evolución temporal</h2>
+          <h2 class="home-section-title">Panel de dimensiones</h2>
         </header>
-        <div class="metrics-core-grid reveal">
+        <p class="home-section-sub reveal">
+          Perfil sintético del momento. Seis dimensiones clave comparadas entre A y B. Los valores numéricos están detrás de cada barra — la barra solo orienta, la interpretación explica.
+        </p>
 
-          <!-- RADAR -->
-          <div class="metrics-radar-shell metrics-panel">
-            <div class="metrics-block-head">
-              <div>
-                <p class="project-eyebrow">RADAR DE ESTADO</p>
-                <h2 class="project-block-title">Perfil sintético del momento</h2>
-              </div>
+        <div class="metrics-panel metrics-dimensions-shell">
 
-              <div class="metrics-controls">
-                <div class="control-group">
-                  <button class="control-chip active" type="button" data-radar-profile="both">Ambos</button>
-                  <button class="control-chip" type="button" data-radar-profile="daniel">Perfil A</button>
-                  <button class="control-chip" type="button" data-radar-profile="marta">Perfil B</button>
-                </div>
-
-                <div class="control-group">
-                  <button class="control-chip active" type="button" data-radar-range="current">Actual</button>
-                  <button class="control-chip" type="button" data-radar-range="weekly">Semanal</button>
-                </div>
-              </div>
+          <div class="metrics-dim-legend">
+            <div class="metrics-dim-legend-item">
+              <div class="metrics-dim-legend-dot metrics-dim-legend-a" aria-hidden="true"></div>
+              Perfil A
             </div>
-
-            <div class="metrics-chart-card metrics-chart-card-radar">
-              <canvas id="radarChart"></canvas>
+            <div class="metrics-dim-legend-item">
+              <div class="metrics-dim-legend-dot metrics-dim-legend-b" aria-hidden="true"></div>
+              Perfil B
             </div>
           </div>
 
-          <!-- PANEL CONTEXTUAL -->
-          <aside class="metrics-context-panel metrics-panel">
-            <div class="metrics-context-head">
-              <p class="project-eyebrow">LECTURA RÁPIDA</p>
-              <h2 class="project-block-title">Contexto del estado</h2>
+          <div class="metrics-dimensions reveal">
+
+            <!-- D1: Capital -->
+            <div class="metrics-dim-row">
+              <span class="metrics-dim-label">Capital restante</span>
+              <div class="metrics-dim-bars">
+                <div class="metrics-dim-bar-row">
+                  <span class="metrics-dim-bar-id metrics-dim-bar-id-a" aria-label="Perfil A">A</span>
+                  <div class="metrics-dim-track" role="progressbar" aria-valuenow="97" aria-valuemin="0" aria-valuemax="100" aria-label="Perfil A: 97%">
+                    <div class="metrics-dim-fill metrics-dim-fill-a" style="--val:97%"></div>
+                  </div>
+                  <span class="metrics-dim-val metrics-dim-val-a">24.200 € · 97%</span>
+                </div>
+                <div class="metrics-dim-bar-row">
+                  <span class="metrics-dim-bar-id metrics-dim-bar-id-b" aria-label="Perfil B">B</span>
+                  <div class="metrics-dim-track" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100" aria-label="Perfil B: 72%">
+                    <div class="metrics-dim-fill metrics-dim-fill-b" style="--val:72%"></div>
+                  </div>
+                  <span class="metrics-dim-val metrics-dim-val-b">5.760 € · 72%</span>
+                </div>
+              </div>
+              <p class="metrics-dim-signal">
+                <span class="exp-signal-dot exp-signal-warn" aria-hidden="true"></span>
+                A conserva casi todo su fondo inicial. B ha consumido 2.240 € en fricciones pre-apertura — su margen de error es radicalmente menor.
+              </p>
             </div>
 
-            <div class="metrics-context-stack">
-              <div class="context-card context-card-a">
-                <small>Perfil A</small>
-                <strong>Más estable, menos velocidad</strong>
-                <p>
-                  Mantiene mejor la estructura general, pero su avance está limitado por tiempo real disponible y cautela ante la incertidumbre.
-                </p>
+            <!-- D2: Tiempo invertido -->
+            <div class="metrics-dim-row">
+              <span class="metrics-dim-label">Tiempo invertido acumulado</span>
+              <div class="metrics-dim-bars">
+                <div class="metrics-dim-bar-row">
+                  <span class="metrics-dim-bar-id metrics-dim-bar-id-a">A</span>
+                  <div class="metrics-dim-track" role="progressbar" aria-valuenow="39" aria-valuemin="0" aria-valuemax="100" aria-label="Perfil A: 28 horas (39% relativo)">
+                    <div class="metrics-dim-fill metrics-dim-fill-a" style="--val:39%"></div>
+                  </div>
+                  <span class="metrics-dim-val metrics-dim-val-a">28 h acum.</span>
+                </div>
+                <div class="metrics-dim-bar-row">
+                  <span class="metrics-dim-bar-id metrics-dim-bar-id-b">B</span>
+                  <div class="metrics-dim-track" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" aria-label="Perfil B: 72 horas (máximo del rango)">
+                    <div class="metrics-dim-fill metrics-dim-fill-b" style="--val:100%"></div>
+                  </div>
+                  <span class="metrics-dim-val metrics-dim-val-b">72 h acum.</span>
+                </div>
               </div>
-
-              <div class="context-card context-card-b">
-                <small>Perfil B</small>
-                <strong>Más impulso, más exposición</strong>
-                <p>
-                  Avanza con mayor velocidad, pero su margen financiero se tensiona antes. Cada imprevisto pesa más.
-                </p>
-              </div>
-
-              <div class="context-alerts">
-                <div class="alert-chip alert-chip-fragile">Capital Perfil B en zona frágil</div>
-                <div class="alert-chip alert-chip-stable">Energía Perfil B estable</div>
-                <div class="alert-chip alert-chip-stable">Capital Perfil A conservado</div>
-              </div>
-
-              <div class="context-legend">
-                <div><span class="legend-dot legend-dot-a"></span> Perfil A = control, prudencia, estructura</div>
-                <div><span class="legend-dot legend-dot-b"></span> Perfil B = impulso, velocidad, exposición</div>
-              </div>
+              <p class="metrics-dim-signal">
+                <span class="exp-signal-dot exp-signal-neutral" aria-hidden="true"></span>
+                B invierte 2,6 veces más tiempo. Compensando capital con dedicación. A avanza despacio por restricción real — no por falta de criterio.
+              </p>
             </div>
-          </aside>
 
+            <!-- D3: Energía -->
+            <div class="metrics-dim-row">
+              <span class="metrics-dim-label">Energía disponible</span>
+              <div class="metrics-dim-bars">
+                <div class="metrics-dim-bar-row">
+                  <span class="metrics-dim-bar-id metrics-dim-bar-id-a">A</span>
+                  <div class="metrics-dim-track" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" aria-label="Perfil A: 6/10">
+                    <div class="metrics-dim-fill metrics-dim-fill-a" style="--val:60%"></div>
+                  </div>
+                  <span class="metrics-dim-val metrics-dim-val-a">6 / 10</span>
+                </div>
+                <div class="metrics-dim-bar-row">
+                  <span class="metrics-dim-bar-id metrics-dim-bar-id-b">B</span>
+                  <div class="metrics-dim-track" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="Perfil B: 7/10">
+                    <div class="metrics-dim-fill metrics-dim-fill-b" style="--val:70%"></div>
+                  </div>
+                  <span class="metrics-dim-val metrics-dim-val-b">7 / 10</span>
+                </div>
+              </div>
+              <p class="metrics-dim-signal">
+                <span class="exp-signal-dot exp-signal-ok" aria-hidden="true"></span>
+                Ambos mantienen energía aceptable. El desgaste crítico no ha llegado todavía — señal a vigilar en las próximas semanas de operativa real.
+              </p>
+            </div>
+
+            <!-- D4: Fricción -->
+            <div class="metrics-dim-row">
+              <span class="metrics-dim-label">Fricción acumulada</span>
+              <div class="metrics-dim-bars">
+                <div class="metrics-dim-bar-row">
+                  <span class="metrics-dim-bar-id metrics-dim-bar-id-a">A</span>
+                  <div class="metrics-dim-track" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" aria-label="Perfil A: fricción media">
+                    <div class="metrics-dim-fill metrics-dim-fill-a" style="--val:55%"></div>
+                  </div>
+                  <span class="metrics-dim-val metrics-dim-val-a">Media</span>
+                </div>
+                <div class="metrics-dim-bar-row">
+                  <span class="metrics-dim-bar-id metrics-dim-bar-id-b">B</span>
+                  <div class="metrics-dim-track" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" aria-label="Perfil B: fricción alta">
+                    <div class="metrics-dim-fill metrics-dim-fill-b" style="--val:78%"></div>
+                  </div>
+                  <span class="metrics-dim-val metrics-dim-val-b">Alta</span>
+                </div>
+              </div>
+              <p class="metrics-dim-signal">
+                <span class="exp-signal-dot exp-signal-warn" aria-hidden="true"></span>
+                B acumula más fricción operativa. Con capital limitado, cada imprevisto pesa proporcionalmente más que en A.
+              </p>
+            </div>
+
+            <!-- D5: Psicología -->
+            <div class="metrics-dim-row">
+              <span class="metrics-dim-label">Estado psicológico</span>
+              <div class="metrics-dim-bars">
+                <div class="metrics-dim-bar-row">
+                  <span class="metrics-dim-bar-id metrics-dim-bar-id-a">A</span>
+                  <div class="metrics-dim-track" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" aria-label="Perfil A: 4/10">
+                    <div class="metrics-dim-fill metrics-dim-fill-a" style="--val:40%"></div>
+                  </div>
+                  <span class="metrics-dim-val metrics-dim-val-a">4 / 10</span>
+                </div>
+                <div class="metrics-dim-bar-row">
+                  <span class="metrics-dim-bar-id metrics-dim-bar-id-b">B</span>
+                  <div class="metrics-dim-track" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" aria-label="Perfil B: 5/10">
+                    <div class="metrics-dim-fill metrics-dim-fill-b" style="--val:50%"></div>
+                  </div>
+                  <span class="metrics-dim-val metrics-dim-val-b">5 / 10</span>
+                </div>
+              </div>
+              <p class="metrics-dim-signal">
+                <span class="exp-signal-dot exp-signal-neutral" aria-hidden="true"></span>
+                A muestra más cautela y menos entusiasmo activo. B mantiene psicología más positiva pese a las fricciones. Variable a monitorizar en apertura.
+              </p>
+            </div>
+
+            <!-- D6: Encaje modelo-vida -->
+            <div class="metrics-dim-row">
+              <span class="metrics-dim-label">Encaje modelo-vida</span>
+              <div class="metrics-dim-bars">
+                <div class="metrics-dim-bar-row">
+                  <span class="metrics-dim-bar-id metrics-dim-bar-id-a">A</span>
+                  <div class="metrics-dim-track" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" aria-label="Perfil A: 5/10">
+                    <div class="metrics-dim-fill metrics-dim-fill-a" style="--val:50%"></div>
+                  </div>
+                  <span class="metrics-dim-val metrics-dim-val-a">5 / 10</span>
+                </div>
+                <div class="metrics-dim-bar-row">
+                  <span class="metrics-dim-bar-id metrics-dim-bar-id-b">B</span>
+                  <div class="metrics-dim-track" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" aria-label="Perfil B: 6/10">
+                    <div class="metrics-dim-fill metrics-dim-fill-b" style="--val:60%"></div>
+                  </div>
+                  <span class="metrics-dim-val metrics-dim-val-b">6 / 10</span>
+                </div>
+              </div>
+              <p class="metrics-dim-signal">
+                <span class="exp-signal-dot exp-signal-neutral" aria-hidden="true"></span>
+                Mide si el modelo encaja en la vida real de cada perfil. B tiene más tiempo disponible — operativa más asumible. Pero la fragilidad de capital puede romper ese encaje.
+              </p>
+            </div>
+
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- EVOLUCIÓN TEMPORAL -->
+    <!-- ── EVOLUCIÓN TEMPORAL ────────────────────────────── -->
     <section class="section">
       <div class="container">
         <div class="metrics-timeline-shell metrics-panel reveal">
           <div class="metrics-block-head">
             <div>
               <p class="project-eyebrow">EVOLUCIÓN TEMPORAL</p>
-              <h2 class="project-block-title">Cómo cambian las trayectorias</h2>
+              <h2 class="project-block-title">Cómo divergen las trayectorias</h2>
             </div>
 
-            <div class="metrics-controls metrics-controls-stacked">
-              <div class="control-group">
-                <button class="control-chip active" type="button" data-view="daily">Diario</button>
-                <button class="control-chip" type="button" data-view="weekly">Semanal</button>
-              </div>
-
-              <div class="control-group">
-                <button class="control-chip active" type="button" data-metric="energy">Energía</button>
-                <button class="control-chip" type="button" data-metric="psychology">Psicología</button>
-                <button class="control-chip" type="button" data-metric="capital">Capital</button>
-                <button class="control-chip" type="button" data-metric="time">Tiempo invertido</button>
-                <button class="control-chip" type="button" data-metric="income">Ingresos</button>
-                <button class="control-chip" type="button" data-metric="fit">Encaje</button>
-              </div>
+            <div class="control-group" role="group" aria-label="Seleccionar métrica">
+              <button class="control-chip active" type="button" data-metric="capital">Capital</button>
+              <button class="control-chip" type="button" data-metric="energy">Energía</button>
+              <button class="control-chip" type="button" data-metric="time">Tiempo</button>
+              <button class="control-chip" type="button" data-metric="psychology">Psicología</button>
             </div>
           </div>
 
           <div class="metrics-chart-card metrics-chart-card-lg">
-            <canvas id="timelineChart"></canvas>
+            <canvas id="timelineChart" aria-label="Gráfico de evolución temporal por perfil. Selecciona una métrica para visualizar su evolución en los 30 primeros días."></canvas>
           </div>
+
+          <p class="metrics-timeline-reading">
+            En capital, la brecha es estructural desde el día 1 — no la crea el comportamiento, la crea el punto de partida. En energía, ambos se mantienen todavía. El tiempo revela dos estrategias radicalmente distintas para el mismo objetivo. En psicología, A cae más rápido: su cautela tiene un coste emocional que los números no muestran directamente.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- MOMENTOS CRÍTICOS -->
+    <!-- ── 03 · PUNTOS DE INFLEXIÓN ──────────────────────── -->
     <section class="section">
       <div class="container">
         <header class="home-section-head reveal">
@@ -385,7 +568,7 @@
           <article class="critical-event-v2 critical-event-v2-a">
             <div class="critical-event-v2-meta">
               <span class="critical-event-v2-when">Semana 1</span>
-              <span class="critical-event-v2-who">Perfil A</span>
+              <span class="critical-event-v2-who critical-event-v2-a">Perfil A</span>
             </div>
             <h3>Retraso de licencias detectado</h3>
             <p>Descubre que el proceso administrativo puede tardar 6–8 semanas. Asume el retraso y sigue adelante sin modificar su estrategia. Su capital absorbe la espera.</p>
@@ -394,16 +577,16 @@
           <article class="critical-event-v2 critical-event-v2-b">
             <div class="critical-event-v2-meta">
               <span class="critical-event-v2-when">Semana 2</span>
-              <span class="critical-event-v2-who">Perfil B</span>
+              <span class="critical-event-v2-who critical-event-v2-b">Perfil B</span>
             </div>
             <h3>Firma contrato de franquicia</h3>
-            <p>Ante el capital insuficiente para entrada directa, firma con operador. Reduce riesgo de arranque pero cede 12–15% de margen desde el primer día.</p>
+            <p>Ante el capital insuficiente para entrada directa, firma con operador. Reduce riesgo de arranque pero cede 12–15% de margen desde el primer día de ingresos.</p>
           </article>
 
           <article class="critical-event-v2 critical-event-v2-a">
             <div class="critical-event-v2-meta">
               <span class="critical-event-v2-when">Semana 3</span>
-              <span class="critical-event-v2-who">Perfil A</span>
+              <span class="critical-event-v2-who critical-event-v2-a">Perfil A</span>
             </div>
             <h3>Local en zona secundaria</h3>
             <p>Opta por alquiler más bajo con menor tráfico natural. Conserva capital pero introduce incertidumbre real sobre captación de clientes en fase operativa.</p>
@@ -412,147 +595,142 @@
           <article class="critical-event-v2 critical-event-v2-b">
             <div class="critical-event-v2-meta">
               <span class="critical-event-v2-when">Semana 4</span>
-              <span class="critical-event-v2-who">Perfil B</span>
+              <span class="critical-event-v2-who critical-event-v2-b">Perfil B</span>
             </div>
             <h3>Imprevisto ventilación −800 €</h3>
-            <p>El sistema de extracción del local es insuficiente. Asume 800 € para no retrasar la apertura. El capital queda en 5.760 €. Margen de error ya muy estrecho.</p>
+            <p>El sistema de extracción del local es insuficiente. Asume 800 € para no retrasar la apertura. Capital en 5.760 €. El margen de error es ya mínimo.</p>
           </article>
 
         </div>
       </div>
     </section>
 
-    <!-- TABLA HISTÓRICA -->
+    <!-- ── 04 · SERIE DE HITOS POR SEMANA ────────────────── -->
     <section class="section">
       <div class="container">
-        <div class="metrics-history-shell metrics-panel reveal">
-          <div class="metrics-block-head">
-            <div>
-              <p class="project-eyebrow">REGISTRO HISTÓRICO</p>
-              <h2 class="project-block-title">Serie resumida</h2>
-            </div>
+        <header class="home-section-head reveal">
+          <span class="home-section-num" aria-hidden="true">04</span>
+          <h2 class="home-section-title">Serie de hitos por semana</h2>
+        </header>
+        <p class="home-section-sub reveal">
+          Resumen interpretativo de cada semana del experimento. No todos los días importan igual — aquí están los que cambiaron algo.
+        </p>
 
-            <div class="control-group">
-              <button class="control-chip active" type="button" data-table-view="daily">Diario</button>
-              <button class="control-chip" type="button" data-table-view="weekly">Semanal</button>
+        <div class="metrics-hitos reveal">
+
+          <div class="metrics-hito">
+            <div class="metrics-hito-head">
+              <span class="metrics-hito-week">Semana 1</span>
+              <span class="metrics-hito-name">Inicio — Análisis y búsqueda de local</span>
+              <span class="exp-tl-badge exp-badge-done" style="margin-left:auto">Completada</span>
             </div>
+            <div class="metrics-hito-data">
+              <div class="metrics-hito-datum metrics-hito-datum-a">
+                <span class="metrics-hito-datum-key">Capital A</span>
+                <span class="metrics-hito-datum-val">25.000 €</span>
+              </div>
+              <div class="metrics-hito-datum metrics-hito-datum-b">
+                <span class="metrics-hito-datum-key">Capital B</span>
+                <span class="metrics-hito-datum-val">8.000 €</span>
+              </div>
+              <div class="metrics-hito-datum metrics-hito-datum-a">
+                <span class="metrics-hito-datum-key">Tiempo A</span>
+                <span class="metrics-hito-datum-val">7 h acum.</span>
+              </div>
+              <div class="metrics-hito-datum metrics-hito-datum-b">
+                <span class="metrics-hito-datum-key">Tiempo B</span>
+                <span class="metrics-hito-datum-val">18 h acum.</span>
+              </div>
+            </div>
+            <p class="metrics-hito-event">A empieza con análisis y mapeo de zonas antes de visitar ningún local. B arranca directamente con visitas — cuatro locales en cinco días. La primera diferencia de estrategia es visible desde el día 1: información primero vs. movimiento primero.</p>
           </div>
 
-          <div class="metrics-history-table-wrap">
-            <table class="metrics-history-table">
-              <thead>
-                <tr>
-                  <th>Día</th>
-                    <th>
-                        Tiempo<br>
-                        <span class="th-profile th-d">Perf. A</span>
-                    </th>
-                    <th>
-                        Tiempo<br>
-                        <span class="th-profile th-m">Perf. B</span>
-                    </th>
-                    <th>
-                        Capital<br>
-                        <span class="th-profile th-d">Perf. A</span>
-                    </th>
-                    <th>
-                        Capital<br>
-                        <span class="th-profile th-m">Perf. B</span>
-                    </th>
-                    <th>
-                        Energía<br>
-                        <span class="th-profile th-d">Perf. A</span>
-                    </th>
-                    <th>
-                        Energía<br>
-                        <span class="th-profile th-m">Perf. B</span>
-                    </th>
-                    <th>
-                        Psicología<br>
-                        <span class="th-profile th-d">Perf. A</span>
-                    </th>
-                    <th>
-                        Psicología<br>
-                        <span class="th-profile th-m">Perf. B</span>
-                    </th>
-                    <th class="fit-col">Encaje</th>
-                    <th>Ingresos</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>0.5h</td>
-                  <td>1.5h</td>
-                  <td>25.000 €</td>
-                  <td>8.000 €</td>
-                  <td>6</td>
-                  <td>8</td>
-                  <td>5</td>
-                  <td>6</td>
-                  <td>—</td>
-                  <td>0 €</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>1h</td>
-                  <td>2h</td>
-                  <td>24.900 €</td>
-                  <td>7.950 €</td>
-                  <td>5</td>
-                  <td>7</td>
-                  <td>4</td>
-                  <td>5</td>
-                  <td>—</td>
-                  <td>0 €</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>0.5h</td>
-                  <td>1h</td>
-                  <td>24.850 €</td>
-                  <td>7.900 €</td>
-                  <td>5</td>
-                  <td>7</td>
-                  <td>4</td>
-                  <td>5</td>
-                  <td>—</td>
-                  <td>0 €</td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>1h</td>
-                  <td>1.5h</td>
-                  <td>24.700 €</td>
-                  <td>7.850 €</td>
-                  <td>5</td>
-                  <td>7</td>
-                  <td>4</td>
-                  <td>5</td>
-                  <td>—</td>
-                  <td>0 €</td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td>1h</td>
-                  <td>2h</td>
-                  <td>24.500 €</td>
-                  <td>7.750 €</td>
-                  <td>5</td>
-                  <td>7</td>
-                  <td>4</td>
-                  <td>5</td>
-                  <td>—</td>
-                  <td>0 €</td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="metrics-hito">
+            <div class="metrics-hito-head">
+              <span class="metrics-hito-week">Semana 2</span>
+              <span class="metrics-hito-name">Primera fricción — Licencias y franquicia</span>
+              <span class="exp-tl-badge exp-badge-done" style="margin-left:auto">Completada</span>
+            </div>
+            <div class="metrics-hito-data">
+              <div class="metrics-hito-datum metrics-hito-datum-a">
+                <span class="metrics-hito-datum-key">Capital A</span>
+                <span class="metrics-hito-datum-val">24.950 €</span>
+              </div>
+              <div class="metrics-hito-datum metrics-hito-datum-b">
+                <span class="metrics-hito-datum-key">Capital B</span>
+                <span class="metrics-hito-datum-val">7.800 €</span>
+              </div>
+              <div class="metrics-hito-datum metrics-hito-datum-a">
+                <span class="metrics-hito-datum-key">Tiempo A</span>
+                <span class="metrics-hito-datum-val">14 h acum.</span>
+              </div>
+              <div class="metrics-hito-datum metrics-hito-datum-b">
+                <span class="metrics-hito-datum-key">Tiempo B</span>
+                <span class="metrics-hito-datum-val">38 h acum.</span>
+              </div>
+            </div>
+            <p class="metrics-hito-event">A descubre que las licencias tardan 6–8 semanas. Asume el retraso con capital suficiente para esperarlo. B firma franquicia: reduce riesgo de arranque pero cede 12–15% de margen desde el primer día de ingresos. Las trayectorias se separan con claridad.</p>
           </div>
+
+          <div class="metrics-hito">
+            <div class="metrics-hito-head">
+              <span class="metrics-hito-week">Semana 3</span>
+              <span class="metrics-hito-name">Compromisos concretos — Local y costes ocultos</span>
+              <span class="exp-tl-badge exp-badge-done" style="margin-left:auto">Completada</span>
+            </div>
+            <div class="metrics-hito-data">
+              <div class="metrics-hito-datum metrics-hito-datum-a">
+                <span class="metrics-hito-datum-key">Capital A</span>
+                <span class="metrics-hito-datum-val">24.600 €</span>
+              </div>
+              <div class="metrics-hito-datum metrics-hito-datum-b">
+                <span class="metrics-hito-datum-key">Capital B</span>
+                <span class="metrics-hito-datum-val">7.200 €</span>
+              </div>
+              <div class="metrics-hito-datum metrics-hito-datum-a">
+                <span class="metrics-hito-datum-key">Tiempo A</span>
+                <span class="metrics-hito-datum-val">21 h acum.</span>
+              </div>
+              <div class="metrics-hito-datum metrics-hito-datum-b">
+                <span class="metrics-hito-datum-key">Tiempo B</span>
+                <span class="metrics-hito-datum-val">58 h acum.</span>
+              </div>
+            </div>
+            <p class="metrics-hito-event">A compromete local en zona secundaria a 750 €/mes. Conserva capital pero introduce incertidumbre sobre tráfico real post-apertura. B detecta instalación eléctrica insuficiente: −600 € no previstos. El primer coste oculto real aparece antes de generar un solo euro.</p>
+          </div>
+
+          <div class="metrics-hito metrics-hito-active">
+            <div class="metrics-hito-head">
+              <span class="metrics-hito-week">Semana 4 · En curso</span>
+              <span class="metrics-hito-name">Apertura inminente — El primer imprevisto real</span>
+              <span class="exp-tl-badge exp-badge-active" style="margin-left:auto">Activa</span>
+            </div>
+            <div class="metrics-hito-data">
+              <div class="metrics-hito-datum metrics-hito-datum-a">
+                <span class="metrics-hito-datum-key">Capital A</span>
+                <span class="metrics-hito-datum-val">24.200 €</span>
+              </div>
+              <div class="metrics-hito-datum metrics-hito-datum-b">
+                <span class="metrics-hito-datum-key">Capital B</span>
+                <span class="metrics-hito-datum-val">5.760 €</span>
+              </div>
+              <div class="metrics-hito-datum metrics-hito-datum-a">
+                <span class="metrics-hito-datum-key">Tiempo A</span>
+                <span class="metrics-hito-datum-val">28 h acum.</span>
+              </div>
+              <div class="metrics-hito-datum metrics-hito-datum-b">
+                <span class="metrics-hito-datum-key">Tiempo B</span>
+                <span class="metrics-hito-datum-val">72 h acum.</span>
+              </div>
+            </div>
+            <p class="metrics-hito-event">A evalúa si abrir con equipamiento mínimo o esperar — su capital permite esa pausa. B asume 800 € de ventilación insuficiente para no retrasar la apertura. Capital en 5.760 €. El margen de error es ya mínimo y el experimento aún no ha generado ingresos.</p>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <!-- LECTURA LEONIS -->
+    <!-- ── LECTURA LEONIS ─────────────────────────────────── -->
     <section class="section">
       <div class="container">
         <div class="metrics-leonis reveal">
@@ -560,13 +738,13 @@
           <blockquote class="metrics-leonis-quote">
             <p class="metrics-leonis-line-1">Los números no mienten, pero pueden engañar.</p>
             <p class="metrics-leonis-line-2">Perfil B avanza más rápido. También se expone más.</p>
-            <p class="metrics-leonis-body">Perfil A conserva el 97% de su capital en semana 4. Eso parece inactividad. Lo que en realidad refleja es tolerancia baja al riesgo y tiempo limitado — ambas restricciones reales, no fallos de carácter. Perfil B ha invertido el triple de horas y ha cedido margen en cada fricción. La pregunta que las métricas no responden todavía: ¿cuánto tiempo más puede sostener ese ritmo?</p>
+            <p class="metrics-leonis-body">Perfil A conserva el 97% de su capital en semana 4. Eso parece inactividad. Lo que en realidad refleja es tolerancia baja al riesgo y tiempo limitado — ambas restricciones reales, no fallos de carácter. Perfil B ha invertido el triple de horas y ha cedido margen en cada fricción. La pregunta que las métricas no responden todavía: ¿cuánto tiempo más puede sostener ese ritmo sin ingresos?</p>
           </blockquote>
         </div>
       </div>
     </section>
 
-    <!-- NOTA METODOLÓGICA -->
+    <!-- ── NOTA METODOLÓGICA ──────────────────────────────── -->
     <section class="section">
       <div class="container">
         <div class="metrics-method-note metrics-panel reveal">
@@ -578,7 +756,7 @@
       </div>
     </section>
 
-    <!-- CIERRE -->
+    <!-- ── CIERRE ─────────────────────────────────────────── -->
     <section class="section">
       <div class="container">
         <div class="home-follow-grid reveal">
@@ -597,7 +775,7 @@
           <a class="home-follow-card" href="/pages/laboratorio/index.html">
             <span class="home-follow-kicker">Laboratorio</span>
             <strong class="home-follow-title">Ver todos los experimentos</strong>
-            <p class="home-follow-desc">Índice de expedimentos activos, próximos y en preparación.</p>
+            <p class="home-follow-desc">Índice de experimentos activos, próximos y en preparación.</p>
             <span class="home-follow-arrow" aria-hidden="true">→</span>
           </a>
         </div>
@@ -605,524 +783,157 @@
     </section>
 
   </main>
+
   <footer class="footer">
     <div class="container footer-box">
       <div>© The Leonis Project</div>
       <div>Think better. Build wisely.</div>
     </div>
   </footer>
+
   <script>
-      document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("DOMContentLoaded", () => {
 
-        /* =========================================================
-           DATOS SIMULADOS — 30 DÍAS
-        ========================================================= */
+      /* =====================================================
+         DATOS SIMULADOS — 30 DÍAS
+      ===================================================== */
 
-        const dailyData = [
-          { day: 1,  daniel: { timeAvailable: 7, timeInvested: 0.5, capital: 25000, spending: 0,   income: 0, energy: 6.0, psychology: 5.0, fit: null }, marta: { timeAvailable: 22, timeInvested: 1.5, capital: 8000, spending: 0,   income: 0, energy: 8.0, psychology: 6.0, fit: null } },
-          { day: 2,  daniel: { timeAvailable: 7, timeInvested: 1.0, capital: 24900, spending: 100, income: 0, energy: 5.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 22, timeInvested: 2.0, capital: 7950, spending: 50,  income: 0, energy: 7.0, psychology: 5.0, fit: null } },
-          { day: 3,  daniel: { timeAvailable: 6, timeInvested: 0.5, capital: 24850, spending: 150, income: 0, energy: 5.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 21, timeInvested: 1.0, capital: 7900, spending: 100, income: 0, energy: 7.0, psychology: 5.0, fit: null } },
-          { day: 4,  daniel: { timeAvailable: 6, timeInvested: 1.0, capital: 24700, spending: 300, income: 0, energy: 5.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 21, timeInvested: 1.5, capital: 7850, spending: 150, income: 0, energy: 7.0, psychology: 5.0, fit: null } },
-          { day: 5,  daniel: { timeAvailable: 7, timeInvested: 1.0, capital: 24500, spending: 500, income: 0, energy: 5.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 22, timeInvested: 2.0, capital: 7750, spending: 250, income: 0, energy: 7.0, psychology: 5.0, fit: null } },
-          { day: 6,  daniel: { timeAvailable: 6, timeInvested: 0.5, capital: 24400, spending: 600, income: 0, energy: 4.0, psychology: 3.0, fit: null }, marta: { timeAvailable: 21, timeInvested: 2.0, capital: 7650, spending: 350, income: 0, energy: 7.0, psychology: 5.0, fit: null } },
-          { day: 7,  daniel: { timeAvailable: 7, timeInvested: 1.0, capital: 24350, spending: 650, income: 0, energy: 4.0, psychology: 4.0, fit: 5.0 }, marta: { timeAvailable: 22, timeInvested: 2.5, capital: 7600, spending: 400, income: 0, energy: 7.0, psychology: 5.0, fit: 6.0 } },
+      const dailyData = [
+        { day: 1,  daniel: { timeInvested: 0.5,  capital: 25000, energy: 6.0, psychology: 5.0 }, marta: { timeInvested: 1.5,  capital: 8000, energy: 8.0, psychology: 6.0 } },
+        { day: 2,  daniel: { timeInvested: 1.0,  capital: 24900, energy: 5.0, psychology: 4.0 }, marta: { timeInvested: 2.0,  capital: 7950, energy: 7.0, psychology: 5.0 } },
+        { day: 3,  daniel: { timeInvested: 0.5,  capital: 24850, energy: 5.0, psychology: 4.0 }, marta: { timeInvested: 1.0,  capital: 7900, energy: 7.0, psychology: 5.0 } },
+        { day: 4,  daniel: { timeInvested: 1.0,  capital: 24700, energy: 5.0, psychology: 4.0 }, marta: { timeInvested: 1.5,  capital: 7850, energy: 7.0, psychology: 5.0 } },
+        { day: 5,  daniel: { timeInvested: 1.0,  capital: 24500, energy: 5.0, psychology: 4.0 }, marta: { timeInvested: 2.0,  capital: 7750, energy: 7.0, psychology: 5.0 } },
+        { day: 6,  daniel: { timeInvested: 0.5,  capital: 24400, energy: 4.0, psychology: 3.0 }, marta: { timeInvested: 2.0,  capital: 7650, energy: 7.0, psychology: 5.0 } },
+        { day: 7,  daniel: { timeInvested: 1.0,  capital: 24350, energy: 4.0, psychology: 4.0 }, marta: { timeInvested: 2.5,  capital: 7600, energy: 7.0, psychology: 5.0 } },
+        { day: 8,  daniel: { timeInvested: 0.5,  capital: 24250, energy: 5.0, psychology: 4.0 }, marta: { timeInvested: 2.5,  capital: 7500, energy: 7.0, psychology: 5.0 } },
+        { day: 9,  daniel: { timeInvested: 0.5,  capital: 24200, energy: 5.0, psychology: 4.0 }, marta: { timeInvested: 2.0,  capital: 7400, energy: 6.0, psychology: 5.0 } },
+        { day: 10, daniel: { timeInvested: 1.0,  capital: 24150, energy: 5.0, psychology: 4.0 }, marta: { timeInvested: 3.0,  capital: 7350, energy: 7.0, psychology: 6.0 } },
+        { day: 11, daniel: { timeInvested: 0.5,  capital: 24120, energy: 5.0, psychology: 4.0 }, marta: { timeInvested: 1.5,  capital: 7250, energy: 6.0, psychology: 5.0 } },
+        { day: 12, daniel: { timeInvested: 4.0,  capital: 24100, energy: 5.0, psychology: 4.0 }, marta: { timeInvested: 11.0, capital: 7150, energy: 7.0, psychology: 5.0 } },
+        { day: 13, daniel: { timeInvested: 1.0,  capital: 24050, energy: 5.0, psychology: 4.0 }, marta: { timeInvested: 2.5,  capital: 7100, energy: 6.0, psychology: 5.0 } },
+        { day: 14, daniel: { timeInvested: 1.5,  capital: 24000, energy: 5.0, psychology: 4.0 }, marta: { timeInvested: 2.5,  capital: 7050, energy: 6.0, psychology: 5.0 } },
+        { day: 15, daniel: { timeInvested: 1.0,  capital: 23950, energy: 5.0, psychology: 4.0 }, marta: { timeInvested: 3.0,  capital: 6950, energy: 6.0, psychology: 5.0 } },
+        { day: 16, daniel: { timeInvested: 0.5,  capital: 23900, energy: 4.0, psychology: 4.0 }, marta: { timeInvested: 2.5,  capital: 6900, energy: 6.0, psychology: 5.0 } },
+        { day: 17, daniel: { timeInvested: 0.5,  capital: 23880, energy: 4.0, psychology: 4.0 }, marta: { timeInvested: 2.0,  capital: 6850, energy: 6.0, psychology: 5.0 } },
+        { day: 18, daniel: { timeInvested: 1.0,  capital: 23850, energy: 4.0, psychology: 4.0 }, marta: { timeInvested: 2.5,  capital: 6800, energy: 6.0, psychology: 5.0 } },
+        { day: 19, daniel: { timeInvested: 0.5,  capital: 23800, energy: 4.0, psychology: 4.0 }, marta: { timeInvested: 3.0,  capital: 6750, energy: 5.0, psychology: 5.0 } },
+        { day: 20, daniel: { timeInvested: 1.0,  capital: 23780, energy: 4.0, psychology: 4.0 }, marta: { timeInvested: 2.0,  capital: 6700, energy: 5.0, psychology: 5.0 } },
+        { day: 21, daniel: { timeInvested: 1.5,  capital: 23750, energy: 4.0, psychology: 4.0 }, marta: { timeInvested: 2.0,  capital: 6650, energy: 5.0, psychology: 5.0 } },
+        { day: 22, daniel: { timeInvested: 0.5,  capital: 23720, energy: 4.0, psychology: 4.0 }, marta: { timeInvested: 2.5,  capital: 6600, energy: 5.0, psychology: 5.0 } },
+        { day: 23, daniel: { timeInvested: 1.0,  capital: 23690, energy: 4.0, psychology: 4.0 }, marta: { timeInvested: 2.0,  capital: 6550, energy: 5.0, psychology: 5.0 } },
+        { day: 24, daniel: { timeInvested: 1.0,  capital: 23650, energy: 4.0, psychology: 4.0 }, marta: { timeInvested: 2.5,  capital: 6500, energy: 5.0, psychology: 5.0 } },
+        { day: 25, daniel: { timeInvested: 0.5,  capital: 23620, energy: 4.0, psychology: 3.0 }, marta: { timeInvested: 2.0,  capital: 6450, energy: 5.0, psychology: 5.0 } },
+        { day: 26, daniel: { timeInvested: 1.0,  capital: 23600, energy: 4.0, psychology: 3.0 }, marta: { timeInvested: 2.0,  capital: 6400, energy: 5.0, psychology: 5.0 } },
+        { day: 27, daniel: { timeInvested: 1.0,  capital: 23580, energy: 4.0, psychology: 3.0 }, marta: { timeInvested: 2.5,  capital: 6350, energy: 5.0, psychology: 5.0 } },
+        { day: 28, daniel: { timeInvested: 1.0,  capital: 23550, energy: 4.0, psychology: 3.0 }, marta: { timeInvested: 2.0,  capital: 6300, energy: 5.0, psychology: 5.0 } },
+        { day: 29, daniel: { timeInvested: 0.5,  capital: 23520, energy: 4.0, psychology: 3.0 }, marta: { timeInvested: 2.5,  capital: 6250, energy: 5.0, psychology: 5.0 } },
+        { day: 30, daniel: { timeInvested: 1.0,  capital: 23500, energy: 4.0, psychology: 3.0 }, marta: { timeInvested: 2.0,  capital: 6200, energy: 5.0, psychology: 5.0 } }
+      ];
 
-          { day: 8,  daniel: { timeAvailable: 6, timeInvested: 0.5, capital: 24250, spending: 750, income: 0, energy: 5.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 23, timeInvested: 2.5, capital: 7500, spending: 500, income: 0, energy: 7.0, psychology: 5.0, fit: null } },
-          { day: 9,  daniel: { timeAvailable: 6, timeInvested: 0.5, capital: 24200, spending: 800, income: 0, energy: 5.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 23, timeInvested: 2.0, capital: 7400, spending: 600, income: 0, energy: 6.0, psychology: 5.0, fit: null } },
-          { day: 10, daniel: { timeAvailable: 7, timeInvested: 1.0, capital: 24150, spending: 850, income: 0, energy: 5.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 22, timeInvested: 3.0, capital: 7350, spending: 650, income: 50, energy: 7.0, psychology: 6.0, fit: null } },
-          { day: 11, daniel: { timeAvailable: 6, timeInvested: 0.5, capital: 24120, spending: 880, income: 0, energy: 5.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 21, timeInvested: 1.5, capital: 7250, spending: 750, income: 50, energy: 6.0, psychology: 5.0, fit: null } },
-          { day: 12, daniel: { timeAvailable: 7, timeInvested: 4.0, capital: 24100, spending: 900, income: 0, energy: 5.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 22, timeInvested: 11.0, capital: 7150, spending: 850, income: 0, energy: 7.0, psychology: 5.0, fit: null } },
-          { day: 13, daniel: { timeAvailable: 6, timeInvested: 1.0, capital: 24050, spending: 950, income: 0, energy: 5.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 22, timeInvested: 2.5, capital: 7100, spending: 900, income: 0, energy: 6.0, psychology: 5.0, fit: null } },
-          { day: 14, daniel: { timeAvailable: 6, timeInvested: 1.5, capital: 24000, spending: 1000, income: 0, energy: 5.0, psychology: 4.0, fit: 5.0 }, marta: { timeAvailable: 21, timeInvested: 2.5, capital: 7050, spending: 950, income: 0, energy: 6.0, psychology: 5.0, fit: 6.0 } },
+      /* =====================================================
+         CHART: EVOLUCIÓN TEMPORAL
+      ===================================================== */
 
-          { day: 15, daniel: { timeAvailable: 7, timeInvested: 1.0, capital: 23950, spending: 1050, income: 0, energy: 5.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 21, timeInvested: 3.0, capital: 6950, spending: 1050, income: 100, energy: 6.0, psychology: 5.0, fit: null } },
-          { day: 16, daniel: { timeAvailable: 6, timeInvested: 0.5, capital: 23900, spending: 1100, income: 0, energy: 4.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 20, timeInvested: 2.5, capital: 6900, spending: 1100, income: 120, energy: 6.0, psychology: 5.0, fit: null } },
-          { day: 17, daniel: { timeAvailable: 6, timeInvested: 0.5, capital: 23880, spending: 1120, income: 0, energy: 4.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 20, timeInvested: 2.0, capital: 6850, spending: 1150, income: 140, energy: 6.0, psychology: 5.0, fit: null } },
-          { day: 18, daniel: { timeAvailable: 7, timeInvested: 1.0, capital: 23850, spending: 1150, income: 0, energy: 4.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 21, timeInvested: 2.5, capital: 6800, spending: 1200, income: 160, energy: 6.0, psychology: 5.0, fit: null } },
-          { day: 19, daniel: { timeAvailable: 6, timeInvested: 0.5, capital: 23800, spending: 1200, income: 0, energy: 4.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 20, timeInvested: 3.0, capital: 6750, spending: 1250, income: 180, energy: 5.0, psychology: 5.0, fit: null } },
-          { day: 20, daniel: { timeAvailable: 6, timeInvested: 1.0, capital: 23780, spending: 1220, income: 0, energy: 4.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 19, timeInvested: 2.0, capital: 6700, spending: 1300, income: 220, energy: 5.0, psychology: 5.0, fit: null } },
-          { day: 21, daniel: { timeAvailable: 7, timeInvested: 1.5, capital: 23750, spending: 1250, income: 0, energy: 4.0, psychology: 4.0, fit: 4.0 }, marta: { timeAvailable: 20, timeInvested: 2.0, capital: 6650, spending: 1350, income: 250, energy: 5.0, psychology: 5.0, fit: 6.0 } },
+      const timelineCtx = document.getElementById("timelineChart");
+      if (!timelineCtx) return;
 
-          { day: 22, daniel: { timeAvailable: 6, timeInvested: 0.5, capital: 23720, spending: 1280, income: 0, energy: 4.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 19, timeInvested: 2.5, capital: 6600, spending: 1400, income: 300, energy: 5.0, psychology: 5.0, fit: null } },
-          { day: 23, daniel: { timeAvailable: 6, timeInvested: 1.0, capital: 23690, spending: 1310, income: 0, energy: 4.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 19, timeInvested: 2.0, capital: 6550, spending: 1450, income: 340, energy: 5.0, psychology: 5.0, fit: null } },
-          { day: 24, daniel: { timeAvailable: 7, timeInvested: 1.0, capital: 23650, spending: 1350, income: 0, energy: 4.0, psychology: 4.0, fit: null }, marta: { timeAvailable: 18, timeInvested: 2.5, capital: 6500, spending: 1500, income: 380, energy: 5.0, psychology: 5.0, fit: null } },
-          { day: 25, daniel: { timeAvailable: 6, timeInvested: 0.5, capital: 23620, spending: 1380, income: 0, energy: 4.0, psychology: 3.0, fit: null }, marta: { timeAvailable: 18, timeInvested: 2.0, capital: 6450, spending: 1550, income: 420, energy: 5.0, psychology: 5.0, fit: null } },
-          { day: 26, daniel: { timeAvailable: 6, timeInvested: 1.0, capital: 23600, spending: 1400, income: 0, energy: 4.0, psychology: 3.0, fit: null }, marta: { timeAvailable: 18, timeInvested: 2.0, capital: 6400, spending: 1600, income: 460, energy: 5.0, psychology: 5.0, fit: null } },
-          { day: 27, daniel: { timeAvailable: 7, timeInvested: 1.0, capital: 23580, spending: 1420, income: 0, energy: 4.0, psychology: 3.0, fit: null }, marta: { timeAvailable: 17, timeInvested: 2.5, capital: 6350, spending: 1650, income: 520, energy: 5.0, psychology: 5.0, fit: null } },
-          { day: 28, daniel: { timeAvailable: 6, timeInvested: 1.0, capital: 23550, spending: 1450, income: 0, energy: 4.0, psychology: 3.0, fit: 4.0 }, marta: { timeAvailable: 17, timeInvested: 2.0, capital: 6300, spending: 1700, income: 600, energy: 5.0, psychology: 5.0, fit: 6.0 } },
+      const profileColors = {
+        daniel: { border: "rgba(120,170,210,1)", fill: "rgba(120,170,210,0.12)" },
+        marta:  { border: "rgba(185,239,69,1)",  fill: "rgba(185,239,69,0.10)" }
+      };
 
-          { day: 29, daniel: { timeAvailable: 6, timeInvested: 0.5, capital: 23520, spending: 1480, income: 0, energy: 4.0, psychology: 3.0, fit: null }, marta: { timeAvailable: 17, timeInvested: 2.5, capital: 6250, spending: 1750, income: 680, energy: 5.0, psychology: 5.0, fit: null } },
-          { day: 30, daniel: { timeAvailable: 7, timeInvested: 1.0, capital: 23500, spending: 1500, income: 0, energy: 4.0, psychology: 3.0, fit: null }, marta: { timeAvailable: 16, timeInvested: 2.0, capital: 6200, spending: 1800, income: 750, energy: 5.0, psychology: 5.0, fit: null } }
+      const metricConfig = {
+        capital:    { label: "Capital restante (€)", extractA: d => d.daniel.capital,    extractB: d => d.marta.capital },
+        energy:     { label: "Energía (0–10)",        extractA: d => d.daniel.energy,     extractB: d => d.marta.energy },
+        time:       { label: "Tiempo invertido (h)",  extractA: d => d.daniel.timeInvested, extractB: d => d.marta.timeInvested },
+        psychology: { label: "Psicología (0–10)",     extractA: d => d.daniel.psychology, extractB: d => d.marta.psychology }
+      };
+
+      let activeMetric = "capital";
+
+      const chart = new Chart(timelineCtx, {
+        type: "line",
+        data: { labels: [], datasets: [] },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          interaction: { mode: "index", intersect: false },
+          plugins: {
+            legend: { labels: { color: "#dce7dd", font: { size: 12 } } },
+            tooltip: {
+              backgroundColor: "rgba(8,24,15,0.95)",
+              titleColor: "#f5f7f4",
+              bodyColor: "#dce7dd",
+              borderColor: "rgba(255,255,255,0.08)",
+              borderWidth: 1
+            }
+          },
+          scales: {
+            x: {
+              ticks: { color: "#cfdad0", maxTicksLimit: 10 },
+              grid: { color: "rgba(255,255,255,0.04)" }
+            },
+            y: {
+              ticks: { color: "#cfdad0" },
+              grid: { color: "rgba(255,255,255,0.06)" }
+            }
+          }
+        }
+      });
+
+      function updateChart() {
+        const cfg = metricConfig[activeMetric];
+        const labels = dailyData.map(d => `D${d.day}`);
+        const isTenScale = activeMetric === "energy" || activeMetric === "psychology";
+
+        chart.data.labels = labels;
+        chart.data.datasets = [
+          {
+            label: "Perfil A",
+            data: dailyData.map(cfg.extractA),
+            borderColor: profileColors.daniel.border,
+            backgroundColor: profileColors.daniel.fill,
+            tension: 0.32,
+            pointRadius: 2,
+            pointHoverRadius: 4,
+            fill: false
+          },
+          {
+            label: "Perfil B",
+            data: dailyData.map(cfg.extractB),
+            borderColor: profileColors.marta.border,
+            backgroundColor: profileColors.marta.fill,
+            tension: 0.32,
+            pointRadius: 2,
+            pointHoverRadius: 4,
+            fill: false
+          }
         ];
 
-        const initialCapital = {
-          daniel: 25000,
-          marta: 8000
+        chart.options.scales.y.suggestedMin = isTenScale ? 0 : undefined;
+        chart.options.scales.y.suggestedMax = isTenScale ? 10 : undefined;
+        chart.options.plugins.tooltip.callbacks = {
+          title: items => `Día ${items[0].label.replace("D","")}`,
+          label: item => `${item.dataset.label}: ${item.parsed.y}`
         };
+        chart.update();
+      }
 
-        function average(values) {
-          const clean = values.filter(v => v !== null && v !== undefined);
-          if (!clean.length) return null;
-          return clean.reduce((a, b) => a + b, 0) / clean.length;
-        }
+      updateChart();
 
-        function sum(values) {
-          return values.reduce((a, b) => a + (b || 0), 0);
-        }
-
-        function buildWeeklyData(data) {
-          const weeks = [];
-          for (let i = 0; i < data.length; i += 7) {
-            const slice = data.slice(i, i + 7);
-            const label = `S${Math.floor(i / 7) + 1}`;
-            const last = slice[slice.length - 1];
-
-            weeks.push({
-              label,
-              dayStart: slice[0].day,
-              dayEnd: last.day,
-              daniel: {
-                timeAvailable: average(slice.map(d => d.daniel.timeAvailable)),
-                timeInvested: sum(slice.map(d => d.daniel.timeInvested)),
-                capital: last.daniel.capital,
-                spending: last.daniel.spending,
-                income: last.daniel.income,
-                energy: average(slice.map(d => d.daniel.energy)),
-                psychology: average(slice.map(d => d.daniel.psychology)),
-                fit: average(slice.map(d => d.daniel.fit))
-              },
-              marta: {
-                timeAvailable: average(slice.map(d => d.marta.timeAvailable)),
-                timeInvested: sum(slice.map(d => d.marta.timeInvested)),
-                capital: last.marta.capital,
-                spending: last.marta.spending,
-                income: last.marta.income,
-                energy: average(slice.map(d => d.marta.energy)),
-                psychology: average(slice.map(d => d.marta.psychology)),
-                fit: average(slice.map(d => d.marta.fit))
-              }
-            });
-          }
-          return weeks;
-        }
-
-        const weeklyData = buildWeeklyData(dailyData);
-
-        function normalizeTimeAvailable(hours, profile) {
-          const max = profile === "daniel" ? 8 : 25;
-          return Math.max(0, Math.min(10, (hours / max) * 10));
-        }
-
-        function normalizeTimeInvested(hours, profile) {
-          const max = profile === "daniel" ? 8 : 14;
-          return Math.max(0, Math.min(10, (hours / max) * 10));
-        }
-
-        function normalizeCapital(capital, profile) {
-          return Math.max(0, Math.min(10, (capital / initialCapital[profile]) * 10));
-        }
-
-        function normalizeIncome(income, profile) {
-          const max = profile === "daniel" ? 800 : 800;
-          return Math.max(0, Math.min(10, (income / max) * 10));
-        }
-
-        function compositeScore(entry, profile) {
-          const fitValue = entry.fit ?? 5;
-          const score =
-            (entry.energy * 0.25) +
-            (entry.psychology * 0.25) +
-            (fitValue * 0.20) +
-            (normalizeCapital(entry.capital, profile) * 0.20) +
-            (normalizeTimeInvested(entry.timeInvested, profile) * 0.10);
-
-          return Number(score.toFixed(1));
-        }
-
-        function currentDaily() {
-          return dailyData[dailyData.length - 1];
-        }
-
-        function currentWeekly() {
-          return weeklyData[weeklyData.length - 1];
-        }
-
-        /* =========================================================
-           CHARTS
-        ========================================================= */
-
-        const radarCtx = document.getElementById("radarChart");
-        const timelineCtx = document.getElementById("timelineChart");
-
-        const profileColors = {
-          daniel: {
-            border: "rgba(120, 170, 210, 1)",
-            fill: "rgba(120, 170, 210, 0.16)"
-          },
-          marta: {
-            border: "rgba(185, 239, 69, 1)",
-            fill: "rgba(185, 239, 69, 0.16)"
-          }
-        };
-
-        function buildRadarDataset(source, profileKey) {
-          const entry = source[profileKey];
-          return [
-            normalizeTimeAvailable(entry.timeAvailable, profileKey),
-            normalizeTimeInvested(entry.timeInvested, profileKey),
-            normalizeCapital(entry.capital, profileKey),
-            entry.energy,
-            entry.psychology,
-            entry.fit ?? 5,
-            normalizeIncome(entry.income, profileKey)
-          ];
-        }
-
-        const radarLabels = [
-          "Tiempo disp.",
-          "Tiempo inv.",
-          "Capital",
-          "Energía",
-          "Psicología",
-          "Encaje",
-          "Ingresos"
-        ];
-
-        let radarMode = "both";
-        let radarRange = "current";
-
-        const radarChart = new Chart(radarCtx, {
-          type: "radar",
-          data: {
-            labels: radarLabels,
-            datasets: []
-          },
-          options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-              legend: {
-                labels: {
-                  color: "#dce7dd"
-                }
-              }
-            },
-            scales: {
-              r: {
-                min: 0,
-                max: 10,
-                ticks: {
-                  stepSize: 2,
-                  color: "rgba(220,231,221,0.7)",
-                  backdropColor: "transparent"
-                },
-                grid: {
-                  color: "rgba(255,255,255,0.08)"
-                },
-                angleLines: {
-                  color: "rgba(255,255,255,0.08)"
-                },
-                pointLabels: {
-                  color: "#dce7dd",
-                  font: {
-                    size: 12
-                  }
-                }
-              }
-            }
-          }
-        });
-
-        function updateRadarChart() {
-          const source = radarRange === "current" ? currentWeekly() : currentWeekly();
-
-          const datasets = [];
-
-          if (radarMode === "both" || radarMode === "daniel") {
-            datasets.push({
-              label: "Perfil A",
-              data: buildRadarDataset(source, "daniel"),
-              borderColor: profileColors.daniel.border,
-              backgroundColor: profileColors.daniel.fill,
-              pointBackgroundColor: profileColors.daniel.border,
-              pointBorderColor: profileColors.daniel.border,
-              pointRadius: 3
-            });
-          }
-
-          if (radarMode === "both" || radarMode === "marta") {
-            datasets.push({
-              label: "Perfil B",
-              data: buildRadarDataset(source, "marta"),
-              borderColor: profileColors.marta.border,
-              backgroundColor: profileColors.marta.fill,
-              pointBackgroundColor: profileColors.marta.border,
-              pointBorderColor: profileColors.marta.border,
-              pointRadius: 3
-            });
-          }
-
-          radarChart.data.datasets = datasets;
-          radarChart.update();
-        }
-
-        let timelineView = "daily";
-        let timelineMetric = "energy";
-
-        const metricConfig = {
-          energy: {
-            label: "Energía",
-            extract: (entry) => entry.energy
-          },
-          psychology: {
-            label: "Psicología",
-            extract: (entry) => entry.psychology
-          },
-          capital: {
-            label: "Capital restante",
-            extract: (entry) => entry.capital
-          },
-          time: {
-            label: "Tiempo invertido",
-            extract: (entry) => entry.timeInvested
-          },
-          income: {
-            label: "Ingresos generados",
-            extract: (entry) => entry.income
-          },
-          fit: {
-            label: "Encaje",
-            extract: (entry) => entry.fit ?? null
-          }
-        };
-
-        const timelineChart = new Chart(timelineCtx, {
-          type: "line",
-          data: {
-            labels: [],
-            datasets: []
-          },
-          options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            interaction: {
-              mode: "index",
-              intersect: false
-            },
-            plugins: {
-              legend: {
-                labels: {
-                  color: "#dce7dd"
-                }
-              },
-              tooltip: {
-                backgroundColor: "rgba(8, 24, 15, 0.95)",
-                titleColor: "#f5f7f4",
-                bodyColor: "#dce7dd",
-                borderColor: "rgba(255,255,255,0.08)",
-                borderWidth: 1
-              }
-            },
-            scales: {
-              x: {
-                ticks: {
-                  color: "#cfdad0"
-                },
-                grid: {
-                  color: "rgba(255,255,255,0.04)"
-                }
-              },
-              y: {
-                ticks: {
-                  color: "#cfdad0"
-                },
-                grid: {
-                  color: "rgba(255,255,255,0.06)"
-                }
-              }
-            }
-          }
-        });
-
-        function updateTimelineChart() {
-          const source = timelineView === "daily" ? dailyData : weeklyData;
-          const labels = source.map(item => timelineView === "daily" ? `D${item.day}` : item.label);
-          const config = metricConfig[timelineMetric];
-
-          timelineChart.data.labels = labels;
-          timelineChart.data.datasets = [
-            {
-              label: "Perfil A",
-              data: source.map(item => config.extract(item.daniel)),
-              borderColor: profileColors.daniel.border,
-              backgroundColor: profileColors.daniel.fill,
-              tension: 0.32,
-              spanGaps: true,
-              pointRadius: 3,
-              pointHoverRadius: 5,
-              fill: false
-            },
-            {
-              label: "Perfil B",
-              data: source.map(item => config.extract(item.marta)),
-              borderColor: profileColors.marta.border,
-              backgroundColor: profileColors.marta.fill,
-              tension: 0.32,
-              spanGaps: true,
-              pointRadius: 3,
-              pointHoverRadius: 5,
-              fill: false
-            }
-          ];
-
-          const isTenScale = ["energy", "psychology", "fit"].includes(timelineMetric);
-
-          timelineChart.options.scales.y.suggestedMin = isTenScale ? 0 : undefined;
-          timelineChart.options.scales.y.suggestedMax = isTenScale ? 10 : undefined;
-
-          timelineChart.update();
-        }
-
-        updateRadarChart();
-        updateTimelineChart();
-
-        /* =========================================================
-           SUMMARY / COMPARISON AUTO-FILL
-        ========================================================= */
-
-        function updateSummaryCards() {
-          const current = currentDaily();
-          const summaryItems = document.querySelectorAll(".metrics-summary-grid .summary-item strong");
-          if (summaryItems.length >= 4) {
-            summaryItems[0].textContent = `Semana ${Math.ceil(current.day / 7)}`;
-            summaryItems[1].textContent = "Capital inicial";
-            summaryItems[2].textContent = `${compositeScore(current.daniel, "daniel")} / 10`;
-            summaryItems[3].textContent = `${compositeScore(current.marta, "marta")} / 10`;
-          }
-
-          const badgeText = document.querySelector(".metrics-summary-head .status-badge");
-          if (badgeText) {
-            badgeText.lastChild.textContent = ` Día ${current.day}`;
-          }
-        }
-
-        updateSummaryCards();
-
-        /* =========================================================
-           CONTROLS
-        ========================================================= */
-
-        document.querySelectorAll("[data-radar-profile]").forEach(btn => {
-          btn.addEventListener("click", () => {
-            radarMode = btn.dataset.radarProfile;
-            document.querySelectorAll("[data-radar-profile]").forEach(b => b.classList.remove("active"));
-            btn.classList.add("active");
-            updateRadarChart();
-          });
-        });
-
-        document.querySelectorAll("[data-radar-range]").forEach(btn => {
-          btn.addEventListener("click", () => {
-            radarRange = btn.dataset.radarRange;
-            document.querySelectorAll("[data-radar-range]").forEach(b => b.classList.remove("active"));
-            btn.classList.add("active");
-            updateRadarChart();
-          });
-        });
-
-        document.querySelectorAll("[data-view]").forEach(btn => {
-          btn.addEventListener("click", () => {
-            timelineView = btn.dataset.view;
-            document.querySelectorAll("[data-view]").forEach(b => b.classList.remove("active"));
-            btn.classList.add("active");
-            updateTimelineChart();
-          });
-        });
-
-        document.querySelectorAll("[data-metric]").forEach(btn => {
-          btn.addEventListener("click", () => {
-            timelineMetric = btn.dataset.metric;
-            document.querySelectorAll("[data-metric]").forEach(b => b.classList.remove("active"));
-            btn.classList.add("active");
-            updateTimelineChart();
-          });
-        });
-
-        /* =========================================================
-           TABLE TOGGLE
-        ========================================================= */
-
-        const tableButtons = document.querySelectorAll("[data-table-view]");
-        const tableBody = document.querySelector(".metrics-history-table tbody");
-        const tableHeadFirst = document.querySelector(".metrics-history-table thead th");
-        const fitHeader = document.querySelector(".metrics-history-table thead .fit-col");
-            
-        function renderTable(view = "daily") {
-          if (!tableBody) return;
-          const rows = view === "daily" ? dailyData.slice(0, 12) : weeklyData;
-        
-          if (tableHeadFirst) {
-            tableHeadFirst.textContent = view === "daily" ? "Día" : "Semana";
-          }
-      
-          if (fitHeader) {
-            fitHeader.style.display = view === "daily" ? "none" : "";
-          }
-      
-          tableBody.innerHTML = rows.map(item => {
-            const label = view === "daily" ? item.day : item.label;
-            const daniel = item.daniel;
-            const marta = item.marta;
-        
-            const fitCell = view === "daily"
-              ? ""
-              : `
-                <td class="fit-col">
-                  <div class="cell-stack">
-                    <span class="cell-profile cell-profile-a">D ${daniel.fit?.toFixed(1) ?? "—"}</span>
-                    <span class="cell-profile cell-profile-b">M ${marta.fit?.toFixed(1) ?? "—"}</span>
-                  </div>
-                </td>
-              `;
-            
-            const incomeCell = `
-              <td>
-                <div class="cell-stack">
-                  <span class="cell-profile cell-profile-a">D ${(daniel.income || 0).toLocaleString("es-ES")} €</span>
-                  <span class="cell-profile cell-profile-b">M ${(marta.income || 0).toLocaleString("es-ES")} €</span>
-                </div>
-              </td>
-            `;
-          
-            return `
-              <tr>
-                <td>${label}</td>
-                <td>${daniel.timeInvested}h</td>
-                <td>${marta.timeInvested}h</td>
-                <td>${Math.round(daniel.capital).toLocaleString("es-ES")} €</td>
-                <td>${Math.round(marta.capital).toLocaleString("es-ES")} €</td>
-                <td>${daniel.energy.toFixed(1)}</td>
-                <td>${marta.energy.toFixed(1)}</td>
-                <td>${daniel.psychology.toFixed(1)}</td>
-                <td>${marta.psychology.toFixed(1)}</td>
-                ${fitCell}
-                ${incomeCell}
-              </tr>
-            `;
-          }).join("");
-        }
-
-
-        renderTable("daily");
-
-        tableButtons.forEach(btn => {
-          btn.addEventListener("click", () => {
-            tableButtons.forEach(b => b.classList.remove("active"));
-            btn.classList.add("active");
-            renderTable(btn.dataset.tableView);
-          });
+      /* Controles de métrica */
+      document.querySelectorAll("[data-metric]").forEach(btn => {
+        btn.addEventListener("click", () => {
+          activeMetric = btn.dataset.metric;
+          document.querySelectorAll("[data-metric]").forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          updateChart();
         });
       });
-    </script>
+
+    });
+  </script>
+
 </body>
 </html>
