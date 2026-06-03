@@ -1781,40 +1781,50 @@ a.home-follow-card:hover .home-follow-arrow {
 /* ── Columna derecha unificada: brújula + logbook ────────── */
 
 .home-hero-right {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 1.1rem;
+  z-index: 1;
+  align-self: stretch;
+  justify-content: center;
+}
+
+/* Brújula ocupa toda la columna derecha como capa de fondo */
+.hero-compass-wrap {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-compass {
+  width: min(400px, 90%);
+  height: min(400px, 90%);
+  display: block;
+  flex-shrink: 0;
+}
+
+/* Logbook y firma sobre la brújula */
+.home-hero-right .hero-logbook,
+.home-hero-right .hero-signature {
   position: relative;
   z-index: 1;
 }
 
-/* Ventana recortada de la brújula */
-.hero-compass-wrap {
-  position: relative;
-  width: 100%;
-  height: 180px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-compass {
-  width: 280px;
-  height: 280px;
-  flex-shrink: 0;
-  display: block;
-  margin-top: -40px; /* muestra la parte superior de la brújula */
-}
-
-/* Rotaciones (transform-origin en el centro del viewBox 280/2=140) */
+/* Rotaciones — transform-box garantiza origen en centro de cada elemento */
 .compass-ring-outer {
-  transform-origin: 140px 140px;
+  transform-box: fill-box;
+  transform-origin: center;
   animation: compassRotateOuter 120s linear infinite;
 }
 
 .compass-ring-mid {
-  transform-origin: 140px 140px;
+  transform-box: fill-box;
+  transform-origin: center;
   animation: compassRotateMid 180s linear infinite;
 }
 
@@ -1914,14 +1924,26 @@ a.home-follow-card:hover .home-follow-arrow {
     gap: 2.5rem;
   }
 
+  /* En móvil la columna derecha pierde el stretch y la brújula
+     vuelve a flujo normal — aparece como elemento decorativo centrado */
+  .home-hero-right {
+    align-self: auto;
+    justify-content: flex-start;
+  }
+
   .hero-compass-wrap {
-    height: 140px;
+    position: relative;
+    inset: unset;
+    display: block;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+    flex-shrink: 0;
   }
 
   .hero-compass {
-    width: 220px;
-    height: 220px;
-    margin-top: -30px;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -1936,13 +1958,8 @@ a.home-follow-card:hover .home-follow-arrow {
   }
 
   .hero-compass-wrap {
-    height: 110px;
-  }
-
-  .hero-compass {
-    width: 180px;
-    height: 180px;
-    margin-top: -20px;
+    width: 140px;
+    height: 140px;
   }
 
   .home-manifesto-quote {
