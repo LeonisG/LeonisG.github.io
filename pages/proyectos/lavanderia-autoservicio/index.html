@@ -1,489 +1,765 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EXP-01 · Lavandería Autoservicio — Laboratorio Leonis</title>
+  <meta name="description" content="Observación longitudinal de una lavandería autoservicio con dos perfiles distintos. Capital, fricción, decisiones y evolución semanal." />
+  <meta name="theme-color" content="#031d10" />
 
-  <title>Lavandería Autoservicio — The Leonis Project</title>
-
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/css/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="/assets/js/main.js" defer></script>
 </head>
+<body class="project-page exp-page">
 
-<body class="project-page">
   <header class="site-header">
     <nav class="nav">
       <div class="container nav-inner">
-        <a class="brand" href="/index.html#inicio" aria-label="Ir al inicio de The Leonis Project">
+        <a class="brand" href="/" aria-label="Ir al inicio de The Leonis Project">
           <img class="brand-mark" src="/assets/img/logo-mark.png" alt="Símbolo de The Leonis Project" />
           <span class="brand-text">
             <span class="brand-white">THE LEONIS</span>
             <span class="brand-green">PROJECT</span>
           </span>
         </a>
-
-        <button
-          class="nav-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="nav-menu"
-          aria-label="Abrir menú"
-        >
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú">
           <span></span>
           <span></span>
         </button>
-
         <div class="nav-menu" id="nav-menu">
-          <a href="/index.html#contenido">Contenido</a>
-          <a href="/pages/laboratorio.html">Laboratorio</a>
-          <a href="/index.html#manifiesto">Manifiesto</a>
-          <a href="/index.html#about">Proyecto</a>
-          <a class="cta cta-primary" href="/index.html#suscribete">Newsletter</a>
+          <a href="/">Inicio</a>
+          <a href="/pages/laboratorio/index.html">Laboratorio</a>
+          <a class="cta cta-primary" href="/#suscribete">Newsletter</a>
         </div>
       </div>
     </nav>
   </header>
 
-  <main class="project-page">
-    <section class="section project-hero">
+  <main>
+
+    <!-- ── HERO DEL EXPERIMENTO ─────────────────────────────── -->
+    <section class="exp-hero">
       <div class="container">
-        <div class="project-hero-inner reveal">
-          <p class="project-eyebrow">PROYECTO</p>
 
-          <h1 class="project-title">
-            LAVANDERÍA AUTOSERVICIO
-          </h1>
+        <nav class="exp-breadcrumb reveal" aria-label="Ubicación en el sitio">
+          <a href="/pages/laboratorio/index.html">Laboratorio</a>
+          <span aria-hidden="true">›</span>
+          <span>Experimentos</span>
+          <span aria-hidden="true">›</span>
+          <span aria-current="page">EXP-01</span>
+        </nav>
 
-          <p class="project-subtitle">
-            ¿Puede una lavandería autoservicio construirse sin romper el equilibrio entre capital, tiempo y riesgo?
-          </p>
+        <div class="exp-hero-grid">
 
-          <div class="project-status">
-            <span class="status-badge upcoming">
-              <span class="status-dot"></span>
-              Próximamente
-            </span>
+          <div class="exp-hero-copy reveal">
+            <div class="exp-hero-tags">
+              <span class="exp-tag exp-tag-ref">EXP-01</span>
+              <span class="exp-tag exp-tag-type">Negocio físico local</span>
+              <span class="status-badge active">
+                <span class="status-dot"></span>
+                Activo · Semana 4
+              </span>
+            </div>
+
+            <h1 class="exp-h1">
+              Lavandería<br>
+              <span class="accent">autoservicio</span>
+            </h1>
+
+            <p class="exp-subtitle">
+              Cuando un modelo aparentemente simple exige capital intensivo, ubicación precisa
+              y paciencia real. Dos perfiles, el mismo modelo, condiciones de partida distintas.
+            </p>
+
+            <div class="exp-hero-meta">
+              <div class="exp-meta-item">
+                <span class="exp-meta-key">Inversión estimada</span>
+                <span class="exp-meta-val">70–130 k€</span>
+              </div>
+              <div class="exp-meta-item">
+                <span class="exp-meta-key">Fricción dominante</span>
+                <span class="exp-meta-val exp-meta-alert">Capital inicial</span>
+              </div>
+              <div class="exp-meta-item">
+                <span class="exp-meta-key">Duración estimada</span>
+                <span class="exp-meta-val">~10 semanas</span>
+              </div>
+              <div class="exp-meta-item">
+                <span class="exp-meta-key">Hipótesis central</span>
+                <span class="exp-meta-val">¿Encaja en vidas con capital limitado?</span>
+              </div>
+            </div>
+
+            <div class="hero-actions">
+              <a class="cta cta-secondary" href="#estado">Estado actual</a>
+              <a class="cta cta-secondary" href="#perfiles">Comparativa de perfiles</a>
+            </div>
           </div>
+
+          <aside class="exp-hero-aside reveal" aria-label="Estado del experimento">
+            <div class="exp-progress-panel">
+              <div class="exp-progress-head">
+                <span class="exp-progress-label">PROGRESO DEL EXPERIMENTO</span>
+                <span class="exp-progress-pct">40%</span>
+              </div>
+              <div class="exp-progress-track">
+                <div class="exp-progress-fill" style="--prog: 40%"></div>
+              </div>
+              <div class="exp-progress-legend">
+                <span>Semana 1</span>
+                <span>Semana 4 / ~10</span>
+                <span>Cierre</span>
+              </div>
+
+              <div class="exp-panel-stats">
+                <div class="exp-panel-stat">
+                  <span class="exp-panel-stat-key">Fase actual</span>
+                  <span class="exp-panel-stat-val">Primera fricción</span>
+                </div>
+                <div class="exp-panel-stat">
+                  <span class="exp-panel-stat-key">Mejor posicionado</span>
+                  <span class="exp-panel-stat-val exp-panel-val-a">Perfil A</span>
+                </div>
+                <div class="exp-panel-stat">
+                  <span class="exp-panel-stat-key">Riesgo principal</span>
+                  <span class="exp-panel-stat-val exp-meta-alert">Capital de Perfil B</span>
+                </div>
+                <div class="exp-panel-stat">
+                  <span class="exp-panel-stat-key">Decisiones registradas</span>
+                  <span class="exp-panel-stat-val">4</span>
+                </div>
+              </div>
+            </div>
+          </aside>
+
         </div>
       </div>
     </section>
 
-    <section class="section project-nav-section">
+    <!-- ── 01 · ESTADO ACTUAL ────────────────────────────────── -->
+    <section class="section exp-section" id="estado">
       <div class="container">
-        <div class="project-block reveal">
-          <div class="project-links">
-            <a href="#informacion-general" class="project-link-card">Información general del proyecto</a>
-            <a href="./diario.html" class="project-link-card">Diario de avances</a>
-            <a href="./metricas.html" class="project-link-card">Métricas históricas</a>
+        <header class="home-section-head reveal">
+          <span class="home-section-num" aria-hidden="true">01</span>
+          <h2 class="home-section-title">Estado actual — Semana 4</h2>
+        </header>
+
+        <div class="exp-state-grid reveal">
+
+          <div class="exp-metric-card">
+            <div class="exp-metric-top">
+              <span class="exp-metric-name">Capital restante</span>
+              <span class="exp-metric-why">Cuánto queda del fondo inicial de cada perfil</span>
+            </div>
+            <div class="exp-metric-body">
+              <div class="exp-metric-row">
+                <div class="exp-avatar exp-avatar-a" aria-label="Perfil A">A</div>
+                <div class="exp-bar-wrap">
+                  <div class="exp-bar-track">
+                    <div class="exp-bar-fill exp-fill-a" style="--val: 97%"></div>
+                  </div>
+                </div>
+                <span class="exp-bar-val lab-val-a">24.200 € <em>(97%)</em></span>
+              </div>
+              <div class="exp-metric-row">
+                <div class="exp-avatar exp-avatar-b" aria-label="Perfil B">B</div>
+                <div class="exp-bar-wrap">
+                  <div class="exp-bar-track">
+                    <div class="exp-bar-fill exp-fill-b" style="--val: 72%"></div>
+                  </div>
+                </div>
+                <span class="exp-bar-val lab-val-b">5.760 € <em>(72%)</em></span>
+              </div>
+            </div>
+            <p class="exp-metric-signal">
+              <span class="exp-signal-dot exp-signal-warn" aria-hidden="true"></span>
+              B conserva capital, pero pierde margen de error ante cada imprevisto.
+            </p>
           </div>
+
+          <div class="exp-metric-card">
+            <div class="exp-metric-top">
+              <span class="exp-metric-name">Tiempo invertido</span>
+              <span class="exp-metric-why">Horas reales dedicadas hasta la semana 4</span>
+            </div>
+            <div class="exp-metric-body">
+              <div class="exp-metric-row">
+                <div class="exp-avatar exp-avatar-a" aria-label="Perfil A">A</div>
+                <div class="exp-bar-wrap">
+                  <div class="exp-bar-track">
+                    <div class="exp-bar-fill exp-fill-a" style="--val: 35%"></div>
+                  </div>
+                </div>
+                <span class="exp-bar-val lab-val-a">28 h acum.</span>
+              </div>
+              <div class="exp-metric-row">
+                <div class="exp-avatar exp-avatar-b" aria-label="Perfil B">B</div>
+                <div class="exp-bar-wrap">
+                  <div class="exp-bar-track">
+                    <div class="exp-bar-fill exp-fill-b" style="--val: 90%"></div>
+                  </div>
+                </div>
+                <span class="exp-bar-val lab-val-b">72 h acum.</span>
+              </div>
+            </div>
+            <p class="exp-metric-signal">
+              <span class="exp-signal-dot exp-signal-neutral" aria-hidden="true"></span>
+              A avanza despacio por restricción de tiempo, no por falta de criterio.
+            </p>
+          </div>
+
+          <div class="exp-metric-card">
+            <div class="exp-metric-top">
+              <span class="exp-metric-name">Energía disponible</span>
+              <span class="exp-metric-why">Capacidad de sostener el ritmo actual</span>
+            </div>
+            <div class="exp-metric-body">
+              <div class="exp-metric-row">
+                <div class="exp-avatar exp-avatar-a" aria-label="Perfil A">A</div>
+                <div class="exp-bar-wrap">
+                  <div class="exp-bar-track">
+                    <div class="exp-bar-fill exp-fill-a" style="--val: 60%"></div>
+                  </div>
+                </div>
+                <span class="exp-bar-val lab-val-a">6 / 10</span>
+              </div>
+              <div class="exp-metric-row">
+                <div class="exp-avatar exp-avatar-b" aria-label="Perfil B">B</div>
+                <div class="exp-bar-wrap">
+                  <div class="exp-bar-track">
+                    <div class="exp-bar-fill exp-fill-b" style="--val: 70%"></div>
+                  </div>
+                </div>
+                <span class="exp-bar-val lab-val-b">7 / 10</span>
+              </div>
+            </div>
+            <p class="exp-metric-signal">
+              <span class="exp-signal-dot exp-signal-ok" aria-hidden="true"></span>
+              Ambos mantienen energía. B compensa capital con ritmo. Señal a vigilar.
+            </p>
+          </div>
+
+          <div class="exp-metric-card">
+            <div class="exp-metric-top">
+              <span class="exp-metric-name">Fricción acumulada</span>
+              <span class="exp-metric-why">Obstáculos que consumen recursos sin generar avance</span>
+            </div>
+            <div class="exp-metric-body">
+              <div class="exp-metric-row">
+                <div class="exp-avatar exp-avatar-a" aria-label="Perfil A">A</div>
+                <div class="exp-bar-wrap">
+                  <div class="exp-bar-track">
+                    <div class="exp-bar-fill exp-fill-a" style="--val: 55%"></div>
+                  </div>
+                </div>
+                <span class="exp-bar-val lab-val-a">Media</span>
+              </div>
+              <div class="exp-metric-row">
+                <div class="exp-avatar exp-avatar-b" aria-label="Perfil B">B</div>
+                <div class="exp-bar-wrap">
+                  <div class="exp-bar-track">
+                    <div class="exp-bar-fill exp-fill-b" style="--val: 78%"></div>
+                  </div>
+                </div>
+                <span class="exp-bar-val lab-val-b">Alta</span>
+              </div>
+            </div>
+            <p class="exp-metric-signal">
+              <span class="exp-signal-dot exp-signal-warn" aria-hidden="true"></span>
+              B acumula más fricción: cada imprevisto erosiona un colchón ya pequeño.
+            </p>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <section class="section" id="informacion-general">
+    <!-- ── 02 · COMPARATIVA DE PERFILES ─────────────────────── -->
+    <section class="section exp-section" id="perfiles">
       <div class="container">
-        <div class="project-block reveal">
-          <h2 class="project-block-title">Resumen ejecutivo</h2>
+        <header class="home-section-head reveal">
+          <span class="home-section-num" aria-hidden="true">02</span>
+          <h2 class="home-section-title">Comparativa de perfiles</h2>
+        </header>
+        <p class="home-section-sub reveal">
+          El mismo modelo, dos vidas distintas. La diferencia no está en la voluntad, sino en las restricciones reales con las que cada perfil construye.
+        </p>
 
-          <p class="project-text">
-            La lavandería autoservicio es un modelo físico que requiere una inversión inicial elevada y una ejecución precisa desde el primer momento.
-          </p>
+        <div class="exp-profiles-grid reveal">
 
-          <p class="project-text">
-            La rentabilidad depende casi por completo de decisiones críticas: ubicación, estructura de costes y capacidad de sostener el negocio hasta alcanzar estabilidad.
-          </p>
+          <div class="exp-profile exp-profile-a">
+            <div class="exp-profile-head">
+              <div class="exp-avatar exp-avatar-a exp-avatar-lg">A</div>
+              <div class="exp-profile-ident">
+                <span class="exp-profile-label">Perfil A</span>
+                <strong class="exp-profile-name">Prudente</strong>
+                <span class="exp-profile-role">Empleado · Tiempo limitado</span>
+              </div>
+            </div>
+            <div class="exp-profile-vars">
+              <div class="exp-profile-var">
+                <div class="exp-profile-var-head">
+                  <span class="exp-profile-var-key">Capital inicial</span>
+                  <span class="exp-profile-var-val lab-val-a">25.000 €</span>
+                </div>
+                <div class="exp-bar-track">
+                  <div class="exp-bar-fill exp-fill-a" style="--val: 76%"></div>
+                </div>
+              </div>
+              <div class="exp-profile-var">
+                <div class="exp-profile-var-head">
+                  <span class="exp-profile-var-key">Tiempo disponible</span>
+                  <span class="exp-profile-var-val lab-val-a">6–8 h/sem</span>
+                </div>
+                <div class="exp-bar-track">
+                  <div class="exp-bar-fill exp-fill-a" style="--val: 28%"></div>
+                </div>
+              </div>
+              <div class="exp-profile-var">
+                <div class="exp-profile-var-head">
+                  <span class="exp-profile-var-key">Tolerancia al riesgo</span>
+                  <span class="exp-profile-var-val lab-val-a">Moderada</span>
+                </div>
+                <div class="exp-bar-track">
+                  <div class="exp-bar-fill exp-fill-a" style="--val: 42%"></div>
+                </div>
+              </div>
+              <div class="exp-profile-var">
+                <div class="exp-profile-var-head">
+                  <span class="exp-profile-var-key">Energía base</span>
+                  <span class="exp-profile-var-val lab-val-a">Media</span>
+                </div>
+                <div class="exp-bar-track">
+                  <div class="exp-bar-fill exp-fill-a" style="--val: 55%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="exp-profile-notes">
+              <div class="exp-profile-note exp-note-ok">
+                <span class="exp-note-label">Ventaja</span>
+                <p>Capital suficiente. Puede absorber imprevistos y decidir sin urgencia.</p>
+              </div>
+              <div class="exp-profile-note exp-note-warn">
+                <span class="exp-note-label">Limitación</span>
+                <p>Ritmo lento por falta de tiempo. Las decisiones se retrasan.</p>
+              </div>
+            </div>
+          </div>
 
-          <p class="project-text">
-            Este proyecto analiza si es un modelo realista cuando el capital y el margen de error son limitados.
-          </p>
+          <div class="exp-profiles-tension" aria-hidden="true">
+            <div class="exp-tension-line"></div>
+            <span class="exp-tension-vs">vs</span>
+            <div class="exp-tension-line"></div>
+          </div>
+
+          <div class="exp-profile exp-profile-b">
+            <div class="exp-profile-head">
+              <div class="exp-avatar exp-avatar-b exp-avatar-lg">B</div>
+              <div class="exp-profile-ident">
+                <span class="exp-profile-label">Perfil B</span>
+                <strong class="exp-profile-name">Exploradora</strong>
+                <span class="exp-profile-role">Autónoma · Capital limitado</span>
+              </div>
+            </div>
+            <div class="exp-profile-vars">
+              <div class="exp-profile-var">
+                <div class="exp-profile-var-head">
+                  <span class="exp-profile-var-key">Capital inicial</span>
+                  <span class="exp-profile-var-val lab-val-b">8.000 €</span>
+                </div>
+                <div class="exp-bar-track">
+                  <div class="exp-bar-fill exp-fill-b" style="--val: 24%"></div>
+                </div>
+              </div>
+              <div class="exp-profile-var">
+                <div class="exp-profile-var-head">
+                  <span class="exp-profile-var-key">Tiempo disponible</span>
+                  <span class="exp-profile-var-val lab-val-b">20–25 h/sem</span>
+                </div>
+                <div class="exp-bar-track">
+                  <div class="exp-bar-fill exp-fill-b" style="--val: 78%"></div>
+                </div>
+              </div>
+              <div class="exp-profile-var">
+                <div class="exp-profile-var-head">
+                  <span class="exp-profile-var-key">Tolerancia al riesgo</span>
+                  <span class="exp-profile-var-val lab-val-b">Alta</span>
+                </div>
+                <div class="exp-bar-track">
+                  <div class="exp-bar-fill exp-fill-b" style="--val: 78%"></div>
+                </div>
+              </div>
+              <div class="exp-profile-var">
+                <div class="exp-profile-var-head">
+                  <span class="exp-profile-var-key">Energía base</span>
+                  <span class="exp-profile-var-val lab-val-b">Alta</span>
+                </div>
+                <div class="exp-bar-track">
+                  <div class="exp-bar-fill exp-fill-b" style="--val: 78%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="exp-profile-notes">
+              <div class="exp-profile-note exp-note-ok">
+                <span class="exp-note-label">Ventaja</span>
+                <p>Tiempo y energía. Puede moverse rápido y absorber más carga operativa.</p>
+              </div>
+              <div class="exp-profile-note exp-note-warn">
+                <span class="exp-note-label">Limitación</span>
+                <p>Capital insuficiente para el modelo real. Cada imprevisto pesa.</p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
+    <!-- ── 03 · EVOLUCIÓN DEL EXPERIMENTO ───────────────────── -->
+    <section class="section exp-section" id="evolucion">
+      <div class="container">
+        <header class="home-section-head reveal">
+          <span class="home-section-num" aria-hidden="true">03</span>
+          <h2 class="home-section-title">Evolución del experimento</h2>
+        </header>
+        <p class="home-section-sub reveal">
+          Cada semana registra avances, retrocesos y señales. El experimento no es una foto fija, sino un proceso con fricción acumulada.
+        </p>
+
+        <div class="exp-timeline reveal">
+
+          <div class="exp-tl-phase exp-tl-done">
+            <div class="exp-tl-marker">
+              <div class="exp-tl-dot"></div>
+              <div class="exp-tl-connector"></div>
+            </div>
+            <div class="exp-tl-content">
+              <div class="exp-tl-head">
+                <span class="exp-tl-week">Semana 1</span>
+                <span class="exp-tl-name">Inicio</span>
+                <span class="exp-tl-badge exp-badge-done">Completada</span>
+              </div>
+              <p class="exp-tl-text">Ambos perfiles estudian el modelo. A empieza la búsqueda de local con criterio conservador. B acelera la búsqueda apostando por zonas de alta rotación.</p>
+              <div class="exp-tl-pills">
+                <span class="exp-tl-pill exp-pill-a">A: Local estudiado, no comprometido</span>
+                <span class="exp-tl-pill exp-pill-b">B: Visita 4 locales en 5 días</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="exp-tl-phase exp-tl-done">
+            <div class="exp-tl-marker">
+              <div class="exp-tl-dot"></div>
+              <div class="exp-tl-connector"></div>
+            </div>
+            <div class="exp-tl-content">
+              <div class="exp-tl-head">
+                <span class="exp-tl-week">Semanas 2–3</span>
+                <span class="exp-tl-name">Primera fricción</span>
+                <span class="exp-tl-badge exp-badge-done">Completada</span>
+              </div>
+              <p class="exp-tl-text">Aparecen licencias, costes ocultos y plazos reales. A descubre que el proceso administrativo retrasa dos semanas. B firma con una franquicia menor para reducir riesgo inicial, cediendo parte del margen.</p>
+              <div class="exp-tl-pills">
+                <span class="exp-tl-pill exp-pill-a">A: Retraso de licencias +14 días</span>
+                <span class="exp-tl-pill exp-pill-b">B: Franquicia · margen reducido</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="exp-tl-phase exp-tl-active">
+            <div class="exp-tl-marker">
+              <div class="exp-tl-dot exp-tl-dot-active"></div>
+              <div class="exp-tl-connector"></div>
+            </div>
+            <div class="exp-tl-content">
+              <div class="exp-tl-head">
+                <span class="exp-tl-week">Semana 4</span>
+                <span class="exp-tl-name">Decisión de apertura</span>
+                <span class="exp-tl-badge exp-badge-active">En curso</span>
+              </div>
+              <p class="exp-tl-text">A evalúa si abrir con equipamiento básico o esperar a capitalizar mejor. B detecta problema de ventilación que añade 800 € inesperados. Primer imprevisto real que compromete el margen de B.</p>
+              <div class="exp-tl-pills">
+                <span class="exp-tl-pill exp-pill-a">A: Evaluando apertura parcial</span>
+                <span class="exp-tl-pill exp-pill-b">B: Imprevisto ventilación −800 €</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="exp-tl-phase exp-tl-pending">
+            <div class="exp-tl-marker">
+              <div class="exp-tl-dot exp-tl-dot-pending"></div>
+              <div class="exp-tl-connector"></div>
+            </div>
+            <div class="exp-tl-content">
+              <div class="exp-tl-head">
+                <span class="exp-tl-week">Semanas 5–8</span>
+                <span class="exp-tl-name">Operativa y captación</span>
+                <span class="exp-tl-badge exp-badge-pending">Pendiente</span>
+              </div>
+              <p class="exp-tl-text">Apertura al público. Primeros clientes reales. Ajuste de precios y horarios. Medición de flujo diario y rentabilidad por máquina.</p>
+            </div>
+          </div>
+
+          <div class="exp-tl-phase exp-tl-pending exp-tl-last">
+            <div class="exp-tl-marker">
+              <div class="exp-tl-dot exp-tl-dot-pending"></div>
+            </div>
+            <div class="exp-tl-content">
+              <div class="exp-tl-head">
+                <span class="exp-tl-week">Semanas 9–10</span>
+                <span class="exp-tl-name">Cierre y lectura final</span>
+                <span class="exp-tl-badge exp-badge-pending">Pendiente</span>
+              </div>
+              <p class="exp-tl-text">Resumen de métricas, análisis de encaje vital por perfil y veredicto Leonis del modelo completo.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 04 · DECISIONES CLAVE ─────────────────────────────── -->
+    <section class="section exp-section" id="decisiones">
+      <div class="container">
+        <header class="home-section-head reveal">
+          <span class="home-section-num" aria-hidden="true">04</span>
+          <h2 class="home-section-title">Decisiones clave</h2>
+        </header>
+
+        <div class="exp-decisions reveal">
+
+          <div class="exp-decision">
+            <div class="exp-decision-meta">
+              <span class="exp-decision-week">Sem. 1</span>
+              <span class="exp-decision-who exp-who-a">Perfil A</span>
+            </div>
+            <div class="exp-decision-body">
+              <strong class="exp-decision-title">Rechaza ubicación premium</strong>
+              <p class="exp-decision-detail">Descarta un local en zona de alta rotación por superar su umbral de riesgo. Opta por zona secundaria con menor tráfico natural.</p>
+              <div class="exp-decision-impacts">
+                <span class="exp-impact exp-impact-neutral">Menor coste inicial</span>
+                <span class="exp-impact exp-impact-neg">Mayor fricción de captación</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="exp-decision">
+            <div class="exp-decision-meta">
+              <span class="exp-decision-week">Sem. 2</span>
+              <span class="exp-decision-who exp-who-b">Perfil B</span>
+            </div>
+            <div class="exp-decision-body">
+              <strong class="exp-decision-title">Acepta contrato de franquicia menor</strong>
+              <p class="exp-decision-detail">Firma con un operador de franquicia para reducir riesgo de arranque. Gana estructura operativa a cambio de ceder parte del margen.</p>
+              <div class="exp-decision-impacts">
+                <span class="exp-impact exp-impact-ok">Reduce riesgo inicial</span>
+                <span class="exp-impact exp-impact-neg">Cede 12–15% de margen</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="exp-decision">
+            <div class="exp-decision-meta">
+              <span class="exp-decision-week">Sem. 3</span>
+              <span class="exp-decision-who exp-who-a">Perfil A</span>
+            </div>
+            <div class="exp-decision-body">
+              <strong class="exp-decision-title">Asume retraso administrativo</strong>
+              <p class="exp-decision-detail">El proceso de licencia municipal se extiende dos semanas adicionales. A decide no presionar para no comprometer la relación con el ayuntamiento.</p>
+              <div class="exp-decision-impacts">
+                <span class="exp-impact exp-impact-neutral">Relación institucional estable</span>
+                <span class="exp-impact exp-impact-neg">Apertura retrasada +14 días</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="exp-decision">
+            <div class="exp-decision-meta">
+              <span class="exp-decision-week">Sem. 4</span>
+              <span class="exp-decision-who exp-who-b">Perfil B</span>
+            </div>
+            <div class="exp-decision-body">
+              <strong class="exp-decision-title">Gestiona imprevisto de ventilación</strong>
+              <p class="exp-decision-detail">Detecta que el sistema de extracción del local es insuficiente. Asume el coste de 800 € para no retrasar la apertura prevista.</p>
+              <div class="exp-decision-impacts">
+                <span class="exp-impact exp-impact-neg">−800 € capital</span>
+                <span class="exp-impact exp-impact-ok">Mantiene fecha de apertura</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 05 · FRICCIONES DOMINANTES ────────────────────────── -->
+    <section class="section exp-section" id="fricciones">
+      <div class="container">
+        <header class="home-section-head reveal">
+          <span class="home-section-num" aria-hidden="true">05</span>
+          <h2 class="home-section-title">Fricciones dominantes</h2>
+        </header>
+        <p class="home-section-sub reveal">
+          No observamos si el modelo funciona. Observamos qué exige sostenerlo.
+        </p>
+
+        <div class="exp-frictions reveal">
+
+          <div class="exp-friction exp-friction-high">
+            <div class="exp-friction-head">
+              <span class="exp-friction-level">Alta</span>
+              <h3 class="exp-friction-name">Capital inicial</h3>
+              <span class="exp-friction-who">Ambos perfiles</span>
+            </div>
+            <p class="exp-friction-desc">La inversión real para una lavandería de 50 m² supera los 56.000 € solo en maquinaria y obra. Con contingencias en 2026, la franja prudente está entre 70.000 y 130.000 €. Ningún perfil tiene ese capital completo: bloquea la vía directa y fuerza alternativas con menor margen.</p>
+            <div class="exp-friction-tags">
+              <span class="exp-friction-tag">Bloquea operativa directa</span>
+              <span class="exp-friction-tag">Fuerza franquicia o financiación</span>
+            </div>
+          </div>
+
+          <div class="exp-friction exp-friction-high">
+            <div class="exp-friction-head">
+              <span class="exp-friction-level">Alta</span>
+              <h3 class="exp-friction-name">Licencias y burocracia</h3>
+              <span class="exp-friction-who">Perfil A — principal</span>
+            </div>
+            <p class="exp-friction-desc">Los plazos administrativos no son controlables. Los permisos de actividad, licencias de apertura y adecuación ambiental añaden semanas que consumen tiempo y energía sin generar avance visible. Para Perfil A, con poco tiempo disponible, este coste es especialmente alto.</p>
+            <div class="exp-friction-tags">
+              <span class="exp-friction-tag">Retraso de apertura</span>
+              <span class="exp-friction-tag">Consume energía sin retorno</span>
+            </div>
+          </div>
+
+          <div class="exp-friction exp-friction-mid">
+            <div class="exp-friction-head">
+              <span class="exp-friction-level">Media</span>
+              <h3 class="exp-friction-name">Costes energéticos variables</h3>
+              <span class="exp-friction-who">Ambos perfiles</span>
+            </div>
+            <p class="exp-friction-desc">Electricidad, agua y gas afectan directamente al margen. Los suministros son inestables y pueden alterar la cuenta de resultados sin previo aviso. La eficiencia del equipamiento reduce pero no elimina el riesgo de tensión en costes fijos.</p>
+            <div class="exp-friction-tags">
+              <span class="exp-friction-tag">Impacto en margen mensual</span>
+              <span class="exp-friction-tag">Señal pendiente en fase operativa</span>
+            </div>
+          </div>
+
+          <div class="exp-friction exp-friction-pending">
+            <div class="exp-friction-head">
+              <span class="exp-friction-level">Sin datos</span>
+              <h3 class="exp-friction-name">Captación de clientes</h3>
+              <span class="exp-friction-who">Sin datos aún</span>
+            </div>
+            <p class="exp-friction-desc">El tráfico real no puede estimarse hasta la apertura. La zona secundaria de Perfil A introduce incertidumbre sobre si el flujo será suficiente para cubrir costes fijos desde los primeros meses.</p>
+            <div class="exp-friction-tags">
+              <span class="exp-friction-tag">Señal crítica en semana 6</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── LECTURA LEONIS ─────────────────────────────────────── -->
     <section class="section">
       <div class="container">
-        <div class="project-block reveal">
-          <h2 class="project-block-title">Análisis del modelo</h2>
-
-          <div class="project-analysis">
-            <div class="analysis-item">
-              <h3>Qué es el negocio</h3>
-              <p>
-                Una lavandería autoservicio es un local equipado con lavadoras y secadoras industriales que el 
-                cliente usa directamente, normalmente sin personal fijo en tienda. El valor para el usuario no está 
-                en “lavar ropa” en abstracto, sino en resolver tres problemas concretos: cargas grandes, rapidez y 
-                falta de espacio o equipamiento doméstico. Las propias cadenas del sector insisten en que funciona 
-                especialmente bien donde hay viviendas pequeñas, estudiantes, trabajadores móviles, turismo o familias 
-                que necesitan lavar piezas voluminosas.
-              </p>
-              <br>
-              <p>
-                No es un negocio especialmente sofisticado, pero tampoco es un ingreso pasivo mágico. Es un modelo de 
-                <strong>activo físico local</strong>, muy dependiente de ubicación, estructura de costes y tasa de uso diaria.
-                <a href="https://speedqueeninvestor.com/es/preguntas-mas-frecuentes/" class="source-link" target="_blank" rel="noopener noreferrer"> Speed Queen </a>
-                lo dice de forma bastante clara: la ubicación sigue siendo el factor determinante del éxito.</p>
-            </div>
-
-            <div class="analysis-item">
-              <h3>Cómo funciona</h3>
-              <p>
-                La operativa real suele ser esta: alquiler o compra de un local pequeño o mediano, adecuación técnica, 
-                instalación de maquinaria industrial, sistema de pago, señalética, videovigilancia, domótica/control 
-                remoto y apertura al público con horarios amplios. Telelavo subraya que hacen falta local adecuado, 
-                licencias y permisos municipales, cumplimiento de normativa ambiental y de seguridad, maquinaria industrial 
-                y sistemas de pago; 
-                <a href="https://lavasuper.com/wp-content/uploads/2023/08/Estudio-Economico-Lavasuper.pdf" class="source-link" target="_blank" rel="noopener noreferrer"> Lavasuper</a>, 
-                en su estudio económico, aterriza esto en una lavandería de 50 m² con obra, instalación, maquinaria, cartelería y domótica.
-              </p>
-              <br>
-              <p>
-                En el ejemplo de Lavasuper para 50 m², el montaje incluye 3 lavadoras, 2 secadoras, monederos, cartelería, 
-                mesa de plegado, domótica e instalación, además de obra civil y adecuación del local. Ese documento cifra 
-                maquinaria, cartelería y domótica en 38.640 € y la obra en 18.000 €, para un total de 56.640 € en su caso ilustrativo.
-              </p>
-              <br>
-              <p>
-                El ingreso se genera por ciclos de lavado y secado. Speed Queen publica precios orientativos observados en 
-                sus tiendas: entre 3 y 5 € para lavadoras pequeñas-medias, alrededor de 6 € para 13,5 kg, entre 9 y 11,50 € 
-                para 18 kg y unos 14,50 € para 24 kg; en secado, los precios dependen del tiempo/capacidad, con referencias 
-                de 0,50 a 2 € según máquina y uso.
-              </p>
-              <br>
-              <p>
-                La gestión diaria suele incluir limpieza, reposición de detergentes si el modelo los incorpora, resolución 
-                de incidencias, vaciado de efectivo si lo hay, soporte al cliente, mantenimiento preventivo y revisión remota. 
-                El relato comercial del sector vende “sin personal” y “sin experiencia previa”, lo cual es parcialmente cierto 
-                operativamente, pero no elimina ni mantenimiento, ni problemas de averías, ni gestión local.
-              </p>
-            </div>
-
-            <div class="analysis-item">
-              <h3>Barreras de entrada</h3>
-              <p><strong>Barreras de entrada: medias.</strong></p>
-              <br>
-              <p>
-                Entrar no exige una habilidad técnica extraordinaria ni un equipo grande; varios operadores remarcan que no 
-                hace falta experiencia previa y que la operativa puede llevarse de forma remota. Pero tampoco es una barrera 
-                baja de verdad, por cuatro motivos:
-              </p>
-              <br>
-              <p>
-                Primero, necesitas <strong>capital inicial relevante</strong>. Segundo, dependes de un local adecuado técnicamente. Tercero, 
-                la elección del emplazamiento pesa muchísimo en la rentabilidad. Cuarto, en España el sector ya está bastante 
-                más poblado que hace unos años: una fuente sectorial citada por 
-                <a href="https://www.franquiciashoy.es/expansion-provincias/franquicias-de-lavanderia-en-barcelona" class="source-link" target="_blank" rel="noopener noreferrer">
-                  Franquicias Hoy</a> habla de 22 enseñas, más de 1.600 establecimientos y más de 194 millones de euros de facturación 
-                en el segmento de franquicias de lavandería. Es una cifra de medio secundario, así que conviene tomarla como señal de 
-                densidad del mercado, no como verdad absoluta incontestable.
-              </p>
-              <br>
-              <p>
-                <strong>No es difícil abrir una lavandería; es difícil abrir una buena lavandería en una ubicación que soporte el retorno.</strong>
-              </p>
-            </div>
-
-            <div class="analysis-item">
-              <h3>Economía del modelo</h3>
-              <h4>Costes iniciales</h4>
-              <p>
-                Aquí conviene ser honesto: casi todo el contenido comercial del sector habla de “inversión moderada” o “inversión limitada”, 
-                pero rara vez da cifras actuales cerradas y comparables.
-              </p>
-              <br>
-              <p>
-                La referencia más concreta que he encontrado es el estudio de 
-                <a href="https://lavasuper.com/wp-content/uploads/2023/08/Estudio-Economico-Lavasuper.pdf" class="source-link" target="_blank" rel="noopener noreferrer">
-                  Lavasuper
-                </a> para una lavandería autoservicio de 50 m²: 56.640 € entre maquinaria y obra. Ese estudio incluye 3 lavadoras, 2 secadoras, 
-                monederos, cartelería, domótica e instalación, y un acondicionamiento estimado del local de 18.000 €.
-              </p>
-              <br>
-              <p>
-                Con esa base, mi estimación prudente para España en 2026 sería esta:
-                <ul>
-                  <li><strong>Formato pequeño y contenido:</strong> 70.000–90.000 €</li>
-                  <li><strong>Formato medio bien montado:</strong> 90.000–130.000 €</li>
-                  <li><strong>Ubicación exigente / obra compleja / equipamiento más ambicioso:</strong> 130.000 € o más</li></ul>
-              </p>
-              <br>
-              <p>
-                Esto es una <strong>inferencia</strong>, <strong>no una cifra oficial</strong> única: sale de tomar como base el caso de 56.640 € de Lavasuper y sumarle colchón 
-                razonable por inflación, fianzas, licencias, adecuaciones eléctricas/fontanería, TPV, cámaras, contingencias y diferencias 
-                reales entre locales. El propio Electrolux recuerda que, en este tipo de negocios, la inversión inicial es solo una parte del 
-                coste total y que gran parte del gasto se concentra en la vida útil del equipo.
-              </p>
-              <br>
-              <h4>Costes mensuales</h4>
-              <p>
-                El caso de Lavasuper usa este escenario orientativo para 50 m²: alquiler 700 €, seguros 45 €, productos 200 €, varios 105 €, agua 250 €, electricidad 130 € y 
-                gas 150 €, total 1.580 €/mes.
-              </p>
-              <br>
-              <p>
-                Ese dato sirve como referencia histórica, pero hoy hay que mirarlo con prudencia. Los propios fabricantes insisten en que el 
-                ahorro operativo depende mucho de la eficiencia de las máquinas; 
-                <a href="https://www.electroluxprofessional.com/es/montar-lavanderia-autoservicio/" class="source-link" target="_blank" rel="noopener noreferrer">
-                  Electrolux
-                </a>
-                afirma que el equipamiento adecuado puede ahorrar hasta un 40% en gastos de funcionamiento y que sus lavadoras minimizan agua, 
-                energía y detergente.
-              </p>
-              <br>
-              <p>
-                Además, los suministros importan mucho. El 
-                <a href="https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736176834&idp=1254735976602&menu=ultiDatos" class="source-link" target="_blank" rel="noopener noreferrer">
-                  INE
-                </a>
-                situó el coste unitario del agua en 1,92 €/m³ en su última nota disponible, y FACUA recuerda que la factura del agua varía 
-                enormemente según ciudad. En electricidad, la fiscalidad ha cambiado varias veces: Endesa explica que hubo cambios recientes 
-                de IVA y otros conceptos regulados, lo que refuerza una idea clave para este negocio: el coste energético no es estable y puede 
-                alterar la cuenta de resultados.
-              </p>
-              <br>
-              <p>
-                Mi rango prudente para gastos fijos + variables mensuales hoy sería:
-                <ul>
-                  <li><strong>Local pequeño en zona barata:</strong> 1.800–2.500 €/mes</li>
-                  <li><strong>Local urbano medio:</strong> 2.500–4.000 €/mes</li>
-                  <li><strong>Ubicación exigente o suministros tensos:</strong> puede irse muy por encima</li>
-                </ul>
-              </p>
-              <br>
-              <h4>Ingresos Potenciales</h4>
-              <p>
-                Lavasuper plantea un escenario “favorable” con 6 ciclos diarios por máquina y obtiene 4.140 € al mes de ingresos y 2.633 € de 
-                beneficio mensual sobre 1.580 € de gastos. Pero ellos mismos advierten que son datos meramente informativos.
-              </p>
-              <br>
-              <p>
-                Ese ejemplo es útil para entender la lógica del modelo: pequeñas variaciones en uso diario por máquina cambian mucho el resultado. 
-                Speed Queen, además, muestra que el ticket por servicio puede ser atractivo en cargas grandes.
-              </p>
-              <br>
-              <p>
-                Mi lectura realista:
-                <ul>
-                  <li><strong>Lavandería floja o mal ubicada:</strong> puede quedarse por debajo del punto de equilibrio o tardar mucho en llegar.</li>
-                  <li><strong>Lavandería correcta:</strong> puede generar una rentabilidad razonable y bastante estable.</li>
-                  <li><strong>Lavandería muy bien ubicada y optimizada:</strong> puede ser muy buena unidad de caja.</li>
-                </ul>
-              </p>
-              <br>
-              <p>
-                Pero no compraría la promesa de “ROI rápido” sin analizar tráfico real, competencia, mix de viviendas y visibilidad. Las propias 
-                marcas lo dicen con lenguaje comercial, pero el fondo es cierto: tráfico, ubicación y temporada mueven la rentabilidad.
-              </p>
-            </div>
-            
-            <div class="analysis-item">
-              <h3>Escalabilidad</h3>
-              <h4><strong>Escalabilidad: media.</strong></h4>
-              <p>
-                No es baja, porque una vez dominas el sistema puedes replicar unidades, centralizar mantenimiento, marketing, control remoto y 
-                compras. Speed Queen incluso empuja la idea de crear red de lavanderías con gestión en la nube y pago centralizado.
-              </p>
-              <br>
-              <p>
-                Pero tampoco es alta en sentido digital. Cada nueva unidad exige capital, obra, local, puesta en marcha y riesgo inmobiliario. 
-                No escalas como un software; escalas como una microcadena de locales físicos.
-              </p>
-            </div>
-
-            <div class="analysis-item">
-              <h3>Riesgos</h3>
-              <p>
-                El primer riesgo es la <strong>mala ubicación</strong>. Es el riesgo nuclear. Un local barato en una zona con poca demanda real puede convertir 
-                un negocio aparentemente sencillo en un activo mediocre durante años. Speed Queen lo verbaliza sin rodeos: la ubicación es el 
-                factor determinante.
-              </p>
-              <br>
-              <p>
-                El segundo riesgo es <strong>subestimar la densidad competitiva</strong>. El sector ha crecido fuerte y algunas cadenas siguen 
-                abriendo con foco en áreas metropolitanas y zonas de estudiantes o trabajadores móviles. Eso significa que donde la oportunidad 
-                es más obvia, la competencia también suele ser mayor.
-              </p>
-              <br>
-              <p>
-                El tercero es <strong>infraestimar los costes ocultos</strong>: averías, adecuaciones del local, ventilación, extracción, potencia 
-                eléctrica, mantenimiento, vandalismo, limpieza, incidencias con pagos y reposición. El ejemplo de Lavasuper ya muestra que la obra 
-                y la instalación pesan mucho; no es “poner cinco máquinas y cobrar”.
-              </p>
-              <br>
-              <p>
-                El cuarto es <strong>la dependencia de suministros</strong>. Agua, electricidad y gas afectan directamente al margen. Electrolux insiste en que el 
-                ahorro operativo es clave precisamente porque esos costes pesan.
-              </p>
-              <br>
-              <p>
-                El quinto es <strong>creer que no necesita gestión</strong>. Aunque no haya empleados en mostrador, sí hay operación. Una lavandería abandonada transmite suciedad, 
-                inseguridad y baja confianza muy rápido.
-              </p>
-            </div>
-          </div>
+        <div class="exp-lectura reveal">
+          <span class="exp-lectura-label" aria-hidden="true">Leonis — Lectura del experimento</span>
+          <blockquote class="exp-lectura-quote">
+            <p class="exp-lectura-line-1">El capital inicial no es solo una barrera de entrada.</p>
+            <p class="exp-lectura-line-2">Es el margen de error.</p>
+            <p class="exp-lectura-body">Perfil A lo tiene, pero lo protege a costa de velocidad. Perfil B avanza más rápido, pero cada fricción inesperada erosiona un colchón que ya era pequeño para el modelo. La pregunta no es si la lavandería funciona. Es qué vida exige sostenerla cuando el margen es estrecho y el tiempo escaso.</p>
+          </blockquote>
         </div>
       </div>
     </section>
 
+    <!-- ── 06 · ANÁLISIS DEL MODELO ──────────────────────────── -->
+    <section class="section exp-section" id="modelo">
+      <div class="container">
+        <header class="home-section-head reveal">
+          <span class="home-section-num" aria-hidden="true">06</span>
+          <h2 class="home-section-title">Análisis del modelo</h2>
+        </header>
+        <p class="home-section-sub reveal">
+          Qué es, cómo funciona y qué exige realmente una lavandería autoservicio en condiciones de mercado actuales.
+        </p>
+
+        <div class="exp-model-grid reveal">
+
+          <div class="exp-model-card">
+            <h3 class="exp-model-card-title">Qué es el negocio</h3>
+            <p>Un local equipado con lavadoras y secadoras industriales que el cliente usa directamente, normalmente sin personal fijo en tienda. El valor no está en "lavar ropa", sino en resolver tres problemas concretos: cargas grandes, rapidez y falta de equipamiento doméstico.</p>
+            <p>Es un <strong>activo físico local</strong>: muy dependiente de ubicación, estructura de costes y tasa de uso diaria. La ubicación sigue siendo el factor determinante del éxito.</p>
+          </div>
+
+          <div class="exp-model-card">
+            <h3 class="exp-model-card-title">Economía del modelo</h3>
+            <p>Inversión estimada en 2026: entre 70.000 y 130.000 € para un formato pequeño-medio. Gastos fijos mensuales: 1.800–4.000 € según zona y suministros.</p>
+            <p>El escenario favorable de Lavasuper (6 ciclos/máquina/día) genera ~4.100 €/mes de ingresos sobre 1.580 € de gastos. <strong>Pequeñas variaciones en uso diario cambian significativamente el resultado.</strong></p>
+          </div>
+
+          <div class="exp-model-card">
+            <h3 class="exp-model-card-title">Riesgos principales</h3>
+            <ul class="exp-model-list">
+              <li><strong>Ubicación inadecuada</strong> — El riesgo nuclear. Ningún modelo lo compensa.</li>
+              <li><strong>Densidad competitiva</strong> — El sector ha crecido: más de 1.600 establecimientos en franquicia en España.</li>
+              <li><strong>Costes ocultos</strong> — Ventilación, extracción, potencia eléctrica, mantenimiento, vandalismo.</li>
+              <li><strong>Dependencia de suministros</strong> — Electricidad y agua afectan el margen directamente.</li>
+              <li><strong>Creencia de que no necesita gestión</strong> — Existe operativa real aunque no haya empleados en mostrador.</li>
+            </ul>
+          </div>
+
+          <div class="exp-model-card">
+            <h3 class="exp-model-card-title">Escalabilidad</h3>
+            <p>Media. Una vez dominado el sistema, es posible replicar unidades y centralizar mantenimiento, control remoto y compras.</p>
+            <p>Pero cada nueva lavandería exige capital, obra, local y riesgo inmobiliario. <strong>No escala como software. Escala como una microcadena de activos físicos locales.</strong></p>
+            <p class="exp-model-source">Fuentes: <a href="https://lavasuper.com/wp-content/uploads/2023/08/Estudio-Economico-Lavasuper.pdf" target="_blank" rel="noopener noreferrer">Lavasuper</a>, <a href="https://speedqueeninvestor.com/es/preguntas-mas-frecuentes/" target="_blank" rel="noopener noreferrer">Speed Queen</a>, <a href="https://www.electroluxprofessional.com/es/montar-lavanderia-autoservicio/" target="_blank" rel="noopener noreferrer">Electrolux</a></p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CIERRE ──────────────────────────────────────────────── -->
     <section class="section">
       <div class="container">
-        <div class="project-block reveal">
-          <h2 class="project-block-title">Perfiles</h2>
-
-          <div class="project-profiles">
-            <div class="profile-card profile-card-a">
-              <h3>Daniel, 34</h3>
-              <p class="profile-meta">Empleado · Casado · 1 hijo</p>
-
-              <p>
-                Trabaja a jornada completa en logística. Tiene ingresos estables, pero poco tiempo disponible y responsabilidad familiar.
-              </p>
-
-              <ul class="profile-data">
-                <li><strong>Tiempo:</strong> 6–8h/semana</li>
-                <li><strong>Capital:</strong> 25.000 €</li>
-                <li><strong>Riesgo:</strong> Moderado</li>
-              </ul>
-
-              <p class="profile-hypothesis">
-                Puede ejecutar con orden, pero la falta de tiempo y el miedo a equivocarse pueden frenar decisiones clave.
-              </p>
-            </div>
-
-            <div class="profile-card profile-card-b">
-              <h3>Marta, 29</h3>
-              <p class="profile-meta">Autónoma · Soltera</p>
-
-              <p>
-                Tiene ingresos variables y más tiempo disponible. Puede moverse rápido, pero con presión financiera constante.
-              </p>
-
-              <ul class="profile-data">
-                <li><strong>Tiempo:</strong> 20–25h/semana</li>
-                <li><strong>Capital:</strong> 8.000 €</li>
-                <li><strong>Riesgo:</strong> Alto</li>
-              </ul>
-
-              <p class="profile-hypothesis">
-                Puede avanzar rápido, pero su limitación de capital puede frenar el proyecto antes de consolidarse.
-              </p>
-            </div>
-          </div>
+        <div class="home-follow-grid reveal">
+          <a class="home-follow-card" href="/pages/laboratorio/index.html">
+            <span class="home-follow-kicker">Laboratorio</span>
+            <strong class="home-follow-title">Volver al índice de experimentos</strong>
+            <p class="home-follow-desc">Todos los experimentos activos, próximos y en preparación.</p>
+            <span class="home-follow-arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="home-follow-card" href="/pages/laboratorio/index.html#simulacion">
+            <span class="home-follow-kicker">Simulación</span>
+            <strong class="home-follow-title">Ver simulación de trayectoria</strong>
+            <p class="home-follow-desc">Cómo evolucionan dos perfiles a lo largo de las fases del experimento.</p>
+            <span class="home-follow-arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="home-follow-card" href="/#suscribete">
+            <span class="home-follow-kicker">Newsletter</span>
+            <strong class="home-follow-title">Seguir la newsletter</strong>
+            <p class="home-follow-desc">Análisis semanal de modelos de negocio pequeños. Sin ruido ni promesas.</p>
+            <span class="home-follow-arrow" aria-hidden="true">→</span>
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="project-block reveal">
-          <h2 class="project-block-title">Estado del experimento</h2>
-
-          <div class="metrics-header">
-            <span>Día 0</span>
-            <span>Fricción dominante: Capital inicial</span>
-          </div>
-
-          <div class="metrics-table">
-            <div class="metrics-row metrics-head">
-              <div></div>
-              <div class="metrics-col-a">Daniel</div>
-              <div class="metrics-col-b">Marta</div>
-            </div>
-
-            <div class="metrics-row">
-              <div>Tiempo disponible</div>
-              <div>6–8h</div>
-              <div>20–25h</div>
-            </div>
-
-            <div class="metrics-row">
-              <div>Tiempo invertido</div>
-              <div>0h</div>
-              <div>0h</div>
-            </div>
-
-            <div class="metrics-row">
-              <div>Capital restante</div>
-              <div>25.000 €</div>
-              <div>8.000 €</div>
-            </div>
-
-            <div class="metrics-row">
-              <div>Gasto acumulado</div>
-              <div>0 €</div>
-              <div>0 €</div>
-            </div>
-
-            <div class="metrics-row">
-              <div>Energía</div>
-              <div>6/10</div>
-              <div>8/10</div>
-            </div>
-
-            <div class="metrics-row">
-              <div>Psicología</div>
-              <div>5/10</div>
-              <div>6/10</div>
-            </div>
-
-            <div class="metrics-row">
-              <div>Encaje</div>
-              <div>—</div>
-              <div>—</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
+
   <footer class="footer">
     <div class="container footer-box">
       <div>© The Leonis Project</div>
       <div>Think better. Build wisely.</div>
     </div>
   </footer>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const navToggle = document.querySelector(".nav-toggle");
-      const navMenu = document.querySelector(".nav-menu");
-      const revealItems = document.querySelectorAll(".reveal");
-    
-      if (navToggle && navMenu) {
-        navToggle.addEventListener("click", () => {
-          const isOpen = navMenu.classList.toggle("is-open");
-          navToggle.setAttribute("aria-expanded", String(isOpen));
-        });
-      
-        navMenu.querySelectorAll("a").forEach((link) => {
-          link.addEventListener("click", () => {
-            navMenu.classList.remove("is-open");
-            navToggle.setAttribute("aria-expanded", "false");
-          });
-        });
-      }
-    
-      if ("IntersectionObserver" in window && revealItems.length > 0) {
-        const observer = new IntersectionObserver(
-          (entries, currentObserver) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("is-visible");
-                currentObserver.unobserve(entry.target);
-              }
-            });
-          },
-          {
-          threshold: 0.02,
-          rootMargin: "0px 0px -6% 0px"
-          }
-        );
-        
-        revealItems.forEach((item) => observer.observe(item));
-      } else {
-        revealItems.forEach((item) => item.classList.add("is-visible"));
-      }
-    });
-  </script>
 
 </body>
 </html>
