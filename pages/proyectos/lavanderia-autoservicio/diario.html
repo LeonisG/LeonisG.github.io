@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Diario · EXP-01 Lavandería Autoservicio — Laboratorio Leonis</title>
-  <meta name="description" content="Registro semanal del experimento de lavandería autoservicio. Decisiones, fricciones y avances de Perfil A y Perfil B semana a semana." />
+  <meta name="description" content="Bitácora semanal del experimento de lavandería autoservicio. Decisiones, fricciones y evolución de Perfil A y Perfil B semana a semana." />
   <meta name="theme-color" content="#031d10" />
 
   <link rel="icon" href="/favicon.ico" />
@@ -45,384 +45,463 @@
     </nav>
   </header>
 
-  <main class="project-diary-main">
+  <main>
 
     <!-- ── HERO ─────────────────────────────────────────────── -->
-    <section class="section diary-hero">
+    <section class="diary-hero-v2">
       <div class="container">
-        <div class="diary-hero-inner reveal">
 
-          <nav class="exp-breadcrumb" aria-label="Ubicación en el sitio" style="position:relative;z-index:1">
-            <a href="/pages/laboratorio/index.html">Laboratorio</a>
-            <span aria-hidden="true">›</span>
-            <a href="./index.html">EXP-01 · Lavandería</a>
-            <span aria-hidden="true">›</span>
-            <span aria-current="page">Diario</span>
-          </nav>
+        <nav class="exp-breadcrumb reveal" aria-label="Ubicación en el sitio">
+          <a href="/pages/laboratorio/index.html">Laboratorio</a>
+          <span aria-hidden="true">›</span>
+          <a href="./index.html">EXP-01 · Lavandería</a>
+          <span aria-hidden="true">›</span>
+          <span aria-current="page">Diario</span>
+        </nav>
 
-          <h1 class="diary-title">Diario del<br>experimento</h1>
+        <div class="diary-hero-v2-grid reveal">
 
-          <p class="diary-subtitle">
-            Registro semanal de decisiones, fricciones y avances de Perfil A y Perfil B mientras intentan construir una lavandería autoservicio.
-          </p>
+          <div class="diary-hero-v2-copy">
+            <div class="exp-hero-tags">
+              <span class="exp-tag exp-tag-ref">EXP-01</span>
+              <span class="exp-tag exp-tag-type">Bitácora del experimento</span>
+              <span class="status-badge active">
+                <span class="status-dot"></span>
+                Semana 4 · En curso
+              </span>
+            </div>
 
-          <div class="diary-hero-links hero-actions">
-            <a class="cta cta-secondary" href="./index.html">Volver al expediente</a>
-            <a class="cta cta-secondary" href="./metricas.html">Ver métricas</a>
+            <h1 class="diary-title">Diario del<br><span class="accent">experimento</span></h1>
+
+            <p class="diary-subtitle">
+              Registro semanal de decisiones, fricciones y señales. Dos perfiles construyendo el mismo negocio bajo condiciones distintas. Observamos cómo divergen sus trayectorias.
+            </p>
+
+            <div class="hero-actions">
+              <a class="cta cta-secondary" href="./index.html">Expediente completo</a>
+              <a class="cta cta-secondary" href="./metricas.html">Ver métricas</a>
+            </div>
           </div>
+
+          <aside class="diary-hero-v2-state" aria-label="Estado del diario">
+            <span class="diary-state-label">Estado del diario</span>
+            <div class="diary-state-row">
+              <span class="diary-state-row-key">Semanas documentadas</span>
+              <span class="diary-state-row-val">4 / ~10</span>
+            </div>
+            <div class="diary-state-row">
+              <span class="diary-state-row-key">Semana activa</span>
+              <span class="diary-state-row-val" style="color: var(--accent)">Semana 4</span>
+            </div>
+            <div class="diary-state-row">
+              <span class="diary-state-row-key">Última fricción</span>
+              <span class="diary-state-row-val">Ventilación B</span>
+            </div>
+            <div class="diary-state-row">
+              <span class="diary-state-row-key">Decisiones registradas</span>
+              <span class="diary-state-row-val">4</span>
+            </div>
+            <div class="diary-state-row">
+              <span class="diary-state-row-key">Capital A restante</span>
+              <span class="diary-state-row-val" style="color:#9ec3e6">24.200 €</span>
+            </div>
+            <div class="diary-state-row">
+              <span class="diary-state-row-key">Capital B restante</span>
+              <span class="diary-state-row-val" style="color:var(--accent)">5.760 €</span>
+            </div>
+          </aside>
+
         </div>
+
+        <!-- Week nav -->
+        <nav class="diary-week-nav-v2 reveal" aria-label="Navegación por semanas">
+          <a href="#semana-1" class="diary-week-chip diary-week-chip-done">
+            <span class="diary-week-chip-n">01</span>
+            <span class="diary-week-chip-name">Inicio</span>
+          </a>
+          <a href="#semana-2" class="diary-week-chip diary-week-chip-done">
+            <span class="diary-week-chip-n">02</span>
+            <span class="diary-week-chip-name">Primera fricción</span>
+          </a>
+          <a href="#semana-3" class="diary-week-chip diary-week-chip-done">
+            <span class="diary-week-chip-n">03</span>
+            <span class="diary-week-chip-name">Decisión de local</span>
+          </a>
+          <a href="#semana-4" class="diary-week-chip diary-week-chip-active">
+            <span class="diary-week-chip-n">04</span>
+            <span class="diary-week-chip-name">Apertura ←</span>
+          </a>
+          <span class="diary-week-chip diary-week-chip-pending">
+            <span class="diary-week-chip-n">05–10</span>
+            <span class="diary-week-chip-name">Pendiente</span>
+          </span>
+        </nav>
+
       </div>
     </section>
 
-    <!-- ── RESUMEN ───────────────────────────────────────────── -->
+    <!-- ── TIMELINE ──────────────────────────────────────────── -->
     <section class="section">
       <div class="container">
-        <div class="diary-summary diary-panel reveal">
-          <div class="diary-summary-head">
-            <h2 class="project-block-title">Situación actual</h2>
-            <span class="status-badge active">
-              <span class="status-dot"></span>
-              Semana 4 · En curso
-            </span>
-          </div>
-          <div class="diary-summary-grid">
-            <div class="summary-item">
-              <small>Semana actual</small>
-              <strong>Semana 4</strong>
-            </div>
-            <div class="summary-item">
-              <small>Fricción dominante</small>
-              <strong>Capital inicial</strong>
-            </div>
-            <div class="summary-item">
-              <small>Último hito</small>
-              <strong>Imprevisto de ventilación en Perfil B</strong>
-            </div>
-            <div class="summary-item">
-              <small>Fase del experimento</small>
-              <strong>Decisión de apertura</strong>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        <div class="diary-tl-body">
 
-    <!-- ── NAV SEMANAS ───────────────────────────────────────── -->
-    <section class="section diary-week-nav-section">
-      <div class="container">
-        <div class="diary-week-nav reveal">
-          <a href="#semana-1" class="week-nav-chip">Semana 1 — Inicio</a>
-          <a href="#semana-2" class="week-nav-chip">Semana 2 — Primera fricción</a>
-          <a href="#semana-3" class="week-nav-chip">Semana 3 — Decisión de local</a>
-          <a href="#semana-4" class="week-nav-chip active">Semana 4 — Apertura ←</a>
-        </div>
-      </div>
-    </section>
+          <!-- ══ SEMANA 1 ═══════════════════════════════════════ -->
+          <div class="diary-tl-week" id="semana-1">
 
-    <!-- ── SEMANA 1 ──────────────────────────────────────────── -->
-    <section class="section diary-week" id="semana-1">
-      <div class="container">
-        <div class="diary-week-shell diary-panel reveal">
-
-          <div class="diary-week-head">
-            <div>
-              <p class="project-eyebrow">SEMANA 1</p>
-              <h2 class="project-block-title">Inicio — Análisis y búsqueda de local</h2>
+            <div class="diary-tl-week-head reveal">
+              <span class="diary-tl-week-n">Semana 1</span>
+              <span class="diary-tl-week-name">Inicio — Análisis y búsqueda de local</span>
+              <span class="exp-tl-badge exp-badge-done" style="margin-left:auto">Completada</span>
             </div>
-            <span class="status-badge upcoming"><span class="status-dot"></span>Completada</span>
-          </div>
 
-          <div class="week-editorial diary-panel-accent">
-            <h3 class="diary-subsection-title">Lectura editorial de la semana</h3>
-            <p class="project-text">Ambos perfiles parten del punto cero con información similar. Lo que diverge ya desde el inicio es la velocidad de decisión y la gestión del riesgo percibido. El modelo no ha puesto fricción real todavía — eso llega en semana dos.</p>
-          </div>
-
-          <!-- Días 1–2 -->
-          <article class="diary-day diary-panel day-divider">
-            <div class="diary-day-head">
-              <div>
-                <small>Días 1–2</small>
-                <strong>Primer contacto con el modelo</strong>
+            <!-- Entrada 1: primer contacto -->
+            <div class="diary-tl-entry reveal">
+              <div class="diary-tl-rail" aria-hidden="true">
+                <div class="diary-tl-dot"></div>
+                <div class="diary-tl-connector"></div>
               </div>
-              <span class="day-friction">Fricción: duda inicial ante la inversión</span>
-            </div>
-            <div class="day-entries">
-              <div class="day-entry profile-a">
-                <div class="day-entry-head">
-                  <div class="entry-identity">
-                    <div>
-                      <small>Perfil A</small>
-                      <strong>Prudente</strong>
+              <div class="diary-tl-content">
+                <div class="diary-tl-entry-head">
+                  <span class="diary-tl-days">Días 1–2</span>
+                  <span class="diary-tl-entry-title">Primer contacto con el modelo</span>
+                  <span class="diary-ev-tag diary-ev-observacion">Observación</span>
+                </div>
+                <div class="diary-tl-profiles">
+                  <div class="diary-tl-profile diary-tl-profile-a">
+                    <div class="diary-tl-profile-head">
+                      <div class="exp-avatar exp-avatar-a" aria-label="Perfil A">A</div>
+                      <div class="diary-tl-profile-info">
+                        <span class="diary-tl-profile-label">Perfil A · Prudente</span>
+                        <span class="diary-tl-profile-meta">~0.5 h/día · Energía: 6/10</span>
+                      </div>
                     </div>
+                    <p>Empieza con una semana de análisis antes de visitar ningún local. Lee el estudio de Lavasuper, contacta con el ayuntamiento para entender el proceso de licencias y construye un primer mapa de zonas.</p>
+                    <p><strong>Postura:</strong> No comprometerse sin tener clara la ecuación completa.</p>
                   </div>
-                  <span class="entry-meta">T. invertido: 0.5–1 h/día · Energía: 6/10</span>
-                </div>
-                <div class="day-entry-body">
-                  <p>Empieza con una semana de análisis antes de visitar ningún local. Lee el estudio de Lavasuper, contacta con el ayuntamiento para entender el proceso de licencias y construye un primer mapa de zonas.</p>
-                  <p><strong>Postura:</strong> No comprometerse sin tener clara la ecuación completa. El retraso no le genera ansiedad — lo interpreta como prudencia.</p>
-                </div>
-              </div>
-              <div class="day-entry profile-b">
-                <div class="day-entry-head">
-                  <div class="entry-identity">
-                    <div>
-                      <small>Perfil B</small>
-                      <strong>Exploradora</strong>
+                  <div class="diary-tl-profile diary-tl-profile-b">
+                    <div class="diary-tl-profile-head">
+                      <div class="exp-avatar exp-avatar-b" aria-label="Perfil B">B</div>
+                      <div class="diary-tl-profile-info">
+                        <span class="diary-tl-profile-label">Perfil B · Exploradora</span>
+                        <span class="diary-tl-profile-meta">~1.5 h/día · Energía: 8/10</span>
+                      </div>
                     </div>
+                    <p>Arranca directamente con búsqueda de local. Visita cuatro locales en cinco días en zonas de alta rotación. Descubre que los alquileres en las zonas que le interesan oscilan entre 1.200 y 1.500 €/mes.</p>
+                    <p><strong>Postura:</strong> Moverse rápido. El capital ajustado todavía no pesa del todo.</p>
                   </div>
-                  <span class="entry-meta">T. invertido: 1.5–2 h/día · Energía: 8/10</span>
-                </div>
-                <div class="day-entry-body">
-                  <p>Arranca directamente con búsqueda de local. Visita cuatro locales en cinco días en zonas de alta rotación. Descubre que los alquileres en las zonas que le interesan oscilan entre 1.200 y 1.500 €/mes.</p>
-                  <p><strong>Postura:</strong> Moverse rápido para no perder oportunidades. El capital ajustado todavía no pesa del todo.</p>
                 </div>
               </div>
             </div>
-          </article>
 
-          <!-- Días 3–7 -->
-          <article class="diary-day diary-panel day-divider">
-            <div class="diary-day-head">
-              <div>
-                <small>Días 3–7</small>
-                <strong>Primera lectura real de la inversión necesaria</strong>
+            <!-- Entrada 2: inversión necesaria -->
+            <div class="diary-tl-entry reveal">
+              <div class="diary-tl-rail" aria-hidden="true">
+                <div class="diary-tl-dot"></div>
+                <div class="diary-tl-connector"></div>
               </div>
-              <span class="day-friction">Fricción: capital inicial</span>
-            </div>
-            <div class="day-entries">
-              <div class="day-entry profile-a">
-                <div class="day-entry-head">
-                  <div class="entry-identity">
-                    <div>
-                      <small>Perfil A</small>
-                      <strong>Prudente</strong>
+              <div class="diary-tl-content">
+                <div class="diary-tl-entry-head">
+                  <span class="diary-tl-days">Días 3–7</span>
+                  <span class="diary-tl-entry-title">Primera lectura real de la inversión necesaria</span>
+                  <span class="diary-ev-tag diary-ev-friccion">Fricción: capital</span>
+                </div>
+                <div class="diary-tl-profiles">
+                  <div class="diary-tl-profile diary-tl-profile-a">
+                    <div class="diary-tl-profile-head">
+                      <div class="exp-avatar exp-avatar-a">A</div>
+                      <div class="diary-tl-profile-info">
+                        <span class="diary-tl-profile-label">Perfil A</span>
+                        <span class="diary-tl-profile-meta">7 h acumuladas</span>
+                      </div>
                     </div>
+                    <p>Cuando baja la idea a números, la primera lectura es fría. La posibilidad de inmovilizar una suma grande sin visibilidad real de retorno durante meses genera respeto genuino, no rechazo. Termina la semana sin local comprometido.</p>
                   </div>
-                  <span class="entry-meta">Capital: 25.000 € · Tiempo: 7 h acum.</span>
-                </div>
-                <div class="day-entry-body">
-                  <p>Cuando baja la idea a números, la primera lectura es fría. La posibilidad de inmovilizar una suma grande sin visibilidad real de retorno durante meses genera respeto genuino, no rechazo. Termina la semana sin local comprometido.</p>
-                </div>
-              </div>
-              <div class="day-entry profile-b">
-                <div class="day-entry-head">
-                  <div class="entry-identity">
-                    <div>
-                      <small>Perfil B</small>
-                      <strong>Exploradora</strong>
+                  <div class="diary-tl-profile diary-tl-profile-b">
+                    <div class="diary-tl-profile-head">
+                      <div class="exp-avatar exp-avatar-b">B</div>
+                      <div class="diary-tl-profile-info">
+                        <span class="diary-tl-profile-label">Perfil B</span>
+                        <span class="diary-tl-profile-meta">18 h acumuladas</span>
+                      </div>
                     </div>
+                    <p>Cuanto más revisa la inversión necesaria, más claro ve que el problema no es entender el negocio, sino reunir las condiciones para entrar. El modelo es interesante, pero no perdona una entrada débil. Empieza a buscar alternativas de estructura.</p>
                   </div>
-                  <span class="entry-meta">Capital: 8.000 € · Tiempo: 18 h acum.</span>
                 </div>
-                <div class="day-entry-body">
-                  <p>Cuanto más revisa la inversión necesaria, más claro ve que el problema no es entender el negocio, sino reunir las condiciones para entrar. El modelo es interesante, pero no perdona una entrada débil. Empieza a buscar alternativas de estructura.</p>
+                <div class="diary-tl-metrics" aria-label="Métricas al cierre de semana">
+                  <div class="diary-tl-metric-chip">
+                    <span class="diary-tl-metric-key">Cap. A:</span>
+                    <span class="diary-tl-metric-val-a">25.000 €</span>
+                  </div>
+                  <div class="diary-tl-metric-chip">
+                    <span class="diary-tl-metric-key">Cap. B:</span>
+                    <span class="diary-tl-metric-val-b">8.000 €</span>
+                  </div>
+                  <div class="diary-tl-metric-chip">
+                    <span class="diary-tl-metric-key">T. A:</span>
+                    <span class="diary-tl-metric-val-a">7 h</span>
+                  </div>
+                  <div class="diary-tl-metric-chip">
+                    <span class="diary-tl-metric-key">T. B:</span>
+                    <span class="diary-tl-metric-val-b">18 h</span>
+                  </div>
                 </div>
               </div>
             </div>
-          </article>
 
-        </div>
+            <!-- Lectura Leonis semana 1 -->
+            <div class="diary-tl-leonis reveal">
+              <span class="diary-tl-leonis-label">Lectura de la semana</span>
+              <p>Ambos perfiles arrancan con energía. La diferencia ya visible: A optimiza información antes de actuar; B optimiza velocidad antes que información. Ninguna estrategia es incorrecta todavía — el modelo aún no ha puesto fricción real.</p>
+            </div>
+
+          </div><!-- /semana-1 -->
+
+          <!-- ══ SEMANA 2 ═══════════════════════════════════════ -->
+          <div class="diary-tl-week" id="semana-2">
+
+            <div class="diary-tl-week-head reveal">
+              <span class="diary-tl-week-n">Semana 2</span>
+              <span class="diary-tl-week-name">Primera fricción — Licencias y franquicia</span>
+              <span class="exp-tl-badge exp-badge-done" style="margin-left:auto">Completada</span>
+            </div>
+
+            <!-- Entrada: licencias + franquicia -->
+            <div class="diary-tl-entry reveal">
+              <div class="diary-tl-rail" aria-hidden="true">
+                <div class="diary-tl-dot"></div>
+                <div class="diary-tl-connector"></div>
+              </div>
+              <div class="diary-tl-content">
+                <div class="diary-tl-entry-head">
+                  <span class="diary-tl-days">Días 8–14</span>
+                  <span class="diary-tl-entry-title">El peso de las licencias · Perfil B firma franquicia</span>
+                  <span class="diary-ev-tag diary-ev-decision">Decisión</span>
+                  <span class="diary-ev-tag diary-ev-friccion">Fricción burocrática</span>
+                </div>
+                <div class="diary-tl-profiles">
+                  <div class="diary-tl-profile diary-tl-profile-a">
+                    <div class="diary-tl-profile-head">
+                      <div class="exp-avatar exp-avatar-a">A</div>
+                      <div class="diary-tl-profile-info">
+                        <span class="diary-tl-profile-label">Perfil A</span>
+                        <span class="diary-tl-profile-meta">14 h acumuladas</span>
+                      </div>
+                    </div>
+                    <p>Solicita información formal sobre el proceso de licencia de actividad. La respuesta es clara: 6–8 semanas dependiendo del ayuntamiento y de si el local requiere obra.</p>
+                    <p>Decide iniciar el trámite cuanto antes aunque no tenga local firmado. <strong>Postura:</strong> Asume el retraso como parte estructural del modelo. Su capital le da margen para esperar.</p>
+                  </div>
+                  <div class="diary-tl-profile diary-tl-profile-b">
+                    <div class="diary-tl-profile-head">
+                      <div class="exp-avatar exp-avatar-b">B</div>
+                      <div class="diary-tl-profile-info">
+                        <span class="diary-tl-profile-label">Perfil B</span>
+                        <span class="diary-tl-profile-meta">38 h acumuladas</span>
+                      </div>
+                    </div>
+                    <p>Ante la imposibilidad de asumir la inversión completa en equipamiento (56.000 €+), firma con un operador de franquicia: maquinaria + soporte a cambio de royalty del 12%. Reduce capital inicial necesario, pero cede margen desde el día uno.</p>
+                    <p><strong>Postura:</strong> Acepta el trade-off. Sin franquicia el modelo sería inviable con su capital.</p>
+                  </div>
+                </div>
+                <div class="diary-tl-metrics">
+                  <div class="diary-tl-metric-chip">
+                    <span class="diary-tl-metric-key">Cap. A:</span>
+                    <span class="diary-tl-metric-val-a">24.950 €</span>
+                  </div>
+                  <div class="diary-tl-metric-chip">
+                    <span class="diary-tl-metric-key">Cap. B:</span>
+                    <span class="diary-tl-metric-val-b">7.800 €</span>
+                  </div>
+                  <div class="diary-tl-metric-chip">
+                    <span class="diary-tl-metric-key">Energía A:</span>
+                    <span class="diary-tl-metric-val-a">6/10</span>
+                  </div>
+                  <div class="diary-tl-metric-chip">
+                    <span class="diary-tl-metric-key">Energía B:</span>
+                    <span class="diary-tl-metric-val-b">7/10</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="diary-tl-leonis reveal">
+              <span class="diary-tl-leonis-label">Lectura de la semana</span>
+              <p>La primera fricción real ha separado las trayectorias. A está pagando con tiempo y retraso. B ha pagado con margen futuro. El modelo exige capital que ninguno tiene completo, y la forma de gestionar esa carencia define todo lo que viene después.</p>
+            </div>
+
+          </div><!-- /semana-2 -->
+
+          <!-- ══ SEMANA 3 ═══════════════════════════════════════ -->
+          <div class="diary-tl-week" id="semana-3">
+
+            <div class="diary-tl-week-head reveal">
+              <span class="diary-tl-week-n">Semana 3</span>
+              <span class="diary-tl-week-name">Decisión de local — Compromisos y costes ocultos</span>
+              <span class="exp-tl-badge exp-badge-done" style="margin-left:auto">Completada</span>
+            </div>
+
+            <!-- Entrada: local + costes ocultos -->
+            <div class="diary-tl-entry reveal">
+              <div class="diary-tl-rail" aria-hidden="true">
+                <div class="diary-tl-dot"></div>
+                <div class="diary-tl-connector"></div>
+              </div>
+              <div class="diary-tl-content">
+                <div class="diary-tl-entry-head">
+                  <span class="diary-tl-days">Días 15–21</span>
+                  <span class="diary-tl-entry-title">Compromisos concretos · Primer coste oculto en B</span>
+                  <span class="diary-ev-tag diary-ev-decision">Decisión</span>
+                  <span class="diary-ev-tag diary-ev-friccion">Coste oculto</span>
+                </div>
+                <div class="diary-tl-profiles">
+                  <div class="diary-tl-profile diary-tl-profile-a">
+                    <div class="diary-tl-profile-head">
+                      <div class="exp-avatar exp-avatar-a">A</div>
+                      <div class="diary-tl-profile-info">
+                        <span class="diary-tl-profile-label">Perfil A</span>
+                        <span class="diary-tl-profile-meta">21 h acumuladas</span>
+                      </div>
+                    </div>
+                    <p>Identifica un local de 45 m² en barrio residencial. Alquiler de 750 €/mes, acceso correcto, sin obras previstas. Zona secundaria: menor riesgo inicial, pero incertidumbre real sobre el tráfico.</p>
+                    <p>Local comprometido pero sin firmar hasta tener más claridad sobre la licencia. <strong>Postura:</strong> Sigue conservando capital.</p>
+                  </div>
+                  <div class="diary-tl-profile diary-tl-profile-b">
+                    <div class="diary-tl-profile-head">
+                      <div class="exp-avatar exp-avatar-b">B</div>
+                      <div class="diary-tl-profile-info">
+                        <span class="diary-tl-profile-label">Perfil B</span>
+                        <span class="diary-tl-profile-meta">58 h acumuladas</span>
+                      </div>
+                    </div>
+                    <p>Con la franquicia firmada, inicia la adecuación del local. El informe técnico revela que la instalación eléctrica no soporta la carga de las lavadoras industriales. Refuerzo: 600 € adicionales no previstos.</p>
+                    <p>Primer coste oculto real. <strong>Postura:</strong> La ejecución rápida tiene coste. Los imprevistos no se veían en el análisis inicial.</p>
+                  </div>
+                </div>
+                <div class="diary-tl-metrics">
+                  <div class="diary-tl-metric-chip">
+                    <span class="diary-tl-metric-key">Cap. A:</span>
+                    <span class="diary-tl-metric-val-a">24.600 €</span>
+                  </div>
+                  <div class="diary-tl-metric-chip">
+                    <span class="diary-tl-metric-key">Cap. B:</span>
+                    <span class="diary-tl-metric-val-b">7.200 € <em style="opacity:.6;font-style:normal">(−600 €)</em></span>
+                  </div>
+                  <div class="diary-tl-metric-chip">
+                    <span class="diary-tl-metric-key">T. A:</span>
+                    <span class="diary-tl-metric-val-a">21 h</span>
+                  </div>
+                  <div class="diary-tl-metric-chip">
+                    <span class="diary-tl-metric-key">T. B:</span>
+                    <span class="diary-tl-metric-val-b">58 h</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="diary-tl-leonis reveal">
+              <span class="diary-tl-leonis-label">Lectura de la semana</span>
+              <p>A conserva capital pero paga con tiempo y retraso. B avanza más rápido pero cada semana que pasa su margen de error se estrecha. El modelo no es injusto con ninguno — es exigente con aquello que cada perfil no tiene de sobra.</p>
+            </div>
+
+          </div><!-- /semana-3 -->
+
+          <!-- ══ SEMANA 4 (activa) ══════════════════════════════ -->
+          <div class="diary-tl-week diary-tl-week--active" id="semana-4">
+
+            <div class="diary-tl-week-head reveal">
+              <span class="diary-tl-week-n">Semana 4</span>
+              <span class="diary-tl-week-name">Decisión de apertura — El primer imprevisto real</span>
+              <span class="exp-tl-badge exp-badge-active" style="margin-left:auto">En curso</span>
+            </div>
+
+            <!-- Entrada: apertura + ventilación -->
+            <div class="diary-tl-entry reveal">
+              <div class="diary-tl-rail" aria-hidden="true">
+                <div class="diary-tl-dot diary-tl-dot-active"></div>
+                <div class="diary-tl-connector"></div>
+              </div>
+              <div class="diary-tl-content">
+                <div class="diary-tl-entry-head">
+                  <span class="diary-tl-days">Días 22–28</span>
+                  <span class="diary-tl-entry-title">¿Abrir ya o esperar? · Ventilación insuficiente en B</span>
+                  <span class="diary-ev-tag diary-ev-decision">Decisión</span>
+                  <span class="diary-ev-tag diary-ev-friccion">Imprevisto</span>
+                </div>
+                <div class="diary-tl-profiles">
+                  <div class="diary-tl-profile diary-tl-profile-a">
+                    <div class="diary-tl-profile-head">
+                      <div class="exp-avatar exp-avatar-a">A</div>
+                      <div class="diary-tl-profile-info">
+                        <span class="diary-tl-profile-label">Perfil A</span>
+                        <span class="diary-tl-profile-meta">28 h acumuladas · Energía: 6/10</span>
+                      </div>
+                    </div>
+                    <p>La licencia sigue en trámite. Evalúa dos opciones: abrir con equipamiento mínimo (menor inversión, menores ingresos) o esperar a completar el equipamiento estándar. Al cierre de la semana todavía no ha tomado la decisión.</p>
+                    <p><strong>Postura:</strong> Indecisión productiva. Su capital le permite seguir esperando. El coste de oportunidad todavía no genera urgencia.</p>
+                  </div>
+                  <div class="diary-tl-profile diary-tl-profile-b">
+                    <div class="diary-tl-profile-head">
+                      <div class="exp-avatar exp-avatar-b">B</div>
+                      <div class="diary-tl-profile-info">
+                        <span class="diary-tl-profile-label">Perfil B</span>
+                        <span class="diary-tl-profile-meta">72 h acumuladas · Energía: 7/10</span>
+                      </div>
+                    </div>
+                    <p>La revisión técnica detecta que el sistema de extracción del local es insuficiente para la normativa aplicable. Refuerzo: 800 € adicionales. Decide asumirlo para no retrasar el proceso.</p>
+                    <p>El capital queda en 5.760 €. <strong>Postura:</strong> Absorbe el golpe sin dramatismo, pero el margen de error es ya muy estrecho.</p>
+                  </div>
+                </div>
+                <div class="diary-tl-metrics">
+                  <div class="diary-tl-metric-chip">
+                    <span class="diary-tl-metric-key">Cap. A:</span>
+                    <span class="diary-tl-metric-val-a">24.200 €</span>
+                  </div>
+                  <div class="diary-tl-metric-chip">
+                    <span class="diary-tl-metric-key">Cap. B:</span>
+                    <span class="diary-tl-metric-val-b">5.760 € <em style="opacity:.6;font-style:normal">(−800 €)</em></span>
+                  </div>
+                  <div class="diary-tl-metric-chip">
+                    <span class="diary-tl-metric-key">T. A:</span>
+                    <span class="diary-tl-metric-val-a">28 h acum.</span>
+                  </div>
+                  <div class="diary-tl-metric-chip">
+                    <span class="diary-tl-metric-key">T. B:</span>
+                    <span class="diary-tl-metric-val-b">72 h acum.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="diary-tl-leonis reveal">
+              <span class="diary-tl-leonis-label">Lectura de la semana — En progreso</span>
+              <p>El modelo está mostrando lo que siempre muestra antes de la apertura: costes no previstos y decisiones que no pueden aplazarse. Perfil A puede permitirse esperar. Perfil B necesita que no aparezca nada más antes de abrir.</p>
+            </div>
+
+          </div><!-- /semana-4 -->
+
+          <!-- ══ SEMANAS PENDIENTES ══════════════════════════════ -->
+          <div class="diary-tl-pending-block reveal">
+            <div class="diary-tl-pending-head">
+              <span class="diary-tl-week-n">Semanas 5–10</span>
+              <span class="exp-tl-badge exp-badge-pending">Pendiente</span>
+            </div>
+            <p style="font-size:0.88rem; color:var(--muted); margin:0; max-width:56ch;">Las siguientes entradas del diario se publicarán conforme avance el experimento. Fases previstas: apertura, primeros clientes, ajuste de precios, medición de flujo y cierre con lectura final.</p>
+            <div class="diary-tl-pending-phases">
+              <div class="diary-tl-pending-phase">
+                <span class="diary-tl-week-n">Sem. 5–8</span>
+                <span class="diary-tl-pending-phase-name">Operativa y captación de clientes</span>
+              </div>
+              <div class="diary-tl-pending-phase">
+                <span class="diary-tl-week-n">Sem. 9–10</span>
+                <span class="diary-tl-pending-phase-name">Cierre y lectura final del experimento</span>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /diary-tl-body -->
       </div>
     </section>
 
-    <!-- ── SEMANA 2 ──────────────────────────────────────────── -->
-    <section class="section diary-week" id="semana-2">
-      <div class="container">
-        <div class="diary-week-shell diary-panel reveal">
-
-          <div class="diary-week-head">
-            <div>
-              <p class="project-eyebrow">SEMANA 2</p>
-              <h2 class="project-block-title">Primera fricción — Licencias y franquicia</h2>
-            </div>
-            <span class="status-badge upcoming"><span class="status-dot"></span>Completada</span>
-          </div>
-
-          <div class="week-editorial diary-panel-accent">
-            <h3 class="diary-subsection-title">Lectura editorial de la semana</h3>
-            <p class="project-text">La segunda semana introduce la primera fricción real. El modelo deja de ser análisis para volverse proceso burocrático y decisión financiera concreta. Los dos perfiles responden de forma completamente distinta: A paga con retraso, B paga con margen.</p>
-          </div>
-
-          <article class="diary-day diary-panel day-divider">
-            <div class="diary-day-head">
-              <div>
-                <small>Días 8–10</small>
-                <strong>El peso de las licencias — Perfil A descubre los plazos reales</strong>
-              </div>
-              <span class="day-friction">Fricción: burocracia administrativa</span>
-            </div>
-            <div class="day-entries">
-              <div class="day-entry profile-a">
-                <div class="day-entry-head">
-                  <div class="entry-identity">
-                    <div><small>Perfil A</small><strong>Prudente</strong></div>
-                  </div>
-                  <span class="entry-meta">Capital: 24.950 € · Tiempo: 14 h acum.</span>
-                </div>
-                <div class="day-entry-body">
-                  <p>Solicita información formal sobre el proceso de licencia de actividad para una lavandería. La respuesta es clara: entre seis y ocho semanas dependiendo del ayuntamiento y de si el local requiere obra.</p>
-                  <p>Decide iniciar el trámite cuanto antes aunque todavía no tenga local firmado. Entiende que la burocracia no espera y que cada semana de retraso administrativo es una semana sin ingresos.</p>
-                  <p><strong>Postura:</strong> Asume el retraso como parte estructural del modelo. Su capital le da margen para esperar. No toma decisiones precipitadas.</p>
-                </div>
-              </div>
-              <div class="day-entry profile-b">
-                <div class="day-entry-head">
-                  <div class="entry-identity">
-                    <div><small>Perfil B</small><strong>Exploradora</strong></div>
-                  </div>
-                  <span class="entry-meta">Capital: 7.800 € · Tiempo: 38 h acum.</span>
-                </div>
-                <div class="day-entry-body">
-                  <p>Ante la imposibilidad de asumir la inversión completa en equipamiento (estimada en más de 56.000 € en maquinaria y obra), encuentra un operador de franquicia que ofrece maquinaria, soporte y marca a cambio de un royalty del 12% sobre facturación.</p>
-                  <p>Las condiciones reducen el capital inicial necesario a 6.000–7.000 € en adecuación del local. La decisión tiene lógica con su restricción de capital, pero implica ceder margen desde el primer día.</p>
-                  <p><strong>Postura:</strong> Acepta el trade-off de margen por accesibilidad. Sin franquicia el modelo sería inviable con su capital.</p>
-                </div>
-              </div>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ── SEMANA 3 ──────────────────────────────────────────── -->
-    <section class="section diary-week" id="semana-3">
-      <div class="container">
-        <div class="diary-week-shell diary-panel reveal">
-
-          <div class="diary-week-head">
-            <div>
-              <p class="project-eyebrow">SEMANA 3</p>
-              <h2 class="project-block-title">Decisión de local — Compromisos y costes ocultos</h2>
-            </div>
-            <span class="status-badge upcoming"><span class="status-dot"></span>Completada</span>
-          </div>
-
-          <div class="week-editorial diary-panel-accent">
-            <h3 class="diary-subsection-title">Lectura editorial de la semana</h3>
-            <p class="project-text">La semana de los primeros compromisos reales. El modelo deja de ser un ejercicio de análisis para convertirse en obligaciones concretas con coste. A conserva capital pero paga con tiempo y retraso. B avanza más rápido pero cada semana que pasa su margen de error se estrecha.</p>
-          </div>
-
-          <article class="diary-day diary-panel day-divider">
-            <div class="diary-day-head">
-              <div>
-                <small>Días 15–21</small>
-                <strong>Compromisos concretos y primer coste oculto</strong>
-              </div>
-              <span class="day-friction">Fricción: costes ocultos de adecuación</span>
-            </div>
-            <div class="day-entries">
-              <div class="day-entry profile-a">
-                <div class="day-entry-head">
-                  <div class="entry-identity">
-                    <div><small>Perfil A</small><strong>Prudente</strong></div>
-                  </div>
-                  <span class="entry-meta">Capital: 24.600 € · Tiempo: 21 h acum.</span>
-                </div>
-                <div class="day-entry-body">
-                  <p>Identifica un local de 45 m² en barrio residencial con buena densidad de viviendas pero sin alta rotación comercial. Alquiler de 750 €/mes, acceso correcto, sin grandes obras previstas.</p>
-                  <p>La elección de zona secundaria es consecuente con su perfil: menor riesgo inicial, pero incertidumbre real sobre el tráfico. Local comprometido pero sin firmar definitivamente hasta tener más claridad sobre la licencia.</p>
-                  <p><strong>Postura:</strong> Sigue conservando capital. Incertidumbre de tráfico todavía sin resolver.</p>
-                </div>
-              </div>
-              <div class="day-entry profile-b">
-                <div class="day-entry-head">
-                  <div class="entry-identity">
-                    <div><small>Perfil B</small><strong>Exploradora</strong></div>
-                  </div>
-                  <span class="entry-meta">Capital: 7.200 € · Tiempo: 58 h acum.</span>
-                </div>
-                <div class="day-entry-body">
-                  <p>Con el contrato de franquicia firmado, inicia el proceso de adecuación del local. El informe técnico del operador revela que la instalación eléctrica no soporta la carga de las lavadoras industriales.</p>
-                  <p>El refuerzo eléctrico supone 600 € adicionales no contemplados en el presupuesto. Es el primer coste oculto real del modelo. Lo asume, pero el capital empieza a ajustarse de forma visible.</p>
-                  <p><strong>Postura:</strong> La ejecución rápida tiene coste. Los imprevistos no se veían en el análisis inicial.</p>
-                </div>
-              </div>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ── SEMANA 4 ──────────────────────────────────────────── -->
-    <section class="section diary-week" id="semana-4">
-      <div class="container">
-        <div class="diary-week-shell diary-panel reveal" style="border-color: rgba(185,239,69,0.14);">
-
-          <div class="diary-week-head">
-            <div>
-              <p class="project-eyebrow">SEMANA 4 · EN CURSO</p>
-              <h2 class="project-block-title">Decisión de apertura — El primer imprevisto real</h2>
-            </div>
-            <span class="status-badge active"><span class="status-dot"></span>En curso</span>
-          </div>
-
-          <div class="week-editorial diary-panel-accent">
-            <h3 class="diary-subsection-title">Lectura editorial de la semana</h3>
-            <p class="project-text">La semana con más tensión hasta ahora. A debe decidir si abre con lo que tiene o espera. B descubre un problema nuevo que consume capital que no tenía previsto gastar. El modelo está mostrando lo que siempre muestra antes de la apertura: costes no previstos y decisiones que no pueden aplazarse.</p>
-          </div>
-
-          <article class="diary-day diary-panel day-divider">
-            <div class="diary-day-head">
-              <div>
-                <small>Días 22–28</small>
-                <strong>¿Abrir ya o esperar? · Ventilación insuficiente en Perfil B</strong>
-              </div>
-              <span class="day-friction">Fricción: imprevisto de ventilación + decisión de apertura</span>
-            </div>
-            <div class="day-entries">
-              <div class="day-entry profile-a">
-                <div class="day-entry-head">
-                  <div class="entry-identity">
-                    <div><small>Perfil A</small><strong>Prudente</strong></div>
-                  </div>
-                  <span class="entry-meta">Capital: 24.200 € · Tiempo: 28 h acum. · Energía: 6/10</span>
-                </div>
-                <div class="day-entry-body">
-                  <p>La licencia sigue en trámite. Evalúa dos opciones: abrir con tres lavadoras y una secadora (mínimo viable, menor inversión, menores ingresos potenciales) o esperar a completar el equipamiento estándar antes de abrir.</p>
-                  <p>La decisión implica un trade-off real: menos inversión inicial significa menos capacidad, pero también menos riesgo si el tráfico es menor de lo esperado en zona secundaria. Al cierre de la semana todavía no ha tomado la decisión.</p>
-                  <p><strong>Postura:</strong> Indecisión productiva. Su capital le permite seguir esperando. El coste de oportunidad todavía no le genera urgencia.</p>
-                </div>
-              </div>
-              <div class="day-entry profile-b">
-                <div class="day-entry-head">
-                  <div class="entry-identity">
-                    <div><small>Perfil B</small><strong>Exploradora</strong></div>
-                  </div>
-                  <span class="entry-meta">Capital: 5.760 € · Tiempo: 72 h acum. · Energía: 7/10</span>
-                </div>
-                <div class="day-entry-body">
-                  <p>Durante la revisión técnica, el técnico del operador detecta que el sistema de extracción de vapor y humedad del local es insuficiente para la normativa que aplica a este tipo de actividad. El refuerzo cuesta 800 €.</p>
-                  <p>Decide asumirlo directamente para no complicar la relación con el operador y no retrasar el proceso. El capital queda en 5.760 €. Si aparece otro imprevisto de magnitud similar, la situación se vuelve crítica.</p>
-                  <p><strong>Postura:</strong> Absorbe el golpe sin dramatismo, pero el margen de error es ya muy estrecho. La apertura sigue siendo el objetivo, pero cada semana con gastos y sin ingresos aumenta la presión.</p>
-                </div>
-              </div>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ── SEMANAS PENDIENTES ─────────────────────────────────── -->
-    <section class="section diary-week">
-      <div class="container">
-        <div class="diary-week-shell diary-panel reveal diary-week-placeholder" style="opacity:0.6">
-          <div class="diary-week-head">
-            <div>
-              <p class="project-eyebrow">SEMANAS 5–10</p>
-              <h2 class="project-block-title">Próximas entradas</h2>
-            </div>
-          </div>
-          <p class="project-text">
-            Las siguientes entradas del diario se publicarán conforme avance el experimento. Las fases previstas son: apertura al público, primeros clientes reales, ajuste de precios y horarios, medición de flujo diario y cierre con lectura final.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── CIERRE ──────────────────────────────────────────────── -->
+    <!-- ── CIERRE ─────────────────────────────────────────────── -->
     <section class="section">
       <div class="container">
         <div class="home-follow-grid reveal">

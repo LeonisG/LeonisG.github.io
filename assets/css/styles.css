@@ -6702,3 +6702,819 @@ a.home-follow-card:hover .home-follow-arrow {
     transform: none;
   }
 }
+
+/* =========================================================
+   DIARY TIMELINE — Rediseño bitácora de experimento
+========================================================= */
+
+/* ── Hero del diario ────────────────────────────────────── */
+
+.diary-hero-v2 {
+  padding: 4rem 0 0;
+}
+
+.diary-hero-v2-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.diary-hero-v2-copy {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.diary-hero-v2-state {
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.025);
+  padding: 1.1rem 1.25rem;
+  display: grid;
+  gap: 0.6rem;
+  width: 240px;
+  flex-shrink: 0;
+}
+
+.diary-state-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  opacity: 0.65;
+  display: block;
+}
+
+.diary-state-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding: 0.38rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  font-size: 0.8rem;
+}
+
+.diary-state-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.diary-state-row-key {
+  color: var(--muted);
+  flex-shrink: 0;
+}
+
+.diary-state-row-val {
+  color: #dce7dd;
+  text-align: right;
+  font-weight: 500;
+}
+
+/* ── Week nav (mejorado) ─────────────────────────────────── */
+
+.diary-week-nav-v2 {
+  display: flex;
+  gap: 0;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.02);
+  margin: 2rem 0;
+}
+
+.diary-week-chip {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 0.6rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.2s ease;
+  gap: 0.2rem;
+}
+
+.diary-week-chip:last-child {
+  border-right: none;
+}
+
+.diary-week-chip:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.diary-week-chip-n {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  opacity: 0.5;
+  text-transform: uppercase;
+}
+
+.diary-week-chip-name {
+  font-size: 0.74rem;
+  color: var(--muted);
+  line-height: 1.2;
+}
+
+.diary-week-chip-done .diary-week-chip-n {
+  color: var(--accent);
+  opacity: 0.5;
+}
+
+.diary-week-chip-active {
+  background: rgba(185, 239, 69, 0.05);
+  border-color: rgba(185, 239, 69, 0.12);
+}
+
+.diary-week-chip-active .diary-week-chip-n {
+  color: var(--accent);
+  opacity: 0.8;
+}
+
+.diary-week-chip-active .diary-week-chip-name {
+  color: rgba(185, 239, 69, 0.8);
+}
+
+.diary-week-chip-pending {
+  opacity: 0.4;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* ── Timeline body ──────────────────────────────────────── */
+
+.diary-tl-body {
+  display: grid;
+  gap: 0;
+}
+
+.diary-tl-week {
+  padding-bottom: 3rem;
+}
+
+.diary-tl-week:last-child {
+  padding-bottom: 0;
+}
+
+.diary-tl-week-head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  margin-bottom: 0;
+}
+
+.diary-tl-week-n {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: 0.55;
+}
+
+.diary-tl-week-name {
+  font-size: clamp(1rem, 2.2vw, 1.3rem);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  color: var(--text);
+}
+
+/* ── Timeline entry ─────────────────────────────────────── */
+
+.diary-tl-entry {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.diary-tl-entry:last-of-type {
+  border-bottom: none;
+}
+
+.diary-tl-rail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0.22rem;
+  flex-shrink: 0;
+}
+
+.diary-tl-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.06);
+  flex-shrink: 0;
+  transition:
+    transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1),
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.diary-tl-entry:hover .diary-tl-dot {
+  transform: scale(1.35);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.diary-tl-week--active .diary-tl-dot {
+  border-color: rgba(185, 239, 69, 0.5);
+  background: rgba(185, 239, 69, 0.2);
+  box-shadow: 0 0 10px rgba(185, 239, 69, 0.22);
+  animation: statusPulse 2.8s ease-in-out infinite;
+}
+
+.diary-tl-connector {
+  flex: 1;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.07);
+  margin-top: 0.35rem;
+  min-height: 24px;
+}
+
+.diary-tl-content {
+  padding-left: 1rem;
+  display: grid;
+  gap: 0.85rem;
+}
+
+/* ── Entry header ───────────────────────────────────────── */
+
+.diary-tl-entry-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.diary-tl-days {
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: 0.6;
+}
+
+.diary-tl-entry-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+/* Event type tags */
+.diary-ev-tag {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 0.14rem 0.46rem;
+  border-radius: 999px;
+}
+
+.diary-ev-friccion {
+  background: rgba(210, 80, 60, 0.1);
+  border: 1px solid rgba(210, 80, 60, 0.2);
+  color: rgba(225, 110, 95, 0.9);
+}
+
+.diary-ev-decision {
+  background: rgba(180, 150, 50, 0.1);
+  border: 1px solid rgba(180, 150, 50, 0.2);
+  color: rgba(205, 175, 65, 0.9);
+}
+
+.diary-ev-avance {
+  background: rgba(120, 200, 130, 0.08);
+  border: 1px solid rgba(120, 200, 130, 0.15);
+  color: rgba(130, 210, 140, 0.9);
+}
+
+.diary-ev-observacion {
+  background: rgba(120, 170, 210, 0.08);
+  border: 1px solid rgba(120, 170, 210, 0.15);
+  color: rgba(155, 195, 230, 0.9);
+}
+
+/* ── Profile cards dentro de la entrada ─────────────────── */
+
+.diary-tl-profiles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.7rem;
+}
+
+.diary-tl-profile {
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.022);
+  display: grid;
+  gap: 0.55rem;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.diary-tl-profile:hover {
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.diary-tl-profile-a {
+  border-left: 2px solid rgba(120, 170, 210, 0.35);
+}
+
+.diary-tl-profile-a:hover {
+  border-left-color: rgba(120, 170, 210, 0.55);
+}
+
+.diary-tl-profile-b {
+  border-left: 2px solid rgba(185, 239, 69, 0.28);
+}
+
+.diary-tl-profile-b:hover {
+  border-left-color: rgba(185, 239, 69, 0.45);
+}
+
+.diary-tl-profile-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.diary-tl-profile-info {
+  display: grid;
+  gap: 0.05rem;
+  min-width: 0;
+}
+
+.diary-tl-profile-label {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--text);
+  display: block;
+  line-height: 1.2;
+}
+
+.diary-tl-profile-meta {
+  font-size: 0.68rem;
+  color: var(--muted);
+  display: block;
+  opacity: 0.75;
+}
+
+.diary-tl-profile p {
+  margin: 0;
+  font-size: 0.86rem;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.diary-tl-profile p strong {
+  color: var(--text);
+}
+
+/* ── Metric chips en cada entrada ───────────────────────── */
+
+.diary-tl-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.diary-tl-metric-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 0.7rem;
+}
+
+.diary-tl-metric-key {
+  color: var(--muted);
+}
+
+.diary-tl-metric-val-a { color: #9ec3e6; font-weight: 600; }
+.diary-tl-metric-val-b { color: var(--accent); font-weight: 600; }
+.diary-tl-metric-val   { color: #dce7dd; font-weight: 600; }
+
+/* ── Lectura editorial inline (por semana) ──────────────── */
+
+.diary-tl-leonis {
+  margin-left: 2rem;
+  padding: 0.9rem 1.1rem;
+  border-radius: 10px;
+  border-left: 2px solid rgba(185, 239, 69, 0.25);
+  background: rgba(185, 239, 69, 0.025);
+  display: grid;
+  gap: 0.35rem;
+}
+
+.diary-tl-leonis-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: 0.55;
+  display: block;
+}
+
+.diary-tl-leonis p {
+  margin: 0;
+  font-size: 0.86rem;
+  color: var(--muted);
+  font-style: italic;
+  line-height: 1.65;
+}
+
+/* ── Semanas pendientes ─────────────────────────────────── */
+
+.diary-tl-pending-block {
+  padding: 2rem 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  opacity: 0.55;
+  display: grid;
+  gap: 1rem;
+}
+
+.diary-tl-pending-head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.diary-tl-pending-phases {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.diary-tl-pending-phase {
+  display: flex;
+  flex-direction: column;
+  gap: 0.12rem;
+  padding: 0.7rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.015);
+}
+
+.diary-tl-pending-phase-name {
+  font-size: 0.84rem;
+  color: var(--muted);
+}
+
+/* ── Responsive (diary) ─────────────────────────────────── */
+
+@media (max-width: 860px) {
+  .diary-hero-v2-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .diary-hero-v2-state {
+    width: 100%;
+  }
+
+  .diary-tl-profiles {
+    grid-template-columns: 1fr;
+  }
+
+  .diary-week-nav-v2 {
+    flex-wrap: wrap;
+  }
+
+  .diary-week-chip {
+    flex: 1 1 40%;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+}
+
+@media (max-width: 640px) {
+  .diary-hero-v2 {
+    padding-top: 2.5rem;
+  }
+
+  .diary-tl-entry {
+    grid-template-columns: 1.5rem 1fr;
+  }
+
+  .diary-tl-leonis {
+    margin-left: 0;
+  }
+
+  .diary-tl-week-name {
+    font-size: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .diary-tl-dot {
+    transition: none;
+  }
+
+  .diary-tl-week--active .diary-tl-dot {
+    animation: none;
+  }
+
+  .diary-tl-entry:hover .diary-tl-dot {
+    transform: none;
+  }
+
+  .diary-tl-profile {
+    transition: none;
+  }
+}
+
+/* =========================================================
+   METRICS v2 — Señales, barras visuales y lectura editorial
+========================================================= */
+
+/* ── Bars comparison (reemplaza la tabla) ───────────────── */
+
+.metrics-bars-section {
+  padding: 3rem 0;
+}
+
+.metrics-bars-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.metrics-bars-grid.is-visible .exp-bar-fill {
+  width: var(--val);
+}
+
+/* ── Señales visuales ───────────────────────────────────── */
+
+.metrics-signals {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 0;
+}
+
+.metrics-signal {
+  padding: 1rem 1.15rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.02);
+  display: grid;
+  gap: 0.45rem;
+}
+
+.metrics-signal-warn {
+  border-color: rgba(210, 100, 70, 0.2);
+  background: rgba(210, 80, 50, 0.04);
+}
+
+.metrics-signal-ok {
+  border-color: rgba(120, 200, 130, 0.18);
+  background: rgba(120, 190, 130, 0.03);
+}
+
+.metrics-signal-neutral {
+  border-color: rgba(255, 255, 255, 0.07);
+}
+
+.metrics-signal-head {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.metrics-signal-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.metrics-signal-warn .metrics-signal-dot {
+  background: rgba(225, 100, 75, 0.9);
+  box-shadow: 0 0 6px rgba(225, 100, 75, 0.3);
+}
+
+.metrics-signal-ok .metrics-signal-dot {
+  background: rgba(130, 210, 140, 0.9);
+  box-shadow: 0 0 6px rgba(130, 210, 140, 0.25);
+}
+
+.metrics-signal-neutral .metrics-signal-dot {
+  background: rgba(180, 180, 180, 0.5);
+}
+
+.metrics-signal-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+  display: block;
+}
+
+.metrics-signal-desc {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── Critical moments (mejorado) ────────────────────────── */
+
+.critical-moments-grid-v2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.85rem;
+}
+
+.critical-event-v2 {
+  padding: 1rem 1.1rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.02);
+  display: grid;
+  gap: 0.4rem;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.critical-event-v2:hover {
+  background: rgba(255, 255, 255, 0.032);
+  border-color: rgba(255, 255, 255, 0.09);
+}
+
+.critical-event-v2-a {
+  border-left: 2px solid rgba(120, 170, 210, 0.35);
+}
+
+.critical-event-v2-b {
+  border-left: 2px solid rgba(185, 239, 69, 0.3);
+}
+
+.critical-event-v2-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.critical-event-v2-when {
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: 0.55;
+}
+
+.critical-event-v2-who {
+  font-size: 0.68rem;
+  padding: 0.12rem 0.4rem;
+  border-radius: 999px;
+}
+
+.critical-event-v2-a .critical-event-v2-who {
+  background: rgba(120, 170, 210, 0.1);
+  border: 1px solid rgba(120, 170, 210, 0.18);
+  color: #9ec3e6;
+}
+
+.critical-event-v2-b .critical-event-v2-who {
+  background: rgba(185, 239, 69, 0.07);
+  border: 1px solid rgba(185, 239, 69, 0.15);
+  color: rgba(185, 239, 69, 0.85);
+}
+
+.critical-event-v2 h3 {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.25;
+  color: var(--text);
+}
+
+.critical-event-v2 p {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ── Lectura Leonis en métricas ─────────────────────────── */
+
+.metrics-leonis {
+  padding: 3rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  display: grid;
+  gap: 1.2rem;
+}
+
+.metrics-leonis-label {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: 0.5;
+}
+
+.metrics-leonis-quote {
+  margin: 0;
+  padding: 0;
+  border: none;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.metrics-leonis-line-1 {
+  margin: 0;
+  font-size: clamp(1.1rem, 2.2vw, 1.8rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--muted);
+  font-weight: 400;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.metrics-leonis-line-2 {
+  margin: 0;
+  font-size: clamp(1.1rem, 2.2vw, 1.8rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  font-weight: 700;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.metrics-leonis-body {
+  margin: 0.5rem 0 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 62ch;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.metrics-leonis.is-visible .metrics-leonis-line-1 { opacity: 1; transform: translateY(0); transition-delay: 0.5s; }
+.metrics-leonis.is-visible .metrics-leonis-line-2 { opacity: 1; transform: translateY(0); transition-delay: 0.72s; }
+.metrics-leonis.is-visible .metrics-leonis-body   { opacity: 1; transform: translateY(0); transition-delay: 0.95s; }
+
+/* ── Summary actualizado ─────────────────────────────────── */
+
+.metrics-summary-v2 {
+  padding: 1.35rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.metrics-summary-v2-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.85rem;
+}
+
+/* ── Responsive (metrics v2) ────────────────────────────── */
+
+@media (max-width: 980px) {
+  .metrics-bars-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics-signals {
+    grid-template-columns: 1fr;
+  }
+
+  .critical-moments-grid-v2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .metrics-summary-v2-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .metrics-leonis-line-1,
+  .metrics-leonis-line-2,
+  .metrics-leonis-body {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

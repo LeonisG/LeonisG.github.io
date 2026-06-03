@@ -34,7 +34,7 @@
   <header class="site-header">
     <nav class="nav">
       <div class="container nav-inner">
-        <a class="brand" href="/index.html#inicio" aria-label="Ir al inicio de The Leonis Project">
+        <a class="brand" href="/" aria-label="Ir al inicio de The Leonis Project">
           <img class="brand-mark" src="/assets/img/logo-mark.png" alt="Símbolo de The Leonis Project" />
           <span class="brand-text">
             <span class="brand-white">THE LEONIS</span>
@@ -92,22 +92,22 @@
       </div>
     </section>
 
-    <!-- LECTURA RÁPIDA -->
+    <!-- ESTADO ACTUAL -->
     <section class="section">
       <div class="container">
         <div class="metrics-summary metrics-panel reveal">
           <div class="metrics-summary-head">
             <h2 class="project-block-title">Estado actual del experimento</h2>
-            <span class="status-badge upcoming">
+            <span class="status-badge active">
               <span class="status-dot"></span>
-              Día 12
+              Semana 4 · En curso
             </span>
           </div>
 
           <div class="metrics-summary-grid">
             <div class="summary-item">
               <small>Semana actual</small>
-              <strong>Semana 2</strong>
+              <strong>Semana 4 / ~10</strong>
             </div>
 
             <div class="summary-item">
@@ -116,92 +116,158 @@
             </div>
 
             <div class="summary-item summary-item-a">
-              <small>Estado Daniel</small>
-              <strong>5.8 / 10</strong>
+              <small>Estado Perfil A</small>
+              <strong>24.200 € · 97%</strong>
             </div>
 
             <div class="summary-item summary-item-b">
-              <small>Estado Marta</small>
-              <strong>6.6 / 10</strong>
+              <small>Estado Perfil B</small>
+              <strong>5.760 € · 72%</strong>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- COMPARATIVA PUNTUAL -->
-    <section class="section">
+    <!-- COMPARATIVA VISUAL — barras animadas -->
+    <section class="section metrics-bars-section">
       <div class="container">
-        <div class="metrics-comparison metrics-panel reveal">
-          <div class="metrics-block-head">
-            <div>
-              <p class="project-eyebrow">COMPARATIVA ACTUAL</p>
-              <h2 class="project-block-title">Fotografía del estado actual</h2>
+        <header class="home-section-head reveal">
+          <span class="home-section-num" aria-hidden="true">01</span>
+          <h2 class="home-section-title">Comparativa de métricas — Semana 4</h2>
+        </header>
+
+        <div class="metrics-bars-grid reveal">
+
+          <div class="exp-metric-card">
+            <div class="exp-metric-top">
+              <span class="exp-metric-name">Capital restante</span>
+              <span class="exp-metric-why">Porcentaje del fondo inicial disponible</span>
             </div>
+            <div class="exp-metric-body">
+              <div class="exp-metric-row">
+                <div class="exp-avatar exp-avatar-a" aria-label="Perfil A">A</div>
+                <div class="exp-bar-wrap"><div class="exp-bar-track"><div class="exp-bar-fill exp-fill-a" style="--val:97%"></div></div></div>
+                <span class="exp-bar-val lab-val-a">24.200 € (97%)</span>
+              </div>
+              <div class="exp-metric-row">
+                <div class="exp-avatar exp-avatar-b" aria-label="Perfil B">B</div>
+                <div class="exp-bar-wrap"><div class="exp-bar-track"><div class="exp-bar-fill exp-fill-b" style="--val:72%"></div></div></div>
+                <span class="exp-bar-val lab-val-b">5.760 € (72%)</span>
+              </div>
+            </div>
+            <p class="exp-metric-signal">
+              <span class="exp-signal-dot exp-signal-warn" aria-hidden="true"></span>
+              B pierde margen de error rápido ante imprevistos. A lo conserva a coste de velocidad.
+            </p>
           </div>
 
-          <div class="metrics-compare-table">
-            <div class="metrics-compare-row metrics-compare-head">
-              <div></div>
-              <div class="metrics-col-a">Perfil A</div>
-              <div class="metrics-col-b">Perfil B</div>
+          <div class="exp-metric-card">
+            <div class="exp-metric-top">
+              <span class="exp-metric-name">Tiempo invertido</span>
+              <span class="exp-metric-why">Horas reales dedicadas al experimento (acumuladas)</span>
             </div>
+            <div class="exp-metric-body">
+              <div class="exp-metric-row">
+                <div class="exp-avatar exp-avatar-a">A</div>
+                <div class="exp-bar-wrap"><div class="exp-bar-track"><div class="exp-bar-fill exp-fill-a" style="--val:35%"></div></div></div>
+                <span class="exp-bar-val lab-val-a">28 h acum.</span>
+              </div>
+              <div class="exp-metric-row">
+                <div class="exp-avatar exp-avatar-b">B</div>
+                <div class="exp-bar-wrap"><div class="exp-bar-track"><div class="exp-bar-fill exp-fill-b" style="--val:90%"></div></div></div>
+                <span class="exp-bar-val lab-val-b">72 h acum.</span>
+              </div>
+            </div>
+            <p class="exp-metric-signal">
+              <span class="exp-signal-dot exp-signal-neutral" aria-hidden="true"></span>
+              A avanza despacio por restricción de tiempo real. B compensa capital con dedicación.
+            </p>
+          </div>
 
-            <div class="metrics-compare-row">
-              <div>Tiempo disponible</div>
-              <div>6–8h</div>
-              <div>20–25h</div>
+          <div class="exp-metric-card">
+            <div class="exp-metric-top">
+              <span class="exp-metric-name">Energía disponible</span>
+              <span class="exp-metric-why">Capacidad subjetiva de sostener el ritmo actual</span>
             </div>
+            <div class="exp-metric-body">
+              <div class="exp-metric-row">
+                <div class="exp-avatar exp-avatar-a">A</div>
+                <div class="exp-bar-wrap"><div class="exp-bar-track"><div class="exp-bar-fill exp-fill-a" style="--val:60%"></div></div></div>
+                <span class="exp-bar-val lab-val-a">6 / 10</span>
+              </div>
+              <div class="exp-metric-row">
+                <div class="exp-avatar exp-avatar-b">B</div>
+                <div class="exp-bar-wrap"><div class="exp-bar-track"><div class="exp-bar-fill exp-fill-b" style="--val:70%"></div></div></div>
+                <span class="exp-bar-val lab-val-b">7 / 10</span>
+              </div>
+            </div>
+            <p class="exp-metric-signal">
+              <span class="exp-signal-dot exp-signal-ok" aria-hidden="true"></span>
+              Ambos mantienen energía. Señal positiva — todavía no hay desgaste crítico.
+            </p>
+          </div>
 
-            <div class="metrics-compare-row">
-              <div>Tiempo invertido</div>
-              <div>4h</div>
-              <div>11h</div>
+          <div class="exp-metric-card">
+            <div class="exp-metric-top">
+              <span class="exp-metric-name">Fricción acumulada</span>
+              <span class="exp-metric-why">Obstáculos que consumen recursos sin generar avance</span>
             </div>
+            <div class="exp-metric-body">
+              <div class="exp-metric-row">
+                <div class="exp-avatar exp-avatar-a">A</div>
+                <div class="exp-bar-wrap"><div class="exp-bar-track"><div class="exp-bar-fill exp-fill-a" style="--val:55%"></div></div></div>
+                <span class="exp-bar-val lab-val-a">Media</span>
+              </div>
+              <div class="exp-metric-row">
+                <div class="exp-avatar exp-avatar-b">B</div>
+                <div class="exp-bar-wrap"><div class="exp-bar-track"><div class="exp-bar-fill exp-fill-b" style="--val:78%"></div></div></div>
+                <span class="exp-bar-val lab-val-b">Alta</span>
+              </div>
+            </div>
+            <p class="exp-metric-signal">
+              <span class="exp-signal-dot exp-signal-warn" aria-hidden="true"></span>
+              B acumula más fricción: capital limitado amplifica el impacto de cada imprevisto.
+            </p>
+          </div>
 
-            <div class="metrics-compare-row">
-              <div>Capital restante</div>
-              <div>24.100 €</div>
-              <div>7.150 €</div>
-            </div>
+        </div><!-- /metrics-bars-grid -->
 
-            <div class="metrics-compare-row">
-              <div>Gasto acumulado</div>
-              <div>900 €</div>
-              <div>850 €</div>
+        <!-- Señales visuales -->
+        <div class="metrics-signals reveal">
+          <div class="metrics-signal metrics-signal-warn">
+            <div class="metrics-signal-head">
+              <div class="metrics-signal-dot"></div>
+              <span class="metrics-signal-title">Capital Perfil B en zona de riesgo</span>
             </div>
-
-            <div class="metrics-compare-row">
-              <div>Ingresos generados</div>
-              <div>0 €</div>
-              <div>0 €</div>
+            <p class="metrics-signal-desc">5.760 € restantes. Un imprevisto adicional de 1.000–2.000 € comprometería la apertura. El margen de error es ya muy estrecho.</p>
+          </div>
+          <div class="metrics-signal metrics-signal-ok">
+            <div class="metrics-signal-head">
+              <div class="metrics-signal-dot"></div>
+              <span class="metrics-signal-title">Capital Perfil A protegido</span>
             </div>
-
-            <div class="metrics-compare-row">
-              <div>Energía</div>
-              <div><span class="metric-state fragile">5/10</span></div>
-              <div><span class="metric-state stable">7/10</span></div>
+            <p class="metrics-signal-desc">24.200 € conservados (97%). Puede absorber fricciones imprevistas. La lentitud es su coste, no su riesgo principal.</p>
+          </div>
+          <div class="metrics-signal metrics-signal-neutral">
+            <div class="metrics-signal-head">
+              <div class="metrics-signal-dot"></div>
+              <span class="metrics-signal-title">Señal pendiente: captación de clientes</span>
             </div>
-
-            <div class="metrics-compare-row">
-              <div>Psicología</div>
-              <div><span class="metric-state critical">4/10</span></div>
-              <div><span class="metric-state fragile">5/10</span></div>
-            </div>
-
-            <div class="metrics-compare-row">
-              <div>Encaje semanal</div>
-              <div><span class="metric-state fragile">5/10</span></div>
-              <div><span class="metric-state stable">6/10</span></div>
-            </div>
+            <p class="metrics-signal-desc">Datos de tráfico real no disponibles hasta la apertura. Semana 6 será crítica para evaluar si la ubicación de A soporta el modelo.</p>
           </div>
         </div>
+
       </div>
     </section>
 
-        <!-- NÚCLEO ANALÍTICO -->
+    <!-- CHARTS: RADAR + CONTEXTO -->
     <section class="section">
       <div class="container">
+        <header class="home-section-head reveal">
+          <span class="home-section-num" aria-hidden="true">02</span>
+          <h2 class="home-section-title">Radar de estado y evolución temporal</h2>
+        </header>
         <div class="metrics-core-grid reveal">
 
           <!-- RADAR -->
@@ -306,53 +372,52 @@
       </div>
     </section>
 
-    <!-- BLOQUE INFERIOR -->
+    <!-- MOMENTOS CRÍTICOS -->
     <section class="section">
       <div class="container">
-        <div class="metrics-bottom-grid reveal">
+        <header class="home-section-head reveal">
+          <span class="home-section-num" aria-hidden="true">03</span>
+          <h2 class="home-section-title">Puntos de inflexión</h2>
+        </header>
 
-          <div class="critical-moments-shell metrics-panel">
-            <div class="metrics-block-head">
-              <div>
-                <p class="project-eyebrow">MOMENTOS CRÍTICOS</p>
-                <h2 class="project-block-title">Puntos de inflexión</h2>
-              </div>
+        <div class="critical-moments-grid-v2 reveal">
+
+          <article class="critical-event-v2 critical-event-v2-a">
+            <div class="critical-event-v2-meta">
+              <span class="critical-event-v2-when">Semana 1</span>
+              <span class="critical-event-v2-who">Perfil A</span>
             </div>
+            <h3>Retraso de licencias detectado</h3>
+            <p>Descubre que el proceso administrativo puede tardar 6–8 semanas. Asume el retraso y sigue adelante sin modificar su estrategia. Su capital absorbe la espera.</p>
+          </article>
 
-            <div class="critical-moments-grid">
-              <article class="critical-event event-a">
-                <small>Semana 1 · Perfil A</small>
-                <h3>Retraso de licencias detectado</h3>
-                <p>
-                  Descubre que el proceso administrativo puede tardar 6–8 semanas. Asume el retraso y sigue adelante sin modificar su estrategia.
-                </p>
-              </article>
-
-              <article class="critical-event event-b">
-                <small>Semana 2 · Perfil B</small>
-                <h3>Acepta contrato de franquicia</h3>
-                <p>
-                  Ante el capital insuficiente para entrada directa, firma con operador de franquicia. Reduce riesgo inicial pero cede 12–15% de margen.
-                </p>
-              </article>
-
-              <article class="critical-event event-a">
-                <small>Semana 3 · Perfil A</small>
-                <h3>Local en zona secundaria comprometido</h3>
-                <p>
-                  Opta por alquiler más bajo con menor tráfico natural. Conserva capital pero introduce incertidumbre real sobre captación de clientes.
-                </p>
-              </article>
-
-              <article class="critical-event event-b">
-                <small>Semana 4 · Perfil B</small>
-                <h3>Imprevisto de ventilación −800 €</h3>
-                <p>
-                  El sistema de extracción del local es insuficiente. Asume 800 € adicionales para no retrasar la apertura. Margen de error ya muy estrecho.
-                </p>
-              </article>
+          <article class="critical-event-v2 critical-event-v2-b">
+            <div class="critical-event-v2-meta">
+              <span class="critical-event-v2-when">Semana 2</span>
+              <span class="critical-event-v2-who">Perfil B</span>
             </div>
-          </div>
+            <h3>Firma contrato de franquicia</h3>
+            <p>Ante el capital insuficiente para entrada directa, firma con operador. Reduce riesgo de arranque pero cede 12–15% de margen desde el primer día.</p>
+          </article>
+
+          <article class="critical-event-v2 critical-event-v2-a">
+            <div class="critical-event-v2-meta">
+              <span class="critical-event-v2-when">Semana 3</span>
+              <span class="critical-event-v2-who">Perfil A</span>
+            </div>
+            <h3>Local en zona secundaria</h3>
+            <p>Opta por alquiler más bajo con menor tráfico natural. Conserva capital pero introduce incertidumbre real sobre captación de clientes en fase operativa.</p>
+          </article>
+
+          <article class="critical-event-v2 critical-event-v2-b">
+            <div class="critical-event-v2-meta">
+              <span class="critical-event-v2-when">Semana 4</span>
+              <span class="critical-event-v2-who">Perfil B</span>
+            </div>
+            <h3>Imprevisto ventilación −800 €</h3>
+            <p>El sistema de extracción del local es insuficiente. Asume 800 € para no retrasar la apertura. El capital queda en 5.760 €. Margen de error ya muy estrecho.</p>
+          </article>
+
         </div>
       </div>
     </section>
@@ -487,6 +552,20 @@
       </div>
     </section>
 
+    <!-- LECTURA LEONIS -->
+    <section class="section">
+      <div class="container">
+        <div class="metrics-leonis reveal">
+          <span class="metrics-leonis-label" aria-hidden="true">Leonis — Lectura de las métricas</span>
+          <blockquote class="metrics-leonis-quote">
+            <p class="metrics-leonis-line-1">Los números no mienten, pero pueden engañar.</p>
+            <p class="metrics-leonis-line-2">Perfil B avanza más rápido. También se expone más.</p>
+            <p class="metrics-leonis-body">Perfil A conserva el 97% de su capital en semana 4. Eso parece inactividad. Lo que en realidad refleja es tolerancia baja al riesgo y tiempo limitado — ambas restricciones reales, no fallos de carácter. Perfil B ha invertido el triple de horas y ha cedido margen en cada fricción. La pregunta que las métricas no responden todavía: ¿cuánto tiempo más puede sostener ese ritmo?</p>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
     <!-- NOTA METODOLÓGICA -->
     <section class="section">
       <div class="container">
@@ -495,6 +574,32 @@
           <p class="project-text">
             Las métricas de esta página son simuladas y se actualizan manualmente a partir del histórico del experimento. Su función no es ofrecer exactitud contable absoluta, sino observar tendencias, desgaste, capacidad de avance y encaje real del modelo con cada perfil.
           </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CIERRE -->
+    <section class="section">
+      <div class="container">
+        <div class="home-follow-grid reveal">
+          <a class="home-follow-card" href="./index.html">
+            <span class="home-follow-kicker">Expediente</span>
+            <strong class="home-follow-title">Volver al expediente completo</strong>
+            <p class="home-follow-desc">Estado actual, perfiles, fricciones, decisiones y lectura Leonis.</p>
+            <span class="home-follow-arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="home-follow-card" href="./diario.html">
+            <span class="home-follow-kicker">Diario</span>
+            <strong class="home-follow-title">Leer el diario semanal</strong>
+            <p class="home-follow-desc">Bitácora narrativa de decisiones y fricciones semana a semana.</p>
+            <span class="home-follow-arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="home-follow-card" href="/pages/laboratorio/index.html">
+            <span class="home-follow-kicker">Laboratorio</span>
+            <strong class="home-follow-title">Ver todos los experimentos</strong>
+            <p class="home-follow-desc">Índice de expedimentos activos, próximos y en preparación.</p>
+            <span class="home-follow-arrow" aria-hidden="true">→</span>
+          </a>
         </div>
       </div>
     </section>
