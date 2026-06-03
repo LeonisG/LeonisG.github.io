@@ -84,25 +84,27 @@
   <main>
 
     <!-- ── HERO ─────────────────────────────────────────────── -->
-    <section class="hero" id="inicio">
-      <div class="container hero-editorial-wrap">
+    <section class="hero home-hero" id="inicio">
+      <div class="container home-hero-wrap">
 
-        <div class="hero-editorial-copy reveal">
+        <!-- Copy -->
+        <div class="home-hero-copy reveal">
           <p class="hero-tag">
             <span class="hero-tag-dot" aria-hidden="true"></span>
-            Leonis — Laboratorio Editorial
+            <span class="hero-tag-ref">EXP-01</span>
+            <span class="hero-tag-sep" aria-hidden="true">·</span>
+            Sistema activo
           </p>
 
-          <h1 class="hero-h1">
+          <h1 class="home-h1">
             Negocios pequeños,<br>
             sistemas realistas,<br>
-            <span class="accent">libertad progresiva.</span>
+            <span class="accent home-h1-accent">libertad progresiva.</span>
           </h1>
 
-          <p class="hero-editorial-body">
-            Un proyecto editorial sobre modelos de negocio pequeños, fricción real
+          <p class="home-hero-body">
+            Un sistema de observación sobre modelos de negocio pequeños, fricción real
             y construcción progresiva de independencia. No somos una promesa.
-            Somos un sistema de observación.
           </p>
 
           <div class="hero-actions">
@@ -111,7 +113,119 @@
           </div>
         </div>
 
-        <aside class="hero-editorial-aside reveal">
+        <!-- Visual: Brújula de sistema + logbook -->
+        <div class="home-hero-visual reveal" aria-hidden="true">
+
+          <!-- SVG Brújula -->
+          <svg class="hero-compass" viewBox="0 0 360 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="presentation">
+            <defs>
+              <radialGradient id="compassGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="rgba(185,239,69,0.14)"/>
+                <stop offset="55%" stop-color="rgba(185,239,69,0.03)"/>
+                <stop offset="100%" stop-color="transparent"/>
+              </radialGradient>
+              <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="rgba(185,239,69,0.55)"/>
+                <stop offset="100%" stop-color="transparent"/>
+              </radialGradient>
+            </defs>
+
+            <!-- Ambient glow -->
+            <circle cx="180" cy="180" r="175" fill="url(#compassGlow)"/>
+
+            <!-- Outer rotating ring -->
+            <g class="compass-ring-outer">
+              <circle cx="180" cy="180" r="162" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+              <!-- Cardinal N tick (green) -->
+              <line x1="180" y1="18" x2="180" y2="34" stroke="rgba(185,239,69,0.5)" stroke-width="1.5"/>
+              <!-- Cardinal E tick -->
+              <line x1="326" y1="180" x2="342" y2="180" stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
+              <!-- Cardinal S tick -->
+              <line x1="180" y1="326" x2="180" y2="342" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+              <!-- Cardinal W tick -->
+              <line x1="18" y1="180" x2="34" y2="180" stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
+              <!-- NE tick -->
+              <line x1="294.6" y1="65.4" x2="284" y2="76" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+              <!-- SE tick -->
+              <line x1="294.6" y1="294.6" x2="284" y2="284" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+              <!-- SW tick -->
+              <line x1="65.4" y1="294.6" x2="76" y2="284" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+              <!-- NW tick -->
+              <line x1="65.4" y1="65.4" x2="76" y2="76" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+            </g>
+
+            <!-- Middle dashed ring (counter-rotates) -->
+            <g class="compass-ring-mid">
+              <circle cx="180" cy="180" r="108" stroke="rgba(255,255,255,0.045)" stroke-width="1" stroke-dasharray="4 10"/>
+            </g>
+
+            <!-- Inner ring -->
+            <circle cx="180" cy="180" r="52" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+
+            <!-- Radial lines (very faint, static) -->
+            <g stroke="rgba(255,255,255,0.04)" stroke-width="1">
+              <line x1="180" y1="180" x2="180" y2="18"/>
+              <line x1="180" y1="180" x2="180" y2="342"/>
+              <line x1="180" y1="180" x2="18" y2="180"/>
+              <line x1="180" y1="180" x2="342" y2="180"/>
+              <line x1="180" y1="180" x2="294.6" y2="65.4"/>
+              <line x1="180" y1="180" x2="294.6" y2="294.6"/>
+              <line x1="180" y1="180" x2="65.4" y2="294.6"/>
+              <line x1="180" y1="180" x2="65.4" y2="65.4"/>
+            </g>
+
+            <!-- Node: Capital (top-left, θ≈330°, r=128) → (116, 69) -->
+            <g class="compass-node compass-node--primary">
+              <line x1="116" y1="69" x2="180" y2="180" stroke="rgba(185,239,69,0.18)" stroke-width="1"/>
+              <circle cx="116" cy="69" r="4.5" fill="rgba(185,239,69,0.85)"/>
+              <circle cx="116" cy="69" r="10" stroke="rgba(185,239,69,0.2)" stroke-width="1" fill="none"/>
+            </g>
+
+            <!-- Node: Tiempo (right, θ≈70°, r=138) → (310, 133) -->
+            <g class="compass-node">
+              <line x1="310" y1="133" x2="180" y2="180" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+              <circle cx="310" cy="133" r="3.5" fill="rgba(255,255,255,0.45)"/>
+            </g>
+
+            <!-- Node: Energía (bottom-left, θ≈220°, r=118) → (104, 270) -->
+            <g class="compass-node">
+              <line x1="104" y1="270" x2="180" y2="180" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+              <circle cx="104" cy="270" r="3" fill="rgba(255,255,255,0.35)"/>
+            </g>
+
+            <!-- Node: Encaje (bottom-right, θ≈148°, r=96) → (231, 261) -->
+            <g class="compass-node">
+              <circle cx="231" cy="261" r="3" fill="rgba(255,255,255,0.3)"/>
+            </g>
+
+            <!-- Node: IA (inner, θ≈30°, r=73) → (217, 117) -->
+            <g class="compass-node compass-node--ia">
+              <circle cx="217" cy="117" r="2.5" fill="rgba(185,239,69,0.5)"/>
+            </g>
+
+            <!-- Center element -->
+            <circle cx="180" cy="180" r="18" fill="url(#centerGlow)" opacity="0.6"/>
+            <circle cx="180" cy="180" r="10" stroke="rgba(185,239,69,0.2)" stroke-width="1" fill="none"/>
+            <!-- Crosshair -->
+            <line x1="170" y1="180" x2="190" y2="180" stroke="rgba(185,239,69,0.5)" stroke-width="1"/>
+            <line x1="180" y1="170" x2="180" y2="190" stroke="rgba(185,239,69,0.5)" stroke-width="1"/>
+            <!-- Center dot -->
+            <circle cx="180" cy="180" r="3.5" fill="rgba(185,239,69,1)" class="compass-center-dot"/>
+          </svg>
+
+          <!-- Node labels -->
+          <span class="compass-label compass-label--capital">Capital</span>
+          <span class="compass-label compass-label--tiempo">Tiempo</span>
+          <span class="compass-label compass-label--energia">Energía</span>
+          <span class="compass-label compass-label--ia">IA</span>
+
+        </div><!-- /home-hero-visual -->
+
+      </div><!-- /home-hero-wrap -->
+
+      <!-- Logbook flotante (fuera del grid, ancla al fondo del hero) -->
+      <div class="container">
+        <div class="home-hero-logbook reveal" aria-label="Estado del experimento activo">
           <div class="hero-logbook">
             <div class="hero-logbook-head">
               <span class="hero-logbook-label">SISTEMA EN CURSO</span>
@@ -135,18 +249,17 @@
               </div>
               <div class="hero-logbook-row">
                 <dt>Modelo</dt>
-                <dd>Negocio físico local</dd>
+                <dd>Negocio físico · IA activa</dd>
               </div>
             </dl>
             <a class="hero-logbook-link" href="pages/laboratorio/index.html">
               Ver el experimento <span aria-hidden="true">→</span>
             </a>
           </div>
-
           <p class="hero-signature">Think better. Build wisely.</p>
-        </aside>
-
+        </div>
       </div>
+
     </section>
 
     <!-- ── 01 · QUÉ ES ───────────────────────────────────────── -->
@@ -156,6 +269,11 @@
           <span class="home-section-num" aria-hidden="true">01</span>
           <h2 class="home-section-title">Qué es The Leonis Project</h2>
         </header>
+
+        <blockquote class="home-manifesto-quote reveal">
+          "No somos una guía de ingresos pasivos. Somos un sistema de observación para construir con más criterio, más paciencia y menos ilusión."
+        </blockquote>
+
         <div class="home-what-grid reveal">
           <div class="home-what-lead">
             <p>
@@ -233,8 +351,8 @@
           <li class="home-observe-item">
             <span class="home-observe-n" aria-hidden="true">VI</span>
             <div class="home-observe-body">
-              <strong>Métricas y decisiones</strong>
-              <p>Qué medir, cuándo pivotar y cómo leer los datos sin autoengaño.</p>
+              <strong>IA como palanca operativa</strong>
+              <p>Qué herramientas reducen fricción real y cuáles solo añaden ruido. Análisis, métricas y decisiones asistidas.</p>
             </div>
           </li>
         </ol>
@@ -249,9 +367,9 @@
           <h2 class="home-section-title">Laboratorio Leonis</h2>
         </header>
         <p class="home-section-sub reveal">
-          Un entorno de simulación donde personas ficticias con restricciones reales intentan
-          construir modelos de negocio concretos. No es una ficción superficial: cada decisión
-          tiene consecuencias medibles y cada semana se registran avances y retrocesos.
+          Un entorno de simulación donde perfiles con restricciones reales intentan
+          construir modelos de negocio concretos. Cada decisión tiene consecuencias medibles.
+          Cada semana se registran avances y retrocesos.
         </p>
         <div class="home-lab-chain reveal">
           <div class="home-lab-step">
@@ -262,22 +380,22 @@
           <div class="home-lab-step">
             <span class="home-lab-n">02</span>
             <strong>Perfiles</strong>
-            <p>Dos personas simuladas con contextos distintos: tiempo, capital y vida real.</p>
+            <p>Dos perfiles simulados con contextos distintos: tiempo, capital y vida real.</p>
           </div>
           <div class="home-lab-step">
             <span class="home-lab-n">03</span>
-            <strong>Diario</strong>
-            <p>Registro semanal de decisiones, fricciones, avances y retrocesos.</p>
+            <strong>IA aplicada</strong>
+            <p>Cada perfil usa herramientas IA de forma distinta. Observamos su impacto real.</p>
           </div>
           <div class="home-lab-step">
             <span class="home-lab-n">04</span>
             <strong>Métricas</strong>
-            <p>Datos comparados: ingresos, horas invertidas, fricción acumulada.</p>
+            <p>Capital, tiempo invertido, energía, fricción acumulada y encaje vital.</p>
           </div>
           <div class="home-lab-step">
             <span class="home-lab-n">05</span>
-            <strong>Decisiones</strong>
-            <p>Resumen ejecutivo: qué funcionó, qué no, y para qué perfil tiene sentido.</p>
+            <strong>Lectura Leonis</strong>
+            <p>Interpretación editorial: qué funcionó, qué no, y para qué perfil tiene sentido.</p>
           </div>
         </div>
         <div class="reveal">
@@ -295,42 +413,48 @@
           <span class="home-section-num" aria-hidden="true">04</span>
           <h2 class="home-section-title">Principios</h2>
         </header>
-        <div class="home-principles reveal">
-          <div class="home-principle">
-            <span class="home-principle-dash" aria-hidden="true">—</span>
-            <div>
-              <strong>Sin hype, sin promesas</strong>
-              <p>No todo ingreso mejora tu vida. No todo negocio merece tu tiempo.</p>
+        <div class="home-principles-v2 reveal">
+
+          <div class="principle-v2">
+            <span class="principle-v2-num" aria-hidden="true">01</span>
+            <div class="principle-v2-body">
+              <strong class="principle-v2-title">Sin hype, sin promesas</strong>
+              <p class="principle-v2-sub">No todo ingreso mejora tu vida. No todo negocio merece tu tiempo.</p>
             </div>
           </div>
-          <div class="home-principle">
-            <span class="home-principle-dash" aria-hidden="true">—</span>
-            <div>
-              <strong>Realismo operativo</strong>
-              <p>La independencia no se improvisa. Se construye con paciencia y decisiones mejor pensadas.</p>
+
+          <div class="principle-v2">
+            <span class="principle-v2-num" aria-hidden="true">02</span>
+            <div class="principle-v2-body">
+              <strong class="principle-v2-title">Realismo operativo</strong>
+              <p class="principle-v2-sub">La independencia no se improvisa. Se construye con paciencia y decisiones mejor pensadas.</p>
             </div>
           </div>
-          <div class="home-principle">
-            <span class="home-principle-dash" aria-hidden="true">—</span>
-            <div>
-              <strong>El tiempo como activo central</strong>
-              <p>No buscamos solo rentabilidad. Buscamos sistemas que no destruyan margen vital.</p>
+
+          <div class="principle-v2">
+            <span class="principle-v2-num" aria-hidden="true">03</span>
+            <div class="principle-v2-body">
+              <strong class="principle-v2-title">El tiempo como activo central</strong>
+              <p class="principle-v2-sub">No buscamos solo rentabilidad. Buscamos sistemas que no destruyan margen vital.</p>
             </div>
           </div>
-          <div class="home-principle">
-            <span class="home-principle-dash" aria-hidden="true">—</span>
-            <div>
-              <strong>Sistemas antes que impulsos</strong>
-              <p>La realidad importa más que el discurso. Se valora la fricción real, no la versión optimista.</p>
+
+          <div class="principle-v2">
+            <span class="principle-v2-num" aria-hidden="true">04</span>
+            <div class="principle-v2-body">
+              <strong class="principle-v2-title">Sistemas antes que impulsos</strong>
+              <p class="principle-v2-sub">La realidad importa más que el discurso. Se valora la fricción real, no la versión optimista.</p>
             </div>
           </div>
-          <div class="home-principle">
-            <span class="home-principle-dash" aria-hidden="true">—</span>
-            <div>
-              <strong>Independencia progresiva</strong>
-              <p>El criterio es una ventaja acumulativa. Entender qué no construir también es progreso.</p>
+
+          <div class="principle-v2">
+            <span class="principle-v2-num" aria-hidden="true">05</span>
+            <div class="principle-v2-body">
+              <strong class="principle-v2-title">Independencia progresiva</strong>
+              <p class="principle-v2-sub">El criterio es una ventaja acumulativa. Entender qué no construir también es progreso.</p>
             </div>
           </div>
+
         </div>
       </div>
     </section>

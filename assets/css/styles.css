@@ -1686,9 +1686,327 @@ a.home-follow-card:hover .home-follow-arrow {
   }
 }
 
+/* =========================================================
+   HOME V2 — Brújula de sistema · Rediseño
+========================================================= */
+
+/* ── Keyframes brújula ───────────────────────────────────── */
+
+@keyframes compassRotateOuter {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes compassRotateMid {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-360deg); }
+}
+
+/* ── Hero inmersivo ──────────────────────────────────────── */
+
+.home-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glow verde focal en el hero — más fuerte que el del body */
+.home-hero::after {
+  content: "";
+  position: absolute;
+  top: -15%;
+  right: -8%;
+  width: 65%;
+  height: 130%;
+  background: radial-gradient(ellipse at center, rgba(185,239,69,0.10) 0%, transparent 62%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.home-hero-wrap {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 3rem;
+  align-items: center;
+  padding-top: 5.5rem;
+  padding-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── H1 principal ────────────────────────────────────────── */
+
+.home-h1 {
+  margin: 0;
+  font-size: clamp(2.6rem, 6.5vw, 6.5rem);
+  line-height: 0.97;
+  letter-spacing: -0.055em;
+  color: var(--text);
+}
+
+.home-h1-accent {
+  color: var(--accent);
+  display: block;
+  margin-top: 0.05em;
+}
+
+/* ── Hero copy ───────────────────────────────────────────── */
+
+.home-hero-copy {
+  position: relative;
+  z-index: 1;
+}
+
+.home-hero-body {
+  margin: 1.8rem 0 0;
+  max-width: 48ch;
+  color: var(--muted);
+  font-size: 1.04rem;
+  line-height: 1.65;
+}
+
+.hero-tag-ref {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+}
+
+.hero-tag-sep {
+  color: rgba(255,255,255,0.18);
+  padding: 0 0.1em;
+}
+
+/* ── Visual: brújula + labels ────────────────────────────── */
+
+.home-hero-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 440px;
+  aspect-ratio: 1;
+  margin: 0 auto;
+}
+
+.hero-compass {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: visible;
+}
+
+/* Outer ring — rotación muy lenta */
+.compass-ring-outer {
+  transform-origin: 180px 180px;
+  animation: compassRotateOuter 120s linear infinite;
+}
+
+/* Mid ring — contra-rotación muy lenta */
+.compass-ring-mid {
+  transform-origin: 180px 180px;
+  animation: compassRotateMid 180s linear infinite;
+}
+
+/* Centro pulsante */
+.compass-center-dot {
+  animation: statusPulse 3.2s ease-in-out infinite;
+}
+
+/* Etiquetas flotantes sobre el SVG */
+.compass-label {
+  position: absolute;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  opacity: 0.5;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.compass-label--capital {
+  top: 12%;
+  left: 11%;
+  color: var(--accent);
+  opacity: 0.8;
+}
+
+.compass-label--tiempo {
+  top: 36%;
+  right: 1%;
+  opacity: 0.45;
+}
+
+.compass-label--energia {
+  bottom: 22%;
+  left: 7%;
+  opacity: 0.4;
+}
+
+.compass-label--ia {
+  top: 29%;
+  right: 38%;
+  color: var(--accent);
+  opacity: 0.65;
+}
+
+/* ── Logbook strip (debajo del grid) ─────────────────────── */
+
+.home-hero-logbook {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2.5rem;
+  align-items: end;
+  padding-bottom: 4.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Quote de manifiesto ─────────────────────────────────── */
+
+.home-manifesto-quote {
+  margin: 0 0 2.5rem;
+  padding: 1.4rem 1.8rem;
+  border-left: 2px solid rgba(185,239,69,0.45);
+  font-size: clamp(1.05rem, 1.8vw, 1.32rem);
+  color: var(--text);
+  line-height: 1.45;
+  font-style: normal;
+  letter-spacing: -0.02em;
+  background: rgba(185,239,69,0.025);
+  border-radius: 0 12px 12px 0;
+}
+
+/* ── Principios V2 — lista editorial ─────────────────────── */
+
+.home-principles-v2 {
+  display: grid;
+  gap: 0;
+}
+
+.principle-v2 {
+  display: grid;
+  grid-template-columns: 2.2rem 1fr;
+  gap: 1.5rem;
+  align-items: baseline;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  cursor: default;
+}
+
+.principle-v2:first-child {
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.principle-v2-num {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  opacity: 0.65;
+  text-transform: uppercase;
+  padding-top: 0.3rem;
+  flex-shrink: 0;
+}
+
+.principle-v2-title {
+  display: block;
+  font-size: clamp(1.08rem, 2.2vw, 1.52rem);
+  letter-spacing: -0.035em;
+  color: var(--text);
+  line-height: 1.1;
+  margin-bottom: 0.45rem;
+  transition: color 0.28s ease;
+}
+
+.principle-v2:hover .principle-v2-title {
+  color: var(--accent);
+}
+
+.principle-v2:hover .principle-v2-num {
+  opacity: 1;
+}
+
+.principle-v2-sub {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ── Hover mejorado en observe items ─────────────────────── */
+
+.home-observe-item {
+  transition: background 0.22s ease;
+}
+
+.home-observe-item:hover {
+  background: rgba(255,255,255,0.02);
+}
+
+/* ── Responsive HOME V2 ──────────────────────────────────── */
+
+@media (max-width: 980px) {
+  .home-hero-wrap {
+    grid-template-columns: 1fr;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+    gap: 2rem;
+  }
+
+  .home-hero-visual {
+    display: none;
+  }
+
+  .home-hero-logbook {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .home-hero-logbook .hero-signature {
+    text-align: left;
+  }
+}
+
+@media (max-width: 640px) {
+  .home-h1 {
+    font-size: clamp(2.4rem, 11.5vw, 3.2rem);
+  }
+
+  .home-manifesto-quote {
+    padding: 1.1rem 1.3rem;
+    font-size: 1rem;
+  }
+
+  .principle-v2 {
+    grid-template-columns: 1.8rem 1fr;
+    gap: 1rem;
+    padding: 1.2rem 0;
+  }
+
+  .principle-v2-title {
+    font-size: clamp(1rem, 4.5vw, 1.2rem);
+  }
+}
+
 /* ── prefers-reduced-motion ──────────────────────────────── */
 
 @media (prefers-reduced-motion: reduce) {
+  /* Brújula — desactiva rotaciones */
+  .compass-ring-outer,
+  .compass-ring-mid,
+  .compass-center-dot {
+    animation: none;
+  }
+
+  /* Principios — desactiva color hover */
+  .principle-v2:hover .principle-v2-title {
+    color: var(--text);
+  }
+
   /* Navbar — desactiva transiciones */
   .nav {
     transition: none;
