@@ -85,6 +85,7 @@
 
     <!-- ── HERO ─────────────────────────────────────────────── -->
     <section class="hero home-hero" id="inicio">
+      <div class="hero-dotgrid" aria-hidden="true"></div>
       <div class="container home-hero-wrap">
 
         <!-- Izquierda: copy -->
@@ -113,92 +114,8 @@
           </div>
         </div>
 
-        <!-- Derecha: brújula mini + logbook (columna unificada) -->
+        <!-- Derecha: logbook -->
         <aside class="home-hero-right reveal" aria-label="Estado del experimento activo">
-
-          <!-- Brújula decorativa — ventana recortada -->
-          <div class="hero-compass-wrap" aria-hidden="true">
-            <svg class="hero-compass" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg" role="presentation">
-              <defs>
-                <radialGradient id="cGlow" cx="50%" cy="50%" r="50%">
-                  <stop offset="0%" stop-color="rgba(185,239,69,0.16)"/>
-                  <stop offset="60%" stop-color="rgba(185,239,69,0.03)"/>
-                  <stop offset="100%" stop-color="transparent"/>
-                </radialGradient>
-                <radialGradient id="cCenter" cx="50%" cy="50%" r="50%">
-                  <stop offset="0%" stop-color="rgba(185,239,69,0.6)"/>
-                  <stop offset="100%" stop-color="transparent"/>
-                </radialGradient>
-              </defs>
-
-              <circle cx="140" cy="140" r="136" fill="url(#cGlow)"/>
-
-              <!-- Outer ring (rotates) -->
-              <g class="compass-ring-outer">
-                <circle cx="140" cy="140" r="125" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-                <line x1="140" y1="15" x2="140" y2="28" stroke="rgba(185,239,69,0.55)" stroke-width="1.5"/>
-                <line x1="265" y1="140" x2="252" y2="140" stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
-                <line x1="140" y1="265" x2="140" y2="252" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
-                <line x1="15" y1="140" x2="28" y2="140" stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
-                <line x1="228" y1="52" x2="219" y2="61" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-                <line x1="228" y1="228" x2="219" y2="219" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-                <line x1="52" y1="228" x2="61" y2="219" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-                <line x1="52" y1="52" x2="61" y2="61" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-              </g>
-
-              <!-- Mid dashed ring (counter-rotates) -->
-              <g class="compass-ring-mid">
-                <circle cx="140" cy="140" r="83" stroke="rgba(255,255,255,0.045)" stroke-width="1" stroke-dasharray="3 8"/>
-              </g>
-
-              <!-- Inner ring -->
-              <circle cx="140" cy="140" r="40" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-
-              <!-- Radial lines -->
-              <g stroke="rgba(255,255,255,0.04)" stroke-width="1">
-                <line x1="140" y1="140" x2="140" y2="15"/>
-                <line x1="140" y1="140" x2="140" y2="265"/>
-                <line x1="140" y1="140" x2="265" y2="140"/>
-                <line x1="140" y1="140" x2="15" y2="140"/>
-                <line x1="140" y1="140" x2="228" y2="52"/>
-                <line x1="140" y1="140" x2="228" y2="228"/>
-                <line x1="140" y1="140" x2="52" y2="228"/>
-                <line x1="140" y1="140" x2="52" y2="52"/>
-              </g>
-
-              <!-- Node Capital (θ=330°, r=100) → (90, 53) -->
-              <g>
-                <line x1="90" y1="53" x2="140" y2="140" stroke="rgba(185,239,69,0.2)" stroke-width="1"/>
-                <circle cx="90" cy="53" r="4" fill="rgba(185,239,69,0.85)"/>
-                <circle cx="90" cy="53" r="9" stroke="rgba(185,239,69,0.22)" stroke-width="1" fill="none"/>
-              </g>
-
-              <!-- Node Tiempo (θ=70°, r=108) → (241, 103) -->
-              <g>
-                <line x1="241" y1="103" x2="140" y2="140" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
-                <circle cx="241" cy="103" r="3" fill="rgba(255,255,255,0.45)"/>
-              </g>
-
-              <!-- Node Energía (θ=220°, r=92) → (81, 211) -->
-              <g>
-                <line x1="81" y1="211" x2="140" y2="140" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-                <circle cx="81" cy="211" r="2.5" fill="rgba(255,255,255,0.3)"/>
-              </g>
-
-              <!-- Node Encaje (θ=148°, r=74) → (179, 203) -->
-              <circle cx="179" cy="203" r="2.5" fill="rgba(255,255,255,0.28)"/>
-
-              <!-- Node IA (θ=30°, r=56) → (168, 92) -->
-              <circle cx="168" cy="92" r="2" fill="rgba(185,239,69,0.55)"/>
-
-              <!-- Center -->
-              <circle cx="140" cy="140" r="14" fill="url(#cCenter)" opacity="0.65"/>
-              <circle cx="140" cy="140" r="8" stroke="rgba(185,239,69,0.22)" stroke-width="1" fill="none"/>
-              <line x1="133" y1="140" x2="147" y2="140" stroke="rgba(185,239,69,0.55)" stroke-width="1"/>
-              <line x1="140" y1="133" x2="140" y2="147" stroke="rgba(185,239,69,0.55)" stroke-width="1"/>
-              <circle cx="140" cy="140" r="3" fill="rgba(185,239,69,1)" class="compass-center-dot"/>
-            </svg>
-          </div>
 
           <!-- Logbook -->
           <div class="hero-logbook">
