@@ -865,36 +865,36 @@
       // Checkpoints: A→ D7:25000 D14:24950 D21:24600 D28:24200
       //              B→ D7:8000  D14:7800  D21:7200  D28:5760 (D25: imprevisto ventilación −800€)
       const dailyData = [
-        { day: 1,  daniel: { timeInvested: 0.5,  capital: 25000, energy: 6.0, psychology: 5.0 }, marta: { timeInvested: 1.5,  capital: 8000, energy: 8.0, psychology: 6.0 } },
-        { day: 2,  daniel: { timeInvested: 1.0,  capital: 25000, energy: 5.0, psychology: 4.0 }, marta: { timeInvested: 2.0,  capital: 8000, energy: 7.0, psychology: 5.0 } },
-        { day: 3,  daniel: { timeInvested: 0.5,  capital: 25000, energy: 5.0, psychology: 4.0 }, marta: { timeInvested: 1.0,  capital: 8000, energy: 7.0, psychology: 5.0 } },
-        { day: 4,  daniel: { timeInvested: 1.0,  capital: 25000, energy: 5.0, psychology: 4.0 }, marta: { timeInvested: 1.5,  capital: 8000, energy: 7.0, psychology: 5.0 } },
-        { day: 5,  daniel: { timeInvested: 1.0,  capital: 25000, energy: 5.0, psychology: 4.0 }, marta: { timeInvested: 2.0,  capital: 8000, energy: 7.0, psychology: 5.0 } },
-        { day: 6,  daniel: { timeInvested: 0.5,  capital: 25000, energy: 4.0, psychology: 3.0 }, marta: { timeInvested: 2.0,  capital: 8000, energy: 7.0, psychology: 5.0 } },
-        { day: 7,  daniel: { timeInvested: 1.0,  capital: 25000, energy: 4.0, psychology: 4.0 }, marta: { timeInvested: 2.5,  capital: 8000, energy: 7.0, psychology: 5.0 } },
-        { day: 8,  daniel: { timeInvested: 0.5,  capital: 25000, energy: 5.0, psychology: 4.0 }, marta: { timeInvested: 2.5,  capital: 8000, energy: 7.0, psychology: 5.0 } },
-        { day: 9,  daniel: { timeInvested: 0.5,  capital: 25000, energy: 5.0, psychology: 4.0 }, marta: { timeInvested: 2.0,  capital: 7980, energy: 6.0, psychology: 5.0 } },
-        { day: 10, daniel: { timeInvested: 1.0,  capital: 24980, energy: 5.0, psychology: 4.0 }, marta: { timeInvested: 3.0,  capital: 7950, energy: 7.0, psychology: 6.0 } },
-        { day: 11, daniel: { timeInvested: 0.5,  capital: 24960, energy: 5.0, psychology: 4.0 }, marta: { timeInvested: 1.5,  capital: 7900, energy: 6.0, psychology: 5.0 } },
-        { day: 12, daniel: { timeInvested: 4.0,  capital: 24950, energy: 5.0, psychology: 4.0 }, marta: { timeInvested: 11.0, capital: 7850, energy: 7.0, psychology: 5.0 } },
-        { day: 13, daniel: { timeInvested: 1.0,  capital: 24950, energy: 5.0, psychology: 4.0 }, marta: { timeInvested: 2.5,  capital: 7820, energy: 6.0, psychology: 5.0 } },
-        { day: 14, daniel: { timeInvested: 1.5,  capital: 24950, energy: 5.0, psychology: 4.0 }, marta: { timeInvested: 2.5,  capital: 7800, energy: 6.0, psychology: 5.0 } },
-        { day: 15, daniel: { timeInvested: 1.0,  capital: 24900, energy: 5.0, psychology: 4.0 }, marta: { timeInvested: 3.0,  capital: 7750, energy: 6.0, psychology: 5.0 } },
-        { day: 16, daniel: { timeInvested: 0.5,  capital: 24800, energy: 4.0, psychology: 4.0 }, marta: { timeInvested: 2.5,  capital: 7650, energy: 6.0, psychology: 5.0 } },
-        { day: 17, daniel: { timeInvested: 0.5,  capital: 24750, energy: 4.0, psychology: 4.0 }, marta: { timeInvested: 2.0,  capital: 7350, energy: 6.0, psychology: 5.0 } },
-        { day: 18, daniel: { timeInvested: 1.0,  capital: 24700, energy: 4.0, psychology: 4.0 }, marta: { timeInvested: 2.5,  capital: 7250, energy: 6.0, psychology: 5.0 } },
-        { day: 19, daniel: { timeInvested: 0.5,  capital: 24680, energy: 4.0, psychology: 4.0 }, marta: { timeInvested: 3.0,  capital: 7250, energy: 5.0, psychology: 5.0 } },
-        { day: 20, daniel: { timeInvested: 1.0,  capital: 24650, energy: 4.0, psychology: 4.0 }, marta: { timeInvested: 2.0,  capital: 7200, energy: 5.0, psychology: 5.0 } },
-        { day: 21, daniel: { timeInvested: 1.5,  capital: 24600, energy: 4.0, psychology: 4.0 }, marta: { timeInvested: 2.0,  capital: 7200, energy: 5.0, psychology: 5.0 } },
-        { day: 22, daniel: { timeInvested: 0.5,  capital: 24580, energy: 4.0, psychology: 4.0 }, marta: { timeInvested: 2.5,  capital: 7150, energy: 5.0, psychology: 5.0 } },
-        { day: 23, daniel: { timeInvested: 1.0,  capital: 24500, energy: 4.0, psychology: 4.0 }, marta: { timeInvested: 2.0,  capital: 7050, energy: 5.0, psychology: 5.0 } },
-        { day: 24, daniel: { timeInvested: 1.0,  capital: 24400, energy: 4.0, psychology: 4.0 }, marta: { timeInvested: 2.5,  capital: 6950, energy: 5.0, psychology: 5.0 } },
-        { day: 25, daniel: { timeInvested: 0.5,  capital: 24350, energy: 4.0, psychology: 3.0 }, marta: { timeInvested: 2.0,  capital: 6150, energy: 5.0, psychology: 5.0 } },
-        { day: 26, daniel: { timeInvested: 1.0,  capital: 24300, energy: 4.0, psychology: 3.0 }, marta: { timeInvested: 2.0,  capital: 6050, energy: 5.0, psychology: 5.0 } },
-        { day: 27, daniel: { timeInvested: 1.0,  capital: 24250, energy: 4.0, psychology: 3.0 }, marta: { timeInvested: 2.5,  capital: 5910, energy: 5.0, psychology: 5.0 } },
-        { day: 28, daniel: { timeInvested: 1.0,  capital: 24200, energy: 4.0, psychology: 3.0 }, marta: { timeInvested: 2.0,  capital: 5760, energy: 5.7, psychology: 5.0 } },
-        { day: 29, daniel: { timeInvested: 0.5,  capital: 24150, energy: 4.0, psychology: 3.0 }, marta: { timeInvested: 2.5,  capital: 5700, energy: 5.5, psychology: 5.0 } },
-        { day: 30, daniel: { timeInvested: 1.0,  capital: 24100, energy: 4.0, psychology: 3.0 }, marta: { timeInvested: 2.0,  capital: 5650, energy: 5.5, psychology: 5.0 } }
+        { day: 1,  perfilA: { timeInvested: 0.5,  capital: 25000, energy: 6.0, psychology: 5.0 }, perfilB: { timeInvested: 1.5,  capital: 8000, energy: 8.0, psychology: 6.0 } },
+        { day: 2,  perfilA: { timeInvested: 1.0,  capital: 25000, energy: 5.0, psychology: 4.0 }, perfilB: { timeInvested: 2.0,  capital: 8000, energy: 7.0, psychology: 5.0 } },
+        { day: 3,  perfilA: { timeInvested: 0.5,  capital: 25000, energy: 5.0, psychology: 4.0 }, perfilB: { timeInvested: 1.0,  capital: 8000, energy: 7.0, psychology: 5.0 } },
+        { day: 4,  perfilA: { timeInvested: 1.0,  capital: 25000, energy: 5.0, psychology: 4.0 }, perfilB: { timeInvested: 1.5,  capital: 8000, energy: 7.0, psychology: 5.0 } },
+        { day: 5,  perfilA: { timeInvested: 1.0,  capital: 25000, energy: 5.0, psychology: 4.0 }, perfilB: { timeInvested: 2.0,  capital: 8000, energy: 7.0, psychology: 5.0 } },
+        { day: 6,  perfilA: { timeInvested: 0.5,  capital: 25000, energy: 4.0, psychology: 3.0 }, perfilB: { timeInvested: 2.0,  capital: 8000, energy: 7.0, psychology: 5.0 } },
+        { day: 7,  perfilA: { timeInvested: 1.0,  capital: 25000, energy: 4.0, psychology: 4.0 }, perfilB: { timeInvested: 2.5,  capital: 8000, energy: 7.0, psychology: 5.0 } },
+        { day: 8,  perfilA: { timeInvested: 0.5,  capital: 25000, energy: 5.0, psychology: 4.0 }, perfilB: { timeInvested: 2.5,  capital: 8000, energy: 7.0, psychology: 5.0 } },
+        { day: 9,  perfilA: { timeInvested: 0.5,  capital: 25000, energy: 5.0, psychology: 4.0 }, perfilB: { timeInvested: 2.0,  capital: 7980, energy: 6.0, psychology: 5.0 } },
+        { day: 10, perfilA: { timeInvested: 1.0,  capital: 24980, energy: 5.0, psychology: 4.0 }, perfilB: { timeInvested: 3.0,  capital: 7950, energy: 7.0, psychology: 6.0 } },
+        { day: 11, perfilA: { timeInvested: 0.5,  capital: 24960, energy: 5.0, psychology: 4.0 }, perfilB: { timeInvested: 1.5,  capital: 7900, energy: 6.0, psychology: 5.0 } },
+        { day: 12, perfilA: { timeInvested: 4.0,  capital: 24950, energy: 5.0, psychology: 4.0 }, perfilB: { timeInvested: 11.0, capital: 7850, energy: 7.0, psychology: 5.0 } },
+        { day: 13, perfilA: { timeInvested: 1.0,  capital: 24950, energy: 5.0, psychology: 4.0 }, perfilB: { timeInvested: 2.5,  capital: 7820, energy: 6.0, psychology: 5.0 } },
+        { day: 14, perfilA: { timeInvested: 1.5,  capital: 24950, energy: 5.0, psychology: 4.0 }, perfilB: { timeInvested: 2.5,  capital: 7800, energy: 6.0, psychology: 5.0 } },
+        { day: 15, perfilA: { timeInvested: 1.0,  capital: 24900, energy: 5.0, psychology: 4.0 }, perfilB: { timeInvested: 3.0,  capital: 7750, energy: 6.0, psychology: 5.0 } },
+        { day: 16, perfilA: { timeInvested: 0.5,  capital: 24800, energy: 4.0, psychology: 4.0 }, perfilB: { timeInvested: 2.5,  capital: 7650, energy: 6.0, psychology: 5.0 } },
+        { day: 17, perfilA: { timeInvested: 0.5,  capital: 24750, energy: 4.0, psychology: 4.0 }, perfilB: { timeInvested: 2.0,  capital: 7350, energy: 6.0, psychology: 5.0 } },
+        { day: 18, perfilA: { timeInvested: 1.0,  capital: 24700, energy: 4.0, psychology: 4.0 }, perfilB: { timeInvested: 2.5,  capital: 7250, energy: 6.0, psychology: 5.0 } },
+        { day: 19, perfilA: { timeInvested: 0.5,  capital: 24680, energy: 4.0, psychology: 4.0 }, perfilB: { timeInvested: 3.0,  capital: 7250, energy: 5.0, psychology: 5.0 } },
+        { day: 20, perfilA: { timeInvested: 1.0,  capital: 24650, energy: 4.0, psychology: 4.0 }, perfilB: { timeInvested: 2.0,  capital: 7200, energy: 5.0, psychology: 5.0 } },
+        { day: 21, perfilA: { timeInvested: 1.5,  capital: 24600, energy: 4.0, psychology: 4.0 }, perfilB: { timeInvested: 2.0,  capital: 7200, energy: 5.0, psychology: 5.0 } },
+        { day: 22, perfilA: { timeInvested: 0.5,  capital: 24580, energy: 4.0, psychology: 4.0 }, perfilB: { timeInvested: 2.5,  capital: 7150, energy: 5.0, psychology: 5.0 } },
+        { day: 23, perfilA: { timeInvested: 1.0,  capital: 24500, energy: 4.0, psychology: 4.0 }, perfilB: { timeInvested: 2.0,  capital: 7050, energy: 5.0, psychology: 5.0 } },
+        { day: 24, perfilA: { timeInvested: 1.0,  capital: 24400, energy: 4.0, psychology: 4.0 }, perfilB: { timeInvested: 2.5,  capital: 6950, energy: 5.0, psychology: 5.0 } },
+        { day: 25, perfilA: { timeInvested: 0.5,  capital: 24350, energy: 4.0, psychology: 3.0 }, perfilB: { timeInvested: 2.0,  capital: 6150, energy: 5.0, psychology: 5.0 } },
+        { day: 26, perfilA: { timeInvested: 1.0,  capital: 24300, energy: 4.0, psychology: 3.0 }, perfilB: { timeInvested: 2.0,  capital: 6050, energy: 5.0, psychology: 5.0 } },
+        { day: 27, perfilA: { timeInvested: 1.0,  capital: 24250, energy: 4.0, psychology: 3.0 }, perfilB: { timeInvested: 2.5,  capital: 5910, energy: 5.0, psychology: 5.0 } },
+        { day: 28, perfilA: { timeInvested: 1.0,  capital: 24200, energy: 4.0, psychology: 3.0 }, perfilB: { timeInvested: 2.0,  capital: 5760, energy: 5.7, psychology: 5.0 } },
+        { day: 29, perfilA: { timeInvested: 0.5,  capital: 24150, energy: 4.0, psychology: 3.0 }, perfilB: { timeInvested: 2.5,  capital: 5700, energy: 5.5, psychology: 5.0 } },
+        { day: 30, perfilA: { timeInvested: 1.0,  capital: 24100, energy: 4.0, psychology: 3.0 }, perfilB: { timeInvested: 2.0,  capital: 5650, energy: 5.5, psychology: 5.0 } }
       ];
 
       /* =====================================================
@@ -905,15 +905,15 @@
       if (!timelineCtx) return;
 
       const profileColors = {
-        daniel: { border: "rgba(120,170,210,1)", fill: "rgba(120,170,210,0.12)" },
-        marta:  { border: "rgba(185,239,69,1)",  fill: "rgba(185,239,69,0.10)" }
+        perfilA: { border: "rgba(120,170,210,1)", fill: "rgba(120,170,210,0.12)" },
+        perfilB: { border: "rgba(185,239,69,1)",  fill: "rgba(185,239,69,0.10)" }
       };
 
       const metricConfig = {
-        capital:    { label: "Capital restante (€)", extractA: d => d.daniel.capital,    extractB: d => d.marta.capital },
-        energy:     { label: "Energía (0–10)",        extractA: d => d.daniel.energy,     extractB: d => d.marta.energy },
-        time:       { label: "Tiempo invertido (h)",  extractA: d => d.daniel.timeInvested, extractB: d => d.marta.timeInvested },
-        psychology: { label: "Psicología (0–10)",     extractA: d => d.daniel.psychology, extractB: d => d.marta.psychology }
+        capital:    { label: "Capital restante (€)", extractA: d => d.perfilA.capital,    extractB: d => d.perfilB.capital },
+        energy:     { label: "Energía (0–10)",        extractA: d => d.perfilA.energy,     extractB: d => d.perfilB.energy },
+        time:       { label: "Tiempo invertido (h)",  extractA: d => d.perfilA.timeInvested, extractB: d => d.perfilB.timeInvested },
+        psychology: { label: "Psicología (0–10)",     extractA: d => d.perfilA.psychology, extractB: d => d.perfilB.psychology }
       };
 
       let activeMetric = "capital";
@@ -958,8 +958,8 @@
           {
             label: "Perfil A",
             data: dailyData.map(cfg.extractA),
-            borderColor: profileColors.daniel.border,
-            backgroundColor: profileColors.daniel.fill,
+            borderColor: profileColors.perfilA.border,
+            backgroundColor: profileColors.perfilA.fill,
             tension: 0.32,
             pointRadius: 2,
             pointHoverRadius: 4,
@@ -968,8 +968,8 @@
           {
             label: "Perfil B",
             data: dailyData.map(cfg.extractB),
-            borderColor: profileColors.marta.border,
-            backgroundColor: profileColors.marta.fill,
+            borderColor: profileColors.perfilB.border,
+            backgroundColor: profileColors.perfilB.fill,
             tension: 0.32,
             pointRadius: 2,
             pointHoverRadius: 4,
