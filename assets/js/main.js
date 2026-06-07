@@ -1,6 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
   const navToggle = document.querySelector(".nav-toggle");
   const navMenu = document.querySelector(".nav-menu");
+
+  /* ── Active nav link ──────────────────────────────────── */
+  (function markActiveNavLink() {
+    const currentPath = window.location.pathname
+      .replace(/\/index\.html$/, "")
+      .replace(/\/$/, "") || "/";
+    document.querySelectorAll(".nav-menu a:not(.cta-primary)").forEach((link) => {
+      const href = (link.getAttribute("href") || "")
+        .split("#")[0]
+        .replace(/\/index\.html$/, "")
+        .replace(/\/$/, "") || "/";
+      const isHome = href === "/" && (currentPath === "/" || currentPath === "");
+      const isSection = href !== "/" && currentPath.startsWith(href);
+      if (isHome || isSection) {
+        link.classList.add("is-active");
+        link.setAttribute("aria-current", "page");
+      }
+    });
+  })();
   const form = document.querySelector(".form");
   const emailInput = document.querySelector("#email");
   const formMessage = document.querySelector("#form-message");

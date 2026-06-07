@@ -8591,3 +8591,218 @@ details.metrics-hito[open] .metrics-hito-chevron {
   .metrics-hito-accordion-body { animation: none; }
   .metrics-hito-chevron { transition: none; }
 }
+
+/* =========================================================
+   UX/UI REDISEÑO v2 — Navegación, orientación, identidad
+========================================================= */
+
+/* ── Estado activo en navbar ─────────────────────────────── */
+
+.nav-menu a.is-active:not(.cta-primary) {
+  background: rgba(185, 239, 69, 0.1);
+  color: var(--text);
+  box-shadow: inset 0 0 0 1px rgba(185, 239, 69, 0.14);
+}
+
+/* ── Subnav contextual de experimento ────────────────────── */
+
+.exp-subnav {
+  position: sticky;
+  top: 78px;
+  z-index: 88;
+  background: rgba(4, 12, 8, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.exp-subnav-inner {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  height: 46px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 0 0.25rem;
+}
+
+.exp-subnav-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.exp-subnav-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.78rem;
+  border-radius: 999px;
+  font-size: 0.83rem;
+  color: var(--muted);
+  white-space: nowrap;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.exp-subnav-link:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.exp-subnav-link:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(185, 239, 69, 0.28);
+}
+
+.exp-subnav-link.is-active {
+  color: var(--accent);
+  background: rgba(185, 239, 69, 0.09);
+  font-weight: 600;
+}
+
+.exp-subnav-sep {
+  flex: 1;
+  min-width: 0.5rem;
+}
+
+.exp-subnav-back {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.32);
+  letter-spacing: 0.01em;
+  gap: 0.3rem;
+}
+
+.exp-subnav-back:hover {
+  color: var(--muted);
+  background: transparent;
+}
+
+/* ── Identidad visual: Diario — acento bitácora azul/cyan ── */
+
+.project-diary-page .diary-hero-v2 {
+  position: relative;
+}
+
+.project-diary-page .diary-hero-v2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(120, 170, 210, 0.55) 40%,
+    rgba(120, 170, 210, 0.75) 50%,
+    rgba(120, 170, 210, 0.55) 60%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ── Identidad visual: Métricas — acento analítico ──────── */
+
+.project-metrics-page .metrics-hero-v2 {
+  position: relative;
+}
+
+.project-metrics-page .metrics-hero-v2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(80, 140, 210, 0.45) 35%,
+    rgba(100, 160, 230, 0.65) 50%,
+    rgba(80, 140, 210, 0.45) 65%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ── Lavandería — elemento visual temático: tambor ──────── */
+
+@keyframes drumRotate {
+  from { transform: translateY(-50%) rotate(0deg); }
+  to   { transform: translateY(-50%) rotate(360deg); }
+}
+
+.project-page.exp-page .exp-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-page.exp-page .exp-hero::before {
+  content: "";
+  position: absolute;
+  right: -3%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  border: 1px solid rgba(185, 239, 69, 0.05);
+  box-shadow:
+    inset 0 0 0 40px rgba(185, 239, 69, 0.012),
+    0 0 0 40px rgba(185, 239, 69, 0.010),
+    0 0 0 80px rgba(185, 239, 69, 0.006),
+    0 0 0 130px rgba(185, 239, 69, 0.003);
+  background: repeating-conic-gradient(
+    rgba(185, 239, 69, 0.032) 0deg,
+    transparent 2deg,
+    transparent 60deg
+  );
+  pointer-events: none;
+  z-index: 0;
+  animation: drumRotate 38s linear infinite;
+}
+
+@media (max-width: 860px) {
+  .project-page.exp-page .exp-hero::before {
+    width: 240px;
+    height: 240px;
+    right: -10%;
+    opacity: 0.55;
+  }
+}
+
+@media (max-width: 640px) {
+  .project-page.exp-page .exp-hero::before {
+    display: none;
+  }
+}
+
+/* ── Subnav responsive ───────────────────────────────────── */
+
+@media (max-width: 640px) {
+  .exp-subnav {
+    top: 68px;
+  }
+
+  .exp-subnav-inner {
+    height: 42px;
+  }
+
+  .exp-subnav-link {
+    font-size: 0.79rem;
+    padding: 0.26rem 0.6rem;
+  }
+}
+
+/* ── prefers-reduced-motion (rediseño v2) ────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  .project-page.exp-page .exp-hero::before {
+    animation: none;
+  }
+  .nav-menu a.is-active:not(.cta-primary) {
+    transition: none;
+  }
+}
