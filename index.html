@@ -404,5 +404,44 @@
     </div>
   </footer>
 
+  <!-- ── MODAL DE BIENVENIDA ───────────────────────────────── -->
+  <div class="welcome-modal" id="welcome-modal" aria-hidden="true">
+    <div
+      class="welcome-modal-box"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="welcome-modal-title"
+      aria-describedby="welcome-modal-desc"
+    >
+      <button class="welcome-modal-close" id="welcome-modal-close" aria-label="Cerrar">
+        <svg width="11" height="11" viewBox="0 0 11 11" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+          <line x1="1" y1="1" x2="10" y2="10"/><line x1="10" y1="1" x2="1" y2="10"/>
+        </svg>
+      </button>
+
+      <div class="welcome-modal-signal" aria-hidden="true"></div>
+
+      <h2 class="welcome-modal-title" id="welcome-modal-title">
+        ¿Nuevo en<br><span class="accent">The Leonis Project?</span>
+      </h2>
+
+      <div class="welcome-modal-body" id="welcome-modal-desc">
+        <p>Analizamos micronegocios, IA aplicada y fricción real desde una pregunta simple: ¿qué exige construir un pequeño sistema económico compatible con una vida real?</p>
+        <p>Recibe una lectura semanal con experimentos, métricas y aprendizajes sin humo.</p>
+      </div>
+
+      <div class="welcome-modal-actions">
+        <a class="welcome-modal-cta-primary" href="#suscribete" id="welcome-modal-primary">
+          Recibir la newsletter
+        </a>
+        <button class="welcome-modal-cta-secondary" id="welcome-modal-secondary" type="button">
+          Explorar primero
+        </button>
+      </div>
+
+      <p class="welcome-modal-microcopy">Una lectura semanal. Sin spam. Sin humo.</p>
+    </div>
+  </div>
+
 </body>
 </html>

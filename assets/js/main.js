@@ -107,4 +107,72 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     revealItems.forEach((item) => item.classList.add("is-visible"));
   }
+
+  /* ── Modal de bienvenida ─────────────────────────────────── */
+  (function initWelcomeModal() {
+    const STORAGE_KEY = "leonis_newsletter_welcome_seen_v1";
+    const DELAY_MS = 5000;
+
+    // Solo en la home
+    const path = window.location.pathname
+      .replace(/\/index\.html$/, "")
+      .replace(/\/$/, "") || "/";
+    if (path !== "/") return;
+
+    // Ya visto
+    if (localStorage.getItem(STORAGE_KEY)) return;
+
+    const modal = document.getElementById("welcome-modal");
+    if (!modal) return;
+
+    const closeBtn = document.getElementById("welcome-modal-close");
+    const primaryCta = document.getElementById("welcome-modal-primary");
+    const secondaryCta = document.getElementById("welcome-modal-secondary");
+    let openTimeout;
+
+    function openModal() {
+      modal.classList.add("is-open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+      if (closeBtn) closeBtn.focus();
+    }
+
+    function closeModal() {
+      modal.classList.remove("is-open");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+      localStorage.setItem(STORAGE_KEY, "true");
+    }
+
+    // Escape y focus trap
+    modal.addEventListener("keydown", (e) => {
+      if (!modal.classList.contains("is-open")) return;
+      if (e.key === "Escape") { closeModal(); return; }
+      if (e.key === "Tab") {
+        const focusables = Array.from(modal.querySelectorAll(
+          "button, a[href], [tabindex]:not([tabindex='-1'])"
+        ));
+        const first = focusables[0];
+        const last = focusables[focusables.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault(); last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault(); first.focus();
+        }
+      }
+    });
+
+    // Clic en el backdrop
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    if (closeBtn) closeBtn.addEventListener("click", closeModal);
+    if (secondaryCta) secondaryCta.addEventListener("click", closeModal);
+    if (primaryCta) primaryCta.addEventListener("click", closeModal);
+
+    openTimeout = setTimeout(openModal, DELAY_MS);
+
+    window.addEventListener("pagehide", () => clearTimeout(openTimeout), { once: true });
+  })();
 });
