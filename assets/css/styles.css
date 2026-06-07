@@ -8999,3 +8999,127 @@ details.metrics-hito[open] .metrics-hito-chevron {
     transform: none;
   }
 }
+
+/* ── Modal: panel de formulario ──────────────────────────── */
+
+.welcome-modal-box {
+  max-height: 90vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.08) transparent;
+}
+
+.welcome-modal-form-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 0.45rem;
+  letter-spacing: -0.01em;
+}
+
+.welcome-modal-form-desc {
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin: 0 0 1.1rem;
+}
+
+.welcome-modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin-bottom: 0.75rem;
+}
+
+.welcome-modal-email-label {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--muted);
+  letter-spacing: 0.01em;
+}
+
+.welcome-modal-email-input {
+  display: block;
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 7px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.welcome-modal-email-input::placeholder {
+  color: rgba(255, 255, 255, 0.28);
+}
+
+.welcome-modal-email-input:focus {
+  border-color: rgba(185, 239, 69, 0.38);
+}
+
+.welcome-modal-submit {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1.25rem;
+  background: var(--accent);
+  color: #030c04;
+  font-weight: 700;
+  font-size: 0.9rem;
+  font-family: inherit;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  text-align: center;
+  transition: opacity 0.2s;
+}
+
+.welcome-modal-submit:hover {
+  opacity: 0.88;
+}
+
+.welcome-modal-submit:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(185, 239, 69, 0.5);
+}
+
+.welcome-modal-form-message {
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--muted);
+  margin: 0;
+  min-height: 1em;
+}
+
+.welcome-modal-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.32);
+  font-size: 0.78rem;
+  font-family: inherit;
+  cursor: pointer;
+  padding: 0.2rem 0;
+  margin-top: 0.5rem;
+  transition: color 0.2s;
+}
+
+.welcome-modal-back:hover {
+  color: var(--muted);
+}
+
+.welcome-modal-back:focus-visible {
+  outline: none;
+  color: var(--muted);
+  text-decoration: underline;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .welcome-modal-email-input {
+    transition: none;
+  }
+}

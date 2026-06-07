@@ -419,27 +419,57 @@
         </svg>
       </button>
 
-      <div class="welcome-modal-signal" aria-hidden="true"></div>
+      <!-- Panel 1: Bienvenida -->
+      <div class="welcome-modal-panel" id="welcome-panel-welcome">
+        <div class="welcome-modal-signal" aria-hidden="true"></div>
 
-      <h2 class="welcome-modal-title" id="welcome-modal-title">
-        ¿Nuevo en<br><span class="accent">The Leonis Project?</span>
-      </h2>
+        <h2 class="welcome-modal-title" id="welcome-modal-title">
+          ¿Nuevo en<br><span class="accent">The Leonis Project?</span>
+        </h2>
 
-      <div class="welcome-modal-body" id="welcome-modal-desc">
-        <p>Analizamos micronegocios, IA aplicada y fricción real desde una pregunta simple: ¿qué exige construir un pequeño sistema económico compatible con una vida real?</p>
-        <p>Recibe una lectura semanal con experimentos, métricas y aprendizajes sin humo.</p>
+        <div class="welcome-modal-body" id="welcome-modal-desc">
+          <p>Analizamos micronegocios, IA aplicada y fricción real desde una pregunta simple: ¿qué exige construir un pequeño sistema económico compatible con una vida real?</p>
+          <p>Recibe una lectura semanal con experimentos, métricas y aprendizajes sin humo.</p>
+        </div>
+
+        <div class="welcome-modal-actions">
+          <button class="welcome-modal-cta-primary" id="welcome-modal-primary" type="button">
+            Recibir la newsletter
+          </button>
+          <button class="welcome-modal-cta-secondary" id="welcome-modal-secondary" type="button">
+            Explorar primero
+          </button>
+        </div>
+
+        <p class="welcome-modal-microcopy">Una lectura semanal. Sin spam. Sin humo.</p>
       </div>
 
-      <div class="welcome-modal-actions">
-        <a class="welcome-modal-cta-primary" href="#suscribete" id="welcome-modal-primary">
-          Recibir la newsletter
-        </a>
-        <button class="welcome-modal-cta-secondary" id="welcome-modal-secondary" type="button">
-          Explorar primero
-        </button>
+      <!-- Panel 2: Formulario de suscripción -->
+      <div class="welcome-modal-panel" id="welcome-panel-form" hidden>
+        <h3 class="welcome-modal-form-title" id="welcome-form-heading">
+          Recibe la lectura semanal
+        </h3>
+        <p class="welcome-modal-form-desc">
+          Una vez por semana. Micronegocios, IA aplicada y fricción real. Sin spam. Sin humo.
+        </p>
+        <form class="welcome-modal-form" id="welcome-modal-form" novalidate>
+          <label class="welcome-modal-email-label" for="welcome-email">Tu email</label>
+          <input
+            class="welcome-modal-email-input"
+            id="welcome-email"
+            name="email"
+            type="email"
+            placeholder="tu@email.com"
+            autocomplete="email"
+            required
+          />
+          <button class="welcome-modal-submit" type="submit">Suscribirme</button>
+          <p class="welcome-modal-form-message" id="welcome-form-message" aria-live="polite" aria-atomic="true"></p>
+        </form>
+        <p class="welcome-modal-microcopy">Puedes darte de baja cuando quieras.</p>
+        <button class="welcome-modal-back" id="welcome-modal-back" type="button">← Volver</button>
       </div>
 
-      <p class="welcome-modal-microcopy">Una lectura semanal. Sin spam. Sin humo.</p>
     </div>
   </div>
 
