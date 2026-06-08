@@ -825,9 +825,15 @@ h1 {
   }
 
   .nav-toggle {
+    display: -webkit-inline-flex;
     display: inline-flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
     flex-direction: column;
+    -webkit-align-items: center;
     align-items: center;
+    -webkit-justify-content: center;
     justify-content: center;
   }
 
