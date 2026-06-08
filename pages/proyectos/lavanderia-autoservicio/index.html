@@ -27,15 +27,33 @@
             <span class="brand-green">PROJECT</span>
           </span>
         </a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menú">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <div class="nav-menu" id="nav-menu">
-          <a href="/">Inicio</a>
-          <a href="/pages/laboratorio/index.html">Laboratorio</a>
+        <div class="nav-right">
           <a class="cta cta-primary" href="/#suscribete">Newsletter</a>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Explorar páginas">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+        <div class="nav-menu" id="nav-menu">
+          <ul class="nav-tree-list">
+            <li><a href="/">Inicio</a></li>
+            <li>
+              <a href="/pages/laboratorio/index.html">Laboratorio</a>
+              <ul class="nav-tree-sub">
+                <li>
+                  <span class="nav-tree-group">EXP-01 · Lavandería</span>
+                  <ul class="nav-tree-sub">
+                    <li><a href="/pages/proyectos/lavanderia-autoservicio/index.html">Resumen</a></li>
+                    <li><a href="/pages/proyectos/lavanderia-autoservicio/diario.html">Diario</a></li>
+                    <li><a href="/pages/proyectos/lavanderia-autoservicio/metricas.html">Métricas</a></li>
+                    <li><a href="/pages/proyectos/lavanderia-autoservicio/decisiones.html">Decisiones</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
