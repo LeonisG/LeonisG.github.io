@@ -933,6 +933,11 @@ h1 {
     border-radius: 22px;
   }
 
+  /* Ocultar Newsletter CTA en móvil para no tapar el nombre de marca */
+  .nav-right .cta-primary {
+    display: none;
+  }
+
   .about-blocks {
     grid-template-columns: 1fr;
   }
