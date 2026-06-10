@@ -1656,6 +1656,111 @@ a.home-follow-card:hover .home-follow-arrow {
   border-radius: 0;
 }
 
+/* ── Tarjetas próximamente ───────────────────────────────── */
+
+.home-follow-card--upcoming {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}
+
+.home-follow-card--upcoming .home-follow-kicker {
+  color: var(--muted);
+}
+
+/* ── Experimento activo (home) ───────────────────────────── */
+
+.home-exp {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.home-exp-name {
+  font-size: clamp(1.25rem, 2.2vw, 1.7rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin: 0.5rem 0 0.75rem;
+  line-height: 1.15;
+}
+
+.home-exp-desc {
+  color: var(--muted);
+  font-size: 0.96rem;
+  line-height: 1.65;
+  margin: 0 0 0.75rem;
+}
+
+.home-exp-note {
+  color: var(--muted);
+  font-size: 0.87rem;
+  line-height: 1.6;
+  margin: 0;
+  opacity: 0.65;
+}
+
+.home-exp-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.home-exp-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.85rem 1.1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.025);
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.home-exp-link:hover {
+  border-color: rgba(185, 239, 69, 0.18);
+  background: rgba(185, 239, 69, 0.04);
+  transform: translateX(2px);
+}
+
+.home-exp-link strong {
+  font-size: 0.93rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.home-exp-link span {
+  font-size: 0.8rem;
+  color: var(--muted);
+  opacity: 0.7;
+}
+
+/* ── Disclaimer laboratorio ─────────────────────────────── */
+
+.home-lab-disclaimer {
+  margin-top: 1.75rem;
+  padding: 0.9rem 1.15rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.015);
+  font-size: 0.81rem;
+  color: var(--muted);
+  line-height: 1.65;
+  opacity: 0.75;
+}
+
+/* ── Microcopy newsletter ───────────────────────────────── */
+
+.home-newsletter-micro {
+  margin: 0.6rem 0 0;
+  font-size: 0.78rem;
+  color: var(--muted);
+  opacity: 0.6;
+}
+
 /* ── Responsive (home) ───────────────────────────────────── */
 
 @media (max-width: 1080px) {
@@ -1738,6 +1843,11 @@ a.home-follow-card:hover .home-follow-arrow {
 
   .home-follow-grid {
     grid-template-columns: 1fr;
+  }
+
+  .home-exp {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
   }
 
   .home-section {
