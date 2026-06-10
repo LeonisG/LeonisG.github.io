@@ -1887,17 +1887,7 @@ a.home-follow-card:hover .home-follow-arrow {
    HOME V2 — Brújula de sistema · Rediseño
 ========================================================= */
 
-/* ── Keyframes dot grid ──────────────────────────────────── */
-
-@keyframes dotDrift {
-  from { transform: translate(0, 0); }
-  to   { transform: translate(28px, 28px); }
-}
-
-@keyframes dotWave {
-  0%   { mask-position: -80% 0; -webkit-mask-position: -80% 0; }
-  100% { mask-position: 180% 0; -webkit-mask-position: 180% 0; }
-}
+/* ── Keyframes dot grid — eliminados (fondo estático) ───── */
 
 /* ── Hero inmersivo ──────────────────────────────────────── */
 
@@ -1985,26 +1975,24 @@ a.home-follow-card:hover .home-follow-arrow {
   overflow: hidden;
 }
 
-/* Capa base: dots tenues, drift diagonal continuo */
+/* Capa base: dots tenues, estática */
 .hero-dotgrid::before {
   content: "";
   position: absolute;
   inset: -56px;
   background-image: radial-gradient(circle, rgba(185,239,69,0.072) 1.5px, transparent 1.5px);
   background-size: 28px 28px;
-  animation: dotDrift 40s linear infinite;
   mask-image: radial-gradient(ellipse 110% 100% at 72% 42%, black 15%, rgba(0,0,0,0.45) 55%, transparent 82%);
   -webkit-mask-image: radial-gradient(ellipse 110% 100% at 72% 42%, black 15%, rgba(0,0,0,0.45) 55%, transparent 82%);
 }
 
-/* Capa ola: dots más brillantes, máscara diagonal que barre de izq. a der. */
+/* Capa ola: dots más brillantes, máscara diagonal estática */
 .hero-dotgrid::after {
   content: "";
   position: absolute;
   inset: -56px;
   background-image: radial-gradient(circle, rgba(185,239,69,0.32) 1.5px, transparent 1.5px);
   background-size: 28px 28px;
-  animation: dotDrift 40s linear infinite, dotWave 11s ease-in-out infinite;
   mask-image: linear-gradient(115deg, transparent 0%, transparent 30%, rgba(0,0,0,0.9) 44%, rgba(0,0,0,0.6) 54%, transparent 68%);
   -webkit-mask-image: linear-gradient(115deg, transparent 0%, transparent 30%, rgba(0,0,0,0.9) 44%, rgba(0,0,0,0.6) 54%, transparent 68%);
   mask-size: 300% 100%;
