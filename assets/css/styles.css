@@ -9410,6 +9410,12 @@ details.metrics-hito[open] .metrics-hito-chevron {
   opacity: 0.55;
 }
 
+.blog-tag-category {
+  border-color: rgba(255,255,255,0.13);
+  color: rgba(255,255,255,0.62);
+  background: rgba(255,255,255,0.05);
+}
+
 /* ── Featured article card ──────────────────────────────── */
 
 .blog-featured {
