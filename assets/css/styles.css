@@ -452,6 +452,10 @@ input {
   padding-left: 0.25rem;
 }
 
+.nav-accordion-panel[hidden] {
+  display: none !important;
+}
+
 .nav-tree-sep {
   height: 1px;
   background: rgba(255, 255, 255, 0.06);
