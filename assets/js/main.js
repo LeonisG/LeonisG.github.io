@@ -20,6 +20,51 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   })();
+
+  /* ── Acordeón del menú ───────────────────────────────── */
+  function closeAllAccordions() {
+    document.querySelectorAll('.nav-accordion-btn[aria-expanded="true"]').forEach(btn => {
+      btn.setAttribute('aria-expanded', 'false');
+      if (btn.nextElementSibling) btn.nextElementSibling.hidden = true;
+    });
+  }
+
+  // Auto-expand accordion that contains the current active link
+  document.querySelectorAll('.nav-accordion-panel .is-active').forEach(activeLink => {
+    let panel = activeLink.closest('.nav-accordion-panel');
+    while (panel) {
+      panel.hidden = false;
+      const btn = panel.previousElementSibling;
+      if (btn && btn.classList.contains('nav-accordion-btn')) {
+        btn.setAttribute('aria-expanded', 'true');
+        btn.classList.add('is-active');
+      }
+      panel = panel.parentElement ? panel.parentElement.closest('.nav-accordion-panel') : null;
+    }
+  });
+
+  document.querySelectorAll('.nav-accordion-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      const panel = btn.nextElementSibling;
+      const parentUl = btn.closest('li').parentElement;
+
+      // Close other open siblings at same nesting level
+      if (parentUl) {
+        parentUl.querySelectorAll(':scope > li > .nav-accordion-btn[aria-expanded="true"]').forEach(other => {
+          if (other !== btn) {
+            other.setAttribute('aria-expanded', 'false');
+            other.classList.remove('is-active');
+            if (other.nextElementSibling) other.nextElementSibling.hidden = true;
+          }
+        });
+      }
+
+      btn.setAttribute('aria-expanded', String(!expanded));
+      if (panel) panel.hidden = expanded;
+    });
+  });
+
   const form = document.querySelector(".form");
   const emailInput = document.querySelector("#email");
   const formMessage = document.querySelector("#form-message");
@@ -29,6 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
     navToggle.addEventListener("click", () => {
       const isOpen = navMenu.classList.toggle("is-open");
       navToggle.setAttribute("aria-expanded", String(isOpen));
+      if (!isOpen) closeAllAccordions();
     });
 
     navMenu.querySelectorAll("a").forEach((link) => {
@@ -42,6 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
         navMenu.classList.remove("is-open");
         navToggle.setAttribute("aria-expanded", "false");
+        closeAllAccordions();
       }
     });
 
@@ -50,6 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
         navMenu.classList.remove("is-open");
         navToggle.setAttribute("aria-expanded", "false");
         navToggle.focus();
+        closeAllAccordions();
       }
     });
   }
@@ -57,22 +105,22 @@ document.addEventListener("DOMContentLoaded", () => {
   if (form && emailInput && formMessage) {
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
-    
+
       const email = emailInput.value.trim();
       const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    
+
       if (!email) {
         formMessage.textContent = "Introduce tu email para continuar.";
         return;
       }
-    
+
       if (!isValid) {
         formMessage.textContent = "Parece que el email no es válido.";
         return;
       }
-    
+
       formMessage.textContent = "Enviando...";
-    
+
       try {
         const response = await fetch(
           "https://leonis-worker.adrianleonisgarcia.workers.dev/subscribe",
@@ -84,16 +132,16 @@ document.addEventListener("DOMContentLoaded", () => {
             body: JSON.stringify({ email })
           }
         );
-      
+
         const data = await response.json();
         console.log("Worker response:", data);
-      
+
         if (!response.ok) {
           formMessage.textContent =
             data.error || "No se pudo completar la suscripción.";
           return;
         }
-      
+
         formMessage.textContent =
           "Suscripción completada. Revisa tu correo si hay confirmación pendiente.";
         form.reset();

@@ -353,6 +353,105 @@ input {
   cursor: default;
 }
 
+/* ── Acordeón de navegación ─────────────────────────────── */
+
+.nav-accordion-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  width: 100%;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 0.65rem;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.18s ease;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.nav-accordion-btn:hover,
+.nav-accordion-btn:focus-visible {
+  background: rgba(185, 239, 69, 0.08);
+  outline: none;
+}
+
+.nav-accordion-btn[aria-expanded="true"],
+.nav-accordion-btn.is-active {
+  background: rgba(185, 239, 69, 0.06);
+}
+
+.nav-accordion-btn--sub {
+  padding: 0.32rem 0.5rem;
+  border-radius: 6px;
+  color: var(--muted);
+  font-size: 0.84rem;
+  font-weight: 400;
+}
+
+.nav-accordion-btn--sub:hover,
+.nav-accordion-btn--sub:focus-visible {
+  background: rgba(185, 239, 69, 0.07);
+  color: var(--text);
+}
+
+.nav-accordion-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  position: relative;
+  opacity: 0.45;
+  transition: opacity 0.18s;
+}
+
+.nav-accordion-btn:hover .nav-accordion-icon,
+.nav-accordion-btn[aria-expanded="true"] .nav-accordion-icon {
+  opacity: 0.75;
+}
+
+.nav-accordion-icon::before,
+.nav-accordion-icon::after {
+  content: '';
+  position: absolute;
+  background: currentColor;
+  border-radius: 1px;
+}
+
+.nav-accordion-icon::before {
+  width: 9px;
+  height: 1.5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.nav-accordion-icon::after {
+  width: 1.5px;
+  height: 9px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.nav-accordion-btn[aria-expanded="true"] .nav-accordion-icon::after {
+  opacity: 0;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.nav-accordion-panel--sub {
+  padding-left: 0.25rem;
+}
+
 .nav-tree-sep {
   height: 1px;
   background: rgba(255, 255, 255, 0.06);

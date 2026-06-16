@@ -76,18 +76,29 @@
             <li class="nav-tree-newsletter"><a href="/#suscribete">Newsletter</a></li>
             <li><a href="/">Inicio</a></li>
             <li><a href="/pages/informe-de-encaje/index.html">Asesoría</a></li>
-            <li>
-              <a href="/pages/blog/index.html">Blog</a>
-              <ul class="nav-tree-sub">
+            <li class="nav-has-sub">
+              <button class="nav-accordion-btn" type="button" aria-expanded="false">
+                <span>Blog</span>
+                <span class="nav-accordion-icon" aria-hidden="true"></span>
+              </button>
+              <ul class="nav-tree-sub nav-accordion-panel" hidden>
+                <li><a href="/pages/blog/index.html">Todos los análisis</a></li>
                 <li><a href="/pages/blog/lavanderia-autoservicio.html">Lavandería autoservicio</a></li>
               </ul>
             </li>
-            <li>
-              <a href="/pages/laboratorio/index.html">Laboratorio</a>
-              <ul class="nav-tree-sub">
-                <li>
-                  <span class="nav-tree-group">EXP-01 · Lavandería</span>
-                  <ul class="nav-tree-sub">
+            <li class="nav-has-sub">
+              <button class="nav-accordion-btn" type="button" aria-expanded="false">
+                <span>Laboratorio</span>
+                <span class="nav-accordion-icon" aria-hidden="true"></span>
+              </button>
+              <ul class="nav-tree-sub nav-accordion-panel" hidden>
+                <li><a href="/pages/laboratorio/index.html">Ver laboratorio</a></li>
+                <li class="nav-has-sub">
+                  <button class="nav-accordion-btn nav-accordion-btn--sub" type="button" aria-expanded="false">
+                    <span>EXP-01 · Lavandería</span>
+                    <span class="nav-accordion-icon" aria-hidden="true"></span>
+                  </button>
+                  <ul class="nav-tree-sub nav-accordion-panel nav-accordion-panel--sub" hidden>
                     <li><a href="/pages/proyectos/lavanderia-autoservicio/index.html">Resumen</a></li>
                     <li><a href="/pages/proyectos/lavanderia-autoservicio/diario.html">Diario</a></li>
                     <li><a href="/pages/proyectos/lavanderia-autoservicio/metricas.html">Métricas</a></li>
