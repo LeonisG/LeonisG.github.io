@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Por qué no consigues buenos resultados usando IA | The Leonis Project</title>
+  <meta
+    name="description"
+    content="La IA puede ser muy útil, pero no convierte una petición vaga en una respuesta excelente. Cómo darle contexto, restricciones y criterio para obtener mejores resultados."
+  />
+  <meta name="theme-color" content="#031d10" />
+
+  <meta property="og:title" content="Por qué no consigues buenos resultados usando IA" />
+  <meta property="og:description" content="La IA no sustituye el criterio. Lo amplifica cuando existe y lo deja en evidencia cuando falta." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://theleonisproject.com/pages/blog/por-que-no-consigues-buenos-resultados-usando-ia.html" />
+  <meta property="og:image" content="https://theleonisproject.com/assets/img/og-cover.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Por qué no consigues buenos resultados usando IA" />
+  <meta name="twitter:description" content="La IA no sustituye el criterio. Lo amplifica cuando existe y lo deja en evidencia cuando falta." />
+  <meta name="twitter:image" content="https://theleonisproject.com/assets/img/og-cover.jpg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Por qué no consigues buenos resultados usando IA",
+    "description": "La IA puede ser muy útil, pero no convierte una petición vaga en una respuesta excelente. Cómo darle contexto, restricciones y criterio para obtener mejores resultados.",
+    "author": {
+      "@type": "Organization",
+      "name": "The Leonis Project",
+      "url": "https://theleonisproject.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "The Leonis Project",
+      "url": "https://theleonisproject.com"
+    },
+    "datePublished": "2026-06-19",
+    "articleSection": "IA aplicada",
+    "url": "https://theleonisproject.com/pages/blog/por-que-no-consigues-buenos-resultados-usando-ia.html"
+  }
+  </script>
+
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <script src="/assets/js/main.js" defer></script>
+</head>
+<body class="article-page">
+
+  <header class="site-header">
+    <nav class="nav">
+      <div class="container nav-inner">
+        <a class="brand" href="/" aria-label="Ir al inicio de The Leonis Project">
+          <img class="brand-mark" src="/assets/img/logo-mark.png" alt="Símbolo de The Leonis Project" />
+          <span class="brand-text">
+            <span class="brand-white">THE LEONIS</span>
+            <span class="brand-green">PROJECT</span>
+          </span>
+        </a>
+        <div class="nav-right">
+          <a class="cta cta-primary" href="/#suscribete">Newsletter</a>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Explorar páginas">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+        <div class="nav-menu" id="nav-menu">
+          <ul class="nav-tree-list">
+            <li class="nav-tree-newsletter"><a href="/#suscribete">Newsletter</a></li>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/pages/informe-de-encaje/index.html">Asesoría</a></li>
+            <li class="nav-has-sub">
+              <button class="nav-accordion-btn" type="button" aria-expanded="false">
+                <span>Blog</span>
+                <span class="nav-accordion-icon" aria-hidden="true"></span>
+              </button>
+              <ul class="nav-tree-sub nav-accordion-panel" hidden>
+                <li><a href="/pages/blog/index.html">Todos los artículos</a></li>
+                <li><a href="/pages/blog/lavanderia-autoservicio.html">Lavandería autoservicio</a></li>
+                <li><a href="/pages/blog/por-que-no-consigues-buenos-resultados-usando-ia.html" aria-current="page">IA y resultados genéricos</a></li>
+              </ul>
+            </li>
+            <li class="nav-has-sub">
+              <button class="nav-accordion-btn" type="button" aria-expanded="false">
+                <span>Laboratorio</span>
+                <span class="nav-accordion-icon" aria-hidden="true"></span>
+              </button>
+              <ul class="nav-tree-sub nav-accordion-panel" hidden>
+                <li><a href="/pages/laboratorio/index.html">Ver laboratorio</a></li>
+                <li class="nav-has-sub">
+                  <button class="nav-accordion-btn nav-accordion-btn--sub" type="button" aria-expanded="false">
+                    <span>EXP-01 · Lavandería</span>
+                    <span class="nav-accordion-icon" aria-hidden="true"></span>
+                  </button>
+                  <ul class="nav-tree-sub nav-accordion-panel nav-accordion-panel--sub" hidden>
+                    <li><a href="/pages/proyectos/lavanderia-autoservicio/index.html">Resumen</a></li>
+                    <li><a href="/pages/proyectos/lavanderia-autoservicio/diario.html">Diario</a></li>
+                    <li><a href="/pages/proyectos/lavanderia-autoservicio/metricas.html">Métricas</a></li>
+                    <li><a href="/pages/proyectos/lavanderia-autoservicio/decisiones.html">Decisiones</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ── SUBNAV ─────────────────────────────────────────────── -->
+  <nav class="article-subnav" aria-label="Navegación del artículo">
+    <div class="container article-subnav-inner">
+      <a href="/pages/blog/index.html">← Blog</a>
+      <span aria-hidden="true">·</span>
+      <span>Por qué no consigues buenos resultados usando IA</span>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ── HERO ─────────────────────────────────────────────── -->
+    <section class="hero" id="inicio">
+      <div class="container">
+        <div class="article-hero-grid">
+
+          <!-- ── COLUMNA IZQUIERDA ──────────────────────────── -->
+          <div class="article-hero-left">
+
+            <nav class="exp-breadcrumb" aria-label="Breadcrumb">
+              <a href="/">Inicio</a>
+              <span aria-hidden="true">›</span>
+              <a href="/pages/blog/index.html">Blog</a>
+              <span aria-hidden="true">›</span>
+              <span aria-current="page">Por qué no consigues buenos resultados usando IA</span>
+            </nav>
+
+            <div class="blog-featured-tags">
+              <span class="blog-tag blog-tag-active">Publicado</span>
+              <span class="blog-tag blog-tag-category">IA aplicada</span>
+            </div>
+
+            <h1 class="article-h1">Por qué no consigues<br>buenos resultados<br><span class="accent">usando IA</span></h1>
+
+            <p class="article-intro">
+              Todo el mundo habla de la IA como si fuera una revolución inmediata. Pero muchas personas la prueban, le piden una idea de negocio, un plan, una estrategia o un texto… y reciben algo correcto, educado y bastante mediocre. La frustración no siempre viene de que la IA sea mala. Muchas veces viene de pedirle algo mal definido.
+            </p>
+
+          </div>
+
+          <!-- ── COLUMNA DERECHA ────────────────────────────── -->
+          <div class="article-hero-right">
+
+            <nav class="article-toc" aria-label="Índice del artículo">
+              <span class="article-toc-label">En este artículo</span>
+              <ul class="article-toc-list">
+                <li><a href="#el-encargo">El encargo importa más que la herramienta</a></li>
+                <li><a href="#contexto">La IA necesita contexto</a></li>
+                <li><a href="#restricciones">La IA necesita restricciones</a></li>
+                <li><a href="#criterio">La IA necesita criterio de calidad</a></li>
+                <li><a href="#proceso">Como proceso, no como respuesta única</a></li>
+                <li><a href="#que-puede">Qué puede hacer</a></li>
+                <li><a href="#que-no-puede">Qué no puede hacer</a></li>
+                <li><a href="#metodo">Un método simple</a></li>
+                <li><a href="#prompts">Prompts para copiar</a></li>
+              </ul>
+            </nav>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── META ─────────────────────────────────────────────── -->
+    <section class="section" style="padding-top:0;padding-bottom:0">
+      <div class="container">
+        <div class="blog-post-meta" style="padding-bottom:1.5rem;border-bottom:1px solid var(--line)">
+          <time datetime="2026-06">Junio 2026</time>
+          <span aria-hidden="true">·</span>
+          <span>8–10 min de lectura</span>
+          <span aria-hidden="true">·</span>
+          <span>The Leonis Project</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CONTENIDO PRINCIPAL ───────────────────────────────── -->
+    <section class="section">
+      <div class="container">
+        <div class="article-layout">
+
+          <!-- ── CUERPO DEL ARTÍCULO ─────────────────────────── -->
+          <article class="article-body">
+
+            <h2 id="el-encargo">El encargo importa más que la herramienta</h2>
+
+            <p>Hay una idea que se repite mucho: la IA va a transformarlo todo. Y puede que sea verdad a largo plazo. Pero en el día a día, muchas personas prueban ChatGPT, Claude o Gemini, hacen una pregunta, reciben una respuesta perfectamente estructurada y totalmente inútil, y concluyen que la IA no funciona.</p>
+
+            <p>El problema casi nunca está en la herramienta. Está en el encargo.</p>
+
+            <p>La IA no es una máquina de respuestas perfectas. Es más parecida a un colaborador muy rápido al que hay que dirigir bien. Si le das una dirección clara, contexto suficiente y criterio de calidad, puede hacer trabajo muy bueno. Si le das una pregunta vaga y esperas que adivine lo que necesitas, lo normal es que devuelva algo genérico.</p>
+
+            <p>Y lo genérico no es útil.</p>
+
+            <h2 id="contexto">La IA necesita contexto</h2>
+
+            <p>El error más común es pedir cosas sin decir quién eres, cuál es tu situación, qué sabes ya y qué quieres conseguir exactamente. Prompts del tipo:</p>
+
+            <ul>
+              <li>Dame ideas de negocio rentables</li>
+              <li>Hazme un plan de negocio</li>
+              <li>Escríbeme una estrategia</li>
+              <li>Dime cómo ganar dinero con IA</li>
+            </ul>
+
+            <p>…producen respuestas genéricas porque son encargos genéricos. No hay forma de que la IA sepa qué es relevante para ti si no se lo cuentas.</p>
+
+            <p>La comparación más directa: sería como pedirle a una persona "dime qué negocio debería montar" sin decirle cuánto dinero tienes, cuánto tiempo puedes dedicar, qué sabes hacer, qué riesgo puedes asumir ni qué tipo de vida quieres sostener. Esa persona tampoco podría darte una respuesta útil.</p>
+
+            <!-- ── BLOQUE COMPARATIVO ──────────────────────── -->
+            <div class="prompt-compare" aria-label="Comparación de prompts">
+              <div class="prompt-compare-card prompt-compare-card--weak">
+                <span class="prompt-compare-label">Prompt débil</span>
+                <blockquote class="prompt-compare-text">Dame ideas de negocio rentables.</blockquote>
+                <p class="prompt-compare-note">Sin contexto, sin restricciones, sin objetivo claro. La respuesta será una lista de 10 ideas que sirven para cualquier persona en cualquier situación, es decir, para nadie en concreto.</p>
+              </div>
+              <div class="prompt-compare-card prompt-compare-card--strong">
+                <span class="prompt-compare-label">Prompt útil</span>
+                <blockquote class="prompt-compare-text">Tengo 28 años, trabajo a jornada completa y puedo dedicar 6 horas semanales. Tengo 10.000 € disponibles, no quiero endeudarme y busco explorar pequeños negocios con bajo coste fijo. Analiza opciones realistas, riesgos, tiempo operativo y qué tendría que validar antes de invertir.</blockquote>
+                <p class="prompt-compare-note">Contexto real. Restricciones claras. Objetivo concreto. La respuesta puede ser útil porque hay algo con lo que trabajar.</p>
+              </div>
+            </div>
+
+            <p>La diferencia no está en la herramienta. Está en lo que le das para trabajar.</p>
+
+            <h2 id="restricciones">La IA necesita restricciones</h2>
+
+            <p>Las restricciones no limitan la calidad de la respuesta. La hacen posible.</p>
+
+            <p>Una idea de negocio no existe en el vacío. Existe dentro de una vida concreta, con un capital real, un tiempo real, una ciudad real y una tolerancia al riesgo real. Cuando le das esas restricciones a la IA, deja de generar escenarios para "alguien" y empieza a generar escenarios para ti.</p>
+
+            <p>Las restricciones más útiles que puedes incluir son:</p>
+
+            <ul>
+              <li><strong>Capital disponible</strong> — no el que podrías conseguir, el que tienes ahora.</li>
+              <li><strong>Tiempo semanal real</strong> — no el ideal, el que puedes dedicar de verdad.</li>
+              <li><strong>País o ciudad</strong> — los mercados, las licencias y los costes varían enormemente.</li>
+              <li><strong>Habilidades o experiencia previa</strong> — qué sabes hacer sin tener que aprenderlo desde cero.</li>
+              <li><strong>Tolerancia al riesgo</strong> — cuánto puedes perder sin que eso te ponga en problemas serios.</li>
+              <li><strong>Horizonte temporal</strong> — si buscas algo para el próximo año o para los próximos cinco.</li>
+              <li><strong>Cosas que quieres evitar</strong> — negocios que requieren local, que dependen de empleados, que son estacionales.</li>
+            </ul>
+
+            <p>Cuantas más restricciones reales incluyas, más útil será la respuesta. No porque la IA sea más inteligente, sino porque tiene menos margen para inventarse un escenario que no tiene nada que ver contigo.</p>
+
+            <h2 id="criterio">La IA necesita criterio de calidad</h2>
+
+            <p>El otro gran error es no decirle a la IA qué significa "bueno" en el contexto de tu encargo.</p>
+
+            <p>"Mejóralo" no es suficiente. La IA no sabe si quieres que sea más corto, más persuasivo, más realista, más técnico o más fácil de leer. Si no le dices qué significa mejor, va a hacer algo diferente, pero no necesariamente más útil.</p>
+
+            <p>En cambio, si le dices:</p>
+
+            <div class="prompt-copy-block">
+              <p>Revisa tu respuesta anterior. Hazla menos genérica, más realista y más útil para tomar una decisión. Añade riesgos, supuestos, límites y próximos pasos. Elimina frases obvias o motivacionales.</p>
+            </div>
+
+            <p>…tiene un criterio claro con el que trabajar. Sabe qué quieres eliminar, qué quieres añadir y con qué finalidad.</p>
+
+            <p>La IA mejora mucho cuando le dices qué significa "bueno". Sin eso, está adivinando.</p>
+
+            <h2 id="proceso">Como proceso, no como respuesta única</h2>
+
+            <p>Mucha gente usa la IA así:</p>
+
+            <p style="font-style:italic;color:var(--muted);">pregunta → respuesta → decepción</p>
+
+            <p>Y la usa así porque es lo más parecido a cómo funciona un buscador. Pero la IA no es un buscador. Es un colaborador con el que puedes iterar.</p>
+
+            <p>Funciona bastante mejor así:</p>
+
+            <p style="font-style:italic;color:var(--muted);">contexto → primera respuesta → crítica → ajuste → comparación → decisión</p>
+
+            <p>Aplicado a analizar una idea de negocio, el proceso podría ser:</p>
+
+            <ol>
+              <li>Pedirle que evalúe la idea con tu contexto y restricciones reales.</li>
+              <li>Pedirle que critique su propia respuesta: qué supuestos está haciendo, qué riesgos está ignorando.</li>
+              <li>Pedirle que compare esta idea con dos alternativas en tu misma situación.</li>
+              <li>Pedirle que construya un escenario conservador, no el optimista.</li>
+              <li>Pedirle que convierta el análisis en un plan de validación de 14 días.</li>
+            </ol>
+
+            <p>Cada paso usa la respuesta anterior como base. El resultado final no tiene nada que ver con lo que habrías obtenido en una sola pregunta.</p>
+
+            <h2 id="que-puede">Qué puede hacer</h2>
+
+            <p>Con el encargo correcto, la IA puede ayudarte a:</p>
+
+            <ul>
+              <li>Ordenar ideas y estructurar lo que tienes en la cabeza.</li>
+              <li>Comparar opciones con variables concretas (inversión, tiempo, riesgo, margen de error).</li>
+              <li>Detectar riesgos que no habías considerado.</li>
+              <li>Hacer de abogado del diablo contra tus propias ideas.</li>
+              <li>Preparar preguntas para proveedores, asesores o ayuntamientos.</li>
+              <li>Resumir información técnica en términos que puedas usar.</li>
+              <li>Generar escenarios conservadores y realistas, no solo el optimista.</li>
+              <li>Convertir una idea vaga en un plan de investigación con pasos concretos.</li>
+            </ul>
+
+            <p>Todas estas cosas tienen un denominador común: la IA acelera trabajo de análisis que de otra forma llevaría horas o días. No lo inventa. Lo organiza y lo estructura a partir de lo que tú le das.</p>
+
+            <h2 id="que-no-puede">Qué no puede hacer</h2>
+
+            <p>Es igual de importante tener claro dónde termina la utilidad de la herramienta.</p>
+
+            <ul>
+              <li><strong>No puede decidir por ti.</strong> Puede ayudarte a pensar mejor, pero la decisión es tuya.</li>
+              <li><strong>No sabe tu situación real si no se la cuentas.</strong> Lo que no le des, lo inventará o lo ignorará.</li>
+              <li><strong>No puede validar un mercado.</strong> El análisis de zona, la demanda real o el precio que aguanta el barrio se comprueban en el campo, no en una pantalla.</li>
+              <li><strong>No puede comprobar un local físico.</strong> Ni evaluar si el propietario es confiable ni negociar las condiciones del alquiler.</li>
+              <li><strong>No puede saber si puedes soportar psicológicamente el riesgo.</strong> Eso solo lo sabes tú.</li>
+              <li><strong>No convierte una mala idea en una buena.</strong> Si la premisa es débil, una respuesta bien estructurada sigue siendo una respuesta sobre una premisa débil.</li>
+            </ul>
+
+            <div class="article-callout article-callout-ok">
+              <span class="article-callout-label">La idea clave</span>
+              <p>La IA puede reducir confusión y acelerar el análisis. No elimina la realidad. El trabajo de campo, la validación real y las decisiones con consecuencias siguen siendo tuyos.</p>
+            </div>
+
+            <h2 id="metodo">Un método simple</h2>
+
+            <p>No hace falta convertir esto en una disciplina técnica. Hay una estructura sencilla que mejora la mayoría de los encargos:</p>
+
+            <div class="prompt-method-grid" aria-label="Método para encargos a IA">
+              <div class="prompt-method-item">
+                <span class="prompt-method-n">01</span>
+                <strong class="prompt-method-title">Contexto</strong>
+                <p class="prompt-method-desc">Quién eres y cuál es tu situación real. Capital, tiempo, experiencia, restricciones de vida.</p>
+              </div>
+              <div class="prompt-method-item">
+                <span class="prompt-method-n">02</span>
+                <strong class="prompt-method-title">Objetivo</strong>
+                <p class="prompt-method-desc">Qué quieres conseguir con esta respuesta. No "información sobre X", sino para qué la necesitas.</p>
+              </div>
+              <div class="prompt-method-item">
+                <span class="prompt-method-n">03</span>
+                <strong class="prompt-method-title">Restricciones</strong>
+                <p class="prompt-method-desc">Dinero, tiempo, energía, riesgo, horizonte, cosas que quieres evitar.</p>
+              </div>
+              <div class="prompt-method-item">
+                <span class="prompt-method-n">04</span>
+                <strong class="prompt-method-title">Criterio</strong>
+                <p class="prompt-method-desc">Cómo debe evaluar la respuesta. Qué significa "bueno" en este caso concreto.</p>
+              </div>
+              <div class="prompt-method-item">
+                <span class="prompt-method-n">05</span>
+                <strong class="prompt-method-title">Formato</strong>
+                <p class="prompt-method-desc">Cómo quieres recibir el resultado: lista, tabla, texto libre, comparativa, plan de acción.</p>
+              </div>
+            </div>
+
+            <p>No tienes que usarlo siempre en ese orden ni incluir los cinco puntos en cada encargo. Pero si una respuesta te decepciona, revisa cuál de esos cinco faltaba. Casi siempre ahí está el problema.</p>
+
+            <h2 id="prompts">Prompts útiles para copiar</h2>
+
+            <p>Estos prompts funcionan bien como punto de partida. Sustituyendo los campos entre corchetes por tu contexto real.</p>
+
+            <div class="prompt-copy-block">
+              <span class="prompt-copy-label">Mejorar una respuesta mediocre</span>
+              <p>Revisa tu respuesta anterior. Hazla menos genérica, más realista y más útil para tomar una decisión. Añade riesgos, supuestos, límites y próximos pasos. Elimina frases obvias o motivacionales.</p>
+            </div>
+
+            <div class="prompt-copy-block">
+              <span class="prompt-copy-label">Analizar una idea de negocio</span>
+              <p>Actúa como analista crítico de micronegocios. Analiza esta idea: [IDEA]. Evalúala según inversión inicial, costes fijos, tiempo operativo, dependencia de ubicación, riesgos principales, habilidades necesarias y qué tendría que validar antes de invertir. No busques convencerme; busca puntos débiles.</p>
+            </div>
+
+            <div class="prompt-copy-block">
+              <span class="prompt-copy-label">Pedir información faltante antes de responder</span>
+              <p>Antes de responder, dime qué información te falta para dar una respuesta útil. Si alguna parte depende de supuestos, indícalos claramente.</p>
+            </div>
+
+            <div class="prompt-copy-block">
+              <span class="prompt-copy-label">Comparar opciones</span>
+              <p>Compara estas opciones: [A], [B] y [C]. Usa una tabla con inversión inicial, tiempo semanal, dificultad operativa, riesgo, margen de error y compatibilidad con mi situación. Mi contexto es: [CONTEXTO].</p>
+            </div>
+
+            <div class="prompt-copy-block">
+              <span class="prompt-copy-label">Convertir una respuesta en plan de acción</span>
+              <p>Convierte esta respuesta en un plan de 14 días con acciones concretas, decisiones que debo tomar, información que debo buscar y señales de alerta.</p>
+            </div>
+
+            <h2>Conclusión</h2>
+
+            <p>La IA no sustituye el criterio. Lo amplifica cuando existe, y lo deja en evidencia cuando falta.</p>
+
+            <p>Si llegas a la IA con una pregunta vaga, sin saber qué quieres conseguir, sin decirle quién eres y sin darle ninguna restricción real, lo normal es que lo que recibas no sirva de mucho. No porque la herramienta sea mala, sino porque un colaborador muy rápido sin dirección es solo ruido rápido.</p>
+
+            <p>En The Leonis Project usamos la IA así: no para fabricar certezas, sino para hacer mejores preguntas, detectar fricciones y mirar los pequeños negocios con más realismo. La herramienta ayuda a pensar mejor antes de construir. El criterio sobre qué construir sigue siendo humano.</p>
+
+            <!-- ── ASIDE CTA ────────────────────────────────── -->
+            <div class="article-lab-cta">
+              <span class="article-lab-cta-label">Asesoría · The Leonis Project</span>
+              <h3 class="article-lab-cta-title">Si tienes una idea y quieres una segunda lectura</h3>
+              <p class="article-lab-cta-desc">
+                No buscamos decirte qué negocio te hará ganar dinero. Buscamos ayudarte a ordenar opciones,
+                riesgos y próximos pasos antes de invertir. Un análisis personalizado con tu capital,
+                tu tiempo y tu situación real.
+              </p>
+              <div class="article-lab-cta-links">
+                <a class="cta cta-primary" href="/pages/informe-de-encaje/index.html">Solicitar primera valoración</a>
+                <a class="cta cta-secondary" href="/pages/blog/index.html">Leer más artículos</a>
+              </div>
+            </div>
+
+          </article>
+
+          <!-- ── ASIDE ──────────────────────────────────────── -->
+          <aside class="article-aside reveal" aria-label="Información relacionada">
+
+            <div class="article-aside-card">
+              <span class="article-aside-label">Categoría</span>
+              <p class="article-aside-title">IA aplicada</p>
+              <p class="article-aside-desc">Una serie editorial sobre cómo usar la IA con criterio en el contexto de pequeños negocios y decisiones reales.</p>
+              <div class="blog-featured-tags" style="margin-top:0.2rem">
+                <span class="blog-tag blog-tag-category">IA aplicada</span>
+              </div>
+            </div>
+
+            <div class="article-aside-card">
+              <span class="article-aside-label">Asesoría</span>
+              <p class="article-aside-title">Análisis personalizado de micronegocio</p>
+              <p class="article-aside-desc">Un análisis con tu capital, tiempo y tolerancia al riesgo concretos. No ideas genéricas.</p>
+              <a class="cta cta-primary" href="/pages/informe-de-encaje/index.html" style="margin-top:0.75rem;font-size:0.85rem;text-align:center">Solicitar valoración →</a>
+            </div>
+
+            <div class="article-aside-card">
+              <span class="article-aside-label">Análisis de negocio</span>
+              <p class="article-aside-title">Lavandería autoservicio</p>
+              <p class="article-aside-desc">Qué exige realmente montar una lavandería: inversión, fricciones y dónde ayuda la IA con los límites claros.</p>
+              <div class="article-aside-links">
+                <a class="article-aside-link" href="/pages/blog/lavanderia-autoservicio.html">
+                  Leer análisis <span>→</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="article-aside-card">
+              <span class="article-aside-label">Newsletter</span>
+              <p class="article-aside-title">Recibir nuevos artículos</p>
+              <p class="article-aside-desc">Cuando haya nuevos análisis, avances del laboratorio o lecturas sobre IA aplicada y fricción real.</p>
+              <a class="cta cta-primary" href="/#suscribete" style="margin-top:0.2rem;font-size:0.85rem;text-align:center">Suscribirme →</a>
+            </div>
+
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CIERRE ─────────────────────────────────────────────── -->
+    <section class="section">
+      <div class="container">
+        <div class="home-follow-grid reveal">
+          <a class="home-follow-card" href="/pages/informe-de-encaje/index.html">
+            <span class="home-follow-kicker">Asesoría</span>
+            <strong class="home-follow-title">Solicitar primera valoración</strong>
+            <p class="home-follow-desc">Un análisis personalizado para valorar qué pequeños negocios podrían encajar con tu capital, tiempo, habilidades y tolerancia al riesgo.</p>
+            <span class="home-follow-arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="home-follow-card" href="/pages/blog/lavanderia-autoservicio.html">
+            <span class="home-follow-kicker">Análisis de negocio</span>
+            <strong class="home-follow-title">Lavandería autoservicio</strong>
+            <p class="home-follow-desc">Qué exige realmente montar una lavandería: inversión, fricciones, tiempo operativo y para qué perfil tiene encaje real.</p>
+            <span class="home-follow-arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="home-follow-card" href="/pages/laboratorio/index.html">
+            <span class="home-follow-kicker">Laboratorio</span>
+            <strong class="home-follow-title">Ver el laboratorio</strong>
+            <p class="home-follow-desc">Experimentos simulados con IA: dos perfiles, el mismo modelo y condiciones distintas. Diario, métricas y decisiones en abierto.</p>
+            <span class="home-follow-arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-box">
+      <div>© The Leonis Project</div>
+      <div>Análisis de micronegocios sin humo.</div>
+    </div>
+  </footer>
+
+</body>
+</html>
