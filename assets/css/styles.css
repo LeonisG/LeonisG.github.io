@@ -1001,16 +1001,277 @@ h1 {
 
 .footer {
   padding: 2rem 0 3rem;
+  border-top: 1px solid var(--line);
+  margin-top: 2rem;
 }
 
 .footer-box {
   padding: 1rem 1.1rem;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 2rem;
   color: var(--muted);
   font-size: 0.94rem;
+}
+
+.footer-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.footer-tagline {
+  font-size: 0.9rem;
+  color: var(--text);
+  opacity: 0.85;
+  font-weight: 500;
+}
+
+.footer-copy {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.1rem;
+  justify-content: flex-end;
+  max-width: 480px;
+}
+
+.footer-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+
+.footer-nav a:hover {
+  color: var(--text);
+}
+
+/* ── Latest posts (home) ─────────────────────────────── */
+
+.latest-posts {
+  padding-top: 0;
+}
+
+.latest-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.latest-post-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.25rem 1.1rem 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: calc(var(--radius) / 2);
+  text-decoration: none;
+  color: var(--text);
+  background: rgba(255,255,255,0.015);
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.latest-post-card:hover {
+  border-color: rgba(185,239,69,0.35);
+  background: rgba(255,255,255,0.03);
+}
+
+.latest-post-kicker {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: 0.8;
+}
+
+.latest-post-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--text);
+}
+
+.latest-post-desc {
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.55;
+  flex: 1;
+}
+
+.latest-post-meta {
+  font-size: 0.74rem;
+  color: var(--muted);
+  opacity: 0.65;
+  margin-top: 0.25rem;
+}
+
+/* ── Trust pages (about, newsletter, manifiesto, privacidad) ── */
+
+.trust-page-hero {
+  padding: 3rem 0 2.5rem;
+}
+
+.trust-hero-wrap {
+  max-width: 680px;
+}
+
+.trust-kicker {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: 0.75;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.trust-h1 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 0 0 1.25rem;
+  color: var(--text);
+}
+
+.trust-intro {
+  font-size: 1.05rem;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 60ch;
+  margin: 0;
+}
+
+.trust-body {
+  max-width: 680px;
+}
+
+.trust-body h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 2.5rem 0 0.75rem;
+  color: var(--text);
+}
+
+.trust-body p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.75;
+  margin: 0 0 1rem;
+}
+
+.trust-body ul,
+.trust-body ol {
+  padding-left: 1.25rem;
+  margin: 0 0 1rem;
+}
+
+.trust-body li {
+  font-size: 0.92rem;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 0.4rem;
+}
+
+.trust-body a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.trust-body a:hover {
+  text-decoration: underline;
+}
+
+.trust-principle {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: 0.5rem 1rem;
+  align-items: start;
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.trust-principle:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.trust-principle-n {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  opacity: 0.6;
+  padding-top: 0.2rem;
+}
+
+.trust-principle-text strong {
+  display: block;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.2rem;
+}
+
+.trust-principle-text p {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.newsletter-form-wrap {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.75rem 1.5rem;
+  max-width: 480px;
+  margin-top: 2rem;
+}
+
+.newsletter-form-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  color: var(--text);
+}
+
+.newsletter-form-desc {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0 0 1.25rem;
+}
+
+/* ── Responsive adjustments ─────────────────────────── */
+
+@media (max-width: 860px) {
+  .latest-posts-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-box {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+  .footer-nav {
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  .latest-posts-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .reveal {

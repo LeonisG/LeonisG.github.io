@@ -28,6 +28,8 @@
   />
   <meta name="twitter:image" content="https://theleonisproject.com/assets/img/og-cover.jpg" />
 
+  <link rel="canonical" href="https://theleonisproject.com/" />
+
   <link rel="icon" href="favicon.ico" />
   <link rel="shortcut icon" href="favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png" />
@@ -83,10 +85,7 @@
               </button>
               <ul class="nav-tree-sub nav-accordion-panel" hidden>
                 <li><a href="/pages/blog/index.html">Todos los artículos</a></li>
-                <li><a href="/pages/blog/lavanderia-autoservicio.html">Lavandería autoservicio</a></li>
-                <li><a href="/pages/blog/por-que-no-consigues-buenos-resultados-usando-ia.html">IA y resultados genéricos</a></li>
-                <li><a href="/pages/blog/que-puede-hacer-la-ia-antes-de-abrir-un-pequeno-negocio.html">IA antes de abrir un negocio</a></li>
-                <li><a href="/pages/blog/antes-de-preguntar-si-un-negocio-es-rentable.html">¿Puedes sostenerlo?</a></li>
+                <li><a href="/pages/blog/antes-de-preguntar-si-un-negocio-es-rentable.html">Última publicación</a></li>
               </ul>
             </li>
             <li class="nav-has-sub">
@@ -98,7 +97,7 @@
                 <li><a href="/pages/laboratorio/index.html">Ver laboratorio</a></li>
                 <li class="nav-has-sub">
                   <button class="nav-accordion-btn nav-accordion-btn--sub" type="button" aria-expanded="false">
-                    <span>EXP-01 · Lavandería</span>
+                    <span>Lavandería autoservicio</span>
                     <span class="nav-accordion-icon" aria-hidden="true"></span>
                   </button>
                   <ul class="nav-tree-sub nav-accordion-panel nav-accordion-panel--sub" hidden>
@@ -188,6 +187,45 @@
         </aside>
 
       </div><!-- /home-hero-wrap -->
+    </section>
+
+    <!-- ── 00 · ÚLTIMAS PUBLICACIONES ─────────────────────────── -->
+    <section class="section home-section latest-posts" id="ultimas-publicaciones">
+      <div class="container">
+        <header class="home-section-head reveal">
+          <h2 class="home-section-title">Últimas publicaciones</h2>
+        </header>
+        <p class="home-section-sub reveal" style="margin-top:-0.75rem">
+          Análisis y lecturas recientes sobre pequeños negocios, IA aplicada y decisiones antes de invertir tiempo y dinero.
+        </p>
+        <div class="latest-posts-grid reveal">
+
+          <a class="latest-post-card" href="pages/blog/antes-de-preguntar-si-un-negocio-es-rentable.html">
+            <span class="latest-post-kicker">Fundamentos</span>
+            <strong class="latest-post-title">Antes de preguntar si un negocio es rentable, pregunta si puedes sostenerlo</strong>
+            <p class="latest-post-desc">La rentabilidad no existe en el vacío. Depende del capital, el tiempo, el riesgo y el margen de error que tienes.</p>
+            <span class="latest-post-meta">7–9 min de lectura</span>
+          </a>
+
+          <a class="latest-post-card" href="pages/blog/que-puede-hacer-la-ia-antes-de-abrir-un-pequeno-negocio.html">
+            <span class="latest-post-kicker">IA aplicada · Parte 2</span>
+            <strong class="latest-post-title">Qué puede hacer la IA antes de abrir un pequeño negocio</strong>
+            <p class="latest-post-desc">Cómo usarla para investigar mejor, comparar escenarios y preparar decisiones antes de invertir.</p>
+            <span class="latest-post-meta">9–11 min de lectura</span>
+          </a>
+
+          <a class="latest-post-card" href="pages/blog/por-que-no-consigues-buenos-resultados-usando-ia.html">
+            <span class="latest-post-kicker">IA aplicada · Parte 1</span>
+            <strong class="latest-post-title">Por qué no consigues buenos resultados usando IA</strong>
+            <p class="latest-post-desc">El encargo importa más que la herramienta. Contexto, restricciones y criterio para obtener respuestas útiles.</p>
+            <span class="latest-post-meta">8–10 min de lectura</span>
+          </a>
+
+        </div>
+        <div class="reveal" style="margin-top:1.25rem">
+          <a class="cta cta-secondary" href="pages/blog/index.html">Ver todos los artículos →</a>
+        </div>
+      </div>
     </section>
 
     <!-- ── 01 · QUÉ PUEDES HACER AQUÍ ───────────────────────── -->
@@ -311,8 +349,8 @@
         <div class="home-follow-grid reveal">
           <div class="home-follow-card home-follow-card--form" style="grid-column: 1 / -1; max-width: 36rem;">
             <span class="home-follow-kicker">Newsletter</span>
-            <strong class="home-follow-title">Recibir avances del laboratorio</strong>
-            <p class="home-follow-desc">Te enviaremos avances del laboratorio, nuevos análisis cuando los haya y lecturas tranquilas sobre micronegocios, IA aplicada y fricción real.</p>
+            <strong class="home-follow-title">Seguir el proyecto</strong>
+            <p class="home-follow-desc">Un email cuando haya algo relevante que contar: nuevos análisis, avances del laboratorio o lecturas sobre micronegocios, IA aplicada y fricción real. Sin cadencia forzada.</p>
             <form class="form home-mini-form" id="subscribe-form" novalidate>
               <label class="sr-only" for="email">Tu email</label>
               <input
@@ -336,8 +374,20 @@
 
   <footer class="footer">
     <div class="container footer-box">
-      <div>© The Leonis Project</div>
-      <div>Think better. Build wisely.</div>
+      <div class="footer-meta">
+        <span class="footer-tagline">Pensar mejor antes de construir.</span>
+        <span class="footer-copy">© The Leonis Project</span>
+      </div>
+      <nav class="footer-nav" aria-label="Pie de página">
+        <a href="/">Inicio</a>
+        <a href="/pages/blog/index.html">Blog</a>
+        <a href="/pages/laboratorio/index.html">Laboratorio</a>
+        <a href="/pages/informe-de-encaje/index.html">Asesoría</a>
+        <a href="/pages/newsletter.html">Newsletter</a>
+        <a href="/pages/about.html">Sobre el proyecto</a>
+        <a href="/pages/manifiesto.html">Manifiesto</a>
+        <a href="/pages/privacidad.html">Privacidad</a>
+      </nav>
     </div>
   </footer>
 
