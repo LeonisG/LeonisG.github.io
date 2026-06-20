@@ -296,4 +296,72 @@ document.addEventListener("DOMContentLoaded", () => {
     openTimeout = setTimeout(openModal, DELAY_MS);
     window.addEventListener("pagehide", () => clearTimeout(openTimeout), { once: true });
   })();
+
+  /* ── Producto CTA → seleccionar en formulario + scroll ── */
+  document.querySelectorAll("[data-product]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const product = btn.getAttribute("data-product");
+      const radio = document.querySelector(
+        `input[name="selected_product"][value="${product}"]`
+      );
+      if (radio) {
+        radio.checked = true;
+        radio.dispatchEvent(new Event("change", { bubbles: true }));
+      }
+      const formSection = document.getElementById("formulario");
+      if (formSection) {
+        formSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+  });
+
+  /* ── Formulario de asesoría ──────────────────────────── */
+  const asesoriaForm = document.getElementById("asesoria-form");
+  const asesoriaConfirm = document.getElementById("asesoria-confirm");
+  const asesoriaMessage = document.getElementById("asesoria-message");
+
+  if (asesoriaForm && asesoriaConfirm && asesoriaMessage) {
+    asesoriaForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      asesoriaMessage.textContent = "";
+
+      const productRadio = asesoriaForm.querySelector(
+        'input[name="selected_product"]:checked'
+      );
+      const emailInput = asesoriaForm.querySelector('[name="email"]');
+      const privacyCheck = asesoriaForm.querySelector('[name="privacidad"]');
+
+      if (!productRadio) {
+        asesoriaMessage.textContent = "Selecciona el informe que quieres solicitar.";
+        asesoriaForm
+          .querySelector('input[name="selected_product"]')
+          ?.closest(".sp-product-radios")
+          ?.scrollIntoView({ behavior: "smooth", block: "center" });
+        return;
+      }
+
+      if (!emailInput || !emailInput.value.trim()) {
+        asesoriaMessage.textContent = "El email es obligatorio.";
+        emailInput?.focus();
+        return;
+      }
+
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value.trim())) {
+        asesoriaMessage.textContent = "Introduce un email válido.";
+        emailInput?.focus();
+        return;
+      }
+
+      if (!privacyCheck || !privacyCheck.checked) {
+        asesoriaMessage.textContent =
+          "Debes aceptar la política de privacidad para continuar.";
+        privacyCheck?.focus();
+        return;
+      }
+
+      asesoriaForm.hidden = true;
+      asesoriaConfirm.hidden = false;
+      asesoriaConfirm.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+  }
 });

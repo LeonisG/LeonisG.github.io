@@ -11370,3 +11370,605 @@ a.blog-card:hover {
     padding: 1.5rem;
   }
 }
+
+/* =========================================================
+   SP — Service Page v2 (Informe de Encaje — comercial)
+   Prefijo: .sp-*
+========================================================= */
+
+/* ── Hero pills ─────────────────────────────────────────── */
+
+.sp-hero-proof {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.sp-hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.38rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.03);
+  font-size: 0.78rem;
+  color: #d8e8db;
+  line-height: 1.2;
+}
+
+.sp-hero-pill::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+  opacity: 0.8;
+}
+
+/* ── Product grid ───────────────────────────────────────── */
+
+.sp-product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  align-items: stretch;
+  margin-top: 1.5rem;
+}
+
+.sp-product-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.75rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.025);
+  gap: 1rem;
+  position: relative;
+}
+
+.sp-product-card--featured {
+  border-color: rgba(185,239,69,0.28);
+  background: rgba(185,239,69,0.03);
+}
+
+.sp-product-badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(185,239,69,0.12);
+  border: 1px solid rgba(185,239,69,0.22);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.25rem;
+  width: fit-content;
+}
+
+.sp-product-name {
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 0.25rem;
+  line-height: 1.2;
+}
+
+.sp-product-tagline {
+  font-size: 0.84rem;
+  color: var(--muted);
+  line-height: 1.55;
+  margin: 0;
+  flex: 0;
+}
+
+.sp-product-price-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.9rem 0;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.sp-product-price {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.sp-product-price-old {
+  font-size: 0.82rem;
+  color: var(--muted);
+  opacity: 0.45;
+  text-decoration: line-through;
+}
+
+.sp-product-launch {
+  font-size: 0.72rem;
+  color: var(--accent);
+  opacity: 0.75;
+  line-height: 1.45;
+}
+
+.sp-product-includes {
+  flex: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.42rem;
+}
+
+.sp-product-includes li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.81rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.sp-product-includes li::before {
+  content: '→';
+  color: var(--accent);
+  opacity: 0.55;
+  flex-shrink: 0;
+  font-size: 0.72rem;
+  margin-top: 0.1rem;
+}
+
+.sp-product-cta {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.04);
+  color: var(--text);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 0.2s ease, background 0.2s ease;
+  font-family: inherit;
+  margin-top: auto;
+}
+
+.sp-product-cta:hover {
+  border-color: rgba(185,239,69,0.3);
+  background: rgba(185,239,69,0.06);
+}
+
+.sp-product-cta:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(185,239,69,0.22);
+}
+
+.sp-product-card--featured .sp-product-cta {
+  background: linear-gradient(135deg, var(--accent), #cbff67);
+  color: #06110b;
+  border-color: transparent;
+  font-weight: 700;
+}
+
+.sp-product-card--featured .sp-product-cta:hover {
+  background: linear-gradient(135deg, #c7fb59, #ddff8a);
+}
+
+.sp-product-note {
+  font-size: 0.74rem;
+  color: var(--muted);
+  opacity: 0.5;
+  line-height: 1.55;
+  margin: 0.5rem 0 0;
+  border-left: 2px solid rgba(255,255,255,0.07);
+  padding-left: 0.75rem;
+}
+
+/* ── Comparison table ───────────────────────────────────── */
+
+.sp-compare-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.07);
+}
+
+.sp-compare {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+  font-size: 0.84rem;
+}
+
+.sp-compare th,
+.sp-compare td {
+  padding: 0.8rem 1.1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  vertical-align: middle;
+  line-height: 1.4;
+}
+
+.sp-compare th {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--muted);
+  opacity: 0.7;
+  background: rgba(255,255,255,0.02);
+}
+
+.sp-compare th:not(:first-child),
+.sp-compare td:not(:first-child) {
+  text-align: center;
+}
+
+.sp-compare th.sp-compare-featured,
+.sp-compare td.sp-compare-featured {
+  color: var(--accent);
+  background: rgba(185,239,69,0.03);
+}
+
+.sp-compare th.sp-compare-featured {
+  opacity: 1;
+}
+
+.sp-compare td {
+  color: var(--muted);
+}
+
+.sp-compare td:first-child {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.sp-compare tr:last-child td {
+  border-bottom: none;
+}
+
+.sp-compare tbody tr:hover td {
+  background: rgba(255,255,255,0.012);
+}
+
+/* ── Analyze variables grid ─────────────────────────────── */
+
+.sp-analyze-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.sp-analyze-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.07);
+  background: rgba(255,255,255,0.025);
+  font-size: 0.82rem;
+  color: #d4e4d7;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.sp-analyze-item::before {
+  content: '';
+  width: 3.5px;
+  height: 3.5px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+  opacity: 0.65;
+}
+
+/* ── Report outline ─────────────────────────────────────── */
+
+.sp-outline {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.015);
+  max-width: 560px;
+}
+
+.sp-outline-item {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.75rem 1.3rem;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.sp-outline-item:last-child {
+  border-bottom: none;
+}
+
+.sp-outline-n {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  opacity: 0.55;
+  flex-shrink: 0;
+  min-width: 1.5rem;
+  text-transform: uppercase;
+}
+
+.sp-outline-text {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.sp-outline-note {
+  font-size: 0.76rem;
+  color: var(--muted);
+  opacity: 0.42;
+  line-height: 1.6;
+  margin: 1rem 0 0;
+  padding-left: 0.75rem;
+  border-left: 2px solid rgba(255,255,255,0.07);
+  max-width: 560px;
+}
+
+/* ── Limits / methodology ───────────────────────────────── */
+
+.sp-limits {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.015);
+}
+
+.sp-limits-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 0.9rem 1.2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  border-right: 1px solid rgba(255,255,255,0.04);
+  font-size: 0.84rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.sp-limits-item:nth-child(even) {
+  border-right: none;
+}
+
+.sp-limits-item:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+
+.sp-limits-item::before {
+  content: '—';
+  color: var(--accent);
+  opacity: 0.4;
+  flex-shrink: 0;
+  font-size: 0.7rem;
+  margin-top: 0.15rem;
+}
+
+/* ── Form product selector ──────────────────────────────── */
+
+.sp-product-radios {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.sp-product-radio-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.09);
+  background: rgba(255,255,255,0.02);
+  cursor: pointer;
+  transition: border-color 0.18s ease, background 0.18s ease;
+  position: relative;
+}
+
+.sp-product-radio-label input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.sp-product-radio-label:has(input:checked) {
+  border-color: rgba(185,239,69,0.35);
+  background: rgba(185,239,69,0.04);
+}
+
+.sp-product-radio-label:focus-within {
+  box-shadow: 0 0 0 3px rgba(185,239,69,0.2);
+  outline: none;
+}
+
+.sp-radio-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.sp-radio-price {
+  font-size: 0.72rem;
+  color: var(--muted);
+  opacity: 0.65;
+}
+
+/* ── Form status messages ───────────────────────────────── */
+
+.sp-form-success {
+  padding: 1.5rem 1.75rem;
+  border-radius: 12px;
+  border: 1px solid rgba(185,239,69,0.2);
+  background: rgba(185,239,69,0.04);
+  font-size: 0.94rem;
+  color: #d4e8d0;
+  line-height: 1.65;
+}
+
+.sp-form-error {
+  font-size: 0.82rem;
+  color: #f3c6c6;
+  margin-top: 0.5rem;
+  min-height: 1.2em;
+}
+
+/* ── FAQ details/summary ────────────────────────────────── */
+
+.sp-faq {
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 14px;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.sp-faq details {
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.sp-faq details:last-child {
+  border-bottom: none;
+}
+
+.sp-faq summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.15rem 1.75rem;
+  cursor: pointer;
+  font-size: 0.93rem;
+  font-weight: 600;
+  color: var(--text);
+  user-select: none;
+  transition: background 0.18s ease;
+}
+
+.sp-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.sp-faq summary::after {
+  content: '+';
+  color: var(--accent);
+  opacity: 0.55;
+  font-size: 1rem;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+  font-weight: 400;
+}
+
+.sp-faq details[open] summary::after {
+  content: '−';
+}
+
+.sp-faq summary:hover {
+  background: rgba(255,255,255,0.02);
+}
+
+.sp-faq summary:focus-visible {
+  outline: none;
+  background: rgba(185,239,69,0.04);
+}
+
+.sp-faq-body {
+  padding: 0 1.75rem 1.15rem;
+  font-size: 0.87rem;
+  color: var(--muted);
+  line-height: 1.68;
+  max-width: 68ch;
+}
+
+/* ── Responsive SP ──────────────────────────────────────── */
+
+@media (max-width: 860px) {
+  .sp-product-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sp-limits {
+    grid-template-columns: 1fr;
+  }
+
+  .sp-limits-item {
+    border-right: none;
+  }
+
+  .sp-limits-item:nth-last-child(-n+2) {
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+
+  .sp-limits-item:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .sp-product-radios {
+    grid-template-columns: 1fr;
+  }
+
+  .sp-product-grid {
+    max-width: 100%;
+  }
+
+  .sp-hero-pill {
+    font-size: 0.74rem;
+  }
+
+  .sp-faq summary {
+    padding: 1rem 1.2rem;
+  }
+
+  .sp-faq-body {
+    padding: 0 1.2rem 1rem;
+  }
+
+  .sp-compare {
+    font-size: 0.78rem;
+  }
+
+  .sp-analyze-item {
+    font-size: 0.78rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sp-product-cta,
+  .sp-product-radio-label,
+  .sp-faq summary {
+    transition: none;
+  }
+}
