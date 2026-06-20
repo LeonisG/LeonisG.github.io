@@ -12060,6 +12060,12 @@ a.blog-card:hover {
   scroll-margin-top: 88px;
 }
 
+/* ── Reduce gap hero → primera sección ─────────────────── */
+
+.sp-hero + .section {
+  padding-top: 0.75rem;
+}
+
 /* ── Responsive sp-hero ────────────────────────────────── */
 
 @media (max-width: 860px) {
