@@ -10228,6 +10228,14 @@ a.blog-card:hover {
   }
 }
 
+@media (max-width: 520px) {
+  .blog-archive-meta .blog-tag {
+    font-size: 0.58rem;
+    padding: 0.1rem 0.36rem;
+    letter-spacing: 0.02em;
+  }
+}
+
 /* =========================================================
    BLOG — ARTICLE PAGE
    Clases: .article-page, .article-*
