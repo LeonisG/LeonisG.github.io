@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>LastOneArena — Battle Simulator</title>
+  <link rel="stylesheet" href="assets/css/arena.css" />
+</head>
+<body>
+
+  <div id="app">
+
+    <!-- Canvas -->
+    <div id="canvas-wrap">
+      <canvas id="arena"></canvas>
+    </div>
+
+    <!-- Control panel -->
+    <aside id="panel">
+
+      <div class="panel-header">
+        <span class="panel-logo">⚔ LastOneArena</span>
+        <button id="btn-present">▶ RECORD MODE</button>
+      </div>
+
+      <div class="panel-body">
+
+        <label>
+          <span>Seed</span>
+          <input type="text" id="seed" value="lastonearena" spellcheck="false" />
+        </label>
+
+        <label>
+          <span>Participants</span>
+          <select id="count">
+            <option value="4">4</option>
+            <option value="6">6</option>
+            <option value="8">8</option>
+            <option value="10">10</option>
+            <option value="12">12</option>
+            <option value="16" selected>16</option>
+            <option value="20">20</option>
+            <option value="24">24</option>
+            <option value="32">32</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Mode</span>
+          <select id="mode">
+            <option value="ffa">All vs All</option>
+            <option value="teams2">2 Teams (Red / Blue)</option>
+            <option value="teams3">3 Teams (R / B / G)</option>
+            <option value="shrink">Shrinking Arena</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Speed</span>
+          <select id="speed">
+            <option value="0.5">× 0.5 — Slow</option>
+            <option value="1" selected>× 1 — Normal</option>
+            <option value="1.5">× 1.5</option>
+            <option value="2">× 2 — Fast</option>
+            <option value="3">× 3 — Turbo</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Health</span>
+          <select id="hp">
+            <option value="50">Low — 50 HP</option>
+            <option value="100" selected>Normal — 100 HP</option>
+            <option value="200">High — 200 HP</option>
+            <option value="400">Tank — 400 HP</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Damage</span>
+          <select id="damage">
+            <option value="0.5">Low × 0.5</option>
+            <option value="1" selected>Normal × 1</option>
+            <option value="2">High × 2</option>
+            <option value="3">Brutal × 3</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Gravity</span>
+          <select id="gravity">
+            <option value="0" selected>Zero-G</option>
+            <option value="0.4">Low</option>
+            <option value="0.8">Normal</option>
+            <option value="1.5">Heavy</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Ball Size</span>
+          <select id="size">
+            <option value="0.65">Small</option>
+            <option value="1" selected>Normal</option>
+            <option value="1.35">Large</option>
+          </select>
+        </label>
+
+      </div>
+
+      <div class="panel-actions">
+        <button id="btn-start" class="btn-primary">▶ START</button>
+        <div class="panel-actions-row">
+          <button id="btn-pause">⏸ PAUSE</button>
+          <button id="btn-restart">↺ RESTART</button>
+        </div>
+      </div>
+
+      <div class="panel-footer">
+        Seed: <span id="seed-display">—</span>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+  <script src="assets/js/arena.js"></script>
+
+</body>
+</html>
