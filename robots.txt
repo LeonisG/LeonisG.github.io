@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /arena/
 
 Sitemap: https://theleonisproject.com/sitemap.xml
