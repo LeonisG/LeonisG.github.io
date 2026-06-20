@@ -10140,24 +10140,13 @@ a.blog-card:hover {
 
 .blog-archive-meta {
   display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
+  align-items: center;
+  gap: 0.75rem;
   font-size: 0.76rem;
   color: var(--muted);
   flex-shrink: 0;
-  align-items: flex-end;
-}
-
-.blog-archive-meta-row {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-}
-
-.blog-archive-meta-tags {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 /* ── Responsive blog ────────────────────────────────────── */
@@ -10235,7 +10224,7 @@ a.blog-card:hover {
   }
 
   .blog-archive-meta {
-    align-items: flex-start;
+    justify-content: flex-start;
   }
 }
 
